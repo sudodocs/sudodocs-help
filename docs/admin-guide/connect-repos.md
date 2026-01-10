@@ -1,4 +1,4 @@
-# Connecting Repositories
+# Ingest Repositories
 
 SudoDocs ingests content from your repositories to power its AI features. You can connect Documentation repositories (for auditing and chat) and Source Code repositories (for technical drift detection).
 
@@ -28,9 +28,9 @@ To ingest a public documentation site:
     * **Note**: SudoDocs automatically looks for an `/llms.txt` file or a `sitemap.xml` to discover pages.
 4.  Click **Add Repository**.
 
-## Syncing a Repository
+## Sync a Repository (RAG)
 
-After adding a repository, you must sync it to index the content into the Vector Database.
+After adding a repository, you must sync it to index the content into the Vector Database. This creates a RAG pipeline.
 
 1.  Locate the repository in the **Active Repositories** list.
 2.  Click the **Sync** button.

@@ -1,9 +1,10 @@
-# Admin Guide
+# Admin Tasks
 
 This guide provides instructions for System Administrators to configure, manage, and secure the SudoDocs workspace.
 
 ## In This Section
-* [Connecting Repositories](connect-repos.md): Link Git repositories and websites.
-* [Managing Integrations](integrations.md): Connect Jira and Slack.
-* [Knowledge Base Configuration](kb-config.md): Customize AI tone and style.
-* [User Management](users.md): Invite team members and assign roles.
+* [Add and Ingest Repositories: Git, Sitemap, or LLMS.TXT](connect-repos.md)
+* [Connect Services: Jira and Slack](integrations.md)
+* [Configure Knowledge Base and Doc Styles](kb-config.md)
+* [Setup Single Sign-On for Access](sso-setup.md)
+* [Manage Users](users.md)

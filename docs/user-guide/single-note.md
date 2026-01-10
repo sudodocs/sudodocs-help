@@ -1,4 +1,4 @@
-# Compose Release Notes (Single)
+# Write a Release Note Entry
 
 The Single Note Composer is designed for creating a standalone, polished release entry for a specific feature, bug fix, or known issue. This is useful for hotfixes or ad-hoc updates.
 

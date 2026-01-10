@@ -1,11 +1,48 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 4rem 0;
   width: 100%;
 }
 
+/* THE NEW GLASS CARD STYLE */
+.featureCard {
+  /* Layout & Spacing */
+  height: 100%;
+  padding: 2rem;
+  border-radius: 24px; /* Matches the hero card radius */
+  transition: all 0.3s ease; /* Smooth hover animation */
+
+  /* Light Mode Glass Effect */
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+/* Dark Mode Overrides (Handled via global selector) */
+:global(html[data-theme='dark']) .featureCard {
+  background: rgba(255, 255, 255, 0.03); /* Very subtle white tint */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+}
+
+/* HOVER EFFECTS */
+.featureCard:hover {
+  transform: translateY(-5px); /* Moves up slightly */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); /* Adds depth */
+  border-color: var(--ifm-color-primary); /* Highlights border with your brand color */
+}
+
+/* Dark mode hover specific */
+:global(html[data-theme='dark']) .featureCard:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
 .featureSvg {
-  height: 200px;
-  width: 200px;
+  height: 140px; /* Reduced from 200px for a sharper look */
+  width: 140px;
+  margin-bottom: 1.5rem;
 }

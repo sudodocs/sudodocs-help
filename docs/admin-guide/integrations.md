@@ -1,4 +1,4 @@
-# Managing Integrations
+# Connect Services
 
 Connect external tools to fetch data and push notifications.
 

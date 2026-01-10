@@ -1,4 +1,4 @@
-# Configuring the Knowledge Base
+# Configure the Knowledge Base
 
 The Knowledge Base (KB) controls the voice, tone, and categorization rules the AI uses when generating content.
 
