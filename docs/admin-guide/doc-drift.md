@@ -1,4 +1,4 @@
-# Doc PR Inbox & Drift Prevention
+# Configure Webhooks for Doc Drift Prevention
 
 > **Note:** The standalone **Technical Drift Audit** feature has been deprecated and superseded by the real-time **Doc PR Inbox**.
 
