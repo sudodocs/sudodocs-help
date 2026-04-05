@@ -1,26 +1,14 @@
-# Audit Docs (Technical Drift)
+# Technical Drift Audit (Deprecated)
 
-The Doc Drift Inspector compares your source code against your existing documentation to identify gaps, undocumented features, and contradictions.
+> **Note:** This feature has been deprecated.
 
-## Prerequisites
+The standalone Technical Drift Audit feature has been superseded by the new **Doc PR Inbox**.
 
-* You must have at least one **Source Code** repository and one **Documentation** repository synced in the Admin Dashboard.
-* This feature is available on **Pro** and **Enterprise** plans.
+The functionality for comparing source code against documentation is now integrated into the automated suggestion workflow for incoming code pull requests. This provides a more proactive and real-time approach to preventing documentation drift.
 
-## Running an Audit
+### 🔄 Latest Engineering Updates
 
-1.  On the **Project Dashboard**, click **Inspect** on the **Doc Drift Inspector** card.
-2.  Select the **Source Code Repo** representing the ""Truth"" (the implementation).
-3.  Select the **Target Docs Repo** representing the content to check.
-4.  Click **Run Audit**.
+The documentation should be updated to reflect the specific user-facing changes implemented for the deprecation of the Technical Drift Audit feature.
 
-## Analyzing the Report
-
-The system generates a **Technical Audit Report** containing:
-
-* **Executive Summary**: A high-level overview of the documentation's accuracy.
-* **Undocumented Features**: A list of features or parameters found in the code that are missing from the docs.
-    * Includes a **Draft Suggestion** code block with proposed content in your doc's format (Markdown, RST, or AsciiDoc).
-* **Discrepancies**: Areas where the documentation contradicts the code (e.g., wrong default values, deprecated endpoints).
-
-You can export this report to **Word**, **Google Docs**, or save it as a draft within SudoDocs.
+- The user interface at `/workspace/audit` has been removed. Users attempting to navigate to this URL will now see a message stating, "The Doc Drift feature has been upgraded. Please use the new Doc PR Inbox," and will be automatically redirected to the main workspace.
+- The associated API endpoints for running (`/workspace/audit/run`), saving (`/workspace/audit/save`), and deleting (`/workspace/audit/delete`) audit reports have been disabled. They will no longer perform any action and will return an error or redirect.
