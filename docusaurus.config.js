@@ -114,7 +114,7 @@ const config = {
       footer: {
         style: 'dark', 
         links: [], // Empty array = No links, no columns
-        copyright: `Copyright © ${new Date().getFullYear()} SudoDocs by Saurabh Sugandh.`,
+        copyright: `Copyright © ${new Date().getFullYear()} SudoDocs.`,
       },
       prism: {
         theme: prismThemes.github,
