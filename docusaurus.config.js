@@ -13,6 +13,16 @@ const config = {
     'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap',
   ],
 
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'llms-txt',
+        href: '/llms.txt',
+      },
+    },
+  ],
+
   // 2. Production URL
   url: 'https://docs.sudodocs.com',
   baseUrl: '/',

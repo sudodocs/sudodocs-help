@@ -32,6 +32,8 @@ jobs:
         run: npm ci
       - name: Build website
         run: npm run build
+      - name: Expose Raw Markdown
+        run: cp -r docs/ build/docs/
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
         with:
