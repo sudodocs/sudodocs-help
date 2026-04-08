@@ -1,27 +1,24 @@
 # Author a Feature
 
-The Feature Author tool drafts comprehensive documentation topics (conceptual overviews, prerequisites, configuration steps) by analyzing your codebase and engineering specifications.
+Author comprehensive feature documentation using Jira tickets, codebase context, and visual diagrams.
 
-## Creating a Draft
+## 1. Import Source Context
 
-1.  Navigate to your **Project Dashboard** and click **Author** on the **Feature Author** card.
-2.  **Code Verification (Recommended)**:
-    * Select a **Repository** (e.g., ""Backend Code"") from the dropdown.
-    * (Optional) Enter a **Branch Name** if the feature code is not in the default branch. If left empty, the system attempts to find a branch matching the Jira Key.
-3.  **Import Source**:
-    * Select **Fetch from Jira** and enter the ticket key to pull the summary and description.
-    * Alternatively, select **Start from Blank** to type the details manually.
-4.  **Context & Attachments**:
-    * **Upload Design/Spec PDFs**: Click to upload PRDs or technical specs (PDF format supported). The AI reads this text to understand the feature's intent.
-    * **Generate Architecture Diagram**: Check this box to have the AI attempt to generate a Mermaid.js diagram code block based on the description.
-5.  Click **Author a Feature**.
+You can import engineering context using two methods:
 
-## Reviewing the Draft
+* **Fetch from Jira**: Enter a valid Jira ticket key (e.g., PROJ-1234) to automatically import the summary and description.
+* **Start from Blank**: Manually enter the feature summary and technical details.
 
-The editor provides three views for your generated content:
+## 2. Generate Architecture Diagrams
 
-* **Draft**: The main documentation content, including headers, steps, and configuration tables.
-* **Analysis**:
-    * **Placement Proposal**: Suggestions on where this new topic should fit within your existing documentation hierarchy.
-    * **Documentation Audit**: An analysis of existing docs that might conflict with or duplicate this new feature.
-* **Diagram**: A visual rendering of the generated Mermaid diagram (if requested). You can edit the code directly to refine the chart.
+SudoDocs can generate SVG architecture diagrams based on your input context.
+
+* **Mode A (Auto)**: SudoDocs analyzes the text and codebase to generate a feature flow diagram from scratch.
+* **Mode B (Update)**: Upload an existing system diagram image. SudoDocs redraws the diagram and highlights the new feature components in green.
+
+## 3. Export Drafts
+
+Once the AI generates the draft, you can push the content to your preferred platform.
+* **Push to GDoc**: Exports the content to Google Docs, preserving headers and table formats. 
+* **Push to Git**: Opens a Pull Request in your target documentation repository.
+* **Download**: Export locally as Markdown, RST, AsciiDoc, or Word (.docx).

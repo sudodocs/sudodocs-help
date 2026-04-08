@@ -19,9 +19,9 @@ const sidebars = {
         'user-guide/single-note',
         'user-guide/feature-author',
         'user-guide/api-readiness',
-        'user-guide/reference-docs',
         'user-guide/doc-drift',
         'user-guide/chat',
+        'user-guide/converter',
       ],
     },
 

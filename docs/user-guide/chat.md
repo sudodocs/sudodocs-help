@@ -1,17 +1,25 @@
-# Chat with Docs (Product Assistant)
+# DocOps Assistant
 
-The Product Assistant allows you to query your entire knowledge base using natural language. It indexes all synced code and documentation repositories to provide accurate, context-aware answers.
+The DocOps Assistant is your global Retrieval-Augmented Generation (RAG) workspace. Query your codebase, draft new topics, and enforce style guides.
 
-## Starting a Chat
+## Chat Modes
 
-1.  On the **Project Dashboard**, click **Ask** on the **Product Assistant** card.
-2.  Type your question in the chat bar (e.g., ""How does the authentication flow work?"" or ""What are the prerequisites for the new export feature?"").
-3.  The AI retrieves relevant snippets from your synced repositories and generates an answer citing the specific source files.
+Select a mode to define the AI's behavior:
 
-## Strategic Content Planning
+* **Discuss**: Ask questions about the codebase or documentation. The AI treats code as the source of truth and cites file paths.
+* **Author**: Generate net-new documentation based on your prompt and context.
+* **Rewrite**: Paste an existing draft and instruct the AI to fix technical gaps and reformat it.
 
-You can use the assistant to plan documentation updates:
+## Multimodal Analysis
 
-* **Gap Analysis**: Ask ""Do we have documentation for the SSO configuration?"" to quickly verify coverage.
-* **Impact Analysis**: Ask ""Which pages mention the 'legacy_api' parameter?"" to find pages that need updating when a feature is deprecated.
-* **Drafting**: Ask ""Write a draft introduction for the billing API based on the code"" to get a starting point for a new topic.
+You can upload context files directly into the chat interface for the AI to analyze alongside your prompt.
+
+* **Text Documents**: PDF, TXT, MD.
+* **Visuals & Media**: JPG, PNG, MP4, MP3.
+
+## Output Formatting
+
+Define the exact syntax the AI uses to generate responses. SudoDocs supports:
+* Markdown (`.md`)
+* reStructuredText (`.rst`)
+* AsciiDoc (`.adoc`)

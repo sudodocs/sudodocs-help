@@ -1,14 +1,23 @@
-# Technical Drift Audit (Deprecated)
+# Manage the Doc PR Inbox
 
-> **Note:** This feature has been deprecated.
+The Doc PR Inbox allows technical writers to review, edit, and assign automated documentation suggestions generated directly from engineering Pull Requests.
 
-The standalone Technical Drift Audit feature has been superseded by the new **Doc PR Inbox**.
+## Triage Suggestions
 
-The functionality for comparing source code against documentation is now integrated into the automated suggestion workflow for incoming code pull requests. This provides a more proactive and real-time approach to preventing documentation drift.
+When an engineer merges a Pull Request, SudoDocs generates an action item in your inbox.
 
-### 🔄 Latest Engineering Updates
+1. Open the **Doc PR Inbox**.
+2. Review the suggested target file path and the AI-generated draft.
+3. In the assignment panel, input the **Target Release**, designate an **Assignee**, and apply a **Product Tag** (e.g., Auth, API).
+4. Click **Approve**. 
 
-The documentation should be updated to reflect the specific user-facing changes implemented for the deprecation of the Technical Drift Audit feature.
+> Triaged suggestions appear in the assigned Release Dashboard for final review.
 
-- The user interface at `/workspace/audit` has been removed. Users attempting to navigate to this URL will now see a message stating, "The Doc Drift feature has been upgraded. Please use the new Doc PR Inbox," and will be automatically redirected to the main workspace.
-- The associated API endpoints for running (`/workspace/audit/run`), saving (`/workspace/audit/save`), and deleting (`/workspace/audit/delete`) audit reports have been disabled. They will no longer perform any action and will return an error or redirect.
+## Sync and Push Updates
+
+Writers can push approved documentation directly back to the Git repository.
+
+1. Open the **Assigned Doc PRs** panel in your Release Dashboard.
+2. Click **Review & Push** on a triaged item.
+3. *(Optional)* Click **Sync Latest Code** to fetch new commits from GitHub and append missing updates to your draft.
+4. Select the target integration, define the file path, and click **Push PR**.
