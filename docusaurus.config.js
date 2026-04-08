@@ -49,6 +49,10 @@ const config = {
     ],
   ],
 
+  plugins: [
+    '@signalwire/docusaurus-plugin-llms-txt',
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
