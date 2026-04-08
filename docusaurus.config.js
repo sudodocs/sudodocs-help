@@ -50,7 +50,14 @@ const config = {
   ],
 
   plugins: [
-    '@signalwire/docusaurus-plugin-llms-txt',
+    [
+      '@signalwire/docusaurus-plugin-llms-txt',
+      {
+        content: {
+          enableLlmsFullTxt: true, // This enables the full-text generation
+        },
+      },
+    ],
   ],
 
   themeConfig:
