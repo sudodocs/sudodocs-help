@@ -63,10 +63,10 @@ const config = {
     [
       '@signalwire/docusaurus-plugin-llms-txt',
       {
-        title: 'SudoDocs Help',
-        summary: 'Documentation Workflow, Automated!',
+        siteTitle: 'SudoDocs Help',
+        siteDescription: 'Automates the documentation workflows for technical writers and lean product teams.',
         content: {
-          enableLlmsFullTxt: true, // This enables the full-text generation
+          enableLlmsFullTxt: true,
         },
       },
     ],
