@@ -1,6 +1,6 @@
 # Configure Single Sign-On (SSO)
 
-Enterprise organizations can enforce authentication through identity providers like Okta, Azure AD, or Auth0 using OpenID Connect (OIDC)[cite: 1180]. [cite_start]Single Sign-On is strictly an Enterprise feature.
+Enterprise organizations can enforce authentication through identity providers like Okta, Azure AD, or Auth0 using OpenID Connect (OIDC). Single Sign-On is strictly an Enterprise feature.
 
 ## Prerequisites
 
