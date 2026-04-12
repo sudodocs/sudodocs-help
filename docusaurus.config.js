@@ -11,15 +11,9 @@ const config = {
   // 1. Font Loader
   stylesheets: [
     'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap',
-  ],
-
-  headTags: [
     {
-      tagName: 'link',
-      attributes: {
-        rel: 'llms-txt',
-        href: '/llms.txt',
-      },
+      href: 'https://docs.sudodocs.com/llms.txt',
+      rel: 'llms-txt',
     },
   ],
 
