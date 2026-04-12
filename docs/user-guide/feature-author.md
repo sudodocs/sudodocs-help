@@ -2,21 +2,21 @@
 
 Author comprehensive feature documentation using Jira tickets, codebase context, and visual diagrams.
 
-## 1. Import Source Context
+## Import Source Context
 
 You can import engineering context using two methods:
 
 * **Fetch from Jira**: Enter a valid Jira ticket key (e.g., PROJ-1234) to automatically import the summary and description.
 * **Start from Blank**: Manually enter the feature summary and technical details.
 
-## 2. Generate Architecture Diagrams
+## Generate Architecture Diagrams
 
 SudoDocs can generate SVG architecture diagrams based on your input context.
 
 * **Mode A (Auto)**: SudoDocs analyzes the text and codebase to generate a feature flow diagram from scratch.
 * **Mode B (Update)**: Upload an existing system diagram image. SudoDocs redraws the diagram and highlights the new feature components in green.
 
-## 3. Export Drafts
+## Export Drafts
 
 Once the AI generates the draft, you can push the content to your preferred platform.
 
