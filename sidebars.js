@@ -2,30 +2,6 @@
 const sidebars = {
   tutorialSidebar: [
     /* -------------------------------------------------------
-       1. USER GUIDE SECTION
-       ------------------------------------------------------- */
-    {
-      type: 'category',
-      label: '👤 User Tasks',
-      collapsible: true,
-      collapsed: false, // Keep open by default (optional)
-      link: {
-        type: 'doc',
-        id: 'user-guide/index', // This links the "User Guide" text to index.md
-      },
-      items: [
-        // The list below defines the EXACT order of topics
-        'user-guide/release-composer',
-        'user-guide/single-note',
-        'user-guide/feature-author',
-        'user-guide/api-readiness',
-        'user-guide/doc-drift',
-        'user-guide/chat',
-        'user-guide/converter',
-      ],
-    },
-
-    /* -------------------------------------------------------
        2. ADMIN GUIDE SECTION
        ------------------------------------------------------- */
     {
@@ -48,23 +24,28 @@ const sidebars = {
     },
 
     /* -------------------------------------------------------
-       3. API GUIDE SECTION
+       1. USER GUIDE SECTION
        ------------------------------------------------------- */
-    /*{
+    {
       type: 'category',
-      label: '⚡ API Reference',
+      label: '👤 User Tasks',
       collapsible: true,
-      collapsed: true,
+      collapsed: false, // Keep open by default (optional)
       link: {
         type: 'doc',
-        id: 'api/index', // Links "API Guide" text to index.md
+        id: 'user-guide/index', // This links the "User Guide" text to index.md
       },
       items: [
-        // Since you only have petstore.yaml for now, we leave this empty
-        // or add specific sub-pages if you create them later.
+        // The list below defines the EXACT order of topics
+        'user-guide/release-composer',
+        'user-guide/single-note',
+        'user-guide/feature-author',
+        'user-guide/api-readiness',
+        'user-guide/doc-drift',
+        'user-guide/chat',
+        'user-guide/converter',
       ],
     },
-    */
   ],
 };
 
