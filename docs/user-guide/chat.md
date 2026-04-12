@@ -20,6 +20,7 @@ You can upload context files directly into the chat interface for the AI to anal
 ## Output Formatting
 
 Define the exact syntax the AI uses to generate responses. SudoDocs supports:
+
 * Markdown (`.md`)
 * reStructuredText (`.rst`)
 * AsciiDoc (`.adoc`)

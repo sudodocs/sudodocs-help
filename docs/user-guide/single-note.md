@@ -7,9 +7,11 @@ The Single Note Composer is designed for creating a standalone, polished release
 1.  Navigate to your **Project Dashboard** and click **Compose** on the **Release Composer (Single)** card.
 2.  (Optional) **Code Verification**: Select a repository from the dropdown to allow the AI to verify the ticket against the actual code changes.
 3.  **Import Source**:
+
     * **Fetch from Jira**: Enter the **Jira Key** (e.g., `PROJ-123`) and click **Fetch Data**. This auto-fills the summary and description.
     * **Start from Blank**: Manually enter the **Feature Summary** and **Technical Description**.
 4.  **Entry Type**: Select the category for the note:
+
     * **Feature / Enhancement**: Writes a benefit-focused summary.
     * **Bug Fix**: Writes a concise ""Fixed an issue..."" entry.
     * **Known Issue**: Writes an issue description with a workaround.

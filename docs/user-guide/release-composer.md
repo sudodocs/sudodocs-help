@@ -21,6 +21,7 @@ If you do not have a direct Jira connection, you can upload CSV exports.
 1.  On the **Release Composer** page, click the **Manual (CSV)** button.
 2.  Click **Choose File** for the corresponding category (e.g., **Stories CSV**, **Bugs CSV**).
 3.  Select the CSV file from your computer.
+
     * *Note*: Ensure your CSV headers match the mappings configured in the Knowledge Base settings (e.g., Summary, Description, Key).
 4.  Click **Compose**.
 
@@ -30,6 +31,7 @@ Once generation is complete, you will be redirected to the draft view.
 
 1.  Review the generated Markdown content in the editor.
 2.  Use the toolbar buttons to export your notes:
+
     * **Copy Markdown**: Copies the raw text to your clipboard.
     * **Download Word**: Downloads a formatted `.docx` file.
     * **Create Google Doc**: Exports the content directly to a new Google Doc in your connected account.

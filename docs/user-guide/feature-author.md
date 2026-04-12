@@ -19,6 +19,7 @@ SudoDocs can generate SVG architecture diagrams based on your input context.
 ## 3. Export Drafts
 
 Once the AI generates the draft, you can push the content to your preferred platform.
+
 * **Push to GDoc**: Exports the content to Google Docs, preserving headers and table formats. 
 * **Push to Git**: Opens a Pull Request in your target documentation repository.
 * **Download**: Export locally as Markdown, RST, AsciiDoc, or Word (.docx).

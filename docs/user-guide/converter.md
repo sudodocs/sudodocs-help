@@ -8,6 +8,7 @@ Use the Universal Format Converter to instantly translate text between formats w
 
 1. Navigate to **Global Tools > Universal Converter**.
 2. Under the **Universal Format Converter** section, select your **Input Format**:
+
    * Markdown (`.md`)
    * reStructuredText (`.rst`)
    * AsciiDoc (`.adoc`)
@@ -24,6 +25,7 @@ SudoDocs applies strict anti-hallucination rules to this tool: it will only extr
 
 1. Under the **API / Helm to Docs** section, enter a **Document Title**.
 2. Select your **Source Type**:
+
    * **OpenAPI / Swagger**: Accepts JSON or YAML files. The AI will group endpoints by tags and create tables for parameters (Name, Type, Required, Description).
    * **Helm Chart**: Accepts `values.yaml` files. The AI will extract variables, parse inline comments for descriptions, and log default values.
 3. Click **Upload Spec File** to attach your configuration document.
