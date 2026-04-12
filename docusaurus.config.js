@@ -48,10 +48,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/sudodocs/sudodocs-help/tree/main/',
         },
-        blog: {
-          showReadingTime: true,
-          editUrl: 'https://github.com/sudodocs/sudodocs-help/tree/main/',
-        },
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -89,6 +86,11 @@ const config = {
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'Documentation',
+          },
+          {
+            href: 'https://hackernoon.com/u/ssugandh?tab=stories',
+            label: 'Blog',
+            position: 'left',
           },
           {
             href: 'https://app.sudodocs.com',
