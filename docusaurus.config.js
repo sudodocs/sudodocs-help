@@ -11,10 +11,6 @@ const config = {
   // 1. Font Loader
   stylesheets: [
     'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap',
-    {
-      href: 'https://docs.sudodocs.com/llms.txt',
-      rel: 'llms-txt',
-    },
   ],
 
   // 2. Production URL
@@ -45,6 +41,9 @@ const config = {
         blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        sitemap: {
+          ignorePatterns: ['/404.html', '/'],
         },
       }),
     ],
@@ -104,6 +103,11 @@ const config = {
             position: 'right',
             className: 'header-youtube-link',
             'aria-label': 'SudoDocs TV',
+          },
+          {
+            type: 'html',
+            position: 'right',
+            value: '<link rel="llms-txt" href="/llms.txt" /><a href="https://buildwithfern.com/agent-score" target="_blank" rel="noopener noreferrer" title="100% Fern Agent Score"><img src="https://img.shields.io/badge/Fern_Agent_Score-100%25-10b981?style=for-the-badge" alt="100% Fern Agent Score" style="display: flex; transform: translateY(4px);" /></a>',
           },
         ],
       },
