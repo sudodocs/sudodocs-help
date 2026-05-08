@@ -2,7 +2,7 @@
 
 This guide provides instructions for System Administrators to configure, manage, and secure the SudoDocs workspace.
 
-## In This Section
+You can configure features and account in the following ways:
 
 * [Repositories](connect-repos.md): Add and ingest Git, Sitemap, or LLMS.TXT as repositories in SudoDocs.
 * [Configure Doc PR Inbox Webhook](doc-drift.md): Configure your GitHub Webhook settings to connect SudoDocs.
