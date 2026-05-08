@@ -1,6 +1,6 @@
 # DocOps Assistant
 
-The DocOps Assistant is your global Retrieval-Augmented Generation (RAG) workspace. Query your codebase, draft new topics, and enforce style guides.
+The DocOps Assistant is your global Retrieval-Augmented Generation (RAG) workspace. Query your codebase, draft new topics, enforce style guides, generate release notes, or find documentation gaps.
 
 ## Chat Modes
 
@@ -9,6 +9,8 @@ Select a mode to define the AI's behavior:
 * **Discuss**: Ask questions about the codebase or documentation. The AI treats code as the source of truth and cites file paths.
 * **Author**: Generate net-new documentation based on your prompt and context.
 * **Rewrite**: Paste an existing draft and instruct the AI to fix technical gaps and reformat it.
+* **Release Note**: Generate a clear release note entry for a bug fix, feature, or known limitation from Jira (or any other technical text description) details based on your internal style guide.
+* **Analyze Doc Gaps**: Type a specific feature name to perform a direct comparative analysis between your codebase and published documentation. The AI cross-references both sources to uncover undocumented UI workflows, missing user features, and technical drift (where the docs no longer match the code).
 
 ## Multimodal Analysis
 

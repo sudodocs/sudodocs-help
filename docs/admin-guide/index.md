@@ -4,9 +4,10 @@ This guide provides instructions for System Administrators to configure, manage,
 
 ## In This Section
 
-* [Add and Ingest Repositories: Git, Sitemap, or LLMS.TXT](connect-repos.md)
-* [Configure Knowledge Base and Doc Styles](kb-config.md)
-* [Connect Services: Jira and Slack](integrations.md)
-* [Configure Doc Drift Webhook](doc-drift.md)
-* [Setup Single Sign-On for Access](sso-setup.md)
-* [Manage Users](users.md)
+* [Repositories](connect-repos.md): Add and ingest Git, Sitemap, or LLMS.TXT as repositories in SudoDocs.
+* [Configure Doc PR Inbox Webhook](doc-drift.md): Configure your GitHub Webhook settings to connect SudoDocs.
+* [Knowledge Base](kb-config.md): Configure knowledge base to use SudoDocs for documentation purposes.
+* [Users](users.md): Manage users in this section. You can add or remove users and assign user roles.
+* [Connect Services](integrations.md): Connect Jira and Slack to SudoDocs.
+* [Security & SSO](sso-setup.md): Setup Single Sign-On for accessing SudoDocs. 
+* [Settings](settings.md): Manage your subscription and account.
