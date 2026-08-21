@@ -21,6 +21,7 @@ const sidebars = {
         'admin-guide/integrations',
         'admin-guide/sso-setup',
         'admin-guide/settings',
+        'admin-guide/cli-headless-api',
       ],
     },
 

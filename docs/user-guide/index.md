@@ -8,7 +8,7 @@ You can use the features in two ways:
 
     * [DocOps Assistant](chat.md): Bridges the gap between your engineering codebase and your published documentation. By querying your synced code and documentation repositories in real-time, it acts as a technical co-pilot that understands your actual product logic. It streamlines your entire documentation lifecycle—from answering highly technical codebase queries and generating first drafts, to automating release notes and proactively auditing your site for technical drift.
     * [Universal Converter](converter.md): Translates documentation between different markup languages
-    * [Doc PR Inbox](doc-drift.md): Generates automated documentation suggestions directly from engineering pull/merge requests.
+    * [Docflows](doc-drift.md): Generates automated documentation suggestions directly from engineering pull/merge requests.
     * [Diagram Generator](diagram-gen.md): Builds brand-compliant `Mermaid.js` sequence diagrams based on natural language descriptions or visual reference images.
     * [API Readiness](api-readiness.md): Validates your OpenAPI Specifications (OAS) against industry standards and your own style guide.
 
@@ -16,4 +16,4 @@ You can use the features in two ways:
 
     * [Compose Release Notes](release-composer.md): Generate consolidated changelogs from Jira or CSVs.
     * [Author a Feature](feature-author.md): Draft comprehensive feature documentation.
-    * [Assigned PRs](assign-pr.md): Allows you to review, edit, and finalize AI-generated documentation drafts before pushing them to production.
+    * [Assigned Docflows](assign-pr.md): Allows you to review, edit, and finalize AI-generated documentation drafts before pushing them to production.

@@ -18,8 +18,8 @@ const config = {
   baseUrl: '/',
 
   // 3. GitHub Deployment Config
-  organizationName: 'sudodocs', 
-  projectName: 'sudodocs-help', 
+  organizationName: 'sudodocs',
+  projectName: 'sudodocs-help',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -112,7 +112,7 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark', 
+        style: 'dark',
         links: [], // Empty array = No links, no columns
         copyright: `Copyright © ${new Date().getFullYear()} SudoDocs.`,
       },

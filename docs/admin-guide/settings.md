@@ -10,6 +10,16 @@ This section provides a real-time overview of your current billing status (e.g.,
 
 > **Note**: Canceling your subscription does not immediately lock your account. You will retain full access to your Pro or Enterprise features until the end of your current billing period. Once the period expires, your workspace will be downgraded, and premium features will be locked.
 
+## API Keys
+
+The Settings tab also lets you generate API keys for the [SudoDocs CLI and Headless API](cli-headless-api.md), used for scripting doc syncs, spec conversions, and Docflows suggestions from CI/CD pipelines.
+
+1. On the **Settings** tab, find the **API Keys** card.
+2. Enter a name for the key (e.g., "CI Pipeline") and click **Generate New Key**.
+3. Copy the key immediately - it is shown only once and cannot be retrieved again later.
+
+> **Note**: Existing keys are listed with their name, prefix, and last-used time, but never their full value. Click **Revoke** next to a key to invalidate it immediately - anything using that key (CLI, CI job, script) stops working right away.
+
 ## Delete Account
 
 The Delete Account action is a permanent, irreversible operation that completely erases your organization's footprint from SudoDocs.

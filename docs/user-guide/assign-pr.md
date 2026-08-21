@@ -1,10 +1,10 @@
-# Assigned Doc PRs
+# Assigned Docflows
 
-The Assigned Doc PRs module within the Project Dashboard is where your documentation team reviews, edits, and finalizes AI-generated documentation drafts before pushing them to production. While the global **Doc PR Inbox** is used for triaging new suggestions, this module focuses strictly on the updates assigned to your specific release project.  
+The Assigned Docflows module within the Project Dashboard is where your documentation team reviews, edits, and finalizes AI-generated documentation drafts before pushing them to production. While the global **Docflows** page is used for triaging new suggestions, this module focuses strictly on the updates assigned to your specific release project.  
 
 ## View Your Assigned Queue
 
-To see your workload for a specific release, click **View Assigned PRs** on the Project Dashboard. 
+To see your workload for a specific release, click **View Assigned Docflows** on the Project Dashboard. 
 
 This opens a queue displaying:  
 
