@@ -45,3 +45,25 @@ For connected Jira instances, follow these steps in your Jira account:
 7.  Click **Create**.
 
 This configuration will notify the system when Jira tickets are moved to a "Done", "Resolved", or "Closed" status, triggering a documentation suggestion.
+
+## Configure Preview Environments for Screenshot Docflows
+
+SudoDocs can automatically capture screenshots from a pull request's live preview deployment and include those visuals directly in the generated Docflows suggestions. This allows the AI to reference actual UI renderings instead of guessing design elements.
+
+### Configure preview environments
+
+To configure screenshots for your code repository:
+
+1. Navigate to the **Admin Dashboard** and select the **Repositories** tab.
+2. Find the repository integration in the **Active Repositories** list and click **Preview Settings**.
+3. Configure the following parameters in the settings modal:
+   * **Preview URL Pattern**: The base URL format for your pull request preview environments (e.g., `https://pr-{pr_number}.preview.example.com`). You can use the tokens `{pr_number}`, `{branch}`, and `{sha}`. Leaving this blank disables screenshot collection.
+   * **Access Method**: Select the authentication mechanism used to bypass login screens or access-control blocks on your preview builds:
+     * **None (publicly reachable)**: Use this for open preview links.
+     * **HTTP Basic Auth**: Provide a **Username** and **Password** for standard HTTP authentication.
+     * **Custom Header**: Specify a **Header Name** and **Header Value** (e.g., `x-vercel-protection-bypass` for Vercel deployment protections).
+   * **Route Map**: Map specific files in your codebase to UI routes to screenshot. Provide one mapping rule per line using the format `glob_pattern => /route1, /route2`. For example:
+     ```text
+     templates/admin_dashboard.html => /admin/dashboard, /admin/settings
+     ```
+4. Click **Save Preview Settings** to persist the configuration.
