@@ -95,8 +95,38 @@ sudodocs docflow \
 | `--pr-title` | Yes | The PR title. |
 | `--pr-body` | Yes | The PR description/body. |
 | `--pr-author` | Yes | The PR author's username. |
+| `--pr-branch` | No | Head branch name. Required for Screenshot Docflows if your preview URL pattern uses `{branch}`. |
+| `--pr-sha` | No | Head commit SHA. Required for Screenshot Docflows if your preview URL pattern uses `{sha}`. |
+| `--screenshot` | No | Attach a locally captured screenshot to offload browser processing. Format as `ROUTE=PATH`. Repeatable. |
 
 Requires `integration_id` to be set in `sudodocs.yaml` - there is no environment variable for it, since it identifies which connected repository the suggestion belongs to.
+
+---
+
+## CI-Offload for Screenshots
+
+When your preview or staging environments are isolated behind a corporate VPN, protected by complex multi-factor SSO, or otherwise unreachable by SudoDocs' public Cloud Run workers, you can capture screenshots inside your own CI environment and upload them directly.
+
+By passing the repeatable `--screenshot` flag to the `sudodocs docflow` command, you instruct SudoDocs to bypass its own Playwright screenshot stage entirely and trust the provided image files.
+
+```bash
+sudodocs docflow \
+  --pr-number 128 \
+  --pr-title "Update analytics panel" \
+  --pr-body "Refactors dashboard widgets." \
+  --pr-author "jsmith" \
+  --screenshot /dashboard=./screenshots/dashboard.png \
+  --screenshot /settings=./screenshots/settings.png
+```
+
+### Example Workflow File
+
+An example GitHub Actions workflow is provided at `sudodocs-cli/examples/github-actions-ci-offload-screenshots.yml` inside the SudoDocs CLI repository package. This workflow displays how to:
+
+1. Check out code and set up Python.
+2. Install the `sudodocs-cli` package and Playwright.
+3. Spin up local or private browser automation to log in and capture screenshots of specific routes.
+4. Call `sudodocs docflow` with the `--screenshot` arguments to upload and attach those images to the newly generated suggestion.
 
 ## Headless API
 
