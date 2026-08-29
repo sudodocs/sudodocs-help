@@ -17,6 +17,7 @@ const sidebars = {
         'admin-guide/connect-repos',
         'admin-guide/doc-drift',
         'admin-guide/kb-config',
+        'admin-guide/doc-team-roles',
         'admin-guide/users',
         'admin-guide/integrations',
         'admin-guide/sso-setup',
