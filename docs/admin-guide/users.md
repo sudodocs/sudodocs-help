@@ -29,7 +29,7 @@ Seat limits are determined by your active subscription plan.
 
 ## Expand Seat Limits
 
-If your organization requires additional writers on a Pro or Annual plan, you can purchase seat add-ons dynamically.
+If your organization requires additional writers on a Pro or Annual plan, you can purchase seat add-ons dynamically. Enterprise's seat limit (up to 25) is fixed and not expandable via add-on.
 
 1. Navigate to the **Users** tab.
 2. Under **Team Seats**, click **Add Seat ($4.99/mo)**.

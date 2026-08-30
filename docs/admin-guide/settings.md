@@ -10,6 +10,8 @@ This section provides a real-time overview of your current billing status (e.g.,
 
 > **Note**: Canceling your subscription does not immediately lock your account. You will retain full access to your Pro or Enterprise features until the end of your current billing period. Once the period expires, your workspace will be downgraded, and premium features will be locked.
 
+Pro runs on SudoDocs' platform Gemini key. Enterprise can instead bring its own LLM key (OpenAI, Claude, DeepSeek, or a custom endpoint) for data trust and residency - see [LLM Provider](llm-provider.md) for setup and how the transition from the platform key works.
+
 ## API Keys
 
 The Settings tab also lets you generate API keys for the [SudoDocs CLI and Headless API](cli-headless-api.md), used for scripting doc syncs, spec conversions, and Docflows suggestions from CI/CD pipelines.
