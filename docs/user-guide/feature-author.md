@@ -4,13 +4,14 @@ Author comprehensive feature documentation from a Jira ticket, a linked engineer
 
 ## Import Source Context
 
-You can start a draft from any combination of the following:
+Choose one of four modes for **Import Source** - each reveals only the fields it needs:
 
-* **Fetch from Jira**: Enter a valid Jira ticket key (e.g., PROJ-1234) to automatically import the summary and description.
-* **Start from Blank**: Manually enter the feature summary and technical details yourself.
-* **Link a PR only, no Jira ticket needed**: Under **Code Verification**, select the repository and enter the branch name, then leave **Feature Summary** blank. SudoDocs looks up that branch's open (or merged) pull request and uses its title and description as the summary - useful when the work was never tracked in Jira, or you just want to document straight from the code.
+* **Jira**: Type a Jira key or part of a summary into the search box. As you type, SudoDocs looks up matching issues (same idea as linking an issue inside a Jira ticket) - pick the right one from the dropdown to import its summary and description.
+* **PR**: Pick a connected **Repository**, then pick one of its open or draft pull requests from the second dropdown (drafts are labeled). SudoDocs uses that PR's title and description as the summary, and pulls its code diff in as supporting evidence - no Jira ticket required.
+* **Jira + PR**: Search and select a Jira issue the same way as **Jira** mode. SudoDocs then automatically looks up pull requests associated with that issue across every repository your org has connected, and lists all of them (a ticket can have more than one linked PR, e.g. a frontend and a backend change) - you still explicitly pick which one to use. If a matching PR turns up in a repository that isn't connected to SudoDocs yet, it's shown greyed out with a note to connect that repository under **Admin Dashboard > Repositories** first.
+* **Start from Blank**: Manually enter the feature summary and technical details yourself - no Jira or PR link at all.
 
-If you provide both a Jira summary and a linked branch, SudoDocs uses the Jira summary and pulls the branch's code diff in as supporting evidence. You must provide at least a Feature Summary or a linked branch - SudoDocs has nothing to draft from otherwise.
+You must provide at least a Feature Summary or a linked repository/PR - SudoDocs has nothing to draft from otherwise.
 
 Before submitting, choose a **Target Format** for the draft: Markdown, reStructuredText, AsciiDoc, HTML, MDX, or DITA XML. The Writer and Editor both follow the syntax conventions of whichever format you pick.
 
