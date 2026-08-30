@@ -2,7 +2,7 @@
 
 Every documentation draft SudoDocs produces - whether you started it yourself with **Author a Feature** or it arrived automatically through **Docflows** - passes through three roles before a human ever sees it:
 
-* **Information Architect**: Decides where the content belongs (a new page, or an update to an existing one), audits your existing documentation for anything the change makes outdated, and sets the section outline the Writer must follow.
+* **Information Architect**: Decides where the content belongs (a new page, or an update to an existing one), audits your existing documentation for anything the change makes outdated, sets the section outline the Writer must follow, and decides whether the change is significant enough to warrant a generated architecture diagram (see [Author a Feature](../user-guide/feature-author.md#generate-architecture-diagrams)). This diagram judgment isn't part of the editable instructions below - it's a fixed part of the role.
 * **Technical Writer**: Drafts the content against that outline.
 * **Editor**: Reviews the Writer's draft with fresh eyes - it never sees the Writer's own instructions, only the finished draft, the outline it should match, and the same source material the Writer had. It decides whether an issue is **blocking** (sends the draft back to the Writer for one more pass) or a **suggestion** (recorded, doesn't hold up the draft).
 

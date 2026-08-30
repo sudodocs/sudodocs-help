@@ -42,6 +42,7 @@ const sidebars = {
         // The list below defines the EXACT order of topics
         'user-guide/chat',
         'user-guide/converter',
+        'user-guide/feature-author-vs-docflows',
         'user-guide/doc-drift',
         'user-guide/diagram-gen',
         'user-guide/api-readiness',

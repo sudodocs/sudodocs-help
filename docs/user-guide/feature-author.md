@@ -12,6 +12,8 @@ You can start a draft from any combination of the following:
 
 If you provide both a Jira summary and a linked branch, SudoDocs uses the Jira summary and pulls the branch's code diff in as supporting evidence. You must provide at least a Feature Summary or a linked branch - SudoDocs has nothing to draft from otherwise.
 
+Before submitting, choose a **Target Format** for the draft: Markdown, reStructuredText, AsciiDoc, HTML, MDX, or DITA XML. The Writer and Editor both follow the syntax conventions of whichever format you pick.
+
 ## How Your Draft Gets Reviewed
 
 Once you submit the form, your draft doesn't go straight to a blank page - it goes through the same three-role pipeline every SudoDocs-generated draft goes through (see [Doc Team Roles](../admin-guide/doc-team-roles.md) for how your admin can customize each role):
@@ -45,10 +47,13 @@ Click **Edit Draft** from the Pipeline Review page (or open a draft from the sid
 
 ## Generate Architecture Diagrams
 
-SudoDocs can generate SVG architecture diagrams based on your input context.
+Every draft's Information Architect also decides whether the feature is significant enough to warrant a Mermaid architecture/sequence diagram - a new subsystem, a multi-service integration, or a complex sequence of interactions, not a minor UI tweak or a small bug fix. When it decides yes, a diagram is generated automatically alongside the outline, with no action needed from you.
 
-* **Mode A (Auto)**: SudoDocs analyzes the text and codebase to generate a feature flow diagram from scratch.
-* **Mode B (Update)**: Upload an existing system diagram image. SudoDocs redraws the diagram and highlights the new feature components in green.
+You can also force one yourself: check **Generate Architecture Diagram** when creating the draft. Your request is never overridden by the Information Architect's own judgment - checking the box always produces a diagram, even for a change it wouldn't have flagged on its own.
+
+If the target file already has a diagram in it, SudoDocs updates that diagram in place - incorporating your new feature while preserving what's still accurate - rather than always starting from scratch. You can also upload a reference image of an existing diagram (e.g. a screenshot) when creating the draft; SudoDocs redraws its logic as Mermaid, incorporating the new feature.
+
+The diagram lives in its own tab in the classic editor, alongside a live preview (rendered from the generated Mermaid code) and options to download the raw `.mmd` source or the rendered `.svg`.
 
 ## Reassign to a Different Release
 
