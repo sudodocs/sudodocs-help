@@ -28,11 +28,18 @@ Once a diagram is successfully generated and rendered, users can export it in mu
 
 ## Feature Draft Integration
 
-The Diagram Generator is also seamlessly integrated into the feature authoring workflow. When creating a new feature draft, users can check the **Generate Architecture Diagram** option.  
+The same generation logic is also built into [Author a Feature](feature-author.md), reused rather than duplicated:
 
-* Mode A (Auto): The AI automatically generates a feature flow diagram based on the Jira ticket and codebase context.  * Mode B (Update): Users can upload an existing system diagram, and the AI will redraw it to visually incorporate the new feature updates.  
+* **Automatic**: The Information Architect decides on its own whether the feature is significant enough to warrant a diagram, and generates one if so - no action needed from you.
+* **Manual override**: Check **Generate Architecture Diagram** when creating the draft to force one regardless of the Information Architect's own judgment.
+* **Update, not just create**: If the target file already contains a diagram, SudoDocs updates it in place - preserving what's still accurate and incorporating the new feature - instead of always starting from scratch. You can also upload a reference image of an existing diagram; the AI redraws its logic as Mermaid, incorporating the new feature.
+
+## Docflows Integration
+
+[Docflows](doc-drift.md) uses this same generation logic too, fully automatically - there's no checkbox, since Docflows has no manual initiation step at all. If the Information Architect judges a suggestion significant enough, it generates or updates a diagram for the most relevant file as part of the same automated review that produces the rest of the suggestion.
 
 ## AI Credit Costs
 
-* Generating a diagram using only a text description costs `1` AI Credit.  
-* Generating a diagram using an attached reference image costs `2` AI Credits. 
+* Using the standalone Diagram Generator (this page): `1` AI Credit for a text-only description, `2` AI Credits with an attached reference image.
+* A diagram generated as part of an Author a Feature draft is included in that draft's overall credit cost - not charged separately.
+* A diagram generated as part of a Docflows suggestion adds a small additional charge on top of that suggestion's base cost, only when one is actually generated.
