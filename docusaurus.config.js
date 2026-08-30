@@ -81,7 +81,7 @@ const config = {
             label: 'Documentation',
           },
           {
-            href: 'https://hackernoon.com/u/ssugandh?tab=stories',
+            href: 'https://hackernoon.com/u/sudodocs',
             label: 'Blog',
             position: 'left',
           },
