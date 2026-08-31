@@ -6,7 +6,7 @@ The `sudodocs` CLI and the underlying Headless API let you trigger SudoDocs acti
 
 Every CLI command and API request authenticates with a Bearer token.
 
-1. Navigate to the **Admin Dashboard** and select the **Settings** tab.
+1. Navigate to the **Admin Dashboard** and select the **Account** tab.
 2. Under **API Keys**, enter a name for the key (e.g., "CI Pipeline") and click **Generate New Key**.
 3. Copy the key immediately - it is shown only once. See [Settings](settings.md#api-keys) for details on managing existing keys.
 

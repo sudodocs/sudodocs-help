@@ -1,6 +1,6 @@
 # Settings
 
-The Settings tab within the Admin Dashboard allows system administrators to manage their organization's billing status and control the data lifecycle of their SudoDocs workspace.
+The Account tab within the Admin Dashboard allows system administrators to manage their organization's billing status and control the data lifecycle of their SudoDocs workspace.
 
 ## Subscription Management
 
@@ -10,13 +10,13 @@ This section provides a real-time overview of your current billing status (e.g.,
 
 > **Note**: Canceling your subscription does not immediately lock your account. You will retain full access to your Pro or Enterprise features until the end of your current billing period. Once the period expires, your workspace will be downgraded, and premium features will be locked.
 
-Pro runs on SudoDocs' platform Gemini key. Enterprise can instead bring its own LLM key (OpenAI, Claude, DeepSeek, or a custom endpoint) for data trust and residency - see [LLM Provider](llm-provider.md) for setup and how the transition from the platform key works.
+Pro runs on SudoDocs' platform Gemini key. Enterprise can instead bring its own key - for text generation, embeddings & search, or both independently - for data trust and residency: see [Provider](llm-provider.md) for setup and how the transition from the platform key works.
 
 ## API Keys
 
-The Settings tab also lets you generate API keys for the [SudoDocs CLI and Headless API](cli-headless-api.md), used for scripting doc syncs, spec conversions, and Docflows suggestions from CI/CD pipelines.
+The Account tab also lets you generate API keys for the [SudoDocs CLI and Headless API](cli-headless-api.md), used for scripting doc syncs, spec conversions, and Docflows suggestions from CI/CD pipelines.
 
-1. On the **Settings** tab, find the **API Keys** card.
+1. On the **Account** tab, find the **API Keys** card.
 2. Enter a name for the key (e.g., "CI Pipeline") and click **Generate New Key**.
 3. Copy the key immediately - it is shown only once and cannot be retrieved again later.
 
@@ -38,7 +38,7 @@ Your active Paddle billing subscription is immediately canceled.
 
 Follow these steps to delete your account permanently:
 
-1. Navigate to the **Delete Account** inside the **Settings** tab.
+1. Navigate to the **Delete Account** inside the **Account** tab.
 
 2. Type your exact administrator email address into the confirmation box.
 

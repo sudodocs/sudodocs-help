@@ -6,7 +6,7 @@ Connect external tools to fetch data and push notifications.
 
 Connecting Jira allows you to import tickets directly into the Release Composer.
 
-1.  Go to **Admin Dashboard** > **Connect Services**.
+1.  Go to **Admin Dashboard** > **Services**.
 2.  Click **+ Add New Connection**.
 3.  In the **Service Provider** list, select **Atlassian Jira**.
 4.  Enter a **Connection Name** (e.g., "Corporate Jira").
@@ -20,7 +20,7 @@ Connecting Jira allows you to import tickets directly into the Release Composer.
 
 Connecting Slack allows users to push draft notes directly from Slack conversations.
 
-1.  Go to **Admin Dashboard** > **Connect Services**.
+1.  Go to **Admin Dashboard** > **Services**.
 2.  Click **+ Add New Connection**.
 3.  Select **Slack Workspace**.
 4.  Enter the required credentials from your Slack App:

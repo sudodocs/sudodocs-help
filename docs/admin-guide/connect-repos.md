@@ -38,3 +38,14 @@ After adding a repository, you must sync it to index the content into the Vector
 3.  Wait for the status to change to **Synced**.
 
 > **Note**: Initial sync times vary by repository size. A typical documentation repo (50-100 pages) takes 2-5 minutes. Large codebases may take longer. You can navigate away from the page while the sync runs in the background.
+
+## Automatic Sync Schedule
+
+Beyond clicking **Sync** manually and webhook-triggered Docflows suggestions (see [Configure Webhooks and Screenshot Settings for Docflows](doc-drift.md)), you can set a per-repository schedule so a repository's indexed content is periodically refreshed on its own - useful as a catch-all if a webhook event is ever missed, or if you'd simply rather not rely on remembering to click Sync.
+
+1. Locate the repository in the **Active Repositories** list.
+2. Click **Sync Schedule** (repositories with a schedule already set show a green **Auto-Sync: Nh** badge here instead).
+3. Choose a **Frequency**: Off (manual sync only), Daily (every 24 hours), Weekly (every 168 hours), Monthly (every 720 hours), or Custom (enter any interval in hours).
+4. Click **Save Schedule**.
+
+> **Note**: Sync Schedule isn't shown for spec/OpenAPI repositories - those don't need syncing the same way, since API Readiness reads the spec directly rather than from the Vector Database.

@@ -11,6 +11,6 @@ You can configure features and account in the following ways:
 * [Users](users.md): Manage users in this section. You can add or remove users and assign user roles.
 * [Connect Services](integrations.md): Connect Jira and Slack to SudoDocs.
 * [Security & SSO](sso-setup.md): Setup Single Sign-On for accessing SudoDocs. 
-* [LLM Provider](llm-provider.md): Bring your own LLM key (OpenAI, Claude, DeepSeek, or a custom endpoint) instead of the platform Gemini key.
-* [Settings](settings.md): Manage your subscription, account, and API keys.
+* [Provider](llm-provider.md): Bring your own key for text generation and/or embeddings & search (OpenAI, Claude, DeepSeek, Voyage AI, or a custom endpoint) instead of the platform Gemini key.
+* [Account](settings.md): Manage your subscription, account, and API keys.
 * [CLI & Headless API](cli-headless-api.md): Automate SudoDocs from the command line or CI/CD pipelines.

@@ -11,7 +11,7 @@ Each role's judgment is admin-configurable per organization, separately from you
 ## Edit Role Instructions
 
 1. Navigate to **Admin Dashboard**.
-2. Open the **Doc Team Roles** tab.
+2. Open the **Roles** tab.
 3. You'll see three boxes, one per role, each pre-filled with a greyed-out placeholder showing the built-in default. An empty box means that role is using the default - you don't need to fill in all three to customize one.
 4. Type your own instructions into any box to override the default for that role.
 5. Click **Save Role Instructions**.
