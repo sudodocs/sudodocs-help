@@ -37,7 +37,8 @@
   --glass-blur: blur(14px);
 
   /* Brand accent glow + grid-dot pattern color */
-  --brand-glow: rgba(8, 145, 178, 0.16);
+  --brand-glow: rgba(34, 211, 238, 0.45);
+  --button-glow: rgba(8, 145, 178, 0.25);
   --grid-dot-color: rgba(9, 9, 11, 0.10);
   --selection-color: rgba(8, 145, 178, 0.18);
 }
@@ -64,6 +65,7 @@ html[data-theme='dark'] {
   --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.55);
 
   --brand-glow: rgba(34, 211, 238, 0.3);
+  --button-glow: rgba(34, 211, 238, 0.35);
   --grid-dot-color: rgba(255, 255, 255, 0.14);
   --selection-color: rgba(34, 211, 238, 0.3);
 }
@@ -174,7 +176,7 @@ p, li, span {
 }
 .button:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px var(--brand-glow);
+  box-shadow: 0 4px 14px var(--button-glow);
 }
 
 /* Breadcrumbs (Top of doc page) */
