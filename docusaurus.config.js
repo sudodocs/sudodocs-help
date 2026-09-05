@@ -75,12 +75,6 @@ const config = {
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Documentation',
-          },
-          {
             href: 'https://hackernoon.com/u/sudodocs',
             label: 'Blog',
             position: 'left',
