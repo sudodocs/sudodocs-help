@@ -6,7 +6,15 @@ The `sudodocs` CLI and its underlying Headless API let you do everything on this
 
 ## Install the CLI
 
-> **TODO**: packaging and distribution for customers isn't finalized yet (e.g. PyPI package vs. another delivery mechanism). This section needs real install instructions once that's decided - don't publish this page with a placeholder here.
+```bash
+pip install sudodocs-cli
+```
+
+Verify it installed correctly:
+
+```bash
+sudodocs --help
+```
 
 ## Log In
 
