@@ -1,82 +1,105 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
-  tutorialSidebar: [
-    /* -------------------------------------------------------
-       2. ADMIN GUIDE SECTION
-       ------------------------------------------------------- */
+  saasSidebar: [
     {
       type: 'category',
-      label: '⚙️ Admin Tasks',
+      label: '📘 SudoDocs SaaS Guide',
       collapsible: true,
-      collapsed: true,
-      link: {
-        type: 'doc',
-        id: 'admin-guide/index', // Links "Admin Guide" text to index.md
-      },
+      collapsed: false,
       items: [
-        'admin-guide/connect-repos',
-        'admin-guide/doc-drift',
-        'admin-guide/kb-config',
-        'admin-guide/doc-team-roles',
-        'admin-guide/users',
-        'admin-guide/integrations',
-        'admin-guide/sso-setup',
-        'admin-guide/llm-provider',
-        'admin-guide/settings',
+        {
+          type: 'category',
+          label: '⚙️ Admin Tasks',
+          collapsible: true,
+          collapsed: true,
+          link: {
+            type: 'doc',
+            id: 'saas-guide/admin/index',
+          },
+          items: [
+            'saas-guide/admin/connect-repos',
+            'saas-guide/admin/doc-drift',
+            'saas-guide/admin/kb-config',
+            'saas-guide/admin/doc-team-roles',
+            'saas-guide/admin/users',
+            'saas-guide/admin/integrations',
+            'saas-guide/admin/sso-setup',
+            'saas-guide/admin/llm-provider',
+            'saas-guide/admin/settings',
+          ],
+        },
+        {
+          type: 'category',
+          label: '👤 User Tasks',
+          collapsible: true,
+          collapsed: false,
+          link: {
+            type: 'doc',
+            id: 'saas-guide/user/index',
+          },
+          items: [
+            'saas-guide/user/chat',
+            'saas-guide/user/converter',
+            'saas-guide/user/feature-author-vs-docflows',
+            'saas-guide/user/doc-drift',
+            'saas-guide/user/diagram-gen',
+            'saas-guide/user/api-readiness',
+            'saas-guide/user/release-composer',
+            'saas-guide/user/feature-author',
+            'saas-guide/user/assign-pr',
+          ],
+        },
       ],
     },
+  ],
 
-    /* -------------------------------------------------------
-       1. USER GUIDE SECTION
-       ------------------------------------------------------- */
+  cliSidebar: [
     {
       type: 'category',
-      label: '👤 User Tasks',
+      label: '💻 SudoDocs CLI Guide',
       collapsible: true,
-      collapsed: false, // Keep open by default (optional)
+      collapsed: false,
       link: {
         type: 'doc',
-        id: 'user-guide/index', // This links the "User Guide" text to index.md
+        id: 'cli-guide/getting-started',
       },
       items: [
-        // The list below defines the EXACT order of topics
-        'user-guide/chat',
-        'user-guide/converter',
-        'user-guide/feature-author-vs-docflows',
-        'user-guide/doc-drift',
-        'user-guide/diagram-gen',
-        'user-guide/api-readiness',
-        'user-guide/release-composer',
-        'user-guide/feature-author',
-        'user-guide/assign-pr',
-      ],
-    },
-
-    /* -------------------------------------------------------
-       3. CLI GUIDE SECTION (Enterprise) - mirrors Admin Tasks
-          and User Tasks 1:1, one page per dashboard equivalent
-       ------------------------------------------------------- */
-    {
-      type: 'category',
-      label: '💻 CLI Tasks',
-      collapsible: true,
-      collapsed: true,
-      link: {
-        type: 'doc',
-        id: 'cli-guide/index',
-      },
-      items: [
-        'cli-guide/connect-repos',
-        'cli-guide/doc-drift',
-        'cli-guide/kb-config',
-        'cli-guide/doc-team-roles',
-        'cli-guide/users',
-        'cli-guide/integrations',
-        'cli-guide/sso-setup',
-        'cli-guide/llm-provider',
-        'cli-guide/settings',
-        'cli-guide/converter',
-        'cli-guide/release-composer',
+        'cli-guide/getting-started',
+        {
+          type: 'category',
+          label: '⚙️ Admin Tasks',
+          collapsible: true,
+          collapsed: true,
+          link: {
+            type: 'doc',
+            id: 'cli-guide/admin/index',
+          },
+          items: [
+            'cli-guide/admin/connect-repos',
+            'cli-guide/admin/doc-drift',
+            'cli-guide/admin/kb-config',
+            'cli-guide/admin/doc-team-roles',
+            'cli-guide/admin/users',
+            'cli-guide/admin/integrations',
+            'cli-guide/admin/sso-setup',
+            'cli-guide/admin/llm-provider',
+            'cli-guide/admin/settings',
+          ],
+        },
+        {
+          type: 'category',
+          label: '👤 User Tasks',
+          collapsible: true,
+          collapsed: false,
+          link: {
+            type: 'doc',
+            id: 'cli-guide/user/index',
+          },
+          items: [
+            'cli-guide/user/converter',
+            'cli-guide/user/release-composer',
+          ],
+        },
       ],
     },
   ],

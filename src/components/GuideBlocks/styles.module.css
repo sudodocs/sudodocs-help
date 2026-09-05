@@ -1,0 +1,82 @@
+.blockGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .blockGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.block {
+  display: block;
+  height: 100%;
+  padding: 2.5rem 2rem;
+  border-radius: 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  background: var(--glass-background);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+.block:hover,
+.block:focus-visible {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+html[data-theme='dark'] .block:hover,
+html[data-theme='dark'] .block:focus-visible {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.blockIcon {
+  display: block;
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 1.25rem;
+}
+
+.blockTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--ifm-heading-color);
+}
+
+.blockDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ifm-color-emphasis-700);
+  margin: 0;
+}
+
+/* Slightly smaller scale for one level down in the funnel (guide-index blocks) */
+.blockGrid.md .blockIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.blockGrid.md .blockTitle {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.blockGrid.md .blockDescription {
+  font-size: 0.9rem;
+}
+
+.blockGrid.md .block {
+  padding: 2rem 1.5rem;
+}

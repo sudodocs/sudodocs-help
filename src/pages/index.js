@@ -1,56 +1,32 @@
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import GuideHero from '@site/src/components/GuideHero';
+import GuideBlocks from '@site/src/components/GuideBlocks';
 
-import Heading from '@theme/Heading';
-import styles from './index.module.css';
-
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero', styles.heroBanner)}>
-      {/* Overlay to darken background image for readability */}
-      <div className={styles.heroOverlay}></div> 
-      
-      <div className={clsx('container', styles.heroContainer)}>
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        
-        {/* Three Buttons for User, Admin, Dev */}
-        <div className={styles.buttons}>
-          <Link
-            className="button button--info button--lg"
-            to="/docs/admin-guide">
-            Admin Tasks ⚙️
-          </Link>
-          <Link
-            className="button button--primary button--lg"
-            to="/docs/user-guide">
-            User Tasks ⚡
-          </Link>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/cli-guide">
-            CLI Tasks 💻
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
+const GUIDE_BLOCKS = [
+  {
+    href: '/saas-guide',
+    icon: '📘',
+    title: 'SudoDocs SaaS Guide',
+    description: 'Manage and use SudoDocs from the dashboard.',
+  },
+  {
+    href: '/cli-guide',
+    icon: '💻',
+    title: 'SudoDocs CLI Guide',
+    description: 'Automate SudoDocs from a terminal or CI/CD pipeline - Enterprise plan.',
+  },
+];
 
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <Layout
-      description="Automated Documentation for Technical Teams">
-      <HomepageHeader />
+    <Layout description="Automated Documentation for Technical Teams">
+      <GuideHero title={siteConfig.title} subtitle={siteConfig.tagline} />
       <main>
-        <HomepageFeatures />
+        <section className="container" style={{padding: '4rem 0'}}>
+          <GuideBlocks blocks={GUIDE_BLOCKS} size="lg" />
+        </section>
       </main>
     </Layout>
   );
