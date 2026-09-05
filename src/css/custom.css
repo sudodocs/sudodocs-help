@@ -1,51 +1,71 @@
 /**
  * CUSTOM DOCUMENTATION THEME
- * Style: Glassmorphism
+ * Style: Mintlify-inspired - flat surfaces, grid-dot patterns, pill nav/buttons
+ * Palette: Blue / White / Black / Grey (from the SudoFlix mark)
  */
 
 /* 1. DEFINE COLORS & VARIABLES */
 :root {
-  /* Primary Brand Color (Mint Green) */
-  --ifm-color-primary: #10b981; 
-  --ifm-color-primary-dark: #059669;
-  --ifm-color-primary-lighter: #34d399;
-  
+  /* Primary Brand Color (SudoFlix Blue) */
+  --ifm-color-primary: #0891b2;
+  --ifm-color-primary-dark: #0e7490;
+  --ifm-color-primary-darker: #155e75;
+  --ifm-color-primary-darkest: #164e63;
+  --ifm-color-primary-light: #06b6d4;
+  --ifm-color-primary-lighter: #22d3ee;
+  --ifm-color-primary-lightest: #67e8f9;
+
   /* Elegant Font Family */
   --ifm-font-family-base: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  
-  /* Base Readability Colors (Light Mode) */
-  --ifm-background-color: #FAFAFA; /* Soft off-white to reduce glare */
-  --ifm-font-color-base: #374151; /* Slate gray instead of pure black */
-  --ifm-heading-color: #111827; /* Darker slate specifically for headings to create hierarchy */
-  
+
+  /* Base Readability Colors (Light Mode) - neutral grey/black, no blue tint */
+  --ifm-background-color: #ffffff;
+  --ifm-font-color-base: #3f3f46; /* Neutral grey body text */
+  --ifm-heading-color: #09090b; /* Near-black headings */
+
   /* Sidebar Readability */
-  --ifm-menu-color: #4B5563; /* Softer sidebar links */
+  --ifm-menu-color: #52525b;
   --ifm-menu-color-active: var(--ifm-color-primary-dark);
-  
+
   /* Base Layout */
   --ifm-navbar-height: 4rem;
-  
+
   /* Glass Variables (Light Mode) */
-  --glass-background: rgba(255, 255, 255, 0.8); /* Slightly more opaque for readability */
-  --glass-border: 1px solid rgba(0, 0, 0, 0.08);
-  --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
-  --glass-blur: blur(12px);
+  --glass-background: rgba(255, 255, 255, 0.75);
+  --glass-border: 1px solid rgba(9, 9, 11, 0.08);
+  --glass-shadow: 0 4px 30px rgba(9, 9, 11, 0.04);
+  --glass-blur: blur(14px);
+
+  /* Brand accent glow + grid-dot pattern color */
+  --brand-glow: rgba(8, 145, 178, 0.16);
+  --grid-dot-color: rgba(9, 9, 11, 0.10);
+  --selection-color: rgba(8, 145, 178, 0.18);
 }
 
 /* DARK MODE OVERRIDES */
 html[data-theme='dark'] {
-  --ifm-color-primary: #34d399; 
-  
-  /* Base Readability Colors (Dark Mode) */
-  --ifm-background-color: #0f172a; /* Deep Slate Blue (Not pure black) */
-  --ifm-font-color-base: #CBD5E1; /* Soft light-slate text */
-  --ifm-heading-color: #F8FAFC; /* Crisp white-slate for headings */
-  --ifm-menu-color: #94A3B8; /* Muted sidebar links */
-  
+  --ifm-color-primary: #22d3ee;
+  --ifm-color-primary-dark: #06b6d4;
+  --ifm-color-primary-darker: #0891b2;
+  --ifm-color-primary-darkest: #0e7490;
+  --ifm-color-primary-light: #67e8f9;
+  --ifm-color-primary-lighter: #a5f3fc;
+  --ifm-color-primary-lightest: #cffafe;
+
+  /* Base Readability Colors (Dark Mode) - true near-black, no navy tint */
+  --ifm-background-color: #09090b;
+  --ifm-font-color-base: #d4d4d8;
+  --ifm-heading-color: #fafafa;
+  --ifm-menu-color: #a1a1aa;
+
   /* Glass Variables (Dark Mode) */
-  --glass-background: rgba(15, 23, 42, 0.7); 
-  --glass-border: 1px solid rgba(255, 255, 255, 0.1);
-  --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  --glass-background: rgba(24, 24, 27, 0.75);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.09);
+  --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.55);
+
+  --brand-glow: rgba(34, 211, 238, 0.3);
+  --grid-dot-color: rgba(255, 255, 255, 0.14);
+  --selection-color: rgba(34, 211, 238, 0.3);
 }
 
 /* 2. GLASS NAVBAR */
@@ -54,15 +74,35 @@ html[data-theme='dark'] {
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border-bottom: var(--glass-border);
-  box-shadow: none; 
+  box-shadow: none;
+}
+
+/* Pill-shaped nav links (Mintlify-style) */
+.navbar__link,
+.navbar__item.dropdown > .navbar__link {
+  border-radius: 999px;
+  padding: 0.45rem 1rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.navbar__link:hover {
+  background-color: var(--ifm-color-emphasis-100);
+  text-decoration: none;
+}
+.navbar__link--active {
+  background-color: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-primary) !important;
 }
 
 /* 3. MODERN SIDEBAR */
 .theme-doc-sidebar-container {
   border-right: var(--glass-border) !important;
-  background-color: var(--glass-background) !important; 
+  background-color: var(--glass-background) !important;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+  font-weight: 600;
 }
 
 /* 4. CLEAN CARD / BLOCK STYLING */
@@ -70,11 +110,11 @@ html[data-theme='dark'] {
 .alert {
   border: var(--glass-border);
   border-radius: 12px;
-  background-color: rgba(255, 255, 255, 0.5); 
+  background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(5px);
 }
 html[data-theme='dark'] .alert {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.04);
 }
 
 /* Code Blocks - Rounded & Soft */
@@ -113,7 +153,7 @@ h2 {
 p, li, span {
   font-weight: 400; /* Regular weight */
   line-height: 1.65; /* More breathing room */
-  color: var(--ifm-color-emphasis-700); /* Dark Grey instead of Pure Black */
+  color: var(--ifm-color-emphasis-700); /* Neutral grey instead of pure black */
 }
 
 /* Navbar Links */
@@ -124,9 +164,9 @@ p, li, span {
 
 /* 6. COMPONENT OVERRIDES */
 
-/* Buttons - Soft & Pill-shaped */
+/* Buttons - Pill-shaped (Mintlify-style) */
 .button {
-  border-radius: 8px;
+  border-radius: 999px;
   font-weight: 600;
   letter-spacing: -0.01em;
   transition: all 0.2s ease;
@@ -134,7 +174,7 @@ p, li, span {
 }
 .button:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 14px var(--brand-glow);
 }
 
 /* Breadcrumbs (Top of doc page) */
@@ -156,7 +196,7 @@ p, li, span {
   margin-left: 12px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 22px 22px; 
+  background-size: 22px 22px;
   opacity: 0.8;
   transition: opacity 0.2s, transform 0.2s;
 }
@@ -196,8 +236,8 @@ p, li, span {
   background-color: var(--glass-background) !important;
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
-  padding: 1rem 0 !important; 
+  border-top: var(--glass-border);
+  padding: 1rem 0 !important;
   text-align: center;
 }
 
@@ -205,26 +245,18 @@ p, li, span {
   color: var(--ifm-color-emphasis-500);
   font-size: 0.8rem;
   font-weight: 500;
-  margin: 0 !important; 
+  margin: 0 !important;
   line-height: 1.2;
-}
-
-[data-theme='dark'] .footer {
-  background-color: rgba(15, 23, 42, 0.6) !important; 
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* ==============================
    9. PREMIUM MICRO-INTERACTIONS
    ============================== */
 
-/* Custom Text Highlight (Brand Green) */
+/* Custom Text Highlight (Brand Blue) */
 ::selection {
-  background-color: rgba(16, 185, 129, 0.2);
+  background-color: var(--selection-color);
   color: inherit;
-}
-html[data-theme='dark'] ::selection {
-  background-color: rgba(52, 211, 153, 0.3);
 }
 
 /* Elegant Scrollbars */

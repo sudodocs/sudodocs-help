@@ -1,7 +1,7 @@
 .blockGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 2rem;
+  gap: 1.5rem;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -13,70 +13,101 @@
 }
 
 .block {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   height: 100%;
-  padding: 2.5rem 2rem;
-  border-radius: 24px;
-  text-align: center;
+  border-radius: 16px;
   text-decoration: none;
-  transition: all 0.3s ease;
+  background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
 
-  background: var(--glass-background);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border: var(--glass-border);
-  box-shadow: var(--glass-shadow);
+html[data-theme='dark'] .block {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.08);
 }
 
 .block:hover,
 .block:focus-visible {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
   border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 1px var(--ifm-color-primary), 0 16px 40px rgba(9, 9, 11, 0.1);
   text-decoration: none;
 }
 
 html[data-theme='dark'] .block:hover,
 html[data-theme='dark'] .block:focus-visible {
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0 1px var(--ifm-color-primary), 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+.blockIconTile {
+  position: relative;
+  padding: 2.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--ifm-color-emphasis-100);
+  background-image: radial-gradient(var(--ifm-color-emphasis-300) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+html[data-theme='dark'] .blockIconTile {
+  background-color: rgba(255, 255, 255, 0.03);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px);
+}
+
+.blockIconTile::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 40%, var(--brand-glow) 0%, transparent 70%);
 }
 
 .blockIcon {
-  display: block;
-  font-size: 3rem;
+  position: relative;
+  z-index: 1;
+  font-size: 2.75rem;
   line-height: 1;
-  margin-bottom: 1.25rem;
+  filter: drop-shadow(0 4px 12px rgba(9, 9, 11, 0.25));
+}
+
+.blockBody {
+  padding: 1.5rem 1.75rem 1.75rem;
 }
 
 .blockTitle {
-  font-size: 1.5rem;
+  font-size: 1.15rem;
   font-weight: 600;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.4rem;
   color: var(--ifm-heading-color);
 }
 
 .blockDescription {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 0.92rem;
+  line-height: 1.55;
   color: var(--ifm-color-emphasis-700);
   margin: 0;
 }
 
 /* Slightly smaller scale for one level down in the funnel (guide-index blocks) */
+.blockGrid.md .blockIconTile {
+  padding: 2rem 0;
+}
+
 .blockGrid.md .blockIcon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 2.25rem;
 }
 
 .blockGrid.md .blockTitle {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
 }
 
 .blockGrid.md .blockDescription {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
 }
 
-.blockGrid.md .block {
-  padding: 2rem 1.5rem;
+.blockGrid.md .blockBody {
+  padding: 1.25rem 1.5rem 1.5rem;
 }

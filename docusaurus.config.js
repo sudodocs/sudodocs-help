@@ -101,7 +101,7 @@ const config = {
           {
             type: 'html',
             position: 'right',
-            value: '<link rel="llms-txt" href="/llms.txt" /><a href="https://buildwithfern.com/agent-score" target="_blank" rel="noopener noreferrer" title="100% Fern Agent Score"><img src="https://img.shields.io/badge/Fern_Agent_Score-100%25-10b981?style=for-the-badge" alt="100% Fern Agent Score" style="display: flex; transform: translateY(4px);" /></a>',
+            value: '<link rel="llms-txt" href="/llms.txt" /><a href="https://buildwithfern.com/agent-score" target="_blank" rel="noopener noreferrer" title="100% Fern Agent Score"><img src="https://img.shields.io/badge/Fern_Agent_Score-100%25-0891b2?style=for-the-badge" alt="100% Fern Agent Score" style="display: flex; transform: translateY(4px);" /></a>',
           },
         ],
       },

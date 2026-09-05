@@ -73,12 +73,14 @@ This project is configured to deploy automatically using GitHub Actions.
 
 ## 🎨 Theme & Customization
 
-This site uses a custom "Glassmorphism" theme inspired by modern SaaS documentation.
+This site uses a custom theme - glassmorphism surfaces with a Mintlify-inspired card/grid-dot layout - built on the SudoFlix brand palette.
 
 - Font: Plus Jakarta Sans
 
-- Primary Color: Mint Green (`#10b981`)
+- Primary Color: Brand Blue (`#0891b2` light / `#22d3ee` dark)
 
-- Dark Mode: Fully supported with Slate Grey palette.
+- Neutrals: Zinc grey/black/white
+
+- Dark Mode: Fully supported, near-black background.
 
 Copyright © 2026 SudoDocs.
