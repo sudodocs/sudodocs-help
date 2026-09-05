@@ -43,3 +43,7 @@ The **Provider** tab (the first tab in the Admin Dashboard) has two independent 
 ## Multi-modal Attachments
 
 Image and video attachments (chat attachments, diagram-from-image, and similar features) are supported across all Text Generation providers. For a Custom endpoint, whether attachments work depends on that specific deployment's own vision support - SudoDocs cannot verify this in advance for a self-hosted or third-party endpoint you configure.
+
+## See Also
+
+* [CLI Tasks → Provider](../cli-guide/llm-provider.md) - configure BYOK from a script.

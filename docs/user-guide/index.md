@@ -19,3 +19,5 @@ You can use the features in two ways:
     * [Compose Release Notes](release-composer.md): Generate consolidated changelogs from Jira or CSVs.
     * [Author a Feature](feature-author.md): Draft comprehensive feature documentation.
     * [Assigned Docflows](assign-pr.md): Allows you to review, edit, and finalize AI-generated documentation drafts before pushing them to production.
+
+On an Enterprise plan? Most of the tools above - and every Admin Task - can also be scripted from a terminal or CI pipeline. See [CLI Tasks](../cli-guide/index.md).

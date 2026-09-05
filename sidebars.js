@@ -23,7 +23,6 @@ const sidebars = {
         'admin-guide/sso-setup',
         'admin-guide/llm-provider',
         'admin-guide/settings',
-        'admin-guide/cli-headless-api',
       ],
     },
 
@@ -50,6 +49,34 @@ const sidebars = {
         'user-guide/release-composer',
         'user-guide/feature-author',
         'user-guide/assign-pr',
+      ],
+    },
+
+    /* -------------------------------------------------------
+       3. CLI GUIDE SECTION (Enterprise) - mirrors Admin Tasks
+          and User Tasks 1:1, one page per dashboard equivalent
+       ------------------------------------------------------- */
+    {
+      type: 'category',
+      label: '💻 CLI Tasks',
+      collapsible: true,
+      collapsed: true,
+      link: {
+        type: 'doc',
+        id: 'cli-guide/index',
+      },
+      items: [
+        'cli-guide/connect-repos',
+        'cli-guide/doc-drift',
+        'cli-guide/kb-config',
+        'cli-guide/doc-team-roles',
+        'cli-guide/users',
+        'cli-guide/integrations',
+        'cli-guide/sso-setup',
+        'cli-guide/llm-provider',
+        'cli-guide/settings',
+        'cli-guide/converter',
+        'cli-guide/release-composer',
       ],
     },
   ],

@@ -35,6 +35,25 @@ If your organization requires additional writers on a Pro or Annual plan, you ca
 2. Under **Team Seats**, click **Add Seat ($4.99/mo)**.
 3. Complete the checkout process via Paddle to immediately increase your user limit.
 
+## Cancel a Pending Invitation
+
+If you invited someone by mistake, or plans changed before they accepted:
+
+1. Locate the invitation in the **Pending Invitations** list.
+2. Click **Cancel**.
+
+This frees up the seat the invitation was holding.
+
 ## Remove a User
 
-To revoke access, contact support or remove the user from your SSO provider (if Enterprise SSO is enabled). For standard accounts, changing the role to a non-active state is currently managed by database administrators.
+To revoke access, remove the user from your organization directly - no need to contact support:
+
+1. Locate the user in the **Organization Team** list.
+2. In the **Actions** column, click **Remove**.
+3. Confirm the removal.
+
+The user keeps their SudoDocs account (so re-inviting the same email later works normally) but immediately loses access to your organization, including any API keys they'd generated. You can't remove yourself this way - log out instead, or have another administrator remove you.
+
+If Enterprise SSO is enabled for your domain, also remove the user from your identity provider to prevent them from being re-provisioned automatically the next time they sign in.
+
+See [CLI Tasks → Users](../cli-guide/users.md) for the command-line equivalent of every action on this page.

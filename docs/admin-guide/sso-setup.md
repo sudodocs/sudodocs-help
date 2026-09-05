@@ -21,3 +21,7 @@ Create an OIDC application in your IdP and set the **Sign-in Redirect URI** to:
 5. Click **Save Configuration**.
 
 > Once active, SudoDocs utilizes Just-In-Time (JIT) provisioning. Any user logging in with your corporate domain will automatically be routed through your IdP and provisioned as a Writer.
+
+## See Also
+
+* [CLI Tasks → Security & SSO](../cli-guide/sso-setup.md) - configure SSO from a script.

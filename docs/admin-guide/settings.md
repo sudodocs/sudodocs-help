@@ -12,9 +12,11 @@ This section provides a real-time overview of your current billing status (e.g.,
 
 Pro runs on SudoDocs' platform Gemini key. Enterprise can instead bring its own key - for text generation, embeddings & search, or both independently - for data trust and residency: see [Provider](llm-provider.md) for setup and how the transition from the platform key works.
 
+> **Not available via CLI**: Cancelling a subscription and deleting an account are both deliberately dashboard-only actions, given the blast radius of either one being scriptable.
+
 ## API Keys
 
-The Account tab also lets you generate API keys for the [SudoDocs CLI and Headless API](cli-headless-api.md), used for scripting doc syncs, spec conversions, and Docflows suggestions from CI/CD pipelines.
+The Account tab also lets you generate API keys for the [SudoDocs CLI](../cli-guide/index.md) and its underlying Headless API, used for scripting doc syncs, spec conversions, and Docflows suggestions from CI/CD pipelines - see [CLI Tasks → Account](../cli-guide/settings.md) for the command-line equivalent of everything on this page.
 
 1. On the **Account** tab, find the **API Keys** card.
 2. Enter a name for the key (e.g., "CI Pipeline") and click **Generate New Key**.

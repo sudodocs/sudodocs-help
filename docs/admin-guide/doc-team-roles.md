@@ -75,3 +75,4 @@ Role instructions apply the next time a draft is generated - editing them doesn'
 * [Configure the Knowledge Base](kb-config.md) - style guide, terminology, and product categories, which every role already reads alongside its instructions here.
 * [Author a Feature](../user-guide/feature-author.md) - the manually-initiated path through this same pipeline.
 * [Manage Docflows](../user-guide/doc-drift.md) - the automatically-initiated path through this same pipeline.
+* [CLI Tasks → Doc Team Roles](../cli-guide/doc-team-roles.md) - script role instruction changes.

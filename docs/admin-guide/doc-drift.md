@@ -83,3 +83,7 @@ If SudoDocs fails to capture screenshots for a Docflow suggestion, a warning ban
 
 * **Preview environment was unreachable:** SudoDocs could not establish a network connection to your preview URL. Check that your staging server is up and accessible from the public internet.
 * **Login to the preview environment failed:** SudoDocs reached the login page but could not authenticate. Verify that your login form CSS selectors, service account username, or password are correct in the repository's **Screenshot Settings**.
+
+## See Also
+
+* [CLI Tasks → Docflows](../cli-guide/doc-drift.md) - script webhook lookups, Screenshot Settings, and triggering a suggestion directly from CI.

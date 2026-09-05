@@ -32,6 +32,11 @@ function HomepageHeader() {
             to="/docs/user-guide">
             User Tasks ⚡
           </Link>
+          <Link
+            className="button button--secondary button--lg"
+            to="/docs/cli-guide">
+            CLI Tasks 💻
+          </Link>
         </div>
       </div>
     </header>

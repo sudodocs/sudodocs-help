@@ -29,3 +29,7 @@ Connecting Slack allows users to push draft notes directly from Slack conversati
 5.  Click **Connect Service**.
 
 > **Verification**: Once connected, you will see the integration listed in the **Active Service Connections** table.
+
+## See Also
+
+* [CLI Tasks → Connect Services](../cli-guide/integrations.md) - connect Jira or Slack from a script.

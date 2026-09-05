@@ -13,4 +13,5 @@ You can configure features and account in the following ways:
 * [Security & SSO](sso-setup.md): Setup Single Sign-On for accessing SudoDocs. 
 * [Provider](llm-provider.md): Bring your own key for text generation and/or embeddings & search (OpenAI, Claude, DeepSeek, Voyage AI, or a custom endpoint) instead of the platform Gemini key.
 * [Account](settings.md): Manage your subscription, account, and API keys.
-* [CLI & Headless API](cli-headless-api.md): Automate SudoDocs from the command line or CI/CD pipelines.
+
+Every task above - and most [User Tasks](../user-guide/index.md) too - has a scriptable equivalent for Enterprise organizations: see [CLI Tasks](../cli-guide/index.md) to automate them from the command line or CI/CD pipelines instead of the dashboard.

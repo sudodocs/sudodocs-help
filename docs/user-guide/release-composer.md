@@ -2,6 +2,17 @@
 
 The Release Composer allows you to generate a consolidated, launch-ready changelog for an entire release cycle. It supports importing data automatically from Jira or manually via CSV files.
 
+## Release Notes Settings
+
+Before your first import, it's worth checking two optional settings that shape how generation categorizes and tags content - both have sensible built-in defaults, so you can skip this section entirely and come back to it later.
+
+1. On the **Release Composer** page, click **Release Notes Settings** to expand the panel.
+2. **Deployment Tags** (one per line): the set of environment tags SudoDocs can apply to each item (e.g. "Cloud", "On-Premise", "Both"). Leave blank to use the defaults.
+3. **CSV Column Mappings**: map your tracker's CSV export headers (Jira, Linear, Asana, or anything else) to the fields SudoDocs looks for - Ticket ID/Key, Summary, and Description. Each of the three is independent and optional; leave any of them blank to fall back to common default header names (e.g. "Key"/"Issue key" for the ticket ID).
+4. Click **Save Release Notes Settings**.
+
+These settings are shared across every project's release notes for your org, not just the one you're currently viewing - see [CLI Tasks → Compose Release Notes](../cli-guide/release-composer.md) to manage them from a script instead. Looking for Product Categories? Those are a Knowledge Base setting, shared with other AI features - see [Configure the Knowledge Base](../admin-guide/kb-config.md#product-categories).
+
 ## Automatic Import (Jira)
 
 To generate notes directly from your Jira project:
@@ -22,7 +33,7 @@ If you do not have a direct Jira connection, you can upload CSV exports.
 2.  Click **Choose File** for the corresponding category (e.g., **Stories CSV**, **Bugs CSV**).
 3.  Select the CSV file from your computer.
 
-    * *Note*: Ensure your CSV headers match the mappings configured in the Knowledge Base settings (e.g., Summary, Description, Key).
+    * *Note*: Ensure your CSV headers match the mappings configured in [Release Notes Settings](#release-notes-settings) above (e.g., Summary, Description, Key) - or just use one of the common default header names if you haven't customized them.
 4.  Click **Compose**.
 
 ## Reviewing and Exporting

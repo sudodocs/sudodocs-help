@@ -39,6 +39,10 @@ After adding a repository, you must sync it to index the content into the Vector
 
 > **Note**: Initial sync times vary by repository size. A typical documentation repo (50-100 pages) takes 2-5 minutes. Large codebases may take longer. You can navigate away from the page while the sync runs in the background.
 
+## Cancel a Running Sync
+
+If a sync is taking longer than expected or was started by mistake, click the small **Stop Sync** icon next to that repository's progress bar in the **Active Repositories** list. This works for any in-progress job, not just syncs - see [CLI Tasks → Account](../cli-guide/settings.md#cancel-a-running-job) for the command-line equivalent.
+
 ## Automatic Sync Schedule
 
 Beyond clicking **Sync** manually and webhook-triggered Docflows suggestions (see [Configure Webhooks and Screenshot Settings for Docflows](doc-drift.md)), you can set a per-repository schedule so a repository's indexed content is periodically refreshed on its own - useful as a catch-all if a webhook event is ever missed, or if you'd simply rather not rely on remembering to click Sync.
@@ -49,3 +53,8 @@ Beyond clicking **Sync** manually and webhook-triggered Docflows suggestions (se
 4. Click **Save Schedule**.
 
 > **Note**: Sync Schedule isn't shown for spec/OpenAPI repositories - those don't need syncing the same way, since API Readiness reads the spec directly rather than from the Vector Database.
+
+## See Also
+
+* [CLI Tasks → Repositories](../cli-guide/connect-repos.md) - script every action on this page.
+* [Configure Webhooks and Screenshot Settings for Docflows](doc-drift.md) - the other repository-level configuration, for automated documentation suggestions rather than search/RAG.
