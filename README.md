@@ -73,9 +73,9 @@ This project is configured to deploy automatically using GitHub Actions.
 
 ## 🎨 Theme & Customization
 
-This site uses a custom theme - glassmorphism surfaces with a Mintlify-inspired card/grid-dot layout - built on the SudoFlix brand palette.
+This site uses a custom theme - glassmorphism surfaces with a card/grid-dot layout - built on the SudoFlix brand palette.
 
-- Font: Plus Jakarta Sans
+- Font: Inter
 
 - Primary Color: Brand Blue (`#0891b2` light / `#22d3ee` dark)
 

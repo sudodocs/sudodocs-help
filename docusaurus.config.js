@@ -10,7 +10,7 @@ const config = {
 
   // 1. Font Loader
   stylesheets: [
-    'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap',
+    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
   ],
 
   // 2. Production URL
