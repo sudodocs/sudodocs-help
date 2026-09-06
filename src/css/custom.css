@@ -110,16 +110,129 @@ html[data-theme='dark'] {
   font-weight: 600;
 }
 
+/* Tie every doc page's page background to the same grid-dot pattern used
+   on the homepage/guide-index hero and card panels, so content pages read
+   as the same design system instead of a plain, undecorated fallback. */
+.docs-wrapper {
+  background-image: radial-gradient(var(--grid-dot-color) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* Page title gets a short brand-colored accent bar, echoing the hero glow
+   used on the landing/guide-index pages. */
+.docs-wrapper .markdown > h1:first-child,
+.docs-wrapper .markdown > header > h1 {
+  position: relative;
+  padding-top: 0.75rem;
+}
+.docs-wrapper .markdown > h1:first-child::before,
+.docs-wrapper .markdown > header > h1::before {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--ifm-color-primary);
+  margin-bottom: 1rem;
+}
+
+/* List markers pick up the brand color instead of the default neutral tone */
+.markdown ol li::marker,
+.markdown ul li::marker {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
 /* 4. CLEAN CARD / BLOCK STYLING */
-/* Admonitions (Note/Tip/Warning boxes) */
-.alert {
-  border: var(--glass-border);
-  border-radius: 12px;
-  background-color: rgba(255, 255, 255, 0.5);
+/* Admonitions (Note/Tip/Warning/Danger) - colored left border + tinted
+   background + colored icon/title per type, instead of a flat plain box. */
+.theme-admonition {
+  border: none;
+  border-left-width: 4px;
+  border-left-style: solid;
+  border-radius: 8px 12px 12px 8px;
+  padding: 1rem 1.25rem;
   backdrop-filter: blur(5px);
 }
-html[data-theme='dark'] .alert {
-  background-color: rgba(255, 255, 255, 0.04);
+
+/* Heading row (icon + label) and body copy - structural, not class-name
+   dependent, since Docusaurus hashes admonitionHeading/admonitionContent */
+.theme-admonition > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+.theme-admonition > div:first-child svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.theme-admonition-note,
+.theme-admonition-info {
+  border-left-color: var(--ifm-color-primary);
+  background-color: rgba(8, 145, 178, 0.08);
+}
+.theme-admonition-note > div:first-child,
+.theme-admonition-info > div:first-child {
+  color: var(--ifm-color-primary-dark);
+}
+html[data-theme='dark'] .theme-admonition-note,
+html[data-theme='dark'] .theme-admonition-info {
+  background-color: rgba(34, 211, 238, 0.1);
+}
+html[data-theme='dark'] .theme-admonition-note > div:first-child,
+html[data-theme='dark'] .theme-admonition-info > div:first-child {
+  color: var(--ifm-color-primary-lighter);
+}
+
+.theme-admonition-tip {
+  border-left-color: #16a34a;
+  background-color: rgba(22, 163, 74, 0.08);
+}
+.theme-admonition-tip > div:first-child {
+  color: #15803d;
+}
+html[data-theme='dark'] .theme-admonition-tip {
+  background-color: rgba(74, 222, 128, 0.1);
+}
+html[data-theme='dark'] .theme-admonition-tip > div:first-child {
+  color: #4ade80;
+}
+
+.theme-admonition-warning,
+.theme-admonition-caution {
+  border-left-color: #d97706;
+  background-color: rgba(217, 119, 6, 0.08);
+}
+.theme-admonition-warning > div:first-child,
+.theme-admonition-caution > div:first-child {
+  color: #b45309;
+}
+html[data-theme='dark'] .theme-admonition-warning,
+html[data-theme='dark'] .theme-admonition-caution {
+  background-color: rgba(251, 191, 36, 0.1);
+}
+html[data-theme='dark'] .theme-admonition-warning > div:first-child,
+html[data-theme='dark'] .theme-admonition-caution > div:first-child {
+  color: #fbbf24;
+}
+
+.theme-admonition-danger {
+  border-left-color: #dc2626;
+  background-color: rgba(220, 38, 38, 0.08);
+}
+.theme-admonition-danger > div:first-child {
+  color: #b91c1c;
+}
+html[data-theme='dark'] .theme-admonition-danger {
+  background-color: rgba(248, 113, 113, 0.1);
+}
+html[data-theme='dark'] .theme-admonition-danger > div:first-child {
+  color: #f87171;
 }
 
 /* Code Blocks - Rounded & Soft */
@@ -213,6 +326,23 @@ h2 {
   border-bottom: 1px solid var(--ifm-color-emphasis-200);
   padding-bottom: 0.5rem;
   font-size: 1.5rem;
+}
+
+/* H3/H4 - Complete the size hierarchy below H2 */
+h3 {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+h4 {
+  font-size: 1.05rem;
+  margin-top: 1.5rem;
+}
+
+/* Horizontal Rule - Match the glass border language instead of a plain line */
+.markdown hr {
+  border: none;
+  border-top: var(--glass-border);
+  margin: 2.5rem 0;
 }
 
 /* Body Text - Softened Color & Weight */
