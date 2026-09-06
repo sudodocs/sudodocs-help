@@ -126,6 +126,67 @@ html[data-theme='dark'] .alert {
   border: var(--glass-border);
 }
 
+/* Inline Code - Rounded chip instead of default square highlight */
+:not(pre) > code {
+  border-radius: 6px;
+  border: var(--glass-border);
+  background-color: var(--ifm-color-emphasis-100);
+  padding: 0.15rem 0.4rem;
+  font-size: 0.85em;
+}
+html[data-theme='dark'] :not(pre) > code {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+/* Blockquotes - Brand-accented left border instead of default grey */
+.markdown blockquote {
+  border-left: 3px solid var(--ifm-color-primary);
+  background-color: var(--ifm-color-emphasis-100);
+  border-radius: 0 12px 12px 0;
+  padding: 0.75rem 1.25rem;
+}
+html[data-theme='dark'] .markdown blockquote {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Tables - Rounded glass container instead of default square grid */
+.markdown table {
+  display: table;
+  border: var(--glass-border);
+  border-radius: 12px;
+  overflow: hidden;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.markdown table th {
+  background-color: var(--ifm-color-emphasis-100);
+}
+html[data-theme='dark'] .markdown table th {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+.markdown table th,
+.markdown table td {
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+/* Pagination (Previous/Next) - Match the glass card language site-wide */
+.pagination-nav__link {
+  border: var(--glass-border);
+  border-radius: 12px;
+  background-color: var(--glass-background);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.pagination-nav__link:hover {
+  border-color: var(--ifm-color-primary);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+.pagination-nav__sublabel {
+  color: var(--ifm-color-emphasis-500);
+}
+
 /* 5. TYPOGRAPHY REFINEMENTS (The "Elegant" Fix) */
 
 /* Base Headings - Lighter and Tighter */
