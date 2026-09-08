@@ -70,8 +70,8 @@ const config = {
         title: 'SudoDocs',
         logo: {
           alt: 'SudoDocs Logo',
-          src: 'img/Light-Logo.svg',
-          srcDark: 'img/Dark-Logo.svg',
+          src: 'img/Light-Logo.png',
+          srcDark: 'img/Dark-Logo.png',
         },
         items: [
           {
