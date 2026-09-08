@@ -6,7 +6,9 @@ const prismThemes = require('prism-react-renderer').themes;
 const config = {
   title: 'SudoDocs Help',
   tagline: 'Documentation Workflow, Automated!',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon-light.ico',
+
+  clientModules: [require.resolve('./src/clientModules/faviconTheme.js')],
 
   // 1. Font Loader
   stylesheets: [
