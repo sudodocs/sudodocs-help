@@ -13,6 +13,7 @@ You can use the features in two ways:
     * [Docflows](doc-drift.md): Generates automated documentation suggestions directly from engineering pull/merge requests or Jira tickets.
     * [Diagram Generator](diagram-gen.md): Builds brand-compliant `Mermaid.js` sequence diagrams based on natural language descriptions or visual reference images.
     * [API Readiness](api-readiness.md): Validates your OpenAPI Specifications (OAS) against industry standards and your own style guide.
+    * [Capture](capture.md): A Chrome extension for turning a live product into a shareable click-through walkthrough, a narrated screen recording, or an annotated screenshot.
 
 * **Project Tools**: The Project dashboard page a set of specialized tools that you would need to work in a release cycle. These include the following tools:
 

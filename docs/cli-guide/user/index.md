@@ -7,4 +7,4 @@ Command-line equivalents of the [SaaS Guide → User Tasks](../../saas-guide/use
 | [Universal Converter](../../saas-guide/user/converter.md) | [Universal Converter](converter.md) |
 | [Compose Release Notes](../../saas-guide/user/release-composer.md) | [Compose Release Notes](release-composer.md) |
 
-The rest of User Tasks - DocOps Assistant, Manage Docflows' triage/review side, Diagram Generator, API Readiness, Author a Feature, Author a Feature vs. Docflows, and Assigned Docflows - are review/editing workflows that stay browser-first for now and have no CLI equivalent yet.
+The rest of User Tasks - DocOps Assistant, Manage Docflows' triage/review side, Diagram Generator, API Readiness, Author a Feature, Author a Feature vs. Docflows, Assigned Docflows, and [Capture](../../saas-guide/user/capture.md) - are review/editing workflows that stay browser-first for now and have no CLI equivalent yet. Capture in particular is a fully visual, browser-first tool by design (a Chrome extension plus a review dashboard) - there's no terminal-friendly equivalent to a screen recording or an annotated screenshot, so it has no CLI or Headless API surface at all.
