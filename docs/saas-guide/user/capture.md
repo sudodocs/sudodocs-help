@@ -72,6 +72,8 @@ Available as soon as an Interactive capture finishes - no approval needed:
 4. Click **Start**, narrate and act normally. **Pause**/**Resume** are available throughout.
 5. Click **Stop**. The video uploads directly and is shareable the moment the upload finishes.
 
+Recording length is capped by your plan: **5 minutes** on Basic, **10 minutes** on Pro (and Trial), **30 minutes** on Enterprise. A recording longer than your plan's limit is rejected at upload - stay under the cap, or upgrade for longer recordings.
+
 ## Screenshot: Annotated Screenshots
 
 1. Select **Screenshot** in the popup, give it a title, and click **Capture Screenshot**. This captures the current tab immediately and opens a new editor tab.
