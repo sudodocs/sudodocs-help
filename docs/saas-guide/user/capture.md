@@ -12,9 +12,7 @@ Capture has **no approval workflow**: every capture is shareable the moment it f
 
 ## Install and Connect the Extension
 
-<!-- TODO: swap in the real Chrome Web Store listing URL once SudoDocs Capture is published and approved. -->
-
-1. Install **SudoDocs Capture** from the [Chrome Web Store](https://chromewebstore.google.com/detail/PLACEHOLDER).
+1. Install **SudoDocs Capture** from the [Chrome Web Store](https://chromewebstore.google.com/detail/sudodocs-capture/kcjmfohocapknbkdnecfenjfibfidadk).
 2. Click the new SudoDocs Capture icon in your toolbar, then **Connect to SudoDocs**. This opens a tab to approve the connection - confirm the code shown matches the popup, then **Approve**.
 3. Back in the popup, click **I approved it - check again**.
 
