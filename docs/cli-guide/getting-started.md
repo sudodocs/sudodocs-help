@@ -53,7 +53,7 @@ If no API key is found by any of these methods, every command exits immediately 
 
 Commands are grouped by who can run them, mirroring the two sections this page sits alongside:
 
-* **Top-level commands** (`sync`, `convert`, `docflow`, `style-guide`, `release-notes`) - available to any doc-team member (Writer or System Administrator), same as the corresponding dashboard feature. These back the [User Tasks](user/index.md) pages.
+* **Top-level commands** (`sync`, `convert`, `docflow`, `style-guide`, `release-notes`) - available to any doc-team member (Writer or System Administrator), same as the corresponding dashboard feature. These back the [User Tasks](user/index.md) pages. [Capture](../saas-guide/user/capture.md) has no CLI equivalent - it's a browser-first tool (Chrome extension plus dashboard) with no terminal-friendly workflow.
 * **`sudodocs admin ...`** - require the System Administrator role, same as the Admin Dashboard pages they mirror. Running an admin command as a Writer fails with `Error: This action requires a System Administrator.`, the same 403 the API returns. These back the [Admin Tasks](admin/index.md) pages.
 
 Every command that kicks off AI work (`sync`, `convert`, `docflow`, `admin kb auto-learn`) blocks and prints progress until the job completes or fails, polling the same job-status endpoint the dashboard's own progress bars use.

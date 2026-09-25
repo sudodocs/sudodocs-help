@@ -44,6 +44,7 @@ const sidebars = {
             'saas-guide/user/doc-drift',
             'saas-guide/user/diagram-gen',
             'saas-guide/user/api-readiness',
+            'saas-guide/user/capture',
             'saas-guide/user/release-composer',
             'saas-guide/user/feature-author',
             'saas-guide/user/assign-pr',
