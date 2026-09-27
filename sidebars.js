@@ -26,6 +26,7 @@ const sidebars = {
             'saas-guide/admin/sso-setup',
             'saas-guide/admin/llm-provider',
             'saas-guide/admin/settings',
+            'saas-guide/admin/plans',
           ],
         },
         {

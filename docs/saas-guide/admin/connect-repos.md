@@ -11,7 +11,7 @@ To add a GitHub repository:
 3.  In the **Integration Name** box, enter a recognizable name (e.g., "Main API Docs").
 4.  In the **Repository Type** list, select one of the following:
     * **Documentation**: For Markdown, MDX, reStructuredText, AsciiDoc, HTML, DITA XML (`.dita`/`.ditamap`), or plain text files.
-    * **Source Code**: For programming languages (Python, JS, Go, etc.). *Note: Requires Pro/Enterprise plan.*
+    * **Source Code**: For programming languages (Python, JS, Go, etc.). Available on every plan, including Free.
 5.  In the **Git URL** box, enter the HTTPS clone URL (e.g., `https://github.com/org/repo.git`).
 6.  Under **Authentication Type**, select your preferred method:
     * **Service Account (PAT)**: Enter a Classic Personal Access Token. This token requires `repo` scope for private repositories.

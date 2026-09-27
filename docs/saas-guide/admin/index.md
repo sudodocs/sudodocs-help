@@ -13,5 +13,6 @@ You can configure features and account in the following ways:
 * [Security & SSO](sso-setup.md): Setup Single Sign-On for accessing SudoDocs. 
 * [Provider](llm-provider.md): Bring your own key for text generation and/or embeddings & search (OpenAI, Claude, DeepSeek, Voyage AI, or a custom endpoint) instead of the platform Gemini key.
 * [Account](settings.md): Manage your subscription, account, and API keys.
+* [Plans & Billing](plans.md): What each plan includes - seats, AI credits, add-ons, and Enterprise-only features.
 
 Every task above - and most [User Tasks](../user/index.md) too - has a scriptable equivalent for Enterprise organizations: see the [CLI Guide](/cli-guide) to automate them from the command line or CI/CD pipelines instead of the dashboard.

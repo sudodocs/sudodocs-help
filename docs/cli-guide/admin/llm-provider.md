@@ -30,7 +30,7 @@ sudodocs admin llm-provider set-embeddings \
   --api-key "pa-..."
 ```
 
-`--provider-type` is one of `gemini`, `openai`, `voyage`, `custom_openai_compatible` - Claude and DeepSeek aren't offered here, neither has an embeddings API. See [Embeddings & Search](../../saas-guide/admin/llm-provider.md#embeddings-search).
+`--provider-type` is one of `gemini`, `openai`, `voyage`, `custom_openai_compatible` - Claude and DeepSeek aren't offered here, neither has an embeddings API. See [Embeddings & Search](../../saas-guide/admin/llm-provider.md#embeddings--search).
 
 As with the web form, these two commands are independent - running one doesn't touch the other. See [How the two settings interact](../../saas-guide/admin/llm-provider.md#how-the-two-settings-interact) for what happens before you configure either, and the re-sync requirement if you connect repositories before setting Embeddings & Search.
 

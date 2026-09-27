@@ -21,7 +21,7 @@ const GUIDE_BLOCKS = [
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <Layout description="Automated Documentation for Technical Teams">
+    <Layout description="Help center for SudoDocs, the AI documentation platform for technical writers: guides for the web dashboard and for the CLI and Headless API.">
       <GuideHero title={siteConfig.title} subtitle={siteConfig.tagline} />
       <main>
         <section className="container" style={{padding: '4rem 0'}}>

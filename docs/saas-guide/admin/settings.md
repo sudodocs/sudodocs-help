@@ -4,7 +4,7 @@ The Account tab within the Admin Dashboard allows system administrators to manag
 
 ## Subscription Management
 
-This section provides a real-time overview of your current billing status (e.g., `ACTIVE`, `TRIALING`, `CANCELLED`).
+This section provides a real-time overview of your current billing status (e.g., `ACTIVE`, `TRIALING`, `CANCELLED`). For what each plan includes, see [Plans & Billing](plans.md).
 
 * **Cancel Subscription**: If you are on a paid plan, you can initiate a cancellation from this menu.
 

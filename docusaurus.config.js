@@ -44,7 +44,7 @@ const config = {
           customCss: require.resolve('./src/css/custom.css'),
         },
         sitemap: {
-          ignorePatterns: ['/404.html', '/'],
+          ignorePatterns: ['/404.html'],
         },
       }),
     ],
