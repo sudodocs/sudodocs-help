@@ -1,6 +1,8 @@
-# Settings
+# Organization
 
-The Account tab within the Admin Dashboard allows system administrators to manage their organization's billing status and control the data lifecycle of their SudoDocs workspace.
+The **Organization** tab of the Admin Dashboard lets System Administrators manage the organization's subscription and API keys, and delete the organization. It used to be called **Account**.
+
+> **Note**: Your own name, password, and two-factor settings aren't here - they're on [Profile & security](../user/profile-security.md), in the menu under your initials.
 
 ## Subscription Management
 
@@ -12,36 +14,30 @@ This section provides a real-time overview of your current billing status (e.g.,
 
 Pro runs on SudoDocs' platform Gemini key. Enterprise can instead bring its own key - for text generation, embeddings & search, or both independently - for data trust and residency: see [Provider](llm-provider.md) for setup and how the transition from the platform key works.
 
-> **Not available via CLI**: Cancelling a subscription and deleting an account are both deliberately dashboard-only actions, given the blast radius of either one being scriptable.
+> **Not available via CLI**: Cancelling a subscription and deleting an organization are both deliberately dashboard-only actions, given the blast radius of either one being scriptable.
 
 ## API Keys
 
-The Account tab also lets you generate API keys for the [SudoDocs CLI](/cli-guide) and its underlying Headless API, used for scripting doc syncs, spec conversions, and Docflows suggestions from CI/CD pipelines - see [CLI Tasks → Account](../../cli-guide/admin/settings.md) for the command-line equivalent of everything on this page.
+The Organization tab also lets you generate API keys for the [SudoDocs CLI](/cli-guide) and its underlying Headless API, used for scripting doc syncs, spec conversions, and Docflows suggestions from CI/CD pipelines - see [CLI Tasks → Organization](../../cli-guide/admin/settings.md) for the command-line equivalent of everything on this page.
 
-1. On the **Account** tab, find the **API Keys** card.
+1. On the **Organization** tab, find the **API Keys** card.
 2. Enter a name for the key (e.g., "CI Pipeline") and click **Generate New Key**.
 3. Copy the key immediately - it is shown only once and cannot be retrieved again later.
 
 > **Note**: Existing keys are listed with their name, prefix, and last-used time, but never their full value. Click **Revoke** next to a key to invalidate it immediately - anything using that key (CLI, CI job, script) stops working right away.
 
-## Delete Account
+## Delete the Organization
 
-The Delete Account action is a permanent, irreversible operation that completely erases your organization's footprint from SudoDocs.
+**Delete organization** is a permanent, irreversible operation that completely erases your organization's footprint from SudoDocs:
 
-Your active Paddle billing subscription is immediately canceled.
-
+* Your active Paddle billing subscription is immediately canceled.
 * All synced Knowledge Graph data, vector embeddings, and cached code snippets are purged.
-
 * All connected repository integrations and Slack/Jira webhook credentials are deleted.
-
 * All generated documentation drafts, release notes, and OpenAPI configurations are destroyed.
+* Every member loses access, and all user accounts and pending invitations associated with your organization are removed.
 
-* All user accounts and pending email invitations associated with your organization are removed.
+To delete the organization:
 
-Follow these steps to delete your account permanently:
-
-1. Navigate to the **Delete Account** inside the **Account** tab.
-
-2. Type your exact administrator email address into the confirmation box.
-
-3. Click **Delete Account**. You will be immediately logged out, and all data will be wiped.
+1. On the **Organization** tab, find the **Delete organization** card.
+2. Type your organization's name, exactly as shown in the card, into the confirmation box. Capitals and extra spaces don't matter.
+3. Click **Delete organization** and confirm. You're signed out immediately, and all data is wiped.

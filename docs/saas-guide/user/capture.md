@@ -16,7 +16,7 @@ Capture has **no approval workflow**: every capture is shareable the moment it f
 2. Click the new SudoDocs Capture icon in your toolbar, then **Connect to SudoDocs**. This opens a tab to approve the connection - confirm the code shown matches the popup, then **Approve**.
 3. Back in the popup, click **I approved it - check again**.
 
-This is a one-time setup. The extension links to your SudoDocs organization the same way `sudodocs login` links the CLI - a personal, revocable API key, shown in your account's API Keys settings labeled **SudoDocs Capture**.
+This is a one-time setup. The extension links to your SudoDocs organization the same way `sudodocs login` links the CLI - a personal, revocable API key, listed as **SudoDocs Capture** under **API Keys** on the Admin Dashboard's [Organization](../admin/settings.md#api-keys) tab, where an administrator can revoke it.
 
 If you're pointing the extension at a non-default SudoDocs deployment (a test instance, for example), set that first under the extension's **Options** page before connecting.
 

@@ -20,6 +20,7 @@ const sidebars = {
             'saas-guide/admin/connect-repos',
             'saas-guide/admin/doc-drift',
             'saas-guide/admin/kb-config',
+            'saas-guide/admin/api-specs',
             'saas-guide/admin/doc-team-roles',
             'saas-guide/admin/users',
             'saas-guide/admin/integrations',
@@ -39,6 +40,8 @@ const sidebars = {
             id: 'saas-guide/user/index',
           },
           items: [
+            'saas-guide/user/sign-in',
+            'saas-guide/user/profile-security',
             'saas-guide/user/chat',
             'saas-guide/user/converter',
             'saas-guide/user/feature-author-vs-docflows',

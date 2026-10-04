@@ -1,6 +1,6 @@
-# Account
+# Organization
 
-CLI equivalents of [Admin Tasks → Account](../../saas-guide/admin/settings.md#api-keys) - specifically API Keys and background jobs. Billing and account deletion have no CLI equivalent by design - both stay browser-only, given the blast radius of scripting either one.
+CLI equivalents of [Admin Tasks → Organization](../../saas-guide/admin/settings.md#api-keys) - specifically API Keys and background jobs. Billing and deleting the organization have no CLI equivalent by design - both stay browser-only, given the blast radius of scripting either one.
 
 ## Generate an API Key
 

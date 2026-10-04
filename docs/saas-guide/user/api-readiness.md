@@ -2,25 +2,14 @@
 
 The API Readiness tool validates your OpenAPI Specifications (OAS) against industry standards and your own style guide. It supports Swagger and Redocly workflows, and leverages AI to automatically repair technical syntax errors and improve content descriptions.
 
-## Configure API Readiness
+## Before You Start
 
-1. Navigate to API Readiness from the Workspace dashboard under **Global Tools**.
+A System Administrator sets which repository, branch, and spec file API Readiness scans, and which style rules apply, on the Admin Dashboard's [API Specs](../admin/api-specs.md) tab.
 
-2. Click **Save Config** after filling in the configuration form:
+1. Open **API Readiness** from the Workspace and click **Open Validator**.
+2. Check the **Configuration** summary: repository, branch and main spec, API style rules, and whether your style guide is applied.
 
-    * **Git Repo URL**: The HTTPS URL of the repository containing your spec.
-
-    * **Branch**: The branch to scan (defaults to main).
-
-    * **Main Spec Path**: The exact file path to your primary spec (e.g., `src/openapi.yaml`).
-
-    * **Advanced Settings (Optional)**: Expand the advanced menu to configure:
-
-        * **Secondary Paths** & **Reference Folders**: Map additional files if your specification is split across multiple directories.
-
-        * **Base URL Domain**: Programmatically override the base URL in the final spec.
-
-        * **Git User** & **Git PAT**: Provide a Personal Access Token for private repositories not connected via an active Integration.
+If it says **No API spec is set up yet**, ask an administrator to set it up. Administrators see an **Edit in Admin** link that goes straight to the tab.
 
 ## Run a Scan
 
