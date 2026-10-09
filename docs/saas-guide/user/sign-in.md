@@ -19,7 +19,7 @@ To start a new organization:
 
 You can't use SudoDocs until you confirm your email. The link works for 24 hours; if it expires, try to sign in and click **Send a new link**.
 
-When you confirm, SudoDocs creates your organization on a 14-day free trial and makes you its System Administrator.
+When you confirm, SudoDocs creates your organization on a 14-day free trial and makes you its System Administrator. A welcome email follows with your trial end date and three first steps.
 
 > **Note**: If a teammate has already invited your email, leave **Organization name** blank. Confirming your email joins you to their organization instead of creating a new one.
 
@@ -31,6 +31,10 @@ When an administrator invites you, you get an email with an invitation link. Ope
 * **Create a password**: enter your name and a password, then click **Join**. You don't need to confirm your email separately - the invitation already proves it's yours.
 
 If you already have a SudoDocs account with that email, sign in instead to accept the invitation.
+
+Once you've joined, a welcome email tells you your role and where to start.
+
+> **Note**: SudoDocs emails come from `no-reply@mail.sudodocs.com`, so replies aren't read - except invitations, where replying reaches the administrator who invited you.
 
 ## Password Rules
 
