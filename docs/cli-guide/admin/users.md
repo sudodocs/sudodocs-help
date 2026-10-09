@@ -18,7 +18,7 @@ sudodocs admin users invite --email newperson@example.com --role Writer
 
 `--role` is `Writer`, `Walkthrough Auditor`, or `System Administrator`. Blocked with an error if your organization is already at its seat limit - see [Invite a Team Member](../../saas-guide/admin/users.md#invite-a-team-member).
 
-If the email already belongs to an existing SudoDocs user, they're added directly to your org and emailed that you added them; if they're already a member, their role is updated instead - same as the web form. Otherwise an invitation is created and, if email delivery is configured, sent automatically; the command always prints the invite link too, so you can share it directly if email delivery isn't set up.
+If the email already belongs to an existing SudoDocs user, they're added directly to your org (no invitation to accept); if they're already a member, their role is updated instead - same as the web form. Otherwise an invitation is created and, if email delivery is configured, sent automatically; the command always prints the invite link too, so you can share it directly if email delivery isn't set up.
 
 ## Update a User's Role
 

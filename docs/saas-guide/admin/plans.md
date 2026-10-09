@@ -18,19 +18,9 @@ Every plan, including Free, includes the core documentation tools: Author a Feat
 
 ## Free Trial and the Basic Tier
 
-Every new organization starts with a 14-day trial with no credit card required. The badge at the top of every page shows how many days are left. Administrators get an email 3 days before the trial ends, and another when it has ended. After 14 days, the organization moves automatically to the permanent free Basic tier - it doesn't expire and nothing is deleted. Basic keeps the same feature set but is limited to a single admin seat, so inviting writers requires upgrading to Pro.
+Every new organization starts with a 14-day trial with no credit card required. After 14 days, the organization moves automatically to the permanent free Basic tier - it doesn't expire and nothing is deleted. Basic keeps the same feature set but is limited to a single admin seat, so inviting writers requires upgrading to Pro.
 
 SSO, BYOK and the CLI are Enterprise-only and aren't included in the trial.
-
-## Emails About Your Plan
-
-SudoDocs emails your organization's System Administrators when:
-
-* The trial ends in 3 days, and when it has ended.
-* The organization has used 80% of its AI credits, and when they run out. Each is sent once per credit period.
-* The organization upgrades, with what the new plan unlocks.
-
-Receipts, invoices, failed-payment notices and renewal reminders come from Paddle, SudoDocs' payment provider.
 
 ## Annual Billing
 
@@ -47,6 +37,6 @@ The Free tier can't buy add-ons - upgrade to Pro first. Enterprise's 25-seat lim
 
 ## Upgrade, Downgrade or Cancel
 
-Upgrade from the **Upgrade** prompt in the app, or from the [pricing table](https://sudodocs.com/#pricing). Payments are processed by Paddle.
+Upgrade from the **Upgrade** prompt in the app, or from the [pricing table](https://sudodocs.com/#pricing). Payments are processed by Paddle, so receipts, invoices and payment notices come from Paddle by email.
 
 To cancel, see [Settings → Subscription Management](settings.md#subscription-management). You keep your paid features until the end of the current billing period. Refunds are covered by the [Refund Policy](https://sudodocs.com/refund).

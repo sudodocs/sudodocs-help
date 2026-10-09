@@ -20,9 +20,9 @@ Seat limits are determined by your active subscription plan.
 3. Enter the user's email address and assign a role (Writer, Walkthrough Auditor, or System Administrator).
 4. Click **Invite**.
 
-The invitee gets an email with a link. They can join with **Continue with Google** or by creating a SudoDocs password - see [Accept an Invitation](../user/sign-in.md#accept-an-invitation). If they reply to the invitation, the reply comes to you.
+The invitee gets an email with a link. They can join with **Continue with Google** or by creating a SudoDocs password - see [Accept an Invitation](../user/sign-in.md#accept-an-invitation).
 
-If the email already belongs to a SudoDocs account, that person is added to your organization right away, and gets an email saying you added them and what their role is.
+If the email already belongs to a SudoDocs account, that person is added to your organization right away - no invitation to accept.
 
 > **Note**: The number of available seats depends on your subscription plan. Check the **Team Seats** indicator on the Users tab.
 
