@@ -21,4 +21,4 @@ Also for administrators:
 
 Your own password and two-factor settings are on [Profile & security](../user/profile-security.md), not in the Admin Dashboard.
 
-Every task above - and most [User Tasks](../user/index.md) too - has a scriptable equivalent for Enterprise organizations: see the [CLI Guide](/cli-guide) to automate them from the command line or CI/CD pipelines instead of the dashboard.
+Every task above - and most [User Tasks](../user/index.md) too - has a scriptable equivalent for Enterprise organizations: see the [CLI Guide](../../cli-guide/getting-started.md) to automate them from the command line or CI/CD pipelines instead of the dashboard.

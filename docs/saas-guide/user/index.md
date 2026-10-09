@@ -26,4 +26,4 @@ You can use the features in two ways:
     * [Author a Feature](feature-author.md): Draft comprehensive feature documentation.
     * [Assigned Docflows](assign-pr.md): Allows you to review, edit, and finalize AI-generated documentation drafts before pushing them to production.
 
-On an Enterprise plan? Most of the tools above - and every Admin Task - can also be scripted from a terminal or CI pipeline. See the [CLI Guide](/cli-guide).
+On an Enterprise plan? Most of the tools above - and every Admin Task - can also be scripted from a terminal or CI pipeline. See the [CLI Guide](../../cli-guide/getting-started.md).
