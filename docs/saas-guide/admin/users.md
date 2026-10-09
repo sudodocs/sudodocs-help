@@ -8,7 +8,7 @@ SudoDocs utilizes Role-Based Access Control (RBAC) to secure your documentation 
 
 * **System Administrator**: Full access to repository integrations, Single Sign-On (SSO) configurations, and global knowledge base settings.
 * **Writer**: Access to workspaces, release dashboards, and the DocOps Assistant.
-* **Walkthrough Auditor**: Can view and edit [Capture](../user/capture.md) walkthroughs, generate voiceovers, and export video. Doesn't get Writer access to the other tools.
+* **Walkthrough Auditor**: Can view and edit [Capture](../user/capture.md) walkthroughs, generate voiceovers, and export video. Lands on Capture after signing in, and doesn't get Writer access to the other tools.
 * **Pending**: The default state for new users awaiting admin approval.
 
 ## Invite a Team Member
@@ -27,7 +27,7 @@ The invitee gets an email with a link. They can join with **Continue with Google
 ## Update User Roles
 
 1.  Locate the user in the **Organization Team** list.
-2.  In the **Actions** column, open the **Change...** menu and select the new role. The change applies immediately.
+2.  In the **Actions** column, open the **Change...** menu and select the new role. The change applies immediately - if the user is signed in, on their next click.
 
 Other System Administrators' roles can't be changed from this list, and they can't be removed here.
 
@@ -89,7 +89,7 @@ To revoke access, remove the user from your organization directly - no need to c
 2. In the **Actions** column, click **Remove**.
 3. Confirm the removal.
 
-The user keeps their SudoDocs account (so re-inviting the same email later works normally) but immediately loses access to your organization, including any API keys they'd generated. You can't remove yourself this way - sign out instead, or have another administrator remove you.
+The user keeps their SudoDocs account (so re-inviting the same email later works normally) but immediately loses access to your organization - including in any browser where they're signed in, and any API keys they'd generated. You can't remove yourself this way - sign out instead, or have another administrator remove you.
 
 If Enterprise SSO is enabled for your domain, also remove the user from your identity provider to prevent them from being re-provisioned automatically the next time they sign in.
 

@@ -18,7 +18,7 @@ Every plan, including Free, includes the core documentation tools: Author a Feat
 
 ## Free Trial and the Basic Tier
 
-Every new organization starts with a 14-day trial with no credit card required. After 14 days, the organization moves automatically to the permanent free Basic tier - it doesn't expire and nothing is deleted. Basic keeps the same feature set but is limited to a single admin seat, so inviting writers requires upgrading to Pro.
+Every new organization starts with a 14-day trial with no credit card required. The badge at the top of every page shows how many days are left. After 14 days, the organization moves automatically to the permanent free Basic tier - it doesn't expire and nothing is deleted. Basic keeps the same feature set but is limited to a single admin seat, so inviting writers requires upgrading to Pro.
 
 SSO, BYOK and the CLI are Enterprise-only and aren't included in the trial.
 

@@ -26,7 +26,7 @@ If the email already belongs to an existing SudoDocs user, they're added directl
 sudodocs admin users update-role <user_id> --role "System Administrator"
 ```
 
-Find `<user_id>` via `sudodocs admin users list`.
+Find `<user_id>` via `sudodocs admin users list`. The new role applies immediately, including in any browser where the user is signed in.
 
 ## Remove a User
 
@@ -34,7 +34,7 @@ Find `<user_id>` via `sudodocs admin users list`.
 sudodocs admin users remove <user_id>
 ```
 
-Removes the user from your organization immediately - self-service, no need to contact support. They keep their SudoDocs account (so re-inviting the same email later works normally) but lose access to your org right away, including revoking any API keys they'd generated. You can't remove yourself this way - use `sudodocs logout` instead.
+Removes the user from your organization immediately, including in any browser where they're signed in - self-service, no need to contact support. They keep their SudoDocs account (so re-inviting the same email later works normally) but lose access to your org right away, including revoking any API keys they'd generated. You can't remove yourself this way - use `sudodocs logout` instead.
 
 ## Manage a Member's Sign-In
 
@@ -75,7 +75,7 @@ Cancelling frees up the seat the pending invitation was holding.
 
 | Endpoint | Method | Purpose |
 |---|---|---|
-| `/admin/users` | GET | List org users. Wrapped by `sudodocs admin users list`. |
+| `/admin/users` | GET | List org users. Each user includes `two_factor`, `disabled`, `last_login_at`, and `last_login_method`. Wrapped by `sudodocs admin users list`. |
 | `/admin/users/invite` | POST | `{"email", "role"}`. Wrapped by `sudodocs admin users invite`. |
 | `/admin/users/{id}/role` | POST | `{"role"}`. Wrapped by `sudodocs admin users update-role`. |
 | `/admin/users/{id}` | DELETE | Wrapped by `sudodocs admin users remove`. |

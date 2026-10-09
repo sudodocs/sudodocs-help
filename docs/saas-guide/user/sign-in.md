@@ -6,7 +6,7 @@ SudoDocs offers three ways to sign in, all from the same page at [app.sudodocs.c
 * **Continue with Google**: your Google account.
 * **Sign in with company SSO**: your company's identity provider, on Enterprise plans where an administrator has [set up SSO](../admin/sso-setup.md).
 
-Your organization's administrators choose which of these members can use - see [Sign-in Policy](../admin/users.md#set-the-sign-in-policy). After you sign in, System Administrators land on the Admin Dashboard and everyone else on the Workspace.
+Your organization's administrators choose which of these members can use - see [Sign-in Policy](../admin/users.md#set-the-sign-in-policy). After you sign in, System Administrators land on the Admin Dashboard, Walkthrough Auditors on [Capture](capture.md), and everyone else on the Workspace.
 
 ## Create an Account
 
