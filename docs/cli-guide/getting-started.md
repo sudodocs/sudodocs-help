@@ -16,7 +16,7 @@ Verify it installed correctly:
 sudodocs --help
 ```
 
-Already installed? Upgrade to get new commands - the sign-in management commands under `sudodocs admin users` and the GitHub token checks under `sudodocs admin integrations` need version 1.1.0 or later:
+Already installed? Upgrade to get new commands - the sign-in management commands under `sudodocs admin users`, the GitHub token checks under `sudodocs admin integrations`, and `sudodocs admin api-specs` need version 1.1.0 or later:
 
 ```bash
 pip install --upgrade sudodocs-cli

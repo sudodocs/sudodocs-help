@@ -45,4 +45,4 @@ The **Publish this spec as an API reference page** option is for SudoDocs Publis
 
 Click **Save API Specs settings**. The next API Readiness scan uses the new settings.
 
-> **Not available via CLI**: These settings can only be changed in the dashboard for now. The Headless API endpoint `POST /api/v1/oas/validate` runs a scan with them.
+See [CLI Tasks → API Specs](../../cli-guide/admin/api-specs.md) to view and change these settings from the command line.

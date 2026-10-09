@@ -2,7 +2,7 @@
 
 Manage your own sign-in settings from the **Profile & security** page. Every member has one, whatever their role.
 
-To open it, click your initials in the top-right corner, then **Profile & security**. The same menu shows which email and organization you're signed in to, links System Administrators to **Admin settings**, and has **Sign out**.
+To open it, click your initials in the top-right corner, then **Profile & security**. The same menu shows which email and organization you're signed in to, links System Administrators to **Admin Dashboard**, and has **Sign out**.
 
 > **Note**: These settings are about you. Settings for the whole organization - subscription, API keys, deleting the organization - are on the Admin Dashboard's [Organization](../admin/settings.md) tab.
 

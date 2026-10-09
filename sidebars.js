@@ -59,6 +59,7 @@ const sidebars = {
         'cli-guide/admin/connect-repos',
         'cli-guide/admin/doc-drift',
         'cli-guide/admin/kb-config',
+        'cli-guide/admin/api-specs',
         'cli-guide/admin/doc-team-roles',
         'cli-guide/admin/users',
         'cli-guide/admin/integrations',
