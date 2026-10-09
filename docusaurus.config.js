@@ -25,10 +25,29 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
+  headTags: [
+    {tagName: 'link', attributes: {rel: 'llms-txt', href: '/llms.txt'}},
+  ],
+
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
+
+  themes: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      /** Built at compile time into a static index: no external service. */
+      ({
+        hashed: true,
+        docsRouteBasePath: '/docs',
+        indexPages: false,
+        highlightSearchTermsOnTargetPage: true,
+        searchBarShortcutHint: true,
+        explicitSearchResultPath: true,
+      }),
+    ],
+  ],
 
   presets: [
     [
@@ -52,6 +71,18 @@ const config = {
 
   plugins: [
     [
+      '@docusaurus/plugin-client-redirects',
+      {
+        // The old /saas-guide and /cli-guide landing pages are now tabs; the
+        // CLI's README and PyPI page still link to /cli-guide.
+        redirects: [
+          {from: '/saas-guide', to: '/docs/saas-guide/overview'},
+          {from: '/cli-guide', to: '/docs/cli-guide/getting-started'},
+          {from: '/docs/whats-new', to: '/docs/changelog'},
+        ],
+      },
+    ],
+    [
       '@signalwire/docusaurus-plugin-llms-txt',
       {
         siteTitle: 'SudoDocs Help',
@@ -74,46 +105,48 @@ const config = {
           src: 'img/logo.png',
         },
         items: [
-          {
-            href: 'https://hackernoon.com/u/sudodocs',
-            label: 'Blog',
-            position: 'left',
-          },
-          {
-            to: '/docs/whats-new',
-            label: "What's New",
-            position: 'left',
-          },
-          {
-            href: 'https://app.sudodocs.com',
-            label: 'Go to App',
-            position: 'right',
-          },
-          // GitHub Icon
-          {
-            href: 'https://github.com/sudodocs/sudodocs-help',
-            position: 'right',
-            className: 'header-github-link',
-            'aria-label': 'GitHub repository',
-          },
-          // YouTube Icon
-          {
-            href: 'https://youtube.com/@sudodocs-tv',
-            position: 'right',
-            className: 'header-youtube-link',
-            'aria-label': 'SudoDocs TV',
-          },
-          {
-            type: 'html',
-            position: 'right',
-            value: '<link rel="llms-txt" href="/llms.txt" /><a href="https://buildwithfern.com/agent-score" target="_blank" rel="noopener noreferrer" title="100% Fern Agent Score"><img src="https://img.shields.io/badge/Fern_Agent_Score-100%25-0891b2?style=for-the-badge" alt="100% Fern Agent Score" style="display: flex; transform: translateY(4px);" /></a>',
-          },
+          // Top-level tabs: each opens its own sidebar and stays highlighted
+          // while you're anywhere inside it.
+          {type: 'docSidebar', sidebarId: 'saasSidebar', label: 'Guides', position: 'left'},
+          {type: 'docSidebar', sidebarId: 'cliSidebar', label: 'CLI & API', position: 'left'},
+          {type: 'doc', docId: 'changelog', label: 'Changelog', position: 'left'},
+          {type: 'search', position: 'right'},
+          {href: 'https://app.sudodocs.com', label: 'Go to App', position: 'right'},
         ],
       },
       footer: {
-        style: 'dark',
-        links: [], // Empty array = No links, no columns
-        copyright: `Copyright © ${new Date().getFullYear()} SudoDocs.`,
+        style: 'light',
+        links: [
+          {
+            title: 'Docs',
+            items: [
+              {label: 'Guides', to: '/docs/saas-guide/overview'},
+              {label: 'CLI & API', to: '/docs/cli-guide/getting-started'},
+              {label: 'Changelog', to: '/docs/changelog'},
+              {label: 'llms.txt', href: 'https://docs.sudodocs.com/llms.txt'},
+            ],
+          },
+          {
+            title: 'SudoDocs',
+            items: [
+              {label: 'Go to App', href: 'https://app.sudodocs.com'},
+              {label: 'Pricing', href: 'https://sudodocs.com/#pricing'},
+              {label: 'Blog', href: 'https://hackernoon.com/u/sudodocs'},
+              {label: 'SudoDocs TV', href: 'https://youtube.com/@sudodocs-tv'},
+              {label: 'Docs on GitHub', href: 'https://github.com/sudodocs/sudodocs-help'},
+            ],
+          },
+          {
+            title: 'Legal',
+            items: [
+              {label: 'Terms of Service', href: 'https://sudodocs.com/terms'},
+              {label: 'Privacy Policy', href: 'https://sudodocs.com/privacy'},
+              {label: 'Refund Policy', href: 'https://sudodocs.com/refund.html'},
+              {label: 'Contact', href: 'mailto:admin@sudodocs.com'},
+            ],
+          },
+        ],
+        copyright: `Copyright © ${new Date().getFullYear()} SudoDocs. <a class="footer-agent-score" href="https://buildwithfern.com/agent-score" target="_blank" rel="noopener noreferrer" title="100% Fern Agent Score"><img src="https://img.shields.io/badge/Fern_Agent_Score-100%25-0891b2?style=flat-square" alt="100% Fern Agent Score" height="20" /></a>`,
       },
       prism: {
         theme: prismThemes.github,

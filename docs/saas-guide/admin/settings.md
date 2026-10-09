@@ -18,7 +18,7 @@ Pro runs on SudoDocs' platform Gemini key. Enterprise can instead bring its own 
 
 ## API Keys
 
-The Organization tab also lets you generate API keys for the [SudoDocs CLI](/cli-guide) and its underlying Headless API, used for scripting doc syncs, spec conversions, and Docflows suggestions from CI/CD pipelines - see [CLI Tasks → Organization](../../cli-guide/admin/settings.md) for the command-line equivalent of everything on this page.
+The Organization tab also lets you generate API keys for the [SudoDocs CLI](../../cli-guide/getting-started.md) and its underlying Headless API, used for scripting doc syncs, spec conversions, and Docflows suggestions from CI/CD pipelines - see [CLI Tasks → Organization](../../cli-guide/admin/settings.md) for the command-line equivalent of everything on this page.
 
 1. On the **Organization** tab, find the **API Keys** card.
 2. Enter a name for the key (e.g., "CI Pipeline") and click **Generate New Key**.

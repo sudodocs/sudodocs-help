@@ -1,9 +1,9 @@
 ---
-title: What's New
+title: Changelog
 description: Product updates to SudoDocs, newest first.
 ---
 
-# What's New
+# Changelog
 
 Product updates to SudoDocs, newest first.
 
