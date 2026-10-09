@@ -80,6 +80,11 @@ const config = {
             position: 'left',
           },
           {
+            to: '/docs/whats-new',
+            label: "What's New",
+            position: 'left',
+          },
+          {
             href: 'https://app.sudodocs.com',
             label: 'Go to App',
             position: 'right',
