@@ -18,7 +18,7 @@ Product updates to SudoDocs, newest first.
 
 ### Easier to find your way around
 
-- **New profile menu.** Click your initials in the top-right corner for **Profile & security**, **Admin settings**, and **Sign out**.
+- **New profile menu.** Click your initials in the top-right corner for **Profile & security**, **Admin Dashboard**, and **Sign out**.
 - **The Admin Dashboard's Account tab is now Organization**, so it's clear it holds your organization's subscription and API keys, not your personal settings.
 
 ### Repositories and API specs
@@ -28,7 +28,7 @@ Product updates to SudoDocs, newest first.
 
 ### CLI
 
-- **sudodocs-cli 1.1.0** adds commands to manage members' sign-in and your organization's sign-in policy, and to check GitHub tokens before saving them. Upgrade with `pip install --upgrade sudodocs-cli`. See [CLI Users](cli-guide/admin/users.md).
+- **sudodocs-cli 1.1.0** adds commands to manage members' sign-in and your organization's sign-in policy, check GitHub tokens before saving them, and change API Specs settings. Upgrade with `pip install --upgrade sudodocs-cli`. See [CLI Users](cli-guide/admin/users.md).
 
 ### Improvements
 

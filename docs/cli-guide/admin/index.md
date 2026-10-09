@@ -7,7 +7,7 @@ Command-line equivalents of every [SaaS Guide → Admin Tasks](../../saas-guide/
 | [Repositories](../../saas-guide/admin/connect-repos.md) | [Repositories](connect-repos.md) |
 | [Configure Docflows Webhook](../../saas-guide/admin/doc-drift.md) | [Docflows](doc-drift.md) |
 | [Knowledge Base](../../saas-guide/admin/kb-config.md) | [Knowledge Base](kb-config.md) |
-| [API Specs](../../saas-guide/admin/api-specs.md) | Dashboard only for now |
+| [API Specs](../../saas-guide/admin/api-specs.md) | [API Specs](api-specs.md) |
 | [Doc Team Roles](../../saas-guide/admin/doc-team-roles.md) | [Doc Team Roles](doc-team-roles.md) |
 | [Users](../../saas-guide/admin/users.md) | [Users](users.md) |
 | [Connect Services](../../saas-guide/admin/integrations.md) | [Connect Services](integrations.md) |
