@@ -2,6 +2,11 @@
 
 Comprehensive instructions for technical writers, developers, and product managers using SudoDocs to automate documentation workflows.
 
+New here? Start with:
+
+* [Sign In and Create an Account](sign-in.md): Sign in with a password, Google, or company SSO; create an organization; accept an invitation; reset a forgotten password.
+* [Profile & Security](profile-security.md): Change your password, turn on two-factor authentication, and see your recent sign-ins.
+
 Not sure whether to start with **Author a Feature** or let **Docflows** handle it? See [Author a Feature vs. Docflows](feature-author-vs-docflows.md).
 
 You can use the features in two ways:

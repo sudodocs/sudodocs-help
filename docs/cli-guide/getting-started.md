@@ -16,13 +16,20 @@ Verify it installed correctly:
 sudodocs --help
 ```
 
+Already installed? Upgrade to get new commands - the sign-in management commands under `sudodocs admin users`, the GitHub token checks under `sudodocs admin integrations`, and `sudodocs admin api-specs` need version 1.1.0 or later:
+
+```bash
+pip install --upgrade sudodocs-cli
+pip show sudodocs-cli   # shows the installed version
+```
+
 ## Log In
 
 ```bash
 sudodocs login
 ```
 
-This opens your browser to approve the login (the same device-authorization flow GitHub's or Claude's own CLI uses) and saves a personal API key to `~/.sudodocs/credentials.json`. Like every other CLI/API action, logging in requires your organization to be on the **Enterprise** plan - `sudodocs login` fails with an upgrade message otherwise.
+This opens your browser to approve the login (the same device-authorization flow GitHub's or Claude's own CLI uses) and saves a personal API key to `~/.sudodocs/credentials.json`. If you aren't signed in to SudoDocs in that browser, you sign in first with whatever method you normally use - password (plus two-factor code, if it's on), Google, or company SSO. See [Sign In and Create an Account](../saas-guide/user/sign-in.md). Like every other CLI/API action, logging in requires your organization to be on the **Enterprise** plan - `sudodocs login` fails with an upgrade message otherwise.
 
 ```bash
 sudodocs whoami   # confirm who you're logged in as, and which org/plan
@@ -40,7 +47,7 @@ base_url: https://api.sudodocs.com
 integration_id: 42   # required only for `sudodocs docflow` - find this via `sudodocs admin integrations webhook <id>`
 ```
 
-`sudodocs.yaml` is meant to stay out of version control - prefer environment variables for the key itself, generated with [`sudodocs admin api-keys create`](admin/settings.md#generate-an-api-key) (or from the dashboard's Account tab):
+`sudodocs.yaml` is meant to stay out of version control - prefer environment variables for the key itself, generated with [`sudodocs admin api-keys create`](admin/settings.md#generate-an-api-key) (or from the Admin Dashboard's **Organization** tab):
 
 ```bash
 export SUDODOCS_API_KEY="sudo_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"

@@ -37,6 +37,6 @@ The Free tier can't buy add-ons - upgrade to Pro first. Enterprise's 25-seat lim
 
 ## Upgrade, Downgrade or Cancel
 
-Upgrade from the **Upgrade** prompt in the app, or from the [pricing table](https://sudodocs.com/#pricing). Payments are processed by Paddle.
+Upgrade from the **Upgrade** prompt in the app, or from the [pricing table](https://sudodocs.com/#pricing). Payments are processed by Paddle, so receipts, invoices and payment notices come from Paddle by email.
 
 To cancel, see [Settings → Subscription Management](settings.md#subscription-management). You keep your paid features until the end of the current billing period. Refunds are covered by the [Refund Policy](https://sudodocs.com/refund).
