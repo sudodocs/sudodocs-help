@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import styles from './Root.module.css';
+import styles from './styles.module.css';
 
 const DISMISS_KEY = 'sudodocs-capture-bar-dismissed';
 const CWS_URL = 'https://chromewebstore.google.com/detail/sudodocs-capture/kcjmfohocapknbkdnecfenjfibfidadk';
 
-function CaptureBar() {
+// Shown on the home page only (not over every doc page), until dismissed.
+export default function CaptureBar() {
   const [dismissed, setDismissed] = useState(true);
 
   useEffect(() => {
@@ -52,14 +53,5 @@ function CaptureBar() {
         </button>
       </div>
     </div>
-  );
-}
-
-export default function Root({ children }) {
-  return (
-    <>
-      {children}
-      <CaptureBar />
-    </>
   );
 }

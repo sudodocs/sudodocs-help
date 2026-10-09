@@ -1,0 +1,248 @@
+/* Help home page: compact hero with search, latest update, guides, tasks. */
+
+.hero {
+  position: relative;
+  z-index: 2; /* search results drop down over the content below */
+  padding: 4.5rem 1rem 3.5rem;
+  text-align: center;
+  background-color: var(--ifm-background-color);
+  background-image: radial-gradient(var(--grid-dot-color) 1px, transparent 1px);
+  background-size: 22px 22px;
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden; /* clips the glow without clipping the search results */
+  pointer-events: none;
+}
+
+.heroGlow {
+  position: absolute;
+  left: 50%;
+  top: -240px;
+  transform: translateX(-50%);
+  width: 640px;
+  height: 460px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--brand-glow) 0%, transparent 70%);
+  filter: blur(20px);
+  pointer-events: none;
+}
+
+.heroInner {
+  position: relative;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.subtitle {
+  margin: 0.75rem 0 1.75rem;
+  font-size: 1.1rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* Enlarge the search plugin's input inside the hero. When focused, the
+   plugin wraps the input in an inline span; keep that full width too. */
+.search {
+  display: flex;
+  justify-content: center;
+  text-align: left; /* results list, not the centered hero text */
+}
+
+.search :global(.navbar__search) {
+  width: min(560px, 100%);
+  margin-left: 0;
+}
+
+.search :global(.navbar__search) > span,
+.search :global(.navbar__search) span[class*='searchBar'] {
+  display: block !important;
+  width: 100% !important;
+}
+
+.search input {
+  width: 100% !important;
+  height: 3rem !important;
+  font-size: 1rem !important;
+  padding-left: 2.6rem !important;
+  border-radius: 999px !important;
+  border: 1px solid var(--ifm-toc-border-color) !important;
+  background-color: var(--ifm-background-color) !important;
+  box-shadow: 0 4px 24px rgba(9, 9, 11, 0.06);
+}
+
+.search :global(.aa-dropdown-menu) {
+  width: 100% !important;
+  text-align: left;
+}
+
+.main {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+.update {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 12px;
+  color: var(--ifm-font-color-base);
+  transition: border-color 0.15s;
+}
+
+.update:hover {
+  border-color: var(--ifm-color-primary);
+  text-decoration: none;
+  color: var(--ifm-font-color-base);
+}
+
+.updateBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary-darker);
+  background: rgba(34, 211, 238, 0.14);
+  white-space: nowrap;
+}
+
+html[data-theme='dark'] .updateBadge {
+  color: var(--ifm-color-primary);
+}
+
+.updateText {
+  flex: 1 1 280px;
+  font-size: 0.92rem;
+}
+
+.updateMore,
+.guideMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  white-space: nowrap;
+}
+
+.section {
+  margin-top: 2.75rem;
+}
+
+.sectionTitle {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.guides {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.guide {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 14px;
+  color: var(--ifm-font-color-base);
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+
+.guide:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 8px 28px rgba(8, 145, 178, 0.12);
+  transform: translateY(-2px);
+  text-decoration: none;
+  color: var(--ifm-font-color-base);
+}
+
+.iconTile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  color: var(--ifm-color-primary-dark);
+  background: rgba(34, 211, 238, 0.14);
+  margin-bottom: 0.25rem;
+}
+
+html[data-theme='dark'] .iconTile {
+  color: var(--ifm-color-primary);
+}
+
+.guideTitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ifm-heading-color);
+}
+
+.guideText {
+  font-size: 0.93rem;
+  line-height: 1.55;
+  flex: 1;
+}
+
+.tasks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 0.6rem;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 10px;
+  font-weight: 500;
+  color: var(--ifm-heading-color);
+  transition: border-color 0.15s, background-color 0.15s;
+}
+
+.task:hover {
+  border-color: var(--ifm-color-primary);
+  background: rgba(34, 211, 238, 0.06);
+  text-decoration: none;
+  color: var(--ifm-heading-color);
+}
+
+.taskIcon {
+  display: inline-flex;
+  color: var(--ifm-color-primary);
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 3rem 1rem 2.5rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .tasks {
+    grid-template-columns: 1fr;
+  }
+}

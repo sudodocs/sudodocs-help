@@ -1,12 +1,14 @@
 ---
-name: whats-new
-description: Rules for writing and updating the public "What's New" page (docs/whats-new.md) on the SudoDocs help site. Use whenever adding a release entry, summarizing app changes for customers, or editing that page. Covers what to include, what must never appear (private code and security details), wording and format.
+name: changelog
+description: Rules for writing and updating the public Changelog page (docs/changelog.md) and the "Latest update" strip on the help home page on the SudoDocs help site. Use whenever adding a release entry, summarizing app changes for customers, or editing that page. Covers what to include, what must never appear (private code and security details), wording and format.
 ---
 
-# Writing the "What's New" page
+# Writing the Changelog
 
-`docs/whats-new.md` is a **public, customer-facing** changelog on
-docs.sudodocs.com, linked from the navbar. This repository is public too.
+`docs/changelog.md` is the **public, customer-facing** changelog on
+docs.sudodocs.com (the **Changelog** tab). The home page repeats the newest
+release in a short "Latest update" strip (`LATEST_UPDATE` in
+`src/pages/index.js`). This repository is public too.
 Readers are SudoDocs customers (admins, writers, developers using the CLI),
 not SudoDocs engineers. Write about what changed for them, never about how
 it was built.
@@ -74,6 +76,9 @@ Only changes a customer can see, use, or must act on:
   hold the details.
 
 ## Before committing
+
+0. Update `LATEST_UPDATE` in `src/pages/index.js` when you add a new
+   release: month, one-line summary, and the anchor of the new `##` heading.
 
 1. Re-read every line against **Never include**.
 2. Every link points to an existing page and anchor.
