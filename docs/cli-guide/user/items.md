@@ -43,6 +43,15 @@ sudodocs items status diagrams 15 blocked --note "Waiting on the SME" --claim
 
 Statuses: `todo`, `in_progress`, `in_review`, `blocked`, `done`, `rejected` (not for chats). Only the item's writer or a System Administrator can change its status; `--claim` makes you the writer first. `sudodocs items list TOOL --status blocked` lists items in one status, and the list shows each item's status and any open pull request.
 
+## Open a Pull Request from an API Scan
+
+```bash
+sudodocs api-scan open-pr 12 --repo 3 --path openapi/spec.yaml
+sudodocs api-scan open-pr 12 --repo 3 --path openapi/spec.yaml --spec prepped
+```
+
+Opens a pull request with the scan's AI-corrected spec (or the pre-processed one with `--spec prepped`) in a documentation repository, and the scan tracks it. `--repo` is the repository's integration ID (`sudodocs admin integrations list`, System Administrators only). API: `POST /api/v1/oas/scans/<id>/pull-request` with `integration_id`, `file_path`, optional `spec` and `commit_message`.
+
 ## Rename an Item
 
 ```bash
