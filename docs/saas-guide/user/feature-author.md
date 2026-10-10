@@ -4,7 +4,7 @@ Author comprehensive feature documentation from a Jira ticket, a linked engineer
 
 ## Open Feature Author
 
-On the Workspace, click **Open Feature Author** on the **Feature Author** card. The left sidebar lists every feature draft in your organization; use the release list above it to show only one release's drafts, or only untagged ones.
+On the Workspace, click **Open Feature Author** on the **Feature Author** card. The left sidebar lists every feature draft in your organization; use **Show in history** above it to show only one release's drafts, or only drafts not tagged to a release.
 
 At the top of the form, you can tag the new draft:
 

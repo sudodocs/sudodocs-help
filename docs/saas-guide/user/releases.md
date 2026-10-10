@@ -23,7 +23,7 @@ To tag an item, hover over it in the tool's history list and click the tag icon.
 
 Hover over an item to also **Rename** it (pencil icon) or **Delete** it (trash icon).
 
-To see only some items, use the release list above a tool's history: **All releases**, **No release** for untagged items, or a specific release.
+To see only some items, use **Show in history** above a tool's history list: **Everything**, **Not tagged to a release**, or one release. It only filters the list; it doesn't change any item or the form.
 
 :::note
 DocOps Assistant chats are private: only the person who started a chat sees it, so only they can tag, rename or delete it.
