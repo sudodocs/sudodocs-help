@@ -91,3 +91,14 @@ Beyond clicking **Sync** manually and webhook-triggered Docflows suggestions (se
 
 * [CLI Tasks → Repositories](../../cli-guide/admin/connect-repos.md) - script every action on this page.
 * [Configure Webhooks and Screenshot Settings for Docflows](doc-drift.md) - the other repository-level configuration, for automated documentation suggestions rather than search/RAG.
+
+## Track Pull Request Reviews
+
+SudoDocs follows the pull requests it opens in your documentation repositories - reviews, merges and closes - and shows them on each item (see [Track work and pull requests](../user/releases.md#track-work-and-pull-requests)). Repositories connected through the SudoDocs GitHub App report this automatically. For a repository connected with a token, SudoDocs checks open pull requests every 15 minutes.
+
+For updates within seconds on a token-connected documentation repository, add a webhook to it:
+
+1. In SudoDocs, open **Admin Dashboard > Repositories** and copy the repository's **Payload URL** and **Secret** (the same webhook dialog Docflows uses).
+2. In GitHub, open the documentation repository's **Settings** > **Webhooks** > **Add webhook**, paste both, and set **Content type** to `application/json`.
+3. Choose **Let me select individual events**, deselect **Pushes**, and select **Pull requests** and **Pull request reviews**.
+4. Click **Add webhook**.

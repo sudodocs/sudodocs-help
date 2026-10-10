@@ -29,9 +29,55 @@ To see only some items, use the release list above a tool's history: **All relea
 DocOps Assistant chats are private: only the person who started a chat sees it, so only they can tag, rename or delete it.
 :::
 
+## Track Work and Pull Requests
+
+Every item except Assistant chats has a work status:
+
+| Status | Meaning |
+|---|---|
+| **To do** | Not started. New Docflows suggestions start here. |
+| **In progress** | Being worked on. New items start here. |
+| **In review** | Waiting for review - usually a pull request is open. |
+| **Blocked** | Can't move forward. Add a reason so others know why. |
+| **Done** | Finished. A merged pull request moves an item here. |
+| **Rejected** | Dropped, or its pull request was closed without merging. |
+
+The status shows as a badge on the item in its tool's history list. To change it, hover over the item, click the tag icon, and pick a **Status** in **Status and tags**.
+
+Only an item's writer or a System Administrator can change its status. To work on an item that isn't yours, make yourself its writer in the same dialog, then change the status - both save together.
+
+Some statuses change on their own:
+
+* **Author a Feature**: the draft is **In progress** while the review pipeline works on it, and **In review** once it's ready for your technical review.
+* **Docflows**: assigning a suggestion moves it to **In progress**; dismissing it moves it to **Rejected**.
+* **Pull requests**: when SudoDocs opens a pull request for an item (Author a Feature's **Open Pull Request**, Docflows' **Push PR**, or **Push to Git** on a draft or release notes), the item moves to **In review** and SudoDocs follows the pull request on GitHub:
+
+| On GitHub | In SudoDocs |
+|---|---|
+| Pull request open, no review yet | **In review**, badge **PR open** |
+| A reviewer requested changes | **In review**, badge **Changes requested** |
+| Approved | **In review**, badge **Ready to merge** |
+| Merged | **Done** |
+| Closed without merging | **Rejected** |
+
+Click the pull request badge to open the pull request on GitHub and see the review comments. GitHub emails you about reviews as usual; SudoDocs doesn't send its own emails.
+
+SudoDocs checks open pull requests every 15 minutes. If your administrator has set up a webhook for the docs repository, updates arrive within seconds - see [Connect Repositories](../admin/connect-repos.md#track-pull-request-reviews).
+
 ## Open a Release Dashboard
 
 Under **Releases** on the Workspace, click **Open** on a release. Its Release Dashboard links to Feature Author and Release Composer filtered to that release, and shows the Docflows assigned to it (see [Assigned Docflows](assign-pr.md)).
+
+## Edit a Release, Move Its Date, or Mark It Released
+
+On the Release Dashboard:
+
+* Click **Edit release** to change its name, **Target date** or build number. If you move the date, add a reason - it's kept in the release's history. The first target date is kept too, so the dashboard shows "Moved from" the original.
+* When the release ships, pick the actual date (or leave it blank for today) and click **Mark as released**. Click **Reopen** if you marked it by mistake.
+
+**Release history** at the bottom of the dashboard lists every change: date moves with their reasons, renames, and when it was released or reopened.
+
+Writers and System Administrators can both edit releases.
 
 ## Delete a Release
 

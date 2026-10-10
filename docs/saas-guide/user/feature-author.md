@@ -11,7 +11,7 @@ At the top of the form, you can tag the new draft:
 * **Release** (optional): the release the draft belongs to. Choose **+ New release...** to create one.
 * **Writer**: who's responsible for the draft. It defaults to you.
 
-See [Tag work with a release and a writer](releases.md#tag-work-with-a-release-and-a-writer) for how tags work.
+See [Tag work with a release and a writer](releases.md#tag-work-with-a-release-and-a-writer) for how tags work, and [Track work and pull requests](releases.md#track-work-and-pull-requests) for how the draft's status follows its review and pull request.
 
 ## Import Source Context
 
@@ -69,4 +69,4 @@ The diagram lives in its own tab in the classic editor, alongside a live preview
 
 ## Change a Draft's Release or Writer
 
-To move a draft to another release, or hand it to another writer, open the draft and click **Tag release and writer** under **Feature Author** in the sidebar. You can also hover over the draft in the history list and click the tag icon. See [Tag work with a release and a writer](releases.md#tag-work-with-a-release-and-a-writer).
+To move a draft to another release, hand it to another writer or change its status, open the draft and click **Status and tags** under **Feature Author** in the sidebar. You can also hover over the draft in the history list and click the tag icon. See [Tag work with a release and a writer](releases.md#tag-work-with-a-release-and-a-writer).

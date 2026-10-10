@@ -31,5 +31,5 @@ If an engineer pushes new commits to their Pull Request after the AI has already
 
 ## Finalize the Update
 
-* **Push PR**: Once you are satisfied with the draft, click **Push PR**. SudoDocs will automatically create a new branch, commit your edited files, and open a Pull Request directly in your documentation repository.
-* **Dismiss**: If the documentation update is no longer relevant to this release, click **Dismiss** to permanently remove it from the release's assigned list.
+* **Push PR**: Once you are satisfied with the draft, click **Push PR**. SudoDocs will automatically create a new branch, commit your edited files, and open a Pull Request directly in your documentation repository. The suggestion moves to **In review**, and SudoDocs follows the pull request until it's merged (**Done**) or closed (**Rejected**) - see [Track work and pull requests](releases.md#track-work-and-pull-requests).
+* **Dismiss**: If the documentation update is no longer relevant to this release, click **Dismiss** to permanently remove it from the release's assigned list. Its status becomes **Rejected**.

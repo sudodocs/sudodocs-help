@@ -13,6 +13,7 @@ Every command takes a **tool** name:
 | `chats` | DocOps Assistant (only your own chats) |
 | `api-scans` | API Readiness |
 | `diagrams` | Diagram Generator |
+| `docflows` | Docflows suggestions (they're dismissed in Docflows, not deleted) |
 
 ## List Items
 
@@ -33,6 +34,15 @@ sudodocs items tag feature-drafts 42 --writer none
 
 Sets the release and/or the writer. Pass `none` to clear a tag. The writer must be a member of your organization. Tags never limit who can see an item.
 
+## Change an Item's Status
+
+```bash
+sudodocs items status feature-drafts 42 in_review
+sudodocs items status diagrams 15 blocked --note "Waiting on the SME" --claim
+```
+
+Statuses: `todo`, `in_progress`, `in_review`, `blocked`, `done`, `rejected` (not for chats). Only the item's writer or a System Administrator can change its status; `--claim` makes you the writer first. `sudodocs items list TOOL --status blocked` lists items in one status, and the list shows each item's status and any open pull request.
+
 ## Rename an Item
 
 ```bash
@@ -52,7 +62,7 @@ You're asked to confirm; add `--yes` to skip the prompt. Deleting a capture also
 | Action | Request |
 |---|---|
 | List | `GET /api/v1/items/<tool>?release_id=<id or none>&writer_id=<id or none>` |
-| Rename / tag | `PATCH /api/v1/items/<tool>/<id>` with JSON containing any of `title`, `release_id`, `writer_user_id` (`null` clears a tag) |
+| Rename / tag / move | `PATCH /api/v1/items/<tool>/<id>` with JSON containing any of `title`, `release_id`, `writer_user_id` (`null` clears a tag), `work_status`, `status_note`. Tags apply before the status, so claiming and moving works in one call. |
 | Delete | `DELETE /api/v1/items/<tool>/<id>` |
 
-Each item has `id`, `title`, `created_at`, `created_by`, `release_id`, `release_name`, `writer_user_id` and `writer_name`.
+Each item has `id`, `title`, `created_at`, `created_by`, `release_id`, `release_name`, `writer_user_id`, `writer_name`, `work_status`, `status_note` and `pull_request` (`url`, `state`, `review`, or `null`). `GET /api/v1/items/<tool>` also takes `status=`.

@@ -47,6 +47,8 @@ Every scan is listed under **Scan History** on the left, titled with when it ran
 
 ## Push to Production
 
+When you send a corrected spec to Docflows, the suggestion keeps the scan's release and writer. Once its pull request is opened, the scan moves to **In review**, and to **Done** when the pull request merges - see [Track work and pull requests](releases.md#track-work-and-pull-requests).
+
 Once you are satisfied with the AI corrected spec, click **📬 Send to Docflows**.
 
 This will route the updated `JSON` or `YAML` file directly to **Docflows** as a pending suggestion. From there, a writer can assign it to a target release and push the updated specification directly to your documentation repository via a pull request.
