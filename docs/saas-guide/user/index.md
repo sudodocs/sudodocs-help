@@ -20,6 +20,6 @@ Every tool is a card in the **Tools** grid on your Workspace:
 * [API Readiness](api-readiness.md): Validates your OpenAPI Specifications (OAS) against industry standards and your own style guide.
 * [Capture](capture.md): A Chrome extension for turning a live product into a shareable click-through walkthrough, a narrated screen recording, or an annotated screenshot.
 
-Below the tools, the Workspace lists your **Releases**. A release groups one version's feature drafts, release notes and assigned Docflows. See [Manage Releases](releases.md), and [Assigned Docflows](assign-pr.md) to review the Docflows assigned to a release.
+Above the tools, **Dashboard** opens a view of all your team's work - see [Dashboards](dashboards.md). Below the tools, the Workspace lists your **Releases**. A release groups one version's feature drafts, release notes and assigned Docflows. See [Manage Releases](releases.md), and [Assigned Docflows](assign-pr.md) to review the Docflows assigned to a release.
 
 On an Enterprise plan? Most of the tools above - and every Admin Task - can also be scripted from a terminal or CI pipeline. See the [CLI Guide](../../cli-guide/getting-started.md).

@@ -75,3 +75,14 @@ You're asked to confirm; add `--yes` to skip the prompt. Deleting a capture also
 | Delete | `DELETE /api/v1/items/<tool>/<id>` |
 
 Each item has `id`, `title`, `created_at`, `created_by`, `release_id`, `release_name`, `writer_user_id`, `writer_name`, `work_status`, `status_note` and `pull_request` (`url`, `state`, `review`, or `null`). `GET /api/v1/items/<tool>` also takes `status=`.
+
+## Dashboard
+
+```bash
+sudodocs dashboard
+sudodocs dashboard --release 7 --writer 12
+sudodocs dashboard --release none --tool diagrams
+sudodocs dashboard --json
+```
+
+Prints the same numbers as the web [Dashboards](../../saas-guide/user/dashboards.md): item counts, each release's progress (when no release is picked), work per writer (open / done / total), and what needs attention. `--release` and `--writer` take an ID or `none`; `--json` prints everything, including the burn-up series for one release. API: `GET /api/v1/dashboard` with optional `release_id`, `writer_id` and `tool`.

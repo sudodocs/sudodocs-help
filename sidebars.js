@@ -42,6 +42,7 @@ const sidebars = {
         'saas-guide/user/api-readiness',
         'saas-guide/user/capture',
         'saas-guide/user/releases',
+        'saas-guide/user/dashboards',
         'saas-guide/user/release-composer',
         'saas-guide/user/feature-author',
         'saas-guide/user/assign-pr',
