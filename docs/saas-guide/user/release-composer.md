@@ -11,25 +11,27 @@ Before your first import, it's worth checking two optional settings that shape h
 3. **CSV Column Mappings**: map your tracker's CSV export headers (Jira, Linear, Asana, or anything else) to the fields SudoDocs looks for - Ticket ID/Key, Summary, and Description. Each of the three is independent and optional; leave any of them blank to fall back to common default header names (e.g. "Key"/"Issue key" for the ticket ID).
 4. Click **Save Release Notes Settings**.
 
-These settings are shared across every project's release notes for your org, not just the one you're currently viewing - see [CLI Tasks → Compose Release Notes](../../cli-guide/user/release-composer.md) to manage them from a script instead. Looking for Product Categories? Those are a Knowledge Base setting, shared with other AI features - see [Configure the Knowledge Base](../admin/kb-config.md#product-categories).
+These settings are shared across every release's release notes for your org, not just the one you're currently viewing - see [CLI Tasks → Compose Release Notes](../../cli-guide/user/release-composer.md) to manage them from a script instead. Looking for Product Categories? Those are a Knowledge Base setting, shared with other AI features - see [Configure the Knowledge Base](../admin/kb-config.md#product-categories).
 
 ## Automatic Import (Jira)
 
 To generate notes directly from your Jira project:
 
-1.  Navigate to your **Project Dashboard** and click **Compose** on the **Release Composer** card.
-2.  Under **Import Data**, ensure the **Automatic (Jira)** button is selected.
-3.  Locate the filter fields for each category (Epics, Stories, Bugs, Known Issues, Escalations).
-4.  Enter the **Jira Filter ID** for each category you wish to include.
+1.  On the Workspace, click **Open Composer** on the **Release Composer** card.
+2.  Enter a **Title** for the draft. It labels the draft in your history; it isn't added to the notes.
+3.  Pick the **Release** the notes are for (or **+ New release...**). Slack items queued for that release are included. Optionally change the **Writer**, which defaults to you.
+4.  Under **Import Data**, ensure the **Automatic (Jira)** button is selected.
+5.  Locate the filter fields for each category (Epics, Stories, Bugs, Known Issues, Escalations).
+6.  Enter the **Jira Filter ID** for each category you wish to include.
     * *Tip*: To find a Filter ID, open your filter in Jira and look at the URL (e.g., `?filter=12345`).
     * You may leave fields blank if you do not have tickets for that category.
-5.  Click **Compose**.
+7.  Click **Compose**.
 
 ## Manual Import (CSV)
 
 If you do not have a direct Jira connection, you can upload CSV exports.
 
-1.  On the **Release Composer** page, click the **Manual (CSV)** button.
+1.  On the **Release Composer** page, fill in the **Title** and **Release** as above, then click the **Manual (CSV)** button.
 2.  Click **Choose File** for the corresponding category (e.g., **Stories CSV**, **Bugs CSV**).
 3.  Select the CSV file from your computer.
 
@@ -37,6 +39,8 @@ If you do not have a direct Jira connection, you can upload CSV exports.
 4.  Click **Compose**.
 
 ## Reviewing and Exporting
+
+Every draft is listed in the history on the left, with its release and writer. Deleting a release keeps its release notes; they just lose the release tag. See [Tag work with a release and a writer](releases.md#tag-work-with-a-release-and-a-writer).
 
 Once generation is complete, you will be redirected to the draft view.
 

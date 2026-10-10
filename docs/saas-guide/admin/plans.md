@@ -6,13 +6,13 @@ SudoDocs has three plans - Free (Basic), Pro, and Enterprise - with Pro and Ente
 
 | | Free (Basic) | Pro | Enterprise |
 |---|---|---|---|
-| **Seats** | 1 (admin only) | 2, expandable with seat add-ons | Up to 25 |
-| **AI credits** | 100 / month | 500 / month (Pro Annual: 6,000 / year) | Unlimited with your own LLM key; 500 / month until one is configured |
+| **Seats** | 1 (admin only) | 2, expandable with seat add-ons | 25, expandable with seat add-ons (up to 100) |
+| **AI credits** | 100 / month | 500 / month (Pro Annual: 6,000 / year) | Unlimited with your own LLM key; 2,000 / month until one is configured |
 | **Capture recording length** | 5 minutes | 10 minutes | 30 minutes |
 | **LLM provider** | Platform Gemini key | Platform Gemini key | Platform Gemini key, or [bring your own key](llm-provider.md) |
 | **Single Sign-On (SSO)** | - | - | ✅ |
 | **CLI & Headless API** | - | - | ✅ |
-| **Add-ons (seats, credit packs)** | - | ✅ | - |
+| **Add-ons (seats, credit packs)** | - | ✅ | ✅ (credit packs only until you connect your own LLM key) |
 
 Every plan, including Free, includes the core documentation tools: Author a Feature, Release Composer, Docflows (automated doc PRs), the OAS Validator & Fixer, the Universal Doc Converter, Chat with Docs, Git, Code, Jira, Slack and web source sync, and [SudoDocs Capture](../user/capture.md).
 
@@ -28,12 +28,12 @@ Pro and Enterprise can both be billed annually instead of monthly, at a discount
 
 ## Add-ons
 
-Organizations on Pro or Pro Annual can buy add-ons from the Admin Dashboard:
+Organizations on Pro, Pro Annual or Enterprise can buy add-ons from the Admin Dashboard (**Organization** tab):
 
 * **Seats**: one additional user seat per add-on, billed monthly. See [Users](users.md#expand-seat-limits).
 * **Credit packs**: 250 additional AI credits per month, billed monthly.
 
-The Free tier can't buy add-ons - upgrade to Pro first. Enterprise's 25-seat limit isn't expandable through the dashboard add-ons.
+The Free tier can't buy add-ons - upgrade to Pro first. On Enterprise, seats can be added beyond the included 25, up to 100 in total; for more, contact us. Credit packs add to Enterprise's 2,000 monthly credits until you [connect your own LLM key](llm-provider.md) - after that, credits are unlimited and credit packs aren't offered.
 
 ## Upgrade, Downgrade or Cancel
 
