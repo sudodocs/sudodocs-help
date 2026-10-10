@@ -41,6 +41,10 @@ The dashboard displays the results of your scan in four sections:
 
     * B. **AI Corrected Spec**: The final version with all requested AI technical and content fixes applied.
 
+## Scan History
+
+Every scan is listed under **Scan History** on the left, titled with when it ran (for example "OAS Validation - Oct 10, 2026 14:05"). Rename a scan, tag it with a release and a writer, or delete it from there - see [Tag work with a release and a writer](releases.md#tag-work-with-a-release-and-a-writer). New scans record who ran them as the writer; scans from before this change have no writer until you tag one.
+
 ## Push to Production
 
 Once you are satisfied with the AI corrected spec, click **📬 Send to Docflows**.

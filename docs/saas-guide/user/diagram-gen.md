@@ -13,10 +13,17 @@ The Diagram Generator is an AI-powered tool that allows users to instantly build
 ## Use the Diagram Generator
 
 1. On the Workspace, click **Open Diagrammer** on the **Diagram Generator** card.  
-2. Describe your architecture or workflow in the text area provided.  
-3. Optionally, upload a reference image to guide the AI generation.  
-4. Click **Generate Code** to instruct the AI to build the sequence.  
-5. Click **Render** to view the live preview of your diagram.  
+2. Optionally, enter a **Title**. If you leave it blank, the diagram is named after the start of your description.  
+3. Describe your architecture or workflow in the text area provided.  
+4. Optionally, upload a reference image to guide the AI generation.  
+5. Click **Generate Code** to instruct the AI to build the sequence.  
+6. Click **Render** to view the live preview of your diagram.  
+
+## Saved Diagrams
+
+Every generated diagram is saved to **Saved Diagrams** on the left, so you can come back to it. Open one to see its code and preview. If you edit the code, click **💾 Save** to keep your changes.
+
+Each diagram can be tagged with a release and a writer, renamed or deleted from the list - see [Tag work with a release and a writer](releases.md#tag-work-with-a-release-and-a-writer).
 
 ## Export and Download Options
 

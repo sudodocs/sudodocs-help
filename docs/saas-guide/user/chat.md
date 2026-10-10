@@ -2,6 +2,10 @@
 
 The DocOps Assistant is your global Retrieval-Augmented Generation (RAG) workspace. Query your codebase, draft new topics, enforce style guides, generate release notes, or find documentation gaps.
 
+## Chat History
+
+Your chats are listed under **Chat History** on the left. Only you can see your chats. You can rename, tag (release and writer) or delete each one - see [Tag work with a release and a writer](releases.md#tag-work-with-a-release-and-a-writer).
+
 ## Chat Modes
 
 Select a mode to define the AI's behavior:

@@ -29,7 +29,7 @@ sudodocs releases create "v2.0" --date 2026-11-01 --build 2.0.1
 sudodocs releases delete 7
 ```
 
-You're asked to confirm. Add `--yes` to skip the prompt in scripts. Deleting a release also deletes its feature drafts and release notes; Docflows assigned to it are kept and lose their release.
+You're asked to confirm. Add `--yes` to skip the prompt in scripts. Deleting a release doesn't delete any work: everything tagged with it is kept and just loses the release tag.
 
 ## Headless API
 

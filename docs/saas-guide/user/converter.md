@@ -33,6 +33,8 @@ SudoDocs applies strict anti-hallucination rules to this tool: it will only extr
 
 ### Edit and Export Generated Specs
 
+Generated specs are listed on the left. Rename, tag (release and writer) or delete them from there - see [Tag work with a release and a writer](releases.md#tag-work-with-a-release-and-a-writer).
+
 Once the AI finishes processing your specification, it will appear in the **AI Generated Specs** history panel on the left sidebar.
 
 1. Click on a generated spec to open it in the **Markdown Editor**.

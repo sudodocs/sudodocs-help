@@ -4,7 +4,14 @@ Author comprehensive feature documentation from a Jira ticket, a linked engineer
 
 ## Open Feature Author
 
-On the Workspace, click **Open Feature Author** on the **Feature Author** card. Every draft belongs to a release, so Feature Author opens the release you last worked in. To work in another release, pick it from the release list under **Feature Author** in the left sidebar, or choose **+ New Release** to create one. If your organization has no releases yet, you're asked to create one first.
+On the Workspace, click **Open Feature Author** on the **Feature Author** card. The left sidebar lists every feature draft in your organization; use the release list above it to show only one release's drafts, or only untagged ones.
+
+At the top of the form, you can tag the new draft:
+
+* **Release** (optional): the release the draft belongs to. Choose **+ New release...** to create one.
+* **Writer**: who's responsible for the draft. It defaults to you.
+
+See [Tag work with a release and a writer](releases.md#tag-work-with-a-release-and-a-writer) for how tags work.
 
 ## Import Source Context
 
@@ -60,11 +67,6 @@ If the target file already has a diagram in it, SudoDocs updates that diagram in
 
 The diagram lives in its own tab in the classic editor, alongside a live preview (rendered from the generated Mermaid code) and options to download the raw `.mmd` source or the rendered `.svg`.
 
-## Reassign to a Different Release
+## Change a Draft's Release or Writer
 
-If a draft was created under the wrong release, or plans changed after the fact, you don't need to recreate it:
-
-1. Open the draft in the classic editor.
-2. Next to the release name under **Feature Author**, click **Reassign**.
-3. Type an existing release name to move it there, or type a new name to create that release and move the draft into it.
-4. Click **Move Draft**.
+To move a draft to another release, or hand it to another writer, open the draft and click **Tag release and writer** under **Feature Author** in the sidebar. You can also hover over the draft in the history list and click the tag icon. See [Tag work with a release and a writer](releases.md#tag-work-with-a-release-and-a-writer).

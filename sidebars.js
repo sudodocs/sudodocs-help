@@ -74,7 +74,7 @@ const sidebars = {
       label: 'User Tasks',
       collapsed: false,
       link: {type: 'doc', id: 'cli-guide/user/index'},
-      items: ['cli-guide/user/releases', 'cli-guide/user/converter', 'cli-guide/user/release-composer'],
+      items: ['cli-guide/user/releases', 'cli-guide/user/items', 'cli-guide/user/converter', 'cli-guide/user/release-composer'],
     },
   ],
 };
