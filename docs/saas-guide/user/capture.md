@@ -6,7 +6,7 @@ Capture is the **SudoDocs Capture** Chrome extension plus its dashboard - a way 
 * **Recording**: a continuous screen recording of the tab, with the tab's own audio and, optionally, your narration mixed in, Loom-style.
 * **Screenshot**: one screenshot, annotated (arrows, boxes, highlights, text) and cropped in a built-in editor before upload.
 
-All three live under **Capture** in the Workspace's **Global Tools**, and are captured entirely from the extension - not from this dashboard page, which is for editing, redacting, and sharing what you've already captured.
+All three live under **Capture** in the Workspace's **Tools**, and are captured entirely from the extension - not from this dashboard page, which is for editing, redacting, and sharing what you've already captured.
 
 Capture has **no approval workflow**: every capture is shareable the moment it finishes, for all three modes. It's fully user-controlled - you own editing, redacting, and deleting whatever you captured directly, the same way you would any other file. AI still flags likely PII on Interactive and Screenshot captures so it's easy to spot (see [Redaction](#redaction) below), but nothing blocks on that flag - if you need to hide something, you redact it whenever you notice, not before anyone can see the capture at all.
 

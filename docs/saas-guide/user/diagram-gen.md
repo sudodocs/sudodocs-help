@@ -10,9 +10,9 @@ The Diagram Generator is an AI-powered tool that allows users to instantly build
 * Sanitizes generated code automatically by fixing literal newlines, converting self-loops to standard notes, and neutralizing angle brackets.  
 * Detects Mermaid syntax errors during rendering and automatically sends the broken code and error message back to the AI for immediate repair.  
 
-## Use the Global Diagrammer
+## Use the Diagram Generator
 
-1. Navigate to the **Diagram Generator** from the Workspace dashboard under **Global Tools**.  
+1. On the Workspace, click **Open Diagrammer** on the **Diagram Generator** card.  
 2. Describe your architecture or workflow in the text area provided.  
 3. Optionally, upload a reference image to guide the AI generation.  
 4. Click **Generate Code** to instruct the AI to build the sequence.  

@@ -11,13 +11,13 @@ Before your first import, it's worth checking two optional settings that shape h
 3. **CSV Column Mappings**: map your tracker's CSV export headers (Jira, Linear, Asana, or anything else) to the fields SudoDocs looks for - Ticket ID/Key, Summary, and Description. Each of the three is independent and optional; leave any of them blank to fall back to common default header names (e.g. "Key"/"Issue key" for the ticket ID).
 4. Click **Save Release Notes Settings**.
 
-These settings are shared across every project's release notes for your org, not just the one you're currently viewing - see [CLI Tasks → Compose Release Notes](../../cli-guide/user/release-composer.md) to manage them from a script instead. Looking for Product Categories? Those are a Knowledge Base setting, shared with other AI features - see [Configure the Knowledge Base](../admin/kb-config.md#product-categories).
+These settings are shared across every release's release notes for your org, not just the one you're currently viewing - see [CLI Tasks → Compose Release Notes](../../cli-guide/user/release-composer.md) to manage them from a script instead. Looking for Product Categories? Those are a Knowledge Base setting, shared with other AI features - see [Configure the Knowledge Base](../admin/kb-config.md#product-categories).
 
 ## Automatic Import (Jira)
 
 To generate notes directly from your Jira project:
 
-1.  Navigate to your **Project Dashboard** and click **Compose** on the **Release Composer** card.
+1.  On the Workspace, click **Open Composer** on the **Release Composer** card. It opens the release you last worked in; to use another one, pick it from the release list under **Release Composer** in the left sidebar, or choose **+ New Release** there.
 2.  Under **Import Data**, ensure the **Automatic (Jira)** button is selected.
 3.  Locate the filter fields for each category (Epics, Stories, Bugs, Known Issues, Escalations).
 4.  Enter the **Jira Filter ID** for each category you wish to include.

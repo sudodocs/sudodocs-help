@@ -41,6 +41,7 @@ const sidebars = {
         'saas-guide/user/diagram-gen',
         'saas-guide/user/api-readiness',
         'saas-guide/user/capture',
+        'saas-guide/user/releases',
         'saas-guide/user/release-composer',
         'saas-guide/user/feature-author',
         'saas-guide/user/assign-pr',
@@ -73,7 +74,7 @@ const sidebars = {
       label: 'User Tasks',
       collapsed: false,
       link: {type: 'doc', id: 'cli-guide/user/index'},
-      items: ['cli-guide/user/converter', 'cli-guide/user/release-composer'],
+      items: ['cli-guide/user/releases', 'cli-guide/user/converter', 'cli-guide/user/release-composer'],
     },
   ],
 };

@@ -2,6 +2,10 @@
 
 Author comprehensive feature documentation from a Jira ticket, a linked engineering Pull Request, or both.
 
+## Open Feature Author
+
+On the Workspace, click **Open Feature Author** on the **Feature Author** card. Every draft belongs to a release, so Feature Author opens the release you last worked in. To work in another release, pick it from the release list under **Feature Author** in the left sidebar, or choose **+ New Release** to create one. If your organization has no releases yet, you're asked to create one first.
+
 ## Import Source Context
 
 Choose one of four modes for **Import Source** - each reveals only the fields it needs:

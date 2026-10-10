@@ -4,6 +4,7 @@ Command-line equivalents of the [SaaS Guide → User Tasks](../../saas-guide/use
 
 | Dashboard page | CLI equivalent |
 |---|---|
+| [Manage Releases](../../saas-guide/user/releases.md) | [Manage Releases](releases.md) |
 | [Universal Converter](../../saas-guide/user/converter.md) | [Universal Converter](converter.md) |
 | [Compose Release Notes](../../saas-guide/user/release-composer.md) | [Compose Release Notes](release-composer.md) |
 

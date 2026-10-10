@@ -4,7 +4,7 @@ Docflows allows technical writers to review, edit, and assign automated document
 
 ## View Your Assigned Queue
 
-To see your workload for a specific release, click **View Assigned Docflows** on the Project Dashboard.
+To see your workload for a specific release, open the release from **Releases** on the Workspace and click **View Assigned Docflows** on its Release Dashboard.
 
 This opens a queue displaying:
 
@@ -32,4 +32,4 @@ If an engineer pushes new commits to their Pull Request after the AI has already
 ## Finalize the Update
 
 * **Push PR**: Once you are satisfied with the draft, click **Push PR**. SudoDocs will automatically create a new branch, commit your edited files, and open a Pull Request directly in your documentation repository.
-* **Dismiss**: If the documentation update is no longer relevant to this release, click **Dismiss** to permanently remove it from your project's assigned list.
+* **Dismiss**: If the documentation update is no longer relevant to this release, click **Dismiss** to permanently remove it from the release's assigned list.

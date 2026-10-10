@@ -6,7 +6,7 @@ The Universal Doc Converter allows technical writers to seamlessly translate doc
 
 Use the Universal Format Converter to instantly translate text between formats without losing structural integrity (like tables, headers, and lists).
 
-1. Navigate to **Global Tools > Universal Converter**.
+1. On the Workspace, click **Open Converter** on the **Universal Converter** card.
 2. Under the **Universal Format Converter** section, select your **Input Format**:
 
    * Markdown (`.md`)
