@@ -113,6 +113,7 @@ Every screenshot follows your organization's [Screenshot Style](kb-config.md#scr
 1. **Set up like your other screenshots**: your window size, sharpness and theme. Animations are off, dates are frozen to one neutral date, and pop-up messages and chat widgets are hidden. Pages on your **Never screenshot these pages** list are skipped.
 2. **Personal data replaced before the shot**: email addresses, phone numbers, card and bank numbers, API keys and tokens, IDs, IP addresses, the screenshot account's own sign-in, and your **Also treat as private** patterns become realistic demo values - the same real value always becomes the same demo value. Your **Always hide these elements** are covered with a solid box.
 3. **Checked after the shot**: AI writes the image's alt text and looks for anything personal still showing, such as names. Anything it finds is covered with a solid box, and the image is flagged **Check for personal data**.
+4. **Pointed out to match the text**: when the draft's steps name controls in bold - "Click **Refund**, then **Save changes**" - SudoDocs draws a box around each of them in the screenshot that follows (numbered 1, 2, … when the steps are a numbered list, per your [Screenshot Style](kb-config.md#screenshot-style)) and crops to that part of the page with some space around it. Writers can adjust or remove this with **Edit** in the review. This step uses no AI and no credits.
 
 The check costs 1 credit per screenshot. Pages skipped or not captured aren't charged.
 
