@@ -43,3 +43,28 @@ The Auto-Learn agent scans your connected documentation and public web repositor
 1. Ensure you have synced at least one Documentation or Web repository.
 2. Navigate to **Admin Dashboard > Knowledge Base**.
 3. Click **Run Auto-Learn**.
+
+Auto-Learn also looks at up to six screenshots already in your documentation repository and adds what it notices - annotation colour, theme, cropping, whether personal data is hidden - to your [Screenshot Style](#screenshot-style). That part costs 5 credits on top of Auto-Learn's usual cost, and only when there are screenshots to look at.
+
+## Screenshot Style
+
+How SudoDocs takes screenshots for your docs - for Docflows today, and for every screenshot feature that builds on it. Like the writing style guide, it has three layers:
+
+1. **The built-in guide**: sensible defaults - a 1440×900 browser window at 2× sharpness, light theme, crops focused on what the step is about with space around it, one annotation colour, boxes around controls, no cursor or pop-up messages, personal data replaced with demo values, and alt text of 125 characters or fewer.
+2. **Learned from your existing screenshots**: what [Auto-Learn](#auto-learn-tone) noticed.
+3. **Your settings**: anything you set wins over both.
+
+To change it, go to **Admin Dashboard > Knowledge Base > Screenshot Style**. Each setting shows where its current value comes from - **Yours**, **Learned** or **Default** - and a field left blank uses the value shown.
+
+| Setting | What it does |
+|---|---|
+| **Theme**, **Window size**, **Sharpness** | The browser SudoDocs captures in. Sharpness is pixel density: 2× looks crisp on high-resolution screens. |
+| **Annotation colour**, **Numbered callouts** | How boxes, arrows and numbers are drawn, and when numbers are used. |
+| **Space around a crop**, **Largest width in the docs** | How tightly to crop, and the widest an image should appear. |
+| **Alt text length** | The most characters SudoDocs uses for an image's alt text. |
+| **Always hide these elements** | CSS selectors (for example `.account-email`) covered on every screenshot. |
+| **Also treat as private** | Text patterns of your own, such as account numbers. Emails, phone numbers, tokens and keys are always handled. |
+| **Never screenshot these pages** | Page addresses SudoDocs must not capture; `*` matches anything. |
+| **Your team's rules** | Anything else, in plain words. |
+
+Click **Save screenshot style**. **Reset to default** clears your settings and rules; **Forget what was learned** removes what Auto-Learn picked up and keeps yours.
