@@ -9,24 +9,26 @@ There are two kinds:
 
 ## Filter What You See
 
-Use the row above the dashboard to narrow everything on the page at once:
+Use **Filter the work below** to narrow the summary, charts, lists and board at once:
 
 * **Release** (Overall dashboard only): one release, or **Not tagged to a release**.
 * **Writer**: one person. To find work nobody has taken yet, look at **Needs attention** (or the **No writer** count).
 * **Tool**: one tool.
 
-Click **Clear filters** to see everything again.
+Each filter you set shows as a chip under the row. Click the chip's **×** to remove that filter, or **Clear all** to see everything again.
 
 ## What's on a Dashboard
 
-* **Summary**: how many items there are, how many are done, in review and blocked, how many pull requests have changes requested, and how many open items have no writer. Rejected items aren't counted here or in Work by tool and Work by writer.
-* **Status**: how the work splits across To do, In progress, In review, Blocked, Done and Rejected.
+* **Summary**: four tiles - **Open** (to do, in progress, in review or blocked), **In review**, **Blocked** and **Done**. Click a tile to highlight those items on the board; click it again to clear. Rejected items aren't counted here or in Work by tool and Work by writer.
+* **Status** (Overall dashboard only): how the work splits across To do, In progress, In review, Blocked, Done and Rejected. On a release dashboard, the Release timeline's progress bar shows this instead.
 * **Work by tool**: how many items each tool has.
 * **Work by writer**: each writer's items by status, with their total. Items without a writer are grouped under **No writer**. When you filter to one writer, this chart is hidden and **Status** shows that writer's work instead.
-* **Release timeline** (release dashboard only, at the top - it always covers the whole release, whatever the filters): whether the release is on track, due soon with work still open, overdue, or released (and how early or late); its target date and the date it was first planned for; a timeline marking when it was created, every earlier target date, today, the target and the release date; how much of its work is done and how much is still open; and every date change with who made it and why.
-* **Needs attention**: pull requests with changes requested (with a link to the pull request), blocked items and their reasons, items without a writer, and releases due within 7 days that still have unfinished work.
-* **Recent activity**: status changes, retagging, pull request reviews and release date moves, newest first.
+* **Release timeline** (release dashboard only, at the top - it always covers the whole release, whatever the filters): its target date and the date it was first planned for; a timeline marking when it was created, every earlier target date, today, the target and the release date; a progress bar split by status, with the count for each; and every date change with who made it and why. A release without a target date shows only its progress and a **Set a target date** link.
+* **Needs attention**, grouped with a count for each: pull requests with changes requested (with a link to the pull request), blocked items and their reasons, releases due within 7 days that still have unfinished work, and items without a writer.
+* **Recent activity**: status changes, retagging, pull request reviews and release date moves, newest first. The five latest show; click **Show more** for the rest.
 * **Board**: see [Use the Board](#use-the-board).
+
+If nothing matches yet, the dashboard shows what to do next instead of empty charts - for example, links to Author a Feature, Release Composer and Docflows.
 
 Hover over a chart to see exact numbers. Every chart also has **Show as table** for the same numbers as a table.
 
@@ -34,7 +36,7 @@ The Overall dashboard also lists every release with its progress, target date (a
 
 ## Use the Board
 
-The board has a column for each status. Each card shows the tool, the title (click it to open the item in its tool), the writer, the release and, if a pull request is open, its review status.
+The board has a column for each status; empty columns show **Drop here**. Click **Group by writer** to give each writer their own row, or **All work** to go back. On a narrow screen, scroll the board sideways. Each card shows the tool, the title (click it to open the item in its tool), the writer, the release and, if a pull request is open, its review status.
 
 To change an item's status, drag its card to another column, or pick a status in the card's list.
 
@@ -46,7 +48,7 @@ Status changes made on the board are the same as changing the status in the tool
 
 ## The Release Dashboard Also Has
 
-* The **Release timeline**, with **Edit release** and **Mark as released** - see [Manage Releases](releases.md#edit-a-release-move-its-date-or-mark-it-released).
-* Shortcuts to Release Composer and Author a Feature for the release, and the release's [Assigned Docflows](assign-pr.md).
+* A header with the release's status (on track, due soon with work still open, overdue, or released) and **Edit release** and **Mark as released** (or **Reopen**) - see [Manage Releases](releases.md#edit-a-release-move-its-date-or-mark-it-released).
+* Shortcuts under the header: **Compose release notes** and **Author a feature** for the release, and the release's [Assigned Docflows](assign-pr.md).
 
 To get the same numbers from a terminal, see [CLI Tasks → Dashboard](../../cli-guide/user/items.md#dashboard).
