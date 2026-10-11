@@ -25,7 +25,7 @@ An action item appears in your inbox whenever an engineer merges (or opens/updat
 
 1. Open **Docflows**.
 2. Review the draft. Each card's left side has the pull request (or the Jira ticket key, such as `PROJ-501`), the target file(s), and under **Proposed changes** the list of files with lines added and removed, how many you've reviewed, and **Split** / **Unified**. Click a file to jump to it; its changes fill the rest of the card. A **📦 BATCH UPDATE** badge means several files are affected. On a narrower screen the file list sits above the changes. **Show or hide the changes** collapses them.
-3. In the assignment panel, enter the **Target Release**, choose an **Assignee**, and add a **Product Tag** (for example Auth or API).
+3. In the assignment panel, pick the **Target Release** - or choose **+ New release...** and type its name to create it when you approve - then choose an **Assignee** and add a **Product Tag** (for example Auth or API).
 4. Click **Approve**.
 
 > Approved suggestions appear on the release's Release Dashboard, under its **Docflows** button, for final review and pushing - see [Review and Push Docflows](assign-pr.md). The assignee sees them under **Assigned to you** and in **Your work** on their Workspace.
