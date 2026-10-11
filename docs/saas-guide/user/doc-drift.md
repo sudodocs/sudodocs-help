@@ -30,6 +30,16 @@ An action item appears in your inbox whenever an engineer merges (or opens/updat
 
 > Triaged suggestions appear in the assigned Release Dashboard for final review.
 
+## Screenshots in a Suggestion
+
+When your administrator has set up [screenshots for Docflows](../admin/doc-drift.md#configure-screenshot-settings-for-docflows), each suggestion's card has a **Screenshots** list:
+
+* SudoDocs reads the pull request and picks the pages a reader would need to see, with the reason for each ("The PR adds a Refund button to the customer page") and how sure it is. Pages it's confident about are taken right away (✓); the rest wait for you, unticked.
+* If an existing screenshot in your docs is now out of date, the list says **Replaces** that image - the new screenshot updates it in place, so every page that uses it gets the new one.
+* To take more, tick pages in the list, or type or pick any page of your app in **Add a page**, then click **Take selected screenshots**.
+
+A screenshot taken after the draft was written isn't used in any file yet. In the review, choose the file under the image and click **Insert into file** - SudoDocs adds the image with the right syntax and path for that page. Planning a pull request's screenshots costs 2 credits; each screenshot's personal-data check costs 1.
+
 ## Sync and Push Updates
 
 Writers can push approved documentation directly back to the Git repository.

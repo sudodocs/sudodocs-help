@@ -52,6 +52,15 @@ sudodocs items diff docflows 42 --stat
 
 Prints the suggestion's proposed changes as a unified diff, with added lines in green and removed lines in red, against what each file looked like in your docs repository. Screenshots are listed by name. `--stat` lists only the files, with lines added and removed and a ✓ for files marked **Reviewed**. API: `GET /api/v1/docflows/<id>` (a summary per file), or `?format=diff` for the diff as plain text.
 
+## A Docflows Suggestion's Screenshots
+
+```bash
+sudodocs items screenshots docflows 42
+sudodocs items screenshots docflows 42 --take /settings/billing --take "/customers/<id>"
+```
+
+Lists the screenshots SudoDocs planned for the suggestion: ✓ taken, ○ suggested, with the reason for each and any doc image it replaces. `--take` takes screenshots of more pages (from the page index, or any page address) and waits for them. API: the plan is in `GET /api/v1/docflows/<id>` (`screenshot_plan`); `POST /api/v1/docflows/<id>/screenshots` with `{"routes": [...]}` takes more.
+
 ## Open a Pull Request from an API Scan
 
 ```bash

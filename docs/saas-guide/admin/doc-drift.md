@@ -50,16 +50,26 @@ This configuration notifies the system when Jira tickets are moved to a "Done", 
 
 ## Configure Screenshot Settings for Docflows
 
-For code repository integrations, SudoDocs can spin up a headless browser using Playwright to take automated screenshots of your preview environments. This helps writers visually verify engineering changes before publishing them.
+For code repositories, SudoDocs can sign in to your app and take screenshots for Docflows suggestions, so docs updates show the real UI. You don't have to tell it which pages to capture: it learns your app's pages once, then works out which ones each pull request affects.
 
-To configure screenshots for an active repository:
+**1. Tell SudoDocs how to reach and sign in to your app**
 
-1. Go to the **Admin Dashboard** and select the **Repositories** tab.
-2. In the **Active Repositories** list, find your repository and click **Screenshot Settings**.
-3. Enter your **Preview URL Pattern** (e.g., `https://pr-{pr_number}.preview.example.com`).
-4. Select your environment's authentication method from the **Access Method** dropdown (see options below).
-5. Define your **Route Map** as a list of glob patterns mapped to application routes (e.g., `templates/admin_dashboard.html => /admin/dashboard`).
-6. Click **Save Preview Settings**.
+1. Go to **Admin Dashboard > Repositories**.
+2. Find the code repository and click **Screenshot Settings**.
+3. *(Optional)* Enter a **Preview URL Pattern** if each pull request gets its own preview site (for example `https://pr-{pr_number}.preview.example.com`). Without one, SudoDocs uses the app address from step 2 below.
+4. Choose the **Access Method** - how SudoDocs signs in (see [Supported Access Methods](#supported-access-methods)).
+5. Click **Save Preview Settings**.
+
+**2. Build the page index**
+
+1. Under the repository's name, open **Page index**.
+2. Enter a stable address of your app - your test or staging site - and click **Build page index**.
+
+SudoDocs signs in and follows your app's own links to learn its pages: their addresses, titles and headings. It never clicks buttons or submits forms, never follows sign-out, delete or download links, stops at 150 pages, and replaces personal data before reading a page. Pages that differ only by an ID - like `/customers/42` and `/customers/7` - count as one page. It takes a few minutes and uses no credits. Build it again after big UI changes.
+
+**3. That's it.** For each pull request, SudoDocs picks the pages it affects and takes those screenshots - see [Screenshots in a Docflows suggestion](../user/doc-drift.md#screenshots-in-a-suggestion).
+
+> **Route Map (optional):** to always capture certain pages when certain files change, add a **Route Map** in Screenshot Settings - one line per mapping: a file glob, `=>`, then routes, like `templates/admin_dashboard.html => /admin/dashboard`. Mapped pages are captured alongside the ones SudoDocs picks.
 
 ### Supported Access Methods
 
