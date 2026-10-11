@@ -29,16 +29,6 @@ To see only some items, use **Show in history** above a tool's history list: **E
 DocOps Assistant chats are private: only the person who started a chat sees it, so only they can tag, rename or delete it.
 :::
 
-## Size Work
-
-Each item except Assistant chats can have a T-shirt **size** for its rough effort: **S**, **M**, **L** or **XL**. Dashboards weight progress by size (S 1, M 2, L 3, XL 5 points), so finishing a large guide counts for more than a small diagram. Items without a size count as M.
-
-Set the size when you pick up or hand out work:
-
-* **Claim** an item on a dashboard board - the Claim dialog asks for its size.
-* In the **Status and tags** dialog (the tag icon on any item in a tool's history list), next to the writer.
-* When you assign a Docflows suggestion.
-
 ## Track Work and Pull Requests
 
 Every item except Assistant chats has a work status:
