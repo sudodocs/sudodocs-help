@@ -32,7 +32,13 @@ sudodocs items tag feature-drafts 42 --release 7 --writer 12
 sudodocs items tag feature-drafts 42 --writer none
 ```
 
-Sets the release and/or the writer. Pass `none` to clear a tag. The writer must be a member of your organization. Tags never limit who can see an item.
+Sets the release, the writer and/or the size. Pass `none` to clear a tag. The writer must be a member of your organization. Tags never limit who can see an item.
+
+```bash
+sudodocs items tag feature-drafts 42 --size L
+```
+
+`--size` is a T-shirt size, `S`, `M`, `L` or `XL` (or `none`); dashboards weight progress by it. `items status` also takes `--size`, so `sudodocs items status diagrams 15 in_progress --claim --size M` claims, sizes and moves an item in one go.
 
 ## Change an Item's Status
 
@@ -85,4 +91,4 @@ sudodocs dashboard --release none --tool diagrams
 sudodocs dashboard --json
 ```
 
-Prints the same numbers as the web [Dashboards](../../saas-guide/user/dashboards.md): item counts, each release's progress (when no release is picked), work per writer (open / done / total), and what needs attention. `--release` and `--writer` take an ID or `none`; `--json` prints everything, including the burn-up series for one release. API: `GET /api/v1/dashboard` with optional `release_id`, `writer_id` and `tool`.
+Prints the same numbers as the web [Dashboards](../../saas-guide/user/dashboards.md): for one release, its timeline (status, target and first planned date, size-weighted progress and date changes); item counts, each release's progress (when no release is picked), work per writer (open / done / total), and what needs attention. `--release` and `--writer` take an ID or `none`; `--json` prints everything, including the release timeline. API: `GET /api/v1/dashboard` with optional `release_id`, `writer_id` and `tool`.

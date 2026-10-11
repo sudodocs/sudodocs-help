@@ -5,7 +5,7 @@ Dashboards show all of your team's documentation work in one place: what's done,
 There are two kinds:
 
 * **Overall dashboard**: everything, across all releases. Open it with **Dashboard** at the top of the Workspace.
-* **Release dashboard**: one release. Open it from **Releases** on the Workspace, or from the list on the left of any dashboard.
+* **Release dashboard**: one release. Open it from **Releases** on the Workspace, or from the list on the left of any dashboard. Hover over a release in that list to edit or delete it.
 
 ## Filter What You See
 
@@ -19,11 +19,11 @@ Click **Clear filters** to see everything again.
 
 ## What's on a Dashboard
 
-* **Summary**: how many items there are, how many are done, in review and blocked, how many pull requests have changes requested, and how many open items have no writer. Rejected items aren't counted.
+* **Summary**: how many items there are, how many are done (also as size points), in review and blocked, how many pull requests have changes requested, and how many open items have no writer. Rejected items aren't counted here or in Work by tool and Work by writer.
 * **Status**: how the work splits across To do, In progress, In review, Blocked, Done and Rejected.
 * **Work by tool**: how many items each tool has.
-* **Work by writer**: each writer's items by status, with their total. Items without a writer are grouped under **No writer**.
-* **Burn-up** (release dashboard only): total work tagged to the release and work done, day by day. Vertical lines mark the target date and any earlier target dates, so you can see when the date moved.
+* **Work by writer**: each writer's items by status, with their total. Items without a writer are grouped under **No writer**. When you filter to one writer, this chart is hidden and **Status** shows that writer's work instead.
+* **Release timeline** (release dashboard only, at the top): whether the release is on track, due soon with work still open, overdue, or released (and how early or late); its target date and the date it was first planned for; a timeline marking when it was created, every earlier target date, today, the target and the release date; progress weighted by [size](releases.md#size-work); and every date change with who made it and why.
 * **Needs attention**: pull requests with changes requested (with a link to the pull request), blocked items and their reasons, items without a writer, and releases due within 7 days that still have unfinished work.
 * **Recent activity**: status changes, retagging, pull request reviews and release date moves, newest first.
 * **Board**: see [Use the Board](#use-the-board).
@@ -39,14 +39,14 @@ The board has a column for each status. Each card shows the tool, the title (cli
 To change an item's status, drag its card to another column, or pick a status in the card's list.
 
 * You can move items you're the writer of. System Administrators can move any item.
-* To work on someone else's item, or one with no writer, click **Claim (make me the writer)** on the card, then move it.
+* To work on someone else's item, or one with no writer, click **Claim (make me the writer)** on the card, pick its size, and click **Claim**. Then move it.
 * Moving a card to **Blocked** asks what's blocking it.
 
 Status changes made on the board are the same as changing the status in the tool itself - see [Track work and pull requests](releases.md#track-work-and-pull-requests). Pull requests still move their items automatically when they're merged or closed.
 
 ## The Release Dashboard Also Has
 
-* The release's target date, build and release date, with **Edit release** and **Mark as released** - see [Manage Releases](releases.md#edit-a-release-move-its-date-or-mark-it-released).
+* The **Release timeline**, with **Edit release** and **Mark as released** - see [Manage Releases](releases.md#edit-a-release-move-its-date-or-mark-it-released).
 * Shortcuts to Release Composer and Author a Feature for the release, and the release's [Assigned Docflows](assign-pr.md).
 * **Release history**: every date move with its reason, renames, and when it was released.
 

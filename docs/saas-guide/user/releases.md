@@ -29,6 +29,16 @@ To see only some items, use **Show in history** above a tool's history list: **E
 DocOps Assistant chats are private: only the person who started a chat sees it, so only they can tag, rename or delete it.
 :::
 
+## Size Work
+
+Each item except Assistant chats can have a T-shirt **size** for its rough effort: **S**, **M**, **L** or **XL**. Dashboards weight progress by size (S 1, M 2, L 3, XL 5 points), so finishing a large guide counts for more than a small diagram. Items without a size count as M.
+
+Set the size when you pick up or hand out work:
+
+* **Claim** an item on a dashboard board - the Claim dialog asks for its size.
+* In the **Status and tags** dialog (the tag icon on any item in a tool's history list), next to the writer.
+* When you assign a Docflows suggestion.
+
 ## Track Work and Pull Requests
 
 Every item except Assistant chats has a work status:
@@ -66,16 +76,16 @@ SudoDocs checks open pull requests every 15 minutes. If your administrator has s
 
 ## Open a Release Dashboard
 
-Under **Releases** on the Workspace, click **Open** on a release. Its Release Dashboard shows the release's progress, each writer's work, a burn-up chart, what needs attention and a board for moving work along - see [Dashboards](dashboards.md). It also links to Feature Author and Release Composer filtered to that release, and shows the Docflows assigned to it (see [Assigned Docflows](assign-pr.md)).
+Under **Releases** on the Workspace, click **Open** on a release. Its Release Dashboard leads with the **Release timeline** - where the release stands against its target date, every date change and how much work is done - then each writer's work, what needs attention and a board for moving work along - see [Dashboards](dashboards.md). It also links to Feature Author and Release Composer filtered to that release, and shows the Docflows assigned to it (see [Assigned Docflows](assign-pr.md)).
 
 For all releases at once, click **Dashboard** at the top of the Workspace.
 
 ## Edit a Release, Move Its Date, or Mark It Released
 
-On the Release Dashboard:
+On the Release Dashboard's **Release timeline** card:
 
-* Click **Edit release** to change its name, **Target date** or build number. If you move the date, add a reason - it's kept in the release's history. The first target date is kept too, so the dashboard shows "Moved from" the original.
-* When the release ships, pick the actual date (or leave it blank for today) and click **Mark as released**. Click **Reopen** if you marked it by mistake.
+* Click **Edit release** to change its name, **Target date** or build number. If you move the date, add a reason - it's kept in the timeline's **Date changes** and in the release history. The first target date is kept too, so the timeline shows "First planned for" the original. You can also hover over the release in the list on the left and click the pencil icon.
+* When the release ships, click **Mark as released**, check the date (it defaults to today) and click **Mark as released** in the dialog. The timeline then says whether it shipped on time, early or late. Click **Reopen** if you marked it by mistake.
 
 **Release history** at the bottom of the dashboard lists every change: date moves with their reasons, renames, and when it was released or reopened.
 
@@ -83,7 +93,7 @@ Writers and System Administrators can both edit releases.
 
 ## Delete a Release
 
-Click **Delete** on the release under **Releases** on the Workspace, then confirm.
+Hover over the release in the list on the left of any dashboard and click the trash icon (or click **Delete** on the release under **Releases** on the Workspace), then confirm.
 
 Deleting a release doesn't delete any work. Everything tagged with it stays in its tool and just loses the release tag.
 
