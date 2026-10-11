@@ -96,6 +96,18 @@ Two-factor that sends codes by text message or email, passkeys, and Google-only 
 
 To screenshot SudoDocs pages for your docs: create a Writer account for screenshots with a password, then choose **Login Form** with your instance's `/login` page as the **Login URL**, `#email`, `#password` and `button[type=submit]` as the fields and, if the account uses two-factor, `#code` as the **2FA Code Field** and its setup key. System Administrators always need two-factor with a password, and so does everyone when your organization's sign-in policy requires it.
 
+### How SudoDocs Takes Screenshots
+
+Every screenshot follows your organization's [Screenshot Style](kb-config.md#screenshot-style) and is made safe before anyone sees it:
+
+1. **Set up like your other screenshots**: your window size, sharpness and theme. Animations are off, dates are frozen to one neutral date, and pop-up messages and chat widgets are hidden. Pages on your **Never screenshot these pages** list are skipped.
+2. **Personal data replaced before the shot**: email addresses, phone numbers, card and bank numbers, API keys and tokens, IDs, IP addresses, the screenshot account's own sign-in, and your **Also treat as private** patterns become realistic demo values - the same real value always becomes the same demo value. Your **Always hide these elements** are covered with a solid box.
+3. **Checked after the shot**: AI writes the image's alt text and looks for anything personal still showing, such as names. Anything it finds is covered with a solid box, and the image is flagged **Check for personal data**.
+
+The check costs 1 credit per screenshot. Pages skipped or not captured aren't charged.
+
+A flagged screenshot - or one the check couldn't run on - can't be pushed until someone looks at it and ticks **Reviewed** in [Review & Push](../user/assign-pr.md#review--push-workflow). Screenshots your own CI sends with `sudodocs docflow --screenshot` go through the same check.
+
 ### Troubleshooting Screenshot Failures
 
 If SudoDocs fails to capture screenshots for a Docflow suggestion, a warning banner appears at the top of the suggestion card in the **Docflows** list:
