@@ -61,6 +61,17 @@ sudodocs items screenshots docflows 42 --take /settings/billing --take "/custome
 
 Lists the screenshots SudoDocs planned for the suggestion: ✓ taken, ○ suggested, with the reason for each and any doc image it replaces. `--take` takes screenshots of more pages (from the page index, or any page address) and waits for them. API: the plan is in `GET /api/v1/docflows/<id>` (`screenshot_plan`); `POST /api/v1/docflows/<id>/screenshots` with `{"routes": [...]}` takes more.
 
+## Approve or Dismiss a Docflows Suggestion
+
+```bash
+sudodocs items list docflows
+sudodocs docflows approve 42 --release 7 --tag Auth
+sudodocs docflows approve 42 --new-release "v2.6" --writer 12
+sudodocs docflows dismiss 42
+```
+
+Does what **Approve** and **Dismiss** do on the Docflows page - see [Manage Docflows](../../saas-guide/user/doc-drift.md#triage-suggestions). `approve` needs a release: `--release` (an ID from `sudodocs releases list`) or `--new-release` (creates it, or uses an existing release with that name). `--writer` is a user ID or `me` (the default); it must be someone in your organization. `--tag` sets the product tag (default **General**). `dismiss` asks first unless you add `--yes`; the suggestion's status becomes **Rejected**. API: `POST /api/v1/docflows/<id>/approve` with `release_id` or `new_release_name`, `assignee_id` (an ID or `"me"`) and optional `product_tag`; `POST /api/v1/docflows/<id>/dismiss`.
+
 ## Open a Pull Request from an API Scan
 
 ```bash
