@@ -117,6 +117,16 @@ Every screenshot follows your organization's [Screenshot Style](kb-config.md#scr
 
 The check costs 1 credit per screenshot. Pages skipped or not captured aren't charged.
 
+### When Your UI Changes
+
+When a screenshot from Docflows is pushed to your docs, SudoDocs remembers how it was made: the page, the controls it points at (by their names, not their positions), whether it was cropped or numbered, and the window it was taken in. When a later pull request makes that image out of date, SudoDocs re-takes it the same way:
+
+* **Same screen, things moved**: it finds the same controls in their new places, frames the screenshot like before, and has AI confirm it's still the same screen (1 credit). The review says **Re-shot the same way as before**, with what changed.
+* **The screen changed a lot** (the controls are gone, or it's a different screen): AI reads the docs text around the image and your page index and works out what the screenshot should show now - maybe another page - and points at the new controls (2 credits). The review says why, for example "Refunds moved into the Payments page".
+* **Not sure**: if the AI isn't confident, the screenshot is marked **Needs your eyes** and can't be pushed until a writer reviews it.
+
+SudoDocs never replaces a doc image without telling you. To see or forget what it remembers, go to **Admin Dashboard > Knowledge Base > Screenshot Style > Remembered screenshots**.
+
 A flagged screenshot - or one the check couldn't run on - can't be pushed until someone looks at it and ticks **Reviewed** in [Review & Push](../user/assign-pr.md#review--push-workflow). Screenshots your own CI sends with `sudodocs docflow --screenshot` go through the same check.
 
 ### Troubleshooting Screenshot Failures

@@ -59,6 +59,15 @@ sudodocs admin kb screenshot-style reset --yes
 
 `show` lists every setting in use and where it comes from (yours, learned or default), your team's rules, and what Auto-Learn learned from your existing screenshots. `set` changes only the options you pass: `--theme`, `--window WIDTHxHEIGHT`, `--scale` (sharpness, 1-3), `--annotation-color`, `--numbered-callouts`, `--crop-padding`, `--max-width`, `--alt-text-max`, and the repeatable `--mask-selector`, `--mask-pattern` and `--never-page`. `reset --learned` also forgets what was learned. Admin-only. CLI equivalent of [Screenshot Style](../../saas-guide/admin/kb-config.md#screenshot-style).
 
+## Remembered Screenshots
+
+```bash
+sudodocs admin kb screenshot-recipes
+sudodocs admin kb screenshot-recipes --forget static/img/orders.png
+```
+
+Lists the Docflows screenshots SudoDocs knows how to re-take (image, page, the controls it points at, when it was last checked); `--forget` drops one. Admin-only. API: `GET /api/v1/admin/screenshot-recipes`, `DELETE /api/v1/admin/screenshot-recipes?image_path=...`.
+
 ## Headless API
 
 | Endpoint | Method | Purpose |

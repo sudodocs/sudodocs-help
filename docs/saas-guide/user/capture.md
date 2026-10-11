@@ -30,6 +30,8 @@ If you're pointing the extension at a non-default SudoDocs deployment (a test in
 4. Either click **Start** and use the product normally, **or** optionally click **Select Region** first to draw a rectangle constraining every step's screenshot to that area instead of the full tab - confirming the region starts the capture immediately, the same as clicking Start, so there's no separate Start click needed afterward. Either way, every click becomes a step, screenshot and all, and the recorder survives real page navigations and reloads.
 5. Click **Finish** when done. AI captions each step and flags likely PII in the background; the capture appears in the Capture dashboard right away and is shareable immediately - editing continues to work for as long as the capture exists, there's no lock-out point.
 
+With extension version 1.1.0 or later, each step also records what you clicked - the control's role (such as button or link), the name it shows, and a way to find it again - not just where you clicked. SudoDocs uses this to find the same control after your product's layout changes. Update the extension from the Chrome Web Store to get it.
+
 ### Auto-Naming
 
 The title field is optional in every mode. Leave it blank and SudoDocs names it for you based on mode and how many captures of that mode your organization already has - e.g. **"Interactive Walkthrough 3"**, **"Screen Recording 12"**, **"Screenshot 1"**. This count is tracked server-side across your whole organization, not per person, so numbering stays correct even with several teammates capturing at once.

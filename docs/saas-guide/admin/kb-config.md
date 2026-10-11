@@ -68,3 +68,5 @@ To change it, go to **Admin Dashboard > Knowledge Base > Screenshot Style**. Eac
 | **Your team's rules** | Anything else, in plain words. |
 
 Click **Save screenshot style**. **Reset to default** clears your settings and rules; **Forget what was learned** removes what Auto-Learn picked up and keeps yours.
+
+**Remembered screenshots** lists the Docflows screenshots SudoDocs knows how to re-take - each image, its page and the controls it points at, and when it was last taken and checked (see [When Your UI Changes](doc-drift.md#when-your-ui-changes)). Click **Forget** to have SudoDocs treat one as a new screenshot next time.
