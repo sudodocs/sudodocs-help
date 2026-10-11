@@ -7,15 +7,26 @@ There are two kinds:
 * **Overall dashboard**: everything, across all releases. Open it with **Release Dashboard** at the top of the Workspace.
 * **Release dashboard**: one release. Open it from the list on the left of any dashboard; **All releases** at its top takes you back. Hover over a release in that list to edit or delete it.
 
+## Your Work or Everyone's
+
+The **Mine | Everyone** switch at the start of **Filter the work below** chooses whose work the dashboard shows:
+
+* **Mine**: only items where you're the writer, including Docflows suggestions assigned to you. Writers and Walkthrough Auditors start here.
+* **Everyone**: the whole team's work. System Administrators start here.
+
+SudoDocs remembers your choice, on every dashboard and release, until you switch again. A release's timeline and progress, and the Overall dashboard's list of releases, always count the whole release, whichever you pick.
+
+If nothing is assigned to you, the dashboard says so and offers **See everyone's work**, and **Claim unassigned work** when there's work without a writer.
+
 ## Filter What You See
 
 Use **Filter the work below** to narrow the summary, charts, lists and board at once:
 
 * **Release** (Overall dashboard only): one release, or **Not tagged to a release**.
-* **Writer**: one person. To find work nobody has taken yet, look at **Needs attention** (or the **No writer** count).
+* **Writer**: one person (**All writers** is the same as **Everyone**). To find work nobody has taken yet, look at **Needs attention** (or the **No writer** count).
 * **Tool**: one tool.
 
-Each filter you set shows as a chip under the row. Click the chip's **×** to remove that filter, or **Clear all** to see everything again.
+Each filter you set shows as a chip under the row. Click the chip's **×** to remove that filter, or **Clear all** to see everyone's work with no filters.
 
 ## What's on a Dashboard
 
@@ -49,6 +60,6 @@ Status changes made on the board are the same as changing the status in the tool
 ## The Release Dashboard Also Has
 
 * A header with the release's status (on track, due soon with work still open, overdue, or released) and **Edit release** and **Mark as released** (or **Reopen**) - see [Manage Releases](releases.md#edit-a-release-move-its-date-or-mark-it-released).
-* Shortcuts under the header: **Compose release notes** and **Author a feature** for the release, and the release's [Assigned Docflows](assign-pr.md).
+* Shortcuts under the header: **Compose release notes** and **Author a feature** for the release, and the release's Docflows - the button shows how many are assigned to you (for example **Docflows: 2 for you**). See [Assigned Docflows](assign-pr.md).
 
-To get the same numbers from a terminal, see [CLI Tasks → Dashboard](../../cli-guide/user/items.md#dashboard).
+To get the same numbers from a terminal, see [CLI Tasks → Dashboard](../../cli-guide/user/items.md#dashboard). Your own summary is also at the top of the Workspace - see [Your Work](index.md#your-work).

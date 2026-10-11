@@ -117,6 +117,10 @@ sudodocs dashboard
 sudodocs dashboard --release 7 --writer 12
 sudodocs dashboard --release none --tool diagrams
 sudodocs dashboard --json
+sudodocs dashboard --mine
+sudodocs mywork
 ```
 
-Prints the same numbers as the web [Dashboards](../../saas-guide/user/dashboards.md): for one release, its timeline (status, target and first planned date, progress and date changes); item counts, each release's progress (when no release is picked), work per writer (open / done / total), and what needs attention. `--release` and `--writer` take an ID or `none`; `--json` prints everything, including the release timeline. API: `GET /api/v1/dashboard` with optional `release_id`, `writer_id` and `tool`.
+Prints the same numbers as the web [Dashboards](../../saas-guide/user/dashboards.md): for one release, its timeline (status, target and first planned date, progress and date changes); item counts, each release's progress (when no release is picked), work per writer (open / done / total), and what needs attention. `--release` and `--writer` take an ID or `none`, and `--writer` also takes `me`; `--mine` is short for `--writer me`. Without `--writer` or `--mine` it shows everyone's work. `--json` prints everything, including the release timeline. API: `GET /api/v1/dashboard` with optional `release_id`, `writer_id` (an ID, `none`, `me` or `all`) and `tool`.
+
+`sudodocs mywork` prints one line about what's assigned to you, like the Workspace's [Your Work](../../saas-guide/user/index.md#your-work) row: `4 open · 1 blocked · 2 Docflows to review`. API: `GET /api/v1/me/work` returns `open`, `blocked`, `docflows` and `changes_requested`.
