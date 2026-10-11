@@ -72,6 +72,19 @@ After adding a repository, you must sync it to index the content into the Vector
 
 > **Note**: Initial sync times vary by repository size. A typical documentation repo (50-100 pages) takes 2-5 minutes. Large codebases may take longer. You can navigate away from the page while the sync runs in the background.
 
+### What SudoDocs Learns About a Docs Repository
+
+When a **documentation** repository syncs, SudoDocs also works out how it's laid out, from its files alone:
+
+* **Docs framework**: Docusaurus, Mintlify, MkDocs, Antora, Sphinx, Hugo, Jekyll, GitBook, or plain Markdown files.
+* **Image folder**: where most of its images live (for example `static/img/billing`), or the framework's usual folder if it has none yet.
+* **How pages reference images**: from the site's root (`/img/x.png`), relative to the page (`../images/x.png`), or by name (Antora).
+* **File naming**: for example `refund-dialog.png` or `refund_dialog.png`.
+
+Docflows uses this to save screenshots in the right folder and to write each image reference the way that page needs, in its own format (Markdown, MDX, reStructuredText, AsciiDoc, HTML or DITA).
+
+To see it, look under the repository's name in **Active Repositories**: **Docs layout: Docusaurus · images in static/img**. Click it to choose a different **image folder**; leave it blank to go back to the detected one. Your choice is kept when the repository syncs again.
+
 ## Cancel a Running Sync
 
 If a sync is taking longer than expected or was started by mistake, click the small **Stop Sync** icon next to that repository's progress bar in the **Active Repositories** list. This works for any in-progress job, not just syncs - see [CLI Tasks → Organization](../../cli-guide/admin/settings.md#cancel-a-running-job) for the command-line equivalent.

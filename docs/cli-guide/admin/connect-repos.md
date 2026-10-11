@@ -58,6 +58,16 @@ This is the exact same action as clicking **Sync** on the Repositories tab - for
 
 Find `--integration-id` via `sudodocs admin integrations list`.
 
+## See a Docs Repository's Layout
+
+```bash
+sudodocs admin integrations docs-profile 3
+sudodocs admin integrations docs-profile 3 --image-dir static/img/screens
+sudodocs admin integrations docs-profile 3 --use-detected
+```
+
+Shows what SudoDocs learned about a documentation repository when it synced: the docs framework, where images live, how pages reference them and how files are named. `--image-dir` makes Docflows save screenshots in another folder; `--use-detected` goes back to the detected one. `--json` prints everything. Admin-only. CLI equivalent of [What SudoDocs Learns About a Docs Repository](../../saas-guide/admin/connect-repos.md#what-sudodocs-learns-about-a-docs-repository). API: `GET` or `POST /api/v1/admin/integrations/<id>/docs-profile` with `{"image_dir": "..."}`.
+
 ## Cancel a Running Sync
 
 ```bash

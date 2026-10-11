@@ -25,7 +25,7 @@ Click **Review & Push** on any item. Like a pull request on GitHub, you see exac
   * A new file shows only additions.
 * **Edit**: change a file in place, in whatever format it uses (Markdown, reStructuredText, AsciiDoc, HTML, MDX or DITA XML). Tip: click a line number on the after side to start editing at that line. Switch back to **Changes** to see your edits in the diff. You can also change the file's path here. Click **Save Draft** to save at any time.
 * **Reviewed**: tick it once you're happy with a file. The count at the top (for example **2 of 3 reviewed**) tracks your progress, and **Push PR** asks you to confirm if any file isn't reviewed yet.
-* **Screenshots**: captured screenshots are shown as images and committed with the text when you push.
+* **Screenshots**: captured screenshots are shown as images and committed with the text when you push - into your docs repository's image folder, with each page referencing them the way your docs site expects (see [What SudoDocs Learns About a Docs Repository](../admin/connect-repos.md#what-sudodocs-learns-about-a-docs-repository)).
 
 What a file looked like before the suggestion is kept as you edit, so the comparison always shows the change against your docs repository, not against your last save.
 
