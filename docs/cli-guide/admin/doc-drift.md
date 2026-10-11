@@ -31,6 +31,8 @@ Admin-only. CLI equivalent of [Configure Screenshot Settings for Docflows](../..
 | `--header-name`, `--header-value` | For `header`. |
 | `--session-cookie-name`, `--session-cookie-value` | For `session_cookie`. |
 | `--login-url`, `--login-username-selector`, `--login-password-selector`, `--login-submit-selector` | For `form_login`. |
+| `--login-code-selector`, `--totp-secret` | For `form_login` when the account uses two-factor: the code field's selector (`#code` for SudoDocs) and the account's 2FA setup key or `otpauth://` link, stored encrypted. Leave `--totp-secret` unset to keep the saved key. |
+| `--clear-totp-secret` | Removes the saved 2FA setup key. |
 | `--route-map` | `GLOB=>ROUTE1,ROUTE2` (repeatable) - maps a changed-file glob to preview routes to screenshot. |
 
 ## Trigger a Docflows Suggestion

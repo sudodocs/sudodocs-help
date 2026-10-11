@@ -15,6 +15,7 @@ const sidebars = {
       collapsed: true,
       link: {type: 'doc', id: 'saas-guide/admin/index'},
       items: [
+        'saas-guide/admin/overview',
         'saas-guide/admin/connect-repos',
         'saas-guide/admin/doc-drift',
         'saas-guide/admin/kb-config',

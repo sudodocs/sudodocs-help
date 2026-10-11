@@ -71,18 +71,37 @@ SudoDocs supports five authentication modes to handle various preview environmen
 | **HTTP Basic Auth** | **Username**, **Password** | Sites protected by standard browser-level HTTP authentication. |
 | **Custom Header** | **Header Name**, **Header Value** | Staging environments gated by a secret bypass token or header-based gateway. |
 | **Session Cookie** | **Cookie Name**, **Cookie Value** | Applications using third-party OAuth or Single Sign-On (SSO) with no local login form. |
-| **Login Form** | **Login URL**, **Username Field**, **Password Field**, **Submit Button** (CSS Selectors) | Standard applications featuring a username and password form. |
+| **Login Form** | **Login URL**, **Username Field**, **Password Field**, **Submit Button** (CSS Selectors); for two-factor, **2FA Code Field** and **2FA Setup Key** | Standard applications featuring a username and password form, including ones that ask for an authenticator-app code. |
 
 > **Tip on Session Cookies:** To use a session cookie, log into the preview environment manually using a dedicated test account. Open your browser's Developer Tools, copy the session cookie name and value, and paste them into the SudoDocs **Screenshot Settings** dialog. Because session cookies expire, you must periodically refresh this value.
 
 > **Tip on Login Forms:** Use a dedicated, low-privilege service account for form logins. Define CSS selectors for the fields (e.g., `#email` for the **Username Field**, `#password` for the **Password Field**, and `button[type=submit]` for the **Submit Button**). SudoDocs reuses the **Username** and **Password** fields defined in the Basic Auth section so that credentials are encrypted together.
+
+### Sign in to an App That Uses Two-Factor
+
+If the screenshot account has two-factor turned on with an authenticator app, SudoDocs can type the code for it:
+
+1. Turn on two-factor for the screenshot account, and copy its **setup key** (the text shown under the QR code) or the whole `otpauth://` link.
+2. In the repository's **Screenshot Settings**, choose **Login Form**.
+3. Fill in **2FA Code Field** with the CSS selector of the code box (`#code` for SudoDocs itself) and paste the key into **2FA Setup Key**.
+4. Click **Save Settings**.
+
+After the password step, SudoDocs types the current 6-digit code and submits it. Accounts that don't get a code step sign in as usual. The key is stored encrypted and never shown again; leave the field blank to keep it, or tick **Remove the saved 2FA setup key** to delete it.
+
+> **Use an account just for screenshots.** With its setup key saved, the account is effectively protected by its password alone. Give it the lowest role that can see the pages you screenshot, in an organization with demo data only.
+
+Two-factor that sends codes by text message or email, passkeys, and Google-only accounts can't be automated this way - use a **Session Cookie** or an account without them.
+
+#### Screenshot your own SudoDocs test instance
+
+To screenshot SudoDocs pages for your docs: create a Writer account for screenshots with a password, then choose **Login Form** with your instance's `/login` page as the **Login URL**, `#email`, `#password` and `button[type=submit]` as the fields and, if the account uses two-factor, `#code` as the **2FA Code Field** and its setup key. System Administrators always need two-factor with a password, and so does everyone when your organization's sign-in policy requires it.
 
 ### Troubleshooting Screenshot Failures
 
 If SudoDocs fails to capture screenshots for a Docflow suggestion, a warning banner appears at the top of the suggestion card in the **Docflows** list:
 
 * **Preview environment was unreachable:** SudoDocs could not establish a network connection to your preview URL. Check that your staging server is up and accessible from the public internet.
-* **Login to the preview environment failed:** SudoDocs reached the login page but could not authenticate. Verify that your login form CSS selectors, service account username, or password are correct in the repository's **Screenshot Settings**.
+* **Login to the preview environment failed:** SudoDocs reached the login page but could not authenticate - the sign-in form or a two-factor code box was still showing after it submitted. Verify that your login form CSS selectors, service account username, password, and (for two-factor) the code field and setup key are correct in the repository's **Screenshot Settings**. SudoDocs never commits screenshots of a sign-in page.
 
 ## See Also
 
