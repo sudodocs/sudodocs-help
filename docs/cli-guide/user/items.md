@@ -76,6 +76,16 @@ Opens a pull request with the scan's AI-corrected spec (or the pre-processed one
 
 With both, the scan follows the docs pull request. If one can't be opened, the other still is and the reason is printed. API: `POST /api/v1/oas/scans/<id>/pull-request` with `targets` (`["source"]`, `["docs"]` or both), `integration_id` and `file_path` for docs, optional `source_file_path`, `spec` and `commit_message`. It returns `pull_requests` (one URL per target) and any `errors`.
 
+## Zoom on Clicks for a Capture
+
+```bash
+sudodocs capture zoom 42
+sudodocs capture zoom 42 --mode always
+sudodocs capture zoom 42 --step 310=off --step 311=on
+```
+
+Shows or changes how an interactive capture's embed player and exported video zoom toward each step's hotspot - see [Zoom on Clicks](../../saas-guide/user/capture.md#zoom-on-clicks). Without options it lists the capture's setting and every step with its id. `--mode` is `auto` (only small targets), `always` or `off`; `--step STEP_ID=on|off|default` sets one step (`default` follows the capture). API: `GET` / `PUT /api/v1/captures/<id>/zoom` with `{"mode": "...", "steps": {"<step id>": "on|off|default"}}`.
+
 ## Rename an Item
 
 ```bash

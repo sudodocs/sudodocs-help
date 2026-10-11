@@ -8,7 +8,7 @@ SudoDocs utilizes Role-Based Access Control (RBAC) to secure your documentation 
 
 * **System Administrator**: Full access to repository integrations, Single Sign-On (SSO) configurations, and global knowledge base settings.
 * **Writer**: Access to workspaces, release dashboards, and the DocOps Assistant.
-* **Walkthrough Auditor**: Can view and edit [Capture](../user/capture.md) walkthroughs, generate voiceovers, and export video. Lands on Capture after signing in, and doesn't get Writer access to the other tools.
+* **Walkthrough Auditor**: Works only in [Capture](../user/capture.md): can view and edit captures, generate voiceovers, and export video. Lands on Capture after signing in, and doesn't get the other tools. Writers can do all of this too.
 * **Pending**: The default state for new users awaiting admin approval.
 
 ## Invite a Team Member
