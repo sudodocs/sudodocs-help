@@ -20,7 +20,7 @@ Every tool is a card in the **Tools** grid on your Workspace:
 * [API Readiness](api-readiness.md): Validates your OpenAPI Specifications (OAS) against industry standards and your own style guide.
 * [Capture](capture.md): A Chrome extension for turning a live product into a shareable click-through walkthrough, a narrated screen recording, or an annotated screenshot.
 
-At the top, **Release Dashboard** opens all your team's work, release by release - see [Dashboards](dashboards.md). A release groups one version's feature drafts, release notes and Docflows; see [Manage Releases](releases.md), and [Assigned Docflows](assign-pr.md) to review the Docflows on a release.
+At the top, **Release Dashboard** opens all your team's work, release by release - see [Dashboards](dashboards.md). A release groups one version's feature drafts, release notes and Docflows; see [Manage Releases](releases.md), and [Review and Push Docflows](assign-pr.md) to review the Docflows on a release.
 
 ### Your Work
 

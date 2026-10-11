@@ -1,8 +1,12 @@
-# Assigned Docflows
+---
+sidebar_label: Review and Push Docflows
+---
+
+# Review and Push Docflows
 
 Docflows allows technical writers to review, edit, and assign automated documentation suggestions generated directly from engineering activity - a Pull Request or a Jira ticket. See [Manage Docflows](doc-drift.md) for how a suggestion is generated and reviewed before it reaches this queue.
 
-## View Your Assigned Queue
+## Find the Docflows on a Release
 
 To see your workload for a specific release, open the release from **Release Dashboard** on the Workspace (pick it in the list on the left) and click the **Docflows** button under its name. It shows how many are assigned to you, for example **Docflows: 2 for you**.
 

@@ -66,7 +66,7 @@ SudoDocs checks open pull requests every 15 minutes. If your administrator has s
 
 ## Open a Release Dashboard
 
-Click **Release Dashboard** at the top of the Workspace, then pick the release in the list on the left. A new release opens its Release Dashboard as soon as you create it. It leads with the **Release timeline** - where the release stands against its target date, every date change and how much work is done - then each writer's work, what needs attention and a board for moving work along - see [Dashboards](dashboards.md). It also links to Feature Author and Release Composer filtered to that release, and shows the Docflows assigned to it (see [Assigned Docflows](assign-pr.md)).
+Click **Release Dashboard** at the top of the Workspace, then pick the release in the list on the left. A new release opens its Release Dashboard as soon as you create it. It leads with the **Release timeline** - where the release stands against its target date, every date change and how much work is done - then each writer's work, what needs attention and a board for moving work along - see [Dashboards](dashboards.md). It also links to Feature Author and Release Composer filtered to that release, and shows the Docflows assigned to it (see [Review and Push Docflows](assign-pr.md)).
 
 For all releases at once, click **Overall** in that list - it's what **Release Dashboard** opens first.
 

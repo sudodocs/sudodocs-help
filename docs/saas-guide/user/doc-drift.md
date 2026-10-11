@@ -24,11 +24,11 @@ Each Docflows suggestion generated (PR or Jira-sourced) uses AI credits, same as
 An action item appears in your inbox whenever an engineer merges (or opens/updates) a Pull Request on a connected repository, or moves a linked Jira ticket to Done, Resolved, or Closed.
 
 1. Open **Docflows**.
-2. Review the suggested target file path(s) and the AI-generated draft. A **📦 BATCH UPDATE** badge means multiple files are affected - click to review each one. A card sourced from Jira shows the ticket key (e.g. `PROJ-501`) instead of a PR number.
-3. In the assignment panel, input the **Target Release**, designate an **Assignee**, and apply a **Product Tag** (e.g., Auth, API).
-4. Click **Approve**. 
+2. Review the draft. Each card's left side has the pull request (or the Jira ticket key, such as `PROJ-501`), the target file(s), and under **Proposed changes** the list of files with lines added and removed, how many you've reviewed, and **Split** / **Unified**. Click a file to jump to it; its changes fill the rest of the card. A **📦 BATCH UPDATE** badge means several files are affected. On a narrower screen the file list sits above the changes. **Show or hide the changes** collapses them.
+3. In the assignment panel, enter the **Target Release**, choose an **Assignee**, and add a **Product Tag** (for example Auth or API).
+4. Click **Approve**.
 
-> Triaged suggestions appear in the assigned Release Dashboard for final review.
+> Approved suggestions appear on the release's Release Dashboard, under its **Docflows** button, for final review and pushing - see [Review and Push Docflows](assign-pr.md). The assignee sees them under **Assigned to you** and in **Your work** on their Workspace.
 
 ## Screenshots in a Suggestion
 
@@ -44,7 +44,7 @@ A screenshot taken after the draft was written isn't used in any file yet. In th
 
 Writers can push approved documentation directly back to the Git repository.
 
-1. Open the **Assigned Docflows** panel in your Release Dashboard - it shows the same review badge as the Inbox.
+1. Open the release's Release Dashboard and click its **Docflows** button (for example **Docflows: 2 for you**) - the list shows the same review badge as the Inbox. See [Review and Push Docflows](assign-pr.md).
 2. Click **Review & Push** on a triaged item.
 3. *(Optional)* Click **Sync Latest Code** to fetch new commits from GitHub and append missing updates to your draft. This button only appears for PR-sourced suggestions - a Jira-sourced one has no linked commits to sync from, so the option is hidden there.
 4. Review each file's changes - before and after, side by side or in one column - edit where needed, and tick **Reviewed**. See [Review & Push](assign-pr.md#review--push-workflow).
