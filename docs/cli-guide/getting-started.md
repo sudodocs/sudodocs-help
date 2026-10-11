@@ -16,7 +16,14 @@ Verify it installed correctly:
 sudodocs --help
 ```
 
-Already installed? Upgrade to get new commands - the sign-in management commands under `sudodocs admin users`, the GitHub token checks under `sudodocs admin integrations`, and `sudodocs admin api-specs` need version 1.1.0 or later:
+Already installed? Upgrade to get new commands. Version 1.2.0 or later is needed for:
+
+* [Releases](user/releases.md) (`sudodocs releases ...`) and [work items](user/items.md) (`sudodocs items ...`), including approving and dismissing Docflows suggestions.
+* The [dashboard](user/items.md#dashboard) (`sudodocs dashboard`, `--mine`) and `sudodocs mywork`.
+* Opening a pull request from an API scan (`sudodocs api-scan open-pr`), and a capture's zoom setting (`sudodocs capture zoom`).
+* `sudodocs admin status`, the screenshot style and recipes (`sudodocs admin kb screenshot-style`, `screenshot-recipes`), and a repository's page index and docs layout (`sudodocs admin integrations page-index`, `docs-profile`).
+
+The sign-in management commands under `sudodocs admin users`, the GitHub token checks under `sudodocs admin integrations`, and `sudodocs admin api-specs` need version 1.1.0 or later:
 
 ```bash
 pip install --upgrade sudodocs-cli
