@@ -16,12 +16,18 @@ This opens a queue displaying:
 
 ## Review & Push Workflow
 
-Click **Review & Push** on any item to open the interactive editor modal. This interface allows you to finalize the content before it merges into your docs repository:
+Click **Review & Push** on any item. Like a pull request on GitHub, you see exactly what each file will change before it reaches your docs repository:
 
-* **Select Target Repo**: Choose the specific documentation repository where this update should be published.
-* **Review File Actions**: For batch updates, you will see a list of all affected files, each tagged with their respective action (e.g., **✨ CREATE** for new files or **✏️ UPDATE** for existing ones).
-* **Draft Editor**: Manually refine the AI-generated content inside the text area, in whatever format the file uses (Markdown, reStructuredText, AsciiDoc, HTML, MDX, or DITA XML). You can save your progress at any time by clicking **Save Draft**.
-* **Screenshot Previews**: Captured screenshot files are rendered in the modal as read-only image previews rather than plain text blocks. You can view the actual visual rendering of the route directly alongside your text-based documentation updates. SudoDocs pushes these visual assets using standard base64 encoding, automatically committing them under `/docs/images/` in the destination repository when you click **Push PR**.
+* **Select Target Repo**: choose the documentation repository to publish to.
+* **Files**: every file in the suggestion, with how many lines are added (green) and removed (red). Click a file in the list to jump to it. Images are marked **image**.
+* **Changes**: each file's before and after. Removed lines are red and added lines green, with the exact words that changed highlighted. Long stretches of unchanged text are folded - click **Show N unchanged lines** to expand them.
+  * **Split** shows the file before and after side by side; **Unified** shows them in one column with **+** and **−** markers. Your choice is remembered. Narrow screens always use Unified.
+  * A new file shows only additions.
+* **Edit**: change a file in place, in whatever format it uses (Markdown, reStructuredText, AsciiDoc, HTML, MDX or DITA XML). Tip: click a line number on the after side to start editing at that line. Switch back to **Changes** to see your edits in the diff. You can also change the file's path here. Click **Save Draft** to save at any time.
+* **Reviewed**: tick it once you're happy with a file. The count at the top (for example **2 of 3 reviewed**) tracks your progress, and **Push PR** asks you to confirm if any file isn't reviewed yet.
+* **Screenshots**: captured screenshots are shown as images and committed with the text when you push.
+
+What a file looked like before the suggestion is kept as you edit, so the comparison always shows the change against your docs repository, not against your last save.
 
 ## Manage Engineering Changes
 

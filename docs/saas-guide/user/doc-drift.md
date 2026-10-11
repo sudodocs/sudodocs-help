@@ -37,4 +37,5 @@ Writers can push approved documentation directly back to the Git repository.
 1. Open the **Assigned Docflows** panel in your Release Dashboard - it shows the same review badge as the Inbox.
 2. Click **Review & Push** on a triaged item.
 3. *(Optional)* Click **Sync Latest Code** to fetch new commits from GitHub and append missing updates to your draft. This button only appears for PR-sourced suggestions - a Jira-sourced one has no linked commits to sync from, so the option is hidden there.
-4. Select the target integration, define the file path, and click **Push PR**.
+4. Review each file's changes - before and after, side by side or in one column - edit where needed, and tick **Reviewed**. See [Review & Push](assign-pr.md#review--push-workflow).
+5. Select the target integration and click **Push PR**.

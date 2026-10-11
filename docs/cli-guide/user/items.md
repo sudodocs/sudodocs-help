@@ -43,6 +43,15 @@ sudodocs items status diagrams 15 blocked --note "Waiting on the SME" --claim
 
 Statuses: `todo`, `in_progress`, `in_review`, `blocked`, `done`, `rejected` (not for chats). Only the item's writer or a System Administrator can change its status; `--claim` makes you the writer first. `sudodocs items list TOOL --status blocked` lists items in one status, and the list shows each item's status and any open pull request.
 
+## See a Docflows Suggestion's Changes
+
+```bash
+sudodocs items diff docflows 42
+sudodocs items diff docflows 42 --stat
+```
+
+Prints the suggestion's proposed changes as a unified diff, with added lines in green and removed lines in red, against what each file looked like in your docs repository. Screenshots are listed by name. `--stat` lists only the files, with lines added and removed and a ✓ for files marked **Reviewed**. API: `GET /api/v1/docflows/<id>` (a summary per file), or `?format=diff` for the diff as plain text.
+
 ## Open a Pull Request from an API Scan
 
 ```bash
