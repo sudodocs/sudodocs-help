@@ -59,7 +59,7 @@ To configure screenshots for an active repository:
 3. Enter your **Preview URL Pattern** (e.g., `https://pr-{pr_number}.preview.example.com`).
 4. Select your environment's authentication method from the **Access Method** dropdown (see options below).
 5. Define your **Route Map** as a list of glob patterns mapped to application routes (e.g., `templates/admin_dashboard.html => /admin/dashboard`).
-6. Click **Save Settings**.
+6. Click **Save Preview Settings**.
 
 ### Supported Access Methods
 
@@ -84,7 +84,7 @@ If the screenshot account has two-factor turned on with an authenticator app, Su
 1. Turn on two-factor for the screenshot account, and copy its **setup key** (the text shown under the QR code) or the whole `otpauth://` link.
 2. In the repository's **Screenshot Settings**, choose **Login Form**.
 3. Fill in **2FA Code Field** with the CSS selector of the code box (`#code` for SudoDocs itself) and paste the key into **2FA Setup Key**.
-4. Click **Save Settings**.
+4. Click **Save Preview Settings**.
 
 After the password step, SudoDocs types the current 6-digit code and submits it. Accounts that don't get a code step sign in as usual. The key is stored encrypted and never shown again; leave the field blank to keep it, or tick **Remove the saved 2FA setup key** to delete it.
 
