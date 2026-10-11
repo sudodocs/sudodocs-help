@@ -47,14 +47,16 @@ Every scan is listed under **Scan History** on the left, titled with when it ran
 
 ## Push to Production
 
-Each spec under **Final Specification** has two ways to reach your documentation repository:
+Each spec under **Final Specification** has two ways to leave SudoDocs:
 
-* **🚀 Open Pull Request**: opens a pull request with the spec straight away.
+* **🚀 Open Pull Request**: opens a pull request with the spec straight away, in the spec's own repository, a docs repository, or both.
     1. Click **Open Pull Request** under the spec you want (pre-processed or AI-corrected).
-    2. Pick the **Target Docs Repository** and check the **File Path in Repo**.
+    2. Under **Open it in**, tick where it goes:
+        * **The spec's repository**: the repository, branch and file that API Specs validates, so engineering gets the corrections. Change the file path if needed. This needs API Specs to read the spec from a connected repository (Admin Dashboard > API Specs); if it reads from a repository URL instead, add that repository under **Repositories** and pick it there.
+        * **A docs repository**: for the published API reference, for example for this scan's release. Pick the repository; if a file with the spec's name is already there, SudoDocs fills in its path so the pull request updates it. Otherwise it's added at the spec's path, which you can change.
     3. Click **Open Pull Request**.
 
-    The scan moves to **In review** and shows the pull request's review status; it moves to **Done** when the pull request merges, or **Rejected** if it's closed - see [Track work and pull requests](releases.md#track-work-and-pull-requests).
+    Tick both to open a pull request in each. The scan moves to **In review** and shows the pull request's review status; it moves to **Done** when the pull request merges, or **Rejected** if it's closed - see [Track work and pull requests](releases.md#track-work-and-pull-requests). With both, the scan follows the docs pull request; the links to both appear once they're opened.
 
 * **📬 Send to Docflows**: creates a Docflows suggestion instead, so a writer can review the spec in Docflows before pushing it. The suggestion keeps the scan's release and writer, and once its pull request is opened the scan follows it the same way.
 
