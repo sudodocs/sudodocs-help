@@ -74,10 +74,10 @@ For all releases at once, click **Dashboard** at the top of the Workspace.
 
 On the Release Dashboard's **Release timeline** card:
 
-* Click **Edit release** to change its name, **Target date** or build number. If you move the date, add a reason - it's kept in the timeline's **Date changes** and in the release history. The first target date is kept too, so the timeline shows "First planned for" the original. You can also hover over the release in the list on the left and click the pencil icon.
+* Click **Edit release** to change its name, **Target date** or build number. If you move the date, add a reason - it's kept in the timeline's **Date changes**. The first target date is kept too, so the timeline shows "First planned for" the original. You can also hover over the release in the list on the left and click the pencil icon.
 * When the release ships, click **Mark as released**, check the date (it defaults to today) and click **Mark as released** in the dialog. The timeline then says whether it shipped on time, early or late. Click **Reopen** if you marked it by mistake.
 
-**Release history** at the bottom of the dashboard lists every change: date moves with their reasons, renames, and when it was released or reopened.
+Renames, build changes and releases also appear in the dashboard's **Recent activity**.
 
 Writers and System Administrators can both edit releases.
 

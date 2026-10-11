@@ -12,7 +12,7 @@ There are two kinds:
 Use the row above the dashboard to narrow everything on the page at once:
 
 * **Release** (Overall dashboard only): one release, or **Not tagged to a release**.
-* **Writer**: one person, or **No writer**.
+* **Writer**: one person. To find work nobody has taken yet, look at **Needs attention** (or the **No writer** count).
 * **Tool**: one tool.
 
 Click **Clear filters** to see everything again.
@@ -48,6 +48,5 @@ Status changes made on the board are the same as changing the status in the tool
 
 * The **Release timeline**, with **Edit release** and **Mark as released** - see [Manage Releases](releases.md#edit-a-release-move-its-date-or-mark-it-released).
 * Shortcuts to Release Composer and Author a Feature for the release, and the release's [Assigned Docflows](assign-pr.md).
-* **Release history**: every date move with its reason, renames, and when it was released.
 
 To get the same numbers from a terminal, see [CLI Tasks → Dashboard](../../cli-guide/user/items.md#dashboard).
