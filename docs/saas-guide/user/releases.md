@@ -6,7 +6,7 @@ A release groups the work for one version of your product. Anything any tool pro
 
 You can create a release in any of these places:
 
-* **On the Workspace:** click **New Release** (or the **New Release** card under **Releases**). Enter a **Release Name**, and optionally a **Target Date** and **Build Number**, then click **Create**.
+* **On the Workspace:** click **New Release** at the top. Enter a **Release Name**, and optionally a **Target Date** and **Build Number**, then click **Create**. Its Release Dashboard opens.
 * **While tagging:** choose **+ New release...** in any release list - on the Feature Author or Release Composer form, or in the **Tag** dialog - and type a name.
 * **In Docflows:** type a new name in **Target Release** when you assign a suggestion.
 
@@ -66,9 +66,9 @@ SudoDocs checks open pull requests every 15 minutes. If your administrator has s
 
 ## Open a Release Dashboard
 
-Under **Releases** on the Workspace, click **Open** on a release. Its Release Dashboard leads with the **Release timeline** - where the release stands against its target date, every date change and how much work is done - then each writer's work, what needs attention and a board for moving work along - see [Dashboards](dashboards.md). It also links to Feature Author and Release Composer filtered to that release, and shows the Docflows assigned to it (see [Assigned Docflows](assign-pr.md)).
+Click **Release Dashboard** at the top of the Workspace, then pick the release in the list on the left. A new release opens its Release Dashboard as soon as you create it. It leads with the **Release timeline** - where the release stands against its target date, every date change and how much work is done - then each writer's work, what needs attention and a board for moving work along - see [Dashboards](dashboards.md). It also links to Feature Author and Release Composer filtered to that release, and shows the Docflows assigned to it (see [Assigned Docflows](assign-pr.md)).
 
-For all releases at once, click **Dashboard** at the top of the Workspace.
+For all releases at once, click **Overall** in that list - it's what **Release Dashboard** opens first.
 
 ## Edit a Release, Move Its Date, or Mark It Released
 
@@ -83,7 +83,7 @@ Writers and System Administrators can both edit releases.
 
 ## Delete a Release
 
-Hover over the release in the list on the left of any dashboard and click the trash icon (or click **Delete** on the release under **Releases** on the Workspace), then confirm.
+Hover over the release in the list on the left of the Release Dashboard and click the trash icon, then confirm.
 
 Deleting a release doesn't delete any work. Everything tagged with it stays in its tool and just loses the release tag.
 

@@ -4,7 +4,7 @@ Docflows allows technical writers to review, edit, and assign automated document
 
 ## View Your Assigned Queue
 
-To see your workload for a specific release, open the release from **Releases** on the Workspace and click **View Assigned Docflows** on its Release Dashboard.
+To see your workload for a specific release, open the release from **Release Dashboard** on the Workspace (pick it in the list on the left) and click **Assigned Docflows** under its name.
 
 This opens a queue displaying:
 

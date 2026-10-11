@@ -4,8 +4,8 @@ Dashboards show all of your team's documentation work in one place: what's done,
 
 There are two kinds:
 
-* **Overall dashboard**: everything, across all releases. Open it with **Dashboard** at the top of the Workspace.
-* **Release dashboard**: one release. Open it from **Releases** on the Workspace, or from the list on the left of any dashboard. Hover over a release in that list to edit or delete it.
+* **Overall dashboard**: everything, across all releases. Open it with **Release Dashboard** at the top of the Workspace.
+* **Release dashboard**: one release. Open it from the list on the left of any dashboard; **All releases** at its top takes you back. Hover over a release in that list to edit or delete it.
 
 ## Filter What You See
 
