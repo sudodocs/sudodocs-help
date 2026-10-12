@@ -43,6 +43,8 @@ SudoDocs picks a product category for Jira and CSV items from your [Product Cate
 1. Under **Draft the release notes**, check the **Title** (it labels the draft in your history), the **Writer** and the **Format**.
 2. Click **Draft from the queue**. SudoDocs writes every queued item in your house style, under its section and category, then opens the draft. This costs 10 AI credits.
 
+Release notes go through SudoDocs' built-in [Doc Team Roles](../admin/doc-team-roles.md): its Technical Writer writes each entry following your Technical Writer instructions, and its Editor checks that every queued item appears once, in its own section, with nothing invented and nothing internal. If the Editor finds a blocking issue, the Writer revises the notes once. If anything is still open after that, the draft opens with **The Editor still has open issues with these notes** and what they are, and the release's **Release notes** card shows **Editor: open issues**. Fix what's left and click **Save Notes**; saving clears the flag.
+
 When items are queued after a draft was written, Composer shows **N new items since** that draft. Click **Add them to that draft**: SudoDocs writes only the new items and adds them under their headings, leaving the rest of the draft - including your edits - as it is. This costs 5 AI credits.
 
 ## Automatic Drafting

@@ -35,7 +35,7 @@ Each filter you set shows as a chip under the row. Click the chip's **×** to re
 * **Work by tool**: how many items each tool has.
 * **Work by writer**: each writer's items by status, with their total. Items without a writer are grouped under **No writer**. When you filter to one writer, this chart is hidden and **Status** shows that writer's work instead.
 * **Release timeline** (release dashboard only, at the top - it always covers the whole release, whatever the filters): its target date and the date it was first planned for; a timeline marking when it was created, every earlier target date, today, the target and the release date; a progress bar split by status, with the count for each; and every date change with who made it and why. A release without a target date shows only its progress and a **Set a target date** link.
-* **Needs attention**, grouped with a count for each: pull requests with changes requested (with a link to the pull request), blocked items and their reasons, releases due within 7 days that still have unfinished work, and items without a writer.
+* **Needs attention**, grouped with a count for each: pull requests with changes requested (with a link to the pull request), Docflows suggestions SudoDocs' Editor flagged, suggestions your docs already have (dismiss them as done), suggestions whose engineering pull request was closed without merging, blocked items and their reasons, releases due within 7 days that still have unfinished work, and items without a writer.
 * **Recent activity**: status changes, retagging, pull request reviews and release date moves, newest first. The five latest show; click **Show more** for the rest.
 * **Board**: see [Use the Board](#use-the-board).
 

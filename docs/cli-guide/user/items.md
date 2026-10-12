@@ -69,10 +69,31 @@ sudodocs items approve docflows 42 --release 7
 sudodocs items approve docflows 42 --release 7 --notes include --section enhancement --category Billing --note "Refunds are faster."
 sudodocs items approve docflows 42 --new-release "v2.6" --writer 12
 sudodocs items dismiss docflows 42
+sudodocs items dismiss docflows 42 --done
 sudodocs items sync docflows 42
 ```
 
-Does what **Approve** and **Dismiss** do on the Docflows page - see [Manage Docflows](../../saas-guide/user/doc-drift.md#triage-suggestions). `approve` needs a release: `--release` (an ID from `sudodocs releases list`) or `--new-release` (creates it, or uses an existing release with that name). `--writer` is a user ID or `me` (the default); it must be someone in your organization. `--notes include|skip` is the release-notes decision; leave it out to use SudoDocs' suggestion. With `include`, `--section` (`feature`, `enhancement`, `bug`, `known-issue`), `--category` (one of your product categories, or `Other`) and `--note` set what goes into the [release notes queue](release-composer.md#release-notes-queue). `dismiss` asks first unless you add `--yes`; the suggestion's status becomes **Rejected**. `sync` is **Sync Latest Code**: it adds what the draft is missing from the pull request's newest code and waits for it (5 credits); the API's `new_commits` (on `GET /api/v1/docflows/<id>`) says whether there are new commits. API: `POST /api/v1/docflows/<id>/approve` with `release_id` or `new_release_name`, `assignee_id` (an ID or `"me"`), and `release_notes` (`include`/`skip`, default: the suggestion) with `rn_section`, `rn_category` and `rn_note`; `POST /api/v1/docflows/<id>/dismiss`; `POST /api/v1/docflows/<id>/sync` (202 with a job ID).
+Does what **Approve** and **Dismiss** do on the Docflows page - see [Manage Docflows](../../saas-guide/user/doc-drift.md#triage-suggestions). `approve` needs a release: `--release` (an ID from `sudodocs releases list`) or `--new-release` (creates it, or uses an existing release with that name). `--writer` is a user ID or `me` (the default); it must be someone in your organization. `--notes include|skip` is the release-notes decision; leave it out to use SudoDocs' suggestion. With `include`, `--section` (`feature`, `enhancement`, `bug`, `known-issue`), `--category` (one of your product categories, or `Other`) and `--note` set what goes into the [release notes queue](release-composer.md#release-notes-queue). `dismiss` asks first unless you add `--yes`; the suggestion's status becomes **Rejected**, or **Done** with `--done` (your docs already have it; its release notes stay queued). `sync` is **Sync Latest Code**: it adds what the draft is missing from the pull request's newest code and waits for it (5 credits); the API's `new_commits` (on `GET /api/v1/docflows/<id>`) says whether there are new commits. API: `POST /api/v1/docflows/<id>/approve` with `release_id` or `new_release_name`, `assignee_id` (an ID or `"me"`), and `release_notes` (`include`/`skip`, default: the suggestion) with `rn_section`, `rn_category` and `rn_note`; `POST /api/v1/docflows/<id>/dismiss` (with `{"reason": "done"}` for **Dismiss as done**); `POST /api/v1/docflows/<id>/sync` (202 with a job ID).
+
+## Request Changes on a Docflows Suggestion
+
+```bash
+sudodocs items request-changes docflows 42 -m "Mention that the default region is us-east-1"
+sudodocs items request-changes docflows 42 -m "Shorter intro" --file docs/billing/refunds.md
+sudodocs items history docflows 42
+```
+
+`request-changes` is **Request changes** on the Docflows card: SudoDocs' Technical Writer makes the change and its Editor reviews it, then the command prints the result, and any issues the Editor still has (8 credits). `--file` limits it to one of the suggestion's files. `history` prints the suggestion's review history: the Information Architect's plan, the Writer's drafts and revisions, the Editor's comments and who requested changes. See [Request Changes](../../saas-guide/user/doc-drift.md#request-changes). API: `POST /api/v1/docflows/<id>/request-changes` with `feedback` and optional `target_file` (202 with a job ID); `GET /api/v1/docflows/<id>/history`.
+
+## Check Docflows Suggestions Against Your Docs
+
+```bash
+sudodocs items check docflows 42
+sudodocs items check docflows --all
+sudodocs items check docflows --all --dismiss-done
+```
+
+Compares suggestions with your docs repository as it is today and prints, for each, whether it's still needed, already in your docs, or was updated to fit docs that changed since - and whether its pull request was merged or closed. `--all` checks every open suggestion; add `--dismiss-done` to dismiss as done the ones your docs already have. Checking is free. See [Is a Suggestion Still Needed?](../../saas-guide/user/doc-drift.md#is-a-suggestion-still-needed) API: `POST /api/v1/docflows/<id>/check-docs`, or `POST /api/v1/docflows/check-docs` with optional `ids` and `dismiss_done` (202 with a job ID; the job's result lists each suggestion's verdict).
 
 ## Open a Pull Request from an API Scan
 
