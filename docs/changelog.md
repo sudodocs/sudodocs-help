@@ -54,6 +54,7 @@ Product updates to SudoDocs, newest first.
 
 - **Zoom on clicks.** Interactive walkthroughs zoom in on what's being clicked - most helpful on phones - and viewers can switch back to the whole screen. See [Zoom on Clicks](saas-guide/user/capture.md#zoom-on-clicks).
 - **Writers can edit captures.** Captions, hotspots, redaction, voiceover and video export are open to writers, not just administrators.
+- **SudoDocs Capture 1.1.0.** In Interactive mode, the Chrome extension now notes which control you clicked - its label, not just where it was - so SudoDocs can find the same control again when it re-takes a screenshot after your product's layout changes. Chrome updates the extension automatically. See [When Your UI Changes](saas-guide/admin/doc-drift.md#when-your-ui-changes).
 - **Open an API scan's pull request where it belongs.** Send the corrected spec back to the spec's own repository, to a docs repository, or both. See [Push to Production](saas-guide/user/api-readiness.md#push-to-production).
 
 ### For administrators
