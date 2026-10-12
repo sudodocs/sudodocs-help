@@ -26,7 +26,9 @@ Set up SudoDocs for your organization from the Admin Dashboard.
 Draft, review, and ship documentation from the Workspace.
 
 - [DocOps Assistant](user/chat.md): ask questions about your code and docs.
+- [Releases](user/releases.md) and the [Release Dashboard](user/dashboards.md): your work and your team's, release by release.
 - [Docflows](user/doc-drift.md): documentation suggestions from pull requests and Jira tickets.
+- [Release notes](user/release-composer.md): every release's notes, collected from Docflows, Slack and Jira, drafted for you and pushed to your docs.
 - [Capture](user/capture.md): turn a live product into a walkthrough, recording, or annotated screenshot.
 - [See all user tasks](user/index.md)
 

@@ -62,11 +62,12 @@ Every draft is listed in the history on the left, with its release and writer. D
 Once generation is complete, you will be redirected to the draft view.
 
 1.  Review the generated Markdown content in the editor.
-2.  Use the toolbar buttons to export your notes:
+2.  Edit the notes in the editor and click **Save Notes**.
+3.  Use the toolbar to take them elsewhere:
 
-    * **Copy Markdown**: Copies the raw text to your clipboard.
-    * **Download Word**: Downloads a formatted `.docx` file.
-    * **Create Google Doc**: Exports the content directly to a new Google Doc in your connected account.
+    * **Create GDoc**: exports the notes to a new Google Doc in your connected account; **Sync from GDoc** brings edits made there back.
+    * **Download**: downloads the notes as a file.
+    * **Push to docs**: opens a pull request in your docs repository - see [Push to Your Docs](#push-to-your-docs).
 
 ## Push to Your Docs
 

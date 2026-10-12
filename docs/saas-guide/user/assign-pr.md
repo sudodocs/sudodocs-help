@@ -29,7 +29,7 @@ Each row shows:
 
 Click **Review & Push** on any item. Like a pull request on GitHub, you see exactly what each file will change before it reaches your docs repository:
 
-* **Select Target Repo**: choose the documentation repository to publish to.
+* **Target Repo Integration**: choose the documentation repository to publish to.
 * **Files**: every file in the suggestion, with how many lines are added (green) and removed (red). Click a file in the list to jump to it. Images are marked **image**.
 * **Changes**: each file's before and after. Removed lines are red and added lines green, with the exact words that changed highlighted. Long stretches of unchanged text are folded - click **Show N unchanged lines** to expand them.
   * **Split** shows the file before and after side by side; **Unified** shows them in one column with **+** and **−** markers. Your choice is remembered. Narrow screens always use Unified.

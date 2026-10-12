@@ -154,4 +154,4 @@ The base Recording charge is purely a usage throttle, not a pass-through AI cost
 
 ## Availability
 
-Capture is available on every plan, including the free Basic tier - it's not an Enterprise-exclusive feature. It's a browser-first tool by design (a Chrome extension plus a review dashboard) with no CLI or Headless API surface - a screen recording or an annotated screenshot has no terminal-friendly equivalent, so managing captures always happens here or in the extension, never from `sudodocs`.
+Capture is available on every plan, including the free Basic tier - it's not an Enterprise-exclusive feature. Recording is browser-first by design (a Chrome extension plus a review dashboard) - a screen recording or an annotated screenshot has no terminal equivalent. A few things can be done from the CLI: list, rename, tag or delete captures (`sudodocs items ... captures`) and set an interactive capture's zoom (`sudodocs capture zoom`) - see [CLI Tasks](../../cli-guide/user/items.md).
