@@ -74,6 +74,25 @@ After adding a repository, you must sync it to index the content into the Vector
 
 > **Note**: Initial sync times vary by repository size. A typical documentation repo (50-100 pages) takes 2-5 minutes. Large codebases may take longer. You can navigate away from the page while the sync runs in the background.
 
+### What Syncing Is Used For
+
+A sync gives SudoDocs its own searchable copy of a repository: the text of every file, how your components relate, and - for a documentation repository - its layout. These tools read that copy, so they only know what was in the repository at the last sync:
+
+| Tool | What it uses the synced copy for |
+|---|---|
+| [Docflows](../user/doc-drift.md) | Which of your pages a change affects, what they say now, and whether a file is new or an update. Also where screenshots go and which existing screenshots a new one replaces. |
+| [Author a Feature](../user/feature-author.md) | Your existing pages and related code, so drafts fit what's there. |
+| [Sync Latest Code](../user/assign-pr.md#manage-engineering-changes) | Related docs, for context. |
+| [Release Composer](../user/release-composer.md) | Context for writing each entry, and your docs framework when pushing release notes. |
+| [DocOps Assistant](../user/index.md) | Searching your docs and code to answer questions and find gaps. |
+| [Knowledge Base Auto-Learn](kb-config.md) | Your writing style and screenshot style. |
+
+If a documentation repository hasn't been synced since people changed it, Docflows drafts against the older pages. A page added since the last sync can even look like a new file, so the review shows all of it as added. Sync after big changes to your docs.
+
+These don't depend on syncing - they read GitHub directly when you use them: Docflows' [Check against your docs](../user/doc-drift.md#is-a-suggestion-still-needed), pushing pull requests to your repositories, and where release notes go in your docs. Capture, Diagram Generator, API Readiness and the Universal Converter don't use synced repositories.
+
+A repository also syncs on its own when a pull request is merged in it, if it sends SudoDocs pull request events (the SudoDocs GitHub App, or a webhook).
+
 ### What SudoDocs Learns About a Docs Repository
 
 When a **documentation** repository syncs, SudoDocs also works out how it's laid out, from its files alone:
