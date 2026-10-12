@@ -91,7 +91,7 @@ If a documentation repository hasn't been synced since people changed it, Docflo
 
 These don't depend on syncing - they read GitHub directly when you use them: Docflows' [Check against your docs](../user/doc-drift.md#is-a-suggestion-still-needed), pushing pull requests to your repositories, and where release notes go in your docs. Capture, Diagram Generator, API Readiness and the Universal Converter don't use synced repositories.
 
-A repository also syncs on its own when a pull request is merged in it, if it sends SudoDocs pull request events (the SudoDocs GitHub App, or a webhook).
+How often SudoDocs refreshes its copy is up to you - see [Keep in Sync](#keep-in-sync).
 
 ### What SudoDocs Learns About a Docs Repository
 
@@ -110,16 +110,52 @@ To see it, look under the repository's name in **Active Repositories**: **Docs l
 
 If a sync is taking longer than expected or was started by mistake, click the small **Stop Sync** icon next to that repository's progress bar in the **Active Repositories** list. This works for any in-progress job, not just syncs - see [CLI Tasks → Organization](../../cli-guide/admin/settings.md#cancel-a-running-job) for the command-line equivalent.
 
-## Automatic Sync Schedule
+## Keep in Sync
 
-Beyond clicking **Sync** manually and webhook-triggered Docflows suggestions (see [Configure Webhooks and Screenshot Settings for Docflows](doc-drift.md)), you can set a per-repository schedule so a repository's indexed content is periodically refreshed on its own - useful as a catch-all if a webhook event is ever missed, or if you'd simply rather not rely on remembering to click Sync.
+Each repository has a **Keep in sync** setting that decides when SudoDocs re-reads it. Click **Keep in sync** next to the repository:
 
-1. Locate the repository in the **Active Repositories** list.
-2. Click **Sync Schedule** (repositories with a schedule already set show a green **Auto-Sync: Nh** badge here instead).
-3. Choose a **Frequency**: Off (manual sync only), Daily (every 24 hours), Weekly (every 168 hours), Monthly (every 720 hours), or Custom (enter any interval in hours).
-4. Click **Save Schedule**.
+* **When it changes** (the default for documentation repositories): SudoDocs syncs after a pull request is merged into the repository - including the docs pull requests SudoDocs opens - and, within the hour, after any other change, such as a commit pushed straight to the branch. Merges close together are grouped: at most one sync every 30 minutes.
+* **On a schedule** (the default for code repositories: daily): every day, week, month, or a number of hours you choose - and only when the repository has new commits.
+* **Only when I click Sync**: nothing happens on its own.
 
-> **Note**: Sync Schedule isn't shown for spec/OpenAPI repositories - those don't need syncing the same way, since API Readiness reads the spec directly rather than from the Vector Database.
+Repositories you connected before this setting existed sync when they change, as they did before. Websites can sync on a schedule or by hand.
+
+> **Note**: Keep in sync isn't shown for spec/OpenAPI repositories - API Readiness reads the spec directly, so they don't need syncing.
+
+### Sync Status
+
+Under each repository's name, **Active Repositories** shows whether SudoDocs' copy is current, checked every hour:
+
+* **Up to date**: nothing new since the last sync.
+* **Behind GitHub: 12 commits**: the repository has changed since SudoDocs last read it.
+* **Not synced yet**: click **Sync** to read it for the first time.
+
+It also shows when the repository was last synced and its Keep in sync setting. The **Overview** tab lists the repositories that need a sync.
+
+Writers see a notice on **Docflows** and the **Release Dashboard** when a documentation repository is behind (for a repository set to **When it changes**, only if it hasn't caught up within the hour) or hasn't been synced yet - or when a code repository has been behind for a week. They can click **Let admins know**, which emails your organization's System Administrators (at most once a day per repository). Admins see **Sync now** in the notice instead.
+
+### What a Sync Costs
+
+A sync only reads what changed since the last one:
+
+| What changed | AI credits |
+|---|---|
+| Nothing (already up to date) | Free |
+| Some files | 1 credit for every 10 changed files (1-10 files: 1 credit, 11-20: 2 credits, and so on), up to 20 |
+| A first sync, a change of branch, or a very large change (more than 200 files) | 20 |
+| A website | 20 |
+
+Removed files are free. The sync's result says what it read and what it cost, for example **Synced 7 changed files (1 credit)**.
+
+### Docs Branch
+
+By default SudoDocs works with a documentation repository's default branch on GitHub, usually `main`. If your team writes docs on another branch, set it in **Keep in sync** under **Docs branch**. SudoDocs then uses that branch for everything:
+
+* syncing,
+* Docflows' [Check against your docs](../user/doc-drift.md#which-version-of-your-docs-is-checked),
+* and every pull request it opens - Docflows, Author a Feature, release notes and API Readiness pull requests to this repository.
+
+Leave it blank to go back to the default branch. After you change the branch, the next sync reads the whole repository (20 credits).
 
 ## See Also
 

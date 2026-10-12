@@ -30,6 +30,14 @@ Product updates to SudoDocs, newest first.
 - **Request changes.** Tell SudoDocs what to change on a suggestion; it revises and reviews it again, and **Review history** shows every round. See [Request Changes](saas-guide/user/doc-drift.md#request-changes).
 - **Your edits stay yours.** New commits on a pull request no longer redraft its suggestion; you'll see **New commits since this draft** and can sync when you're ready.
 
+### Repositories stay in sync
+
+- **Keep in sync.** Choose for each repository when SudoDocs re-reads it: when it changes (after merges and pushes - the default for docs), on a schedule (the default for code), or only when you click Sync. See [Keep in Sync](saas-guide/admin/connect-repos.md#keep-in-sync).
+- **Syncs cost what they read.** A sync is free when nothing changed and costs 1 credit per 10 changed files, up to 20. See [What a Sync Costs](saas-guide/admin/connect-repos.md#what-a-sync-costs).
+- **Know when a repository is behind.** Repositories show whether SudoDocs' copy is up to date; writers see a notice on Docflows and the Release Dashboard and can let admins know in one click. See [When a Repository Needs a Sync](saas-guide/user/doc-drift.md#when-a-repository-needs-a-sync).
+- **Docs branch.** Work on a branch other than `main`? Set it once, and syncing, checks and every pull request SudoDocs opens use it. See [Docs Branch](saas-guide/admin/connect-repos.md#docs-branch).
+- **Earlier versions of a suggestion.** Review history keeps each version of a Docflows suggestion's text, to view or restore. See [Earlier Versions](saas-guide/user/doc-drift.md#earlier-versions).
+
 ### Doc Team Roles everywhere
 
 - **Every tool follows your role instructions.** Release notes, **Sync Latest Code** and revisions you ask for on a docs pull request now follow your Technical Writer instructions and pass SudoDocs' Editor review, like Author a Feature and Docflows already did. Anything the Editor can't sign off on is flagged, not hidden. See [Where the Roles Apply](saas-guide/admin/doc-team-roles.md#where-the-roles-apply).

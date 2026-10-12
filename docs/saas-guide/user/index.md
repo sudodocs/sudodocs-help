@@ -24,6 +24,6 @@ At the top, **Release Dashboard** opens all your team's work, release by release
 
 ### Your Work
 
-When anything is assigned to you, a **Your work** row above the tools sums it up, for example **4 open · 1 blocked · 2 Docflows to review · 1 PR has changes requested**. Click a number to open the Release Dashboard showing just that: your open work, your blocked items (highlighted on the board), your Docflows, or what needs attention. It only counts tools in your plan, and it's hidden when nothing is assigned to you.
+When anything is assigned to you, a **Your work** row above the tools sums it up, for example **4 open · 1 blocked · 2 Docflows to review · 1 PR has changes requested · 1 flagged by the Editor**. Click a number to open the Release Dashboard showing just that: your open work, your blocked items (highlighted on the board), your Docflows, or what needs attention. **Flagged by the Editor** opens Docflows: suggestions assigned to you that SudoDocs' Editor couldn't sign off on. It only counts tools in your plan, and it's hidden when nothing is assigned to you.
 
 On an Enterprise plan? Most of the tools above - and every Admin Task - can also be scripted from a terminal or CI pipeline. See the [CLI Guide](../../cli-guide/getting-started.md).

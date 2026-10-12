@@ -59,7 +59,7 @@ New pushes to the pull request don't redraft the suggestion, so your edits are n
 
 ## Finalize the Update
 
-* **Push PR**: Once you are satisfied with the draft, click **Push PR**. SudoDocs will automatically create a new branch, commit your edited files, and open a Pull Request directly in your documentation repository. The suggestion moves to **In review**, and SudoDocs follows the pull request until it's merged (**Done**) or closed (**Rejected**) - see [Track work and pull requests](releases.md#track-work-and-pull-requests).
+* **Push PR**: Once you are satisfied with the draft, click **Push PR**. SudoDocs will automatically create a new branch, commit your edited files, and open a Pull Request directly in your documentation repository, against its [Docs branch](../admin/connect-repos.md#docs-branch) (or default branch). Files that [Check against your docs](doc-drift.md#is-a-suggestion-still-needed) found already in your docs are left out; the dialog lists them, and **Push them anyway** includes them. The suggestion moves to **In review**, and SudoDocs follows the pull request until it's merged (**Done**) or closed (**Rejected**) - see [Track work and pull requests](releases.md#track-work-and-pull-requests).
 * **Dismiss**: If the documentation update is no longer relevant to this release, click **Dismiss** to permanently remove it from the release's assigned list. Its status becomes **Rejected**.
 * **Dismiss as done**: If your docs already have the change, click **Dismiss as done** on the Docflows card. Its status becomes **Done** and its release notes stay queued. See [Is a Suggestion Still Needed?](doc-drift.md#is-a-suggestion-still-needed)
 

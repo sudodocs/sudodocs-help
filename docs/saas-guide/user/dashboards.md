@@ -2,6 +2,8 @@
 
 Dashboards show all of your team's documentation work in one place: what's done, what's in progress, who's working on what, and what needs attention. They read from every tool - Author a Feature, Release Composer, Docflows, Capture, Diagram Generator, API Readiness and the Universal Converter. DocOps Assistant chats aren't included.
 
+When a repository SudoDocs drafts from needs a sync, a notice at the top of the dashboard says so - see [When a Repository Needs a Sync](doc-drift.md#when-a-repository-needs-a-sync).
+
 There are two kinds:
 
 * **Overall dashboard**: everything, across all releases. Open it with **Release Dashboard** at the top of the Workspace.

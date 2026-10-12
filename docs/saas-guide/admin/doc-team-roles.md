@@ -33,6 +33,8 @@ These are SudoDocs' own built-in roles, not people on your team. Your writers an
 | [Mentioning SudoDocs on a docs pull request](../user/assign-pr.md#ask-sudodocs-to-revise-a-docs-pull-request) | - | Makes the change | Reviews it; nothing is pushed while it has blocking issues |
 | [Release Composer](../user/release-composer.md#draft-the-release-notes) | - | Writes every entry | Checks every queued item is there once, in its section, with nothing invented |
 
+The Universal Converter's reference pages, API Readiness fixes and content audits, and DocOps Assistant drafts use your style guide but don't go through the Editor yet.
+
 When the Editor marks something as blocking, the Writer gets another pass. If the Editor still has open issues after that, SudoDocs doesn't hide them: the draft or suggestion is flagged with what's still open.
 
 ## What to Write for Each Role

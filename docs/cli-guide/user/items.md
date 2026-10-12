@@ -50,7 +50,7 @@ sudodocs items diff docflows 42
 sudodocs items diff docflows 42 --stat
 ```
 
-Prints the suggestion's proposed changes as a unified diff, with added lines in green and removed lines in red, against what each file looked like in your docs repository. Screenshots are listed by name. `--stat` lists only the files, with lines added and removed and a ✓ for files marked **Reviewed**. API: `GET /api/v1/docflows/<id>` (a summary per file), or `?format=diff` for the diff as plain text.
+Prints the suggestion's proposed changes as a unified diff, with added lines in green and removed lines in red, against what each file looked like in your docs repository. Screenshots are listed by name. `--stat` lists only the files, with lines added and removed, a ✓ for files marked **Reviewed**, and what the last check against your docs found for each file (for example, already in your docs - not pushed), plus the pull request's state. API: `GET /api/v1/docflows/<id>` (a summary per file), or `?format=diff` for the diff as plain text.
 
 ## A Docflows Suggestion's Screenshots
 
@@ -81,9 +81,10 @@ Does what **Approve** and **Dismiss** do on the Docflows page - see [Manage Docf
 sudodocs items request-changes docflows 42 -m "Mention that the default region is us-east-1"
 sudodocs items request-changes docflows 42 -m "Shorter intro" --file docs/billing/refunds.md
 sudodocs items history docflows 42
+sudodocs items restore docflows 42 3
 ```
 
-`request-changes` is **Request changes** on the Docflows card: SudoDocs' Technical Writer makes the change and its Editor reviews it, then the command prints the result, and any issues the Editor still has (8 credits). `--file` limits it to one of the suggestion's files. `history` prints the suggestion's review history: the Information Architect's plan, the Writer's drafts and revisions, the Editor's comments and who requested changes. See [Request Changes](../../saas-guide/user/doc-drift.md#request-changes). API: `POST /api/v1/docflows/<id>/request-changes` with `feedback` and optional `target_file` (202 with a job ID); `GET /api/v1/docflows/<id>/history`.
+`request-changes` is **Request changes** on the Docflows card: SudoDocs' Technical Writer makes the change and its Editor reviews it, then the command prints the result, and any issues the Editor still has (8 credits). `--file` limits it to one of the suggestion's files. `history` prints the suggestion's review history: the Information Architect's plan, the Writer's drafts and revisions, the Editor's comments and who requested changes; rounds whose text is kept are marked `[version N]`. `restore` puts back version N (what's there now is kept as a version, so you can undo it). See [Request Changes](../../saas-guide/user/doc-drift.md#request-changes). API: `POST /api/v1/docflows/<id>/request-changes` with `feedback` and optional `target_file` (202 with a job ID); `GET /api/v1/docflows/<id>/history` (each round's `version`; add `?versions=1` for the text); `POST /api/v1/docflows/<id>/restore` with `{"version": N}`.
 
 ## Check Docflows Suggestions Against Your Docs
 
@@ -94,7 +95,7 @@ sudodocs items check docflows --all --dismiss-done
 sudodocs items check docflows 42 --no-ai
 ```
 
-Compares suggestions with your docs repository as it is today and prints, for each, whether it's still needed, already in your docs, or was updated to fit docs that changed since - and whether its pull request was merged or closed. `--all` checks every open suggestion; add `--dismiss-done` to dismiss as done the ones your docs already have. Comparing the text is free; files your docs changed since are also read by SudoDocs to see whether they already say it in other words, and the reason is printed (1 credit for each suggestion that needs it). `--no-ai` keeps it to the free text check. See [Is a Suggestion Still Needed?](../../saas-guide/user/doc-drift.md#is-a-suggestion-still-needed) API: `POST /api/v1/docflows/<id>/check-docs`, or `POST /api/v1/docflows/check-docs` with optional `ids` and `dismiss_done`; both take `"ai": false` for the text check only (202 with a job ID; the job's result lists each suggestion's verdict).
+Compares suggestions with your docs repository as it is today and prints, for each, whether it's still needed, already in your docs (or probably, in other words - with the reason per file), or was updated to fit docs that changed since - and whether its pull request was merged or closed. `--dismiss-done` never dismisses the "probably" ones. `--all` checks every open suggestion; add `--dismiss-done` to dismiss as done the ones your docs already have. Comparing the text is free; files your docs changed since are also read by SudoDocs to see whether they already say it in other words, and the reason is printed (1 credit for each suggestion that needs it). `--no-ai` keeps it to the free text check. See [Is a Suggestion Still Needed?](../../saas-guide/user/doc-drift.md#is-a-suggestion-still-needed) API: `POST /api/v1/docflows/<id>/check-docs`, or `POST /api/v1/docflows/check-docs` with optional `ids` and `dismiss_done`; both take `"ai": false` for the text check only (202 with a job ID; the job's result lists each suggestion's verdict).
 
 ## Open a Pull Request from an API Scan
 
@@ -134,6 +135,15 @@ sudodocs items delete diagrams 15
 ```
 
 You're asked to confirm; add `--yes` to skip the prompt. Deleting a capture also deletes its screenshots, audio and video.
+
+## Is SudoDocs' Copy of a Repository Up to Date?
+
+```bash
+sudodocs repos list
+sudodocs repos request-sync 7
+```
+
+`repos list` shows each repository with **Up to date**, **Behind GitHub: N commits** or **Not synced yet**, when it was last synced, and its Keep in sync setting. `request-sync` is **Let admins know**: it emails your organization's admins that the repository needs a sync (once a day per repository). Anyone on the doc team can use both. See [When a Repository Needs a Sync](../../saas-guide/user/doc-drift.md#when-a-repository-needs-a-sync). API: `GET /api/v1/repos`, `POST /api/v1/repos/<id>/request-sync`.
 
 ## Headless API
 

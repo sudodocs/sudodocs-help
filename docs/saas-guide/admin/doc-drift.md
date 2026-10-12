@@ -27,7 +27,7 @@ For each connected code repository, follow these steps in GitHub:
 4. Change the **Content type** to `application/json`.
 5. Paste the **Secret** from the SudoDocs dialog into the corresponding field.
 6. Under "Which events would you like to trigger this webhook?", select **Let me select individual events.**
-7. Deselect **Pushes**, and select both **Pull requests** and **Issue comments** - the latter lets SudoDocs respond when someone comments `@sudodocs` on a PR to request a fix.
+7. Deselect **Pushes**, and select both **Pull requests** and **Issue comments** - the latter lets SudoDocs respond when someone comments `@sudodocs` on a PR to request a fix. You don't need **Pushes** to keep SudoDocs up to date: it checks every repository for new commits each hour (see [Keep in Sync](connect-repos.md#keep-in-sync)).
 8. Ensure **Active** is checked, and click **Add webhook**.
 
 Once configured, the system begins analyzing new and updated pull requests for that repository, and suggestions appear in **Docflows**. Every suggestion is generated through the same Information Architect / Technical Writer / Editor review pipeline as manually-created drafts, fully automated - see [Doc Team Roles](doc-team-roles.md) to customize what each role checks for.

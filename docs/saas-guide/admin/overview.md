@@ -25,6 +25,6 @@ Some steps are marked:
 
 * **Team seats**: members against your plan's seats, and how many are free.
 * **AI credits**: credits used this period and when they reset. With your own AI key on Enterprise, credits are unlimited.
-* **Repositories**: whether SudoDocs can still reach each connected repository. A repository with an invalid, expired or revoked token, or limited access, is listed with the reason. Click **Manage repositories** to fix it.
+* **Repositories**: whether SudoDocs can still reach each connected repository. A repository with an invalid, expired or revoked token, or limited access, is listed with the reason. Repositories that need a sync (behind GitHub, or never synced) are listed too. Click **Manage repositories** to fix it - see [Keep in Sync](connect-repos.md#keep-in-sync).
 
 To get the same overview from a terminal, see [CLI Admin Tasks → Admin Status](../../cli-guide/admin/index.md#admin-status).
