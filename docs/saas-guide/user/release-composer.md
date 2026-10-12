@@ -22,7 +22,7 @@ These settings are shared across every release's release notes for your org, not
 
 ## The Release Notes Queue
 
-1. Open **Release Composer** (Workspace, or **Draft release notes** on a release's Release Dashboard) and pick the **Release** at the top of **Release notes queue**.
+1. Open **Release Composer** (Workspace, or **Draft release notes** on a release's Release Dashboard) and pick the **Release** at the top of the page. **Draft the release notes** comes first, then the queue.
 2. The queue lists every item, grouped by section and then by product category. Each one shows where it came from - **Docflows**, **Slack**, **Jira**, **CSV** or **Manual** - and links to it (the pull request, ticket or suggestion).
 3. To change an item, pick a different section or category in its row; it's saved at once. **Remove** takes it out of the queue.
 
