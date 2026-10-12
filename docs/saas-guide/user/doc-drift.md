@@ -54,10 +54,12 @@ Suggestions can wait a while, and in the meantime your docs move on - a writer m
 * **Your docs changed in the same places**: review the flagged files before you push. SudoDocs leaves those files as they were.
 * **Some files this suggestion updates aren't in your docs any more**.
 
-The result lists each file, with when it was checked. Checking is free.
+The result lists each file, with when it was checked.
+
+Comparing the text is free. When your docs changed since the suggestion was written, the lines no longer match exactly, so SudoDocs also reads both versions to see whether your docs already say the same thing in other words - the file is then marked **already in your docs (in other words)**, with the reason. That costs 1 credit for each suggestion that needs it, and is skipped (text check only) if you're out of credits.
 
 * **Check all against your docs** at the top of the page checks every suggestion. When some are already in your docs, **Dismiss N already in your docs as done** dismisses them all; each is checked once more first.
-* Suggestions older than three days are checked automatically when you open Docflows, at most once a day. The page doesn't reload under you - click **Show the results** when you're ready.
+* Suggestions older than three days are checked automatically when you open Docflows, at most once a day. The automatic check compares text only, so it's always free. The page doesn't reload under you - click **Show the results** when you're ready.
 * The card also shows whether the engineering pull request was **merged** or **closed, not merged**. A closed one may never ship, so check before you spend time on it.
 
 **Dismiss as done** sets the suggestion's status to **Done** and removes it from Docflows. Unlike **Dismiss** (status **Rejected**), its release-notes entry stays in the release's [queue](release-composer.md#the-release-notes-queue), since the change still ships in that release.

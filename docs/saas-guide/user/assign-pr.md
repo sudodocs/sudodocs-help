@@ -53,7 +53,7 @@ What a file looked like before the suggestion is kept as you edit, so the compar
 If an engineer pushes new commits to their Pull Request after the AI has already generated your documentation draft, you do not need to start over:
 
 * **New commits since this draft**: this badge shows on the suggestion - on its Docflows card and in the release's Docflows list - when the engineer has pushed to the pull request since the draft was written.
-* **Sync Latest Code**: fetches the pull request's newest code and adds a **### 🔄 Latest Engineering Updates** section with what the draft is missing, without overwriting your edits. SudoDocs' Technical Writer writes it following your [Doc Team Roles](../admin/doc-team-roles.md) instructions and style guide, and its Editor reviews it. It's on the Docflows card (before or after approval) and in **Review & Push**, and costs 5 credits. It only appears for suggestions from a pull request - a Jira-sourced one has no commits to sync from.
+* **Sync Latest Code**: fetches the pull request's newest code and adds a **### 🔄 Latest Engineering Updates** section with what the draft is missing, without overwriting your edits. SudoDocs' Technical Writer writes it following your [Doc Team Roles](../admin/doc-team-roles.md) instructions and style guide, and its Editor reviews it. It's on the Docflows card (before or after approval) and in **Review & Push**. It costs 5 credits, or 8 when there's an update for the Editor to review. It only appears for suggestions from a pull request - a Jira-sourced one has no commits to sync from.
 
 New pushes to the pull request don't redraft the suggestion, so your edits are never replaced; the badge tells you there's something to sync.
 
@@ -70,4 +70,4 @@ After a pull request is open in your docs repository, a reviewer can ask SudoDoc
 * SudoDocs' Technical Writer revises every documentation file in the pull request that the comment concerns, following your [Doc Team Roles](../admin/doc-team-roles.md) instructions and style guide. Its Editor reviews the result.
 * If the Editor approves, SudoDocs pushes the change to the pull request's branch and replies with the files it updated. If the Editor still has blocking issues, nothing is pushed; SudoDocs replies with the issues so you can comment again with more detail.
 * Only the repository's owners, organization members and collaborators can ask; comments from anyone else are ignored.
-* Each request costs 5 credits, and a repository accepts up to 10 requests an hour.
+* Each request costs 8 credits, and a repository accepts up to 10 requests an hour.
