@@ -32,6 +32,13 @@ sudodocs releases edit 7 --name "v2.0 GA" --build 2.0.2
 
 `--date none` clears the target date. The reason is kept in the release's history.
 
+```bash
+sudodocs releases edit 7 --auto-draft off
+sudodocs releases edit 7 --auto-draft on --auto-draft-days 3
+```
+
+`--auto-draft` turns automatic release-notes drafting on or off for the release; `--auto-draft-days` sets how many days before the target date it starts (default 5) - see [Automatic Drafting](../../saas-guide/user/release-composer.md#automatic-drafting). API: `PATCH /api/v1/releases/<id>` with `auto_draft` and `auto_draft_days`.
+
 ## Mark a Release as Released
 
 ```bash

@@ -60,6 +60,7 @@ Status changes made on the board are the same as changing the status in the tool
 ## The Release Dashboard Also Has
 
 * A header with the release's status (on track, due soon with work still open, overdue, or released) and **Edit release** and **Mark as released** (or **Reopen**) - see [Manage Releases](releases.md#edit-a-release-move-its-date-or-mark-it-released).
+* A **Release notes** card: how many items are queued for the release notes and where from, the latest draft (and how many items arrived since), its pull request once pushed, when SudoDocs drafts automatically, and **Automatic drafting settings** - see [Compose Release Notes](release-composer.md#automatic-drafting). Its button opens Release Composer for the release.
 * Shortcuts under the header: **Compose release notes** and **Author a feature** for the release, and the release's Docflows - the button shows how many are assigned to you (for example **Docflows: 2 for you**). See [Review and Push Docflows](assign-pr.md).
 
 To get the same numbers from a terminal, see [CLI Tasks → Dashboard](../../cli-guide/user/items.md#dashboard). Your own summary is also at the top of the Workspace - see [Your Work](index.md#your-work).

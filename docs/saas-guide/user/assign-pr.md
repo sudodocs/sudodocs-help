@@ -21,7 +21,7 @@ Each row shows:
 * **Source PR** & **Target File**: Links back to the original engineering pull request and displays the destination file path.
 * **Batch Updates**: If the AI detected that multiple files need updating (e.g., creating a new Markdown file and updating the navigation menu), it will be clearly marked with a **📦 BATCH UPDATE** badge.
 * **Review Status**: A **✓ IA + Editor Reviewed** badge means the automated review found no blocking issues. A **⚠️ Editor Flagged Open Issues** badge means it didn't fully resolve everything on its own - hover the badge for what's still open, and give those specific files a closer read before pushing. See [Manage Docflows](doc-drift.md#automated-review-before-it-reaches-your-inbox) for how this review works.
-* **Product Tag**: The category tag assigned during triage.
+* **Release notes**: whether it's **queued** for the release notes, already **in draft**, **not needed**, or has **no decision yet** (approved before release-notes choices existed), with its section and category.
 * **Writer**: who it's assigned to (**You**, a teammate, or **No writer**).
 * **Screenshot Status**: If a preview environment screenshot capture failed or was unreachable, a **⚠️ No Screenshots** alert badge is displayed on the dashboard suggestion card.
 
