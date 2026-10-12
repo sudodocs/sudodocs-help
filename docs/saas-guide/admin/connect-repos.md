@@ -70,6 +70,8 @@ After adding a repository, you must sync it to index the content into the Vector
     * The button will change to a progress bar showing the percentage complete.
 3.  Wait for the status to change to **Synced**.
 
+> **Note**: Docflows' [Check against your docs](../user/doc-drift.md#which-version-of-your-docs-is-checked) doesn't depend on syncing: it reads the documentation repository's default branch live from GitHub. Syncing keeps the copy SudoDocs drafts from up to date.
+
 > **Note**: Initial sync times vary by repository size. A typical documentation repo (50-100 pages) takes 2-5 minutes. Large codebases may take longer. You can navigate away from the page while the sync runs in the background.
 
 ### What SudoDocs Learns About a Docs Repository

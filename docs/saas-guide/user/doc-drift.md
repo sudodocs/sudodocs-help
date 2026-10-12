@@ -64,7 +64,13 @@ Comparing the text is free. When your docs changed since the suggestion was writ
 
 **Dismiss as done** sets the suggestion's status to **Done** and removes it from Docflows. Unlike **Dismiss** (status **Rejected**), its release-notes entry stays in the release's [queue](release-composer.md#the-release-notes-queue), since the change still ships in that release.
 
-You need a [documentation repository](../admin/connect-repos.md) connected to check suggestions; SudoDocs checks against the first one.
+### Which Version of Your Docs Is Checked
+
+* **The live files, not the last sync.** SudoDocs reads each file straight from GitHub when you check, so you don't need to sync the repository first. (Syncing still matters for drafting: a suggestion is written against the copy of your docs from the last sync. If that copy was out of date, the check moves the suggestion onto the current files, or flags the files that conflict.)
+* **The default branch.** SudoDocs reads your docs repository's default branch on GitHub - usually `main`. That's the same branch Docflows opens its pull requests against, so the check compares against exactly what pushing would change.
+* **Merged changes only.** Edits still waiting in an open, unmerged docs pull request aren't in the default branch yet, so they don't count as "already in your docs".
+* **Another working branch?** If your team writes docs on a different branch (for example `develop`) and merges to `main` at release time, suggestions are checked against `main` and pushed to it.
+* **Who can check.** Anyone on the doc team - Writers and System Administrators - can check suggestions, check them all, and dismiss them as done. An administrator only has to [connect the documentation repository](../admin/connect-repos.md) once. Until one is connected, the check buttons don't appear. If you connect more than one, SudoDocs checks against the first.
 
 ## Screenshots in a Suggestion
 
