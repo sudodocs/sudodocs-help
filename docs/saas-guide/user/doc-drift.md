@@ -31,6 +31,8 @@ An action item appears in your inbox whenever an engineer merges (or opens/updat
 
 > Approved suggestions appear on the release's Release Dashboard, under its **Docflows** button, for final review and pushing - see [Review and Push Docflows](assign-pr.md). The assignee sees them under **Assigned to you** and in **Your work** on their Workspace.
 
+> If the engineer keeps pushing to the pull request, the card shows **New commits since this draft**. Click **Sync Latest Code** (next to **Proposed changes**) to add what the draft is missing - you don't have to approve it first, and your edits are kept. See [Manage Engineering Changes](assign-pr.md#manage-engineering-changes).
+
 ## Screenshots in a Suggestion
 
 When your administrator has set up [screenshots for Docflows](../admin/doc-drift.md#configure-screenshot-settings-for-docflows), each suggestion's card has a **Screenshots** list:

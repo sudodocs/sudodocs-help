@@ -52,7 +52,8 @@ What a file looked like before the suggestion is kept as you edit, so the compar
 
 If an engineer pushes new commits to their Pull Request after the AI has already generated your documentation draft, you do not need to start over:
 
-* Sync Latest Code: Click this button to fetch the newest code changes from GitHub. The AI will use GraphRAG to analyze the delta and automatically append a **### 🔄 Latest Engineering Updates** section to the bottom of your editor, summarizing the missing details without overwriting your manual edits. This button only appears for PR-sourced suggestions - a Jira-sourced one has no linked commits to sync from.
+* **New commits since this draft**: this badge shows on the suggestion - on its Docflows card and in the release's Docflows list - when the engineer has pushed to the pull request since the draft was written.
+* **Sync Latest Code**: fetches the pull request's newest code and adds a **### 🔄 Latest Engineering Updates** section with what the draft is missing, without overwriting your edits. It's on the Docflows card (before or after approval) and in **Review & Push**, and costs 5 credits. It only appears for suggestions from a pull request - a Jira-sourced one has no commits to sync from.
 
 ## Finalize the Update
 
