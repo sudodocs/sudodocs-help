@@ -8,7 +8,7 @@ import styles from './index.module.css';
 // every new release in docs/changelog.md (see .claude/skills/changelog).
 const LATEST_UPDATE = {
   month: 'October 2026',
-  summary: 'Email and password sign-in, two-factor authentication, Connect with GitHub, and the API Specs tab.',
+  summary: 'Release Dashboard, release notes drafted from each release\'s queue and pushed to your docs, smarter Docflows screenshots, a check for suggestions your docs already have, repositories that stay in sync, and sudodocs-cli 1.2.0.',
   anchor: 'october-2026',
 };
 

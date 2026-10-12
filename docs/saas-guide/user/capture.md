@@ -6,7 +6,9 @@ Capture is the **SudoDocs Capture** Chrome extension plus its dashboard - a way 
 * **Recording**: a continuous screen recording of the tab, with the tab's own audio and, optionally, your narration mixed in, Loom-style.
 * **Screenshot**: one screenshot, annotated (arrows, boxes, highlights, text) and cropped in a built-in editor before upload.
 
-All three live under **Capture** in the Workspace's **Global Tools**, and are captured entirely from the extension - not from this dashboard page, which is for editing, redacting, and sharing what you've already captured.
+All three live under **Capture** in the Workspace's **Tools**, and are captured entirely from the extension - not from this dashboard page, which is for editing, redacting, and sharing what you've already captured.
+
+Every capture is listed under **History** on the left. Writers and admins can rename it, tag it with a release and a writer, or delete it from there - see [Tag work with a release and a writer](releases.md#tag-work-with-a-release-and-a-writer).
 
 Capture has **no approval workflow**: every capture is shareable the moment it finishes, for all three modes. It's fully user-controlled - you own editing, redacting, and deleting whatever you captured directly, the same way you would any other file. AI still flags likely PII on Interactive and Screenshot captures so it's easy to spot (see [Redaction](#redaction) below), but nothing blocks on that flag - if you need to hide something, you redact it whenever you notice, not before anyone can see the capture at all.
 
@@ -28,17 +30,20 @@ If you're pointing the extension at a non-default SudoDocs deployment (a test in
 4. Either click **Start** and use the product normally, **or** optionally click **Select Region** first to draw a rectangle constraining every step's screenshot to that area instead of the full tab - confirming the region starts the capture immediately, the same as clicking Start, so there's no separate Start click needed afterward. Either way, every click becomes a step, screenshot and all, and the recorder survives real page navigations and reloads.
 5. Click **Finish** when done. AI captions each step and flags likely PII in the background; the capture appears in the Capture dashboard right away and is shareable immediately - editing continues to work for as long as the capture exists, there's no lock-out point.
 
+With extension version 1.1.0 or later, each step also records what you clicked - the control's role (such as button or link), the name it shows, and a way to find it again - not just where you clicked. SudoDocs uses this to find the same control after your product's layout changes. Update the extension from the Chrome Web Store to get it.
+
 ### Auto-Naming
 
 The title field is optional in every mode. Leave it blank and SudoDocs names it for you based on mode and how many captures of that mode your organization already has - e.g. **"Interactive Walkthrough 3"**, **"Screen Recording 12"**, **"Screenshot 1"**. This count is tracked server-side across your whole organization, not per person, so numbering stays correct even with several teammates capturing at once.
 
 ### Editing Steps
 
-Anyone with edit permission (Walkthrough Auditor or System Administrator role) can, at any time:
+Writers, Walkthrough Auditors and System Administrators can, at any time:
 
 * **Caption**: edit the AI-generated text and click **Save Caption**.
 * **Hotspot**: a red box drawn on the screenshot. Drag it to reposition, drag its corner handle to resize - saves automatically. Steps with no hotspot yet show a **+ Add Hotspot** button; an existing one shows a small **×** handle in its corner to remove it entirely.
 * **Redact**: see [Redaction](#redaction) below.
+* **Zoom**: for a step with a hotspot, choose whether the player zooms in on it - see [Zoom on Clicks](#zoom-on-clicks) below.
 * **Move Up / Move Down / Delete Step**: reorder or remove individual steps.
 
 ## Redaction
@@ -59,12 +64,26 @@ Interactive (per step) and Screenshot (the whole image) both get an automatic **
 
 ## Voiceover, Video Export, and Embedding (Interactive mode)
 
-Available as soon as an Interactive capture finishes - no approval needed, but **Generate/Regenerate Voiceover** and **Export Video** specifically require the Walkthrough Auditor or System Administrator role (the same role that gates editing steps - see [Editing Steps](#editing-steps) above):
+Available as soon as an Interactive capture finishes - no approval needed:
 
 * **Generate Voiceover**: narrates each step's caption using one of four AI voices - **Ava** (US, Female), **Andrew** (US, Male), **Sonia** (UK, Female), or **Ryan** (UK, Male). Once generated, each step gets an inline audio player to preview its narration right next to its caption. Pick a different voice and click **Regenerate Voiceover** at any time to replace every step's narration - there's no separate "include voiceover" toggle, export automatically narrates whatever's been generated and holds silently on any step that hasn't.
-* **Export Video**: stitches every step into one downloadable `.mp4`, held on each frame for its voiceover's duration (or a fixed 3 seconds per step where there's none). A progress bar (with elapsed time, and percent-complete once per-step progress is available) shows above the buttons while either job runs, with a **Stop** button to cancel it - both action buttons gray out while a job is in flight so you can't start a second one against the same steps. Once it finishes, the video plays inline right there on the dashboard - it also keeps showing up on later visits, not just right after the export completes.
-* **Export for Resolve/Premiere/Final Cut (FCPXML) / Export for Kdenlive**: builds an editable timeline project - each step's screenshot and voiceover as separate clips on the timeline, not a flattened video - for finishing in a real editor. Available to anyone with viewer access (System Administrator, Writer, or Walkthrough Auditor), a broader set than Voiceover/Export Video above.
+* **Export Video**: stitches every step into one downloadable `.mp4`, held on each frame for its voiceover's duration (or a fixed 3 seconds per step where there's none, 4 when the step zooms). It zooms the same way as the embed player - see [Zoom on Clicks](#zoom-on-clicks). A progress bar (with elapsed time, and percent-complete once per-step progress is available) shows above the buttons while either job runs, with a **Stop** button to cancel it - both action buttons gray out while a job is in flight so you can't start a second one against the same steps. Once it finishes, the video plays inline right there on the dashboard - it also keeps showing up on later visits, not just right after the export completes.
+* **Export for Resolve/Premiere/Final Cut (FCPXML) / Export for Kdenlive**: builds an editable timeline project - each step's screenshot and voiceover as separate clips on the timeline, not a flattened video - for finishing in a real editor. These keep the full screenshots (no zoom), so you can frame each clip yourself.
 * **Copy Embed Code** / **Preview Embed**: the `<iframe>` snippet for the interactive click-to-advance player (see [Sharing and Embedding](#sharing-and-embedding)) - **Preview Embed** expands an inline preview of exactly what that snippet renders, without leaving the dashboard.
+
+### Zoom on Clicks
+
+The embed player zooms toward what each step clicks, so readers can see it - especially on a phone, where a full desktop screenshot makes buttons tiny. Each step opens on the whole screen for a moment, so the reader sees where they are, then zooms in on the hotspot; it zooms back out before the next step. Nothing is cropped: readers can click **Whole screen** in the player to see everything, and **Zoom in** to go back. People who've turned on reduced motion in their system settings get the zoomed view without the animation.
+
+Choose how it works for the whole capture with **🔍 Zoom on clicks** next to the embed buttons:
+
+* **Auto** (default): zooms only when the clicked element is small on screen - a button or a menu item, not a large panel. The same capture may zoom on a phone and not on a wide screen.
+* **Always**: zooms in on every step with a hotspot.
+* **Off**: always shows the whole screen.
+
+To change one step, use its **Zoom** setting: **Walkthrough setting**, **Zoom in on the hotspot**, or **Show the whole screen**. Steps without a hotspot always show the whole screen.
+
+The exported video zooms the same way. To override the setting on one embed, add `zoom=auto`, `zoom=always` or `zoom=off` to the embed URL, for example `/embed/capture/42?zoom=off`. From the CLI or API, see [Zoom on Clicks for a Capture](../../cli-guide/user/items.md#zoom-on-clicks-for-a-capture).
 
 ## Recording: Narrated Screen Recordings
 
@@ -78,11 +97,11 @@ Recording length is capped by your plan: **5 minutes** on Basic, **10 minutes** 
 
 ## Editing a Recording: Trim, Replace Audio, and Export
 
-A finished Recording-mode capture can be touched up from the Capture dashboard - no need to re-record for a rough start/end or a flubbed narration. **Trim** and **Replace Audio** both require the Walkthrough Auditor or System Administrator role, and only one of them can run at a time on a given recording:
+A finished Recording-mode capture can be touched up from the Capture dashboard - no need to re-record for a rough start/end or a flubbed narration. Only one of **Trim** and **Replace Audio** can run at a time on a given recording:
 
 * **Trim**: mark an in-point and out-point (**Mark A** / **Mark B**) against the video's own current playback position, then confirm. This is a single range, not a multi-cut timeline, and it's destructive - everything outside that range is discarded and the recording is overwritten in place, with no undo beyond re-uploading a fresh recording. Costs 5 credits.
 * **Replace Audio**: swaps out the *entire* audio track - the original mic + tab audio, already mixed together - with new audio, either typed as a script (up to 5,000 characters) and narrated with AI voiceover, or a direct audio file upload. There's no way to replace just the narration and keep the tab's original sound. If the new audio is shorter than the video, the video is trimmed to match; if longer, the video's last frame holds for the difference. Costs 5 credits.
-* **Export for Resolve/Premiere/Final Cut (FCPXML) / Export for Kdenlive**: same editable-timeline export offered for Interactive mode (see above) - the raw recording as an editable clip, for finishing in a real video editor. Available to anyone with viewer access (System Administrator, Writer, or Walkthrough Auditor), broader than the Trim/Replace Audio roles above. Screenshot mode has no timeline (it's a single still), so this export isn't offered there.
+* **Export for Resolve/Premiere/Final Cut (FCPXML) / Export for Kdenlive**: same editable-timeline export offered for Interactive mode (see above) - the raw recording as an editable clip, for finishing in a real video editor. Screenshot mode has no timeline (it's a single still), so this export isn't offered there.
 
 ## Screenshot: Annotated Screenshots
 
@@ -135,4 +154,4 @@ The base Recording charge is purely a usage throttle, not a pass-through AI cost
 
 ## Availability
 
-Capture is available on every plan, including the free Basic tier - it's not an Enterprise-exclusive feature. It's a browser-first tool by design (a Chrome extension plus a review dashboard) with no CLI or Headless API surface - a screen recording or an annotated screenshot has no terminal-friendly equivalent, so managing captures always happens here or in the extension, never from `sudodocs`.
+Capture is available on every plan, including the free Basic tier - it's not an Enterprise-exclusive feature. Recording is browser-first by design (a Chrome extension plus a review dashboard) - a screen recording or an annotated screenshot has no terminal equivalent. A few things can be done from the CLI: list, rename, tag or delete captures (`sudodocs items ... captures`) and set an interactive capture's zoom (`sudodocs capture zoom`) - see [CLI Tasks](../../cli-guide/user/items.md).

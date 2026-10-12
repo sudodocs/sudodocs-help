@@ -16,7 +16,14 @@ Verify it installed correctly:
 sudodocs --help
 ```
 
-Already installed? Upgrade to get new commands - the sign-in management commands under `sudodocs admin users`, the GitHub token checks under `sudodocs admin integrations`, and `sudodocs admin api-specs` need version 1.1.0 or later:
+Already installed? Upgrade to get new commands. Version 1.2.0 or later is needed for:
+
+* [Releases](user/releases.md) (`sudodocs releases ...`) and [work items](user/items.md) (`sudodocs items ...`), including approving and dismissing Docflows suggestions.
+* The [dashboard](user/items.md#dashboard) (`sudodocs dashboard`, `--mine`) and `sudodocs mywork`.
+* Opening a pull request from an API scan (`sudodocs api-scan open-pr`), and a capture's zoom setting (`sudodocs capture zoom`).
+* `sudodocs admin status`, the screenshot style and recipes (`sudodocs admin kb screenshot-style`, `screenshot-recipes`), and a repository's page index and docs layout (`sudodocs admin integrations page-index`, `docs-profile`).
+
+The sign-in management commands under `sudodocs admin users`, the GitHub token checks under `sudodocs admin integrations`, and `sudodocs admin api-specs` need version 1.1.0 or later:
 
 ```bash
 pip install --upgrade sudodocs-cli
@@ -65,4 +72,4 @@ Commands are grouped by who can run them, mirroring the two sections this page s
 
 Every command that kicks off AI work (`sync`, `convert`, `docflow`, `admin kb auto-learn`) blocks and prints progress until the job completes or fails, polling the same job-status endpoint the dashboard's own progress bars use.
 
-Not every dashboard feature has a CLI equivalent yet - anything that's fundamentally a review/editing workflow (Author a Feature's Pipeline Review, Assigned Docflows' Review & Push, the DocOps Assistant chat, Diagram Generator, API Readiness) is a browser-first experience without a CLI wrapper today.
+Not every dashboard feature has a CLI equivalent yet - anything that's fundamentally a review/editing workflow (Author a Feature's Pipeline Review, editing in Docflows' Review & Push, the DocOps Assistant chat, Diagram Generator, running an API Readiness scan, recording a capture) is a browser-first experience without a CLI wrapper today. Some pieces of those tools do have commands - opening a pull request from an API scan, and a capture's zoom setting - see [CLI Tasks](user/items.md). To read a Docflows suggestion's changes from a terminal, use [`sudodocs items diff docflows`](user/items.md#see-a-docflows-suggestions-changes).

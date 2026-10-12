@@ -4,6 +4,7 @@ Instructions for System Administrators to configure, manage, and secure the Sudo
 
 The Admin Dashboard's tabs, in the order they appear:
 
+* [Overview](overview.md): How much of SudoDocs is set up, the next step, seats and AI credits, and repository health. Opens first.
 * [Provider](llm-provider.md): Bring your own key for text generation and/or embeddings & search (OpenAI, Claude, DeepSeek, Voyage AI, or a custom endpoint) instead of the platform Gemini key.
 * [Repositories](connect-repos.md): Connect GitHub repositories (with **Connect with GitHub** or a token) and public websites, and sync them.
 * [Knowledge Base](kb-config.md): Configure the knowledge base and style guide SudoDocs writes to.

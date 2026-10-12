@@ -1,8 +1,36 @@
 # Compose Release Notes
 
-CLI equivalent of the settings behind [User Tasks → Compose Release Notes](../../saas-guide/user/release-composer.md#release-notes-settings): Deployment Tags and CSV Column Mappings. Not admin-only - available to any doc-team member, matching the settings panel on the Release Composer page itself.
+CLI equivalent of [User Tasks → Compose Release Notes](../../saas-guide/user/release-composer.md): a release's release notes queue, drafting from it, pushing the notes to your docs, and the optional settings (Deployment Tags and CSV Column Mappings). Available to any doc-team member.
 
-**Triggering an actual generation (the "Compose" button) has no CLI equivalent today** - `process_bulk_generation_background` is a browser/session-only workflow. This page only covers the two optional settings that shape how it categorizes and tags content.
+## Release Notes Queue
+
+```bash
+sudodocs release-notes queue --release 7
+sudodocs release-notes queue --release 7 add "Export invoices as PDF" --section feature --category Billing
+sudodocs release-notes queue --release 7 set 31 --section enhancement --category Auth
+sudodocs release-notes queue --release 7 remove 31
+sudodocs release-notes queue --release 7 jira --bugs 10003 --stories 10002
+```
+
+Without a subcommand it lists the queue by section, each item with its ID, source (`docflows`, `slack`, `jira`, `csv`, `manual`) and category, plus the latest draft and the automatic-drafting schedule. `--section` is `feature`, `enhancement`, `bug` or `known-issue`. `jira` adds the tickets from saved filters (`--epics`, `--stories`, `--bugs`, `--known-issues`, `--escalations`); tickets already queued are skipped.
+
+## Draft Release Notes
+
+```bash
+sudodocs release-notes draft --release 7
+sudodocs release-notes draft --release 7 --update-latest
+```
+
+Drafts the release notes from the queue and waits for it (10 credits). `--update-latest` adds only the newly queued items to the latest draft, keeping its edits (5 credits). `--title`, `--format md|rst|adoc` and `--writer` are optional. Automatic drafting is set per release - see [Edit a Release](releases.md#edit-a-release).
+
+## Push Release Notes to Your Docs
+
+```bash
+sudodocs release-notes push 12 --repo 3 --dry-run
+sudodocs release-notes push 12 --repo 3
+```
+
+Opens a pull request with draft 12 where the docs repository keeps release notes - a new file in its release-notes folder, or this release's section at the top of its `CHANGELOG.md` (other releases untouched); see [Push to Your Docs](../../saas-guide/user/release-composer.md#push-to-your-docs). `--dry-run` only prints where it would go. `--path` uses a different file; `--message` sets the commit message. The draft then follows the pull request.
 
 ## Show Current Settings
 
@@ -37,4 +65,9 @@ Repeat `--header` for each column name your tracker might export (Jira, Linear, 
 | Endpoint | Method | Purpose |
 |---|---|---|
 | `/release-notes/settings` | GET | `{"deployment_tags", "csv_key", "csv_summary", "csv_description"}`. Wrapped by `sudodocs release-notes settings get`. |
+| `/releases/<id>/notes-queue` | GET / POST | The queue (queued and drafted items, latest draft, automatic-drafting schedule); POST `{summary, description?, section?, category?}` adds an item. |
+| `/releases/<id>/notes-queue/<item>` | PATCH / DELETE | Change an item's `section`, `category`, `summary` or `description`; or remove it. |
+| `/releases/<id>/notes-queue/jira` | POST | `{"filters": {"bugs": "10003", ...}}` adds those tickets. |
+| `/releases/<id>/release-notes/draft` | POST | `{title?, writer_user_id?, target_format?, update_latest?}` - 202 with a job ID; the finished job has `draft_id`. |
+| `/release-notes/<draft id>/push` | GET / POST | GET `?integration_id=&path=` shows where it would go (`path`, `mode`, `summary`, `preview`); POST `{integration_id, path?, commit_message?}` opens the pull request. |
 | `/release-notes/settings` | POST | Only touches keys present in the request body - send just the one field you're changing. Wrapped by the four `set-*` commands above. |

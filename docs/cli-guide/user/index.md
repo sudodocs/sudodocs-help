@@ -4,7 +4,9 @@ Command-line equivalents of the [SaaS Guide → User Tasks](../../saas-guide/use
 
 | Dashboard page | CLI equivalent |
 |---|---|
+| [Manage Releases](../../saas-guide/user/releases.md) | [Manage Releases](releases.md) |
+| [Tag work with a release and a writer](../../saas-guide/user/releases.md#tag-work-with-a-release-and-a-writer) (every tool's history list) | [Tool Items and Tags](items.md) |
 | [Universal Converter](../../saas-guide/user/converter.md) | [Universal Converter](converter.md) |
 | [Compose Release Notes](../../saas-guide/user/release-composer.md) | [Compose Release Notes](release-composer.md) |
 
-The rest of User Tasks - DocOps Assistant, Manage Docflows' triage/review side, Diagram Generator, API Readiness, Author a Feature, Author a Feature vs. Docflows, Assigned Docflows, and [Capture](../../saas-guide/user/capture.md) - are review/editing workflows that stay browser-first for now and have no CLI equivalent yet. Capture in particular is a fully visual, browser-first tool by design (a Chrome extension plus a review dashboard) - there's no terminal-friendly equivalent to a screen recording or an annotated screenshot, so it has no CLI or Headless API surface at all.
+The rest of User Tasks - DocOps Assistant, Manage Docflows' review side (approving and dismissing have [commands](items.md#approve-or-dismiss-a-docflows-suggestion)), Diagram Generator, running an API Readiness scan, Author a Feature, Author a Feature vs. Docflows, Review and Push Docflows, and recording in [Capture](../../saas-guide/user/capture.md) - are review/editing workflows that stay browser-first for now. A few parts of them do have commands: [open a pull request from an API scan](items.md#open-a-pull-request-from-an-api-scan), [a capture's zoom on clicks](items.md#zoom-on-clicks-for-a-capture), and [reading a Docflows suggestion's changes](items.md#see-a-docflows-suggestions-changes). Recording itself stays in the browser: Capture is a Chrome extension plus a review dashboard, and there's no terminal equivalent of a screen recording or an annotated screenshot.

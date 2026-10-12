@@ -16,9 +16,26 @@ Each role's judgment is admin-configurable per organization, separately from you
 4. Type your own instructions into any box to override the default for that role.
 5. Click **Save Role Instructions**.
 
-Changes apply to every draft generated afterward, in both Author a Feature and Docflows - you don't configure the two separately.
+Changes apply to everything written afterward - you don't configure each tool separately. See [Where the Roles Apply](#where-the-roles-apply).
 
 > **Note:** Only the *judgment* portion of each role's prompt is editable here. The structural contract that keeps SudoDocs' review pipeline working - what format each role responds in, how a draft moves between roles - stays fixed, so nothing you write here can break the pipeline itself.
+
+## Where the Roles Apply
+
+These are SudoDocs' own built-in roles, not people on your team. Your writers and admins don't take on a role; SudoDocs uses the instructions you write here whenever it writes or revises documentation:
+
+| Where | Information Architect | Technical Writer | Editor |
+|---|---|---|---|
+| [Author a Feature](../user/feature-author.md) | Plans the page | Drafts and revises | Reviews every round |
+| [Docflows](../user/doc-drift.md) suggestions | Plans which files change | Drafts and revises | Reviews the whole set |
+| [Request changes](../user/doc-drift.md#request-changes) on a Docflows card | - | Makes your requested changes | Reviews the result |
+| [Sync Latest Code](../user/assign-pr.md#manage-engineering-changes) | - | Writes what's missing | Reviews it |
+| [Mentioning SudoDocs on a docs pull request](../user/assign-pr.md#ask-sudodocs-to-revise-a-docs-pull-request) | - | Makes the change | Reviews it; nothing is pushed while it has blocking issues |
+| [Release Composer](../user/release-composer.md#draft-the-release-notes) | - | Writes every entry | Checks every queued item is there once, in its section, with nothing invented |
+
+The Universal Converter's reference pages, API Readiness fixes and content audits, and DocOps Assistant drafts use your style guide but don't go through the Editor yet.
+
+When the Editor marks something as blocking, the Writer gets another pass. If the Editor still has open issues after that, SudoDocs doesn't hide them: the draft or suggestion is flagged with what's still open.
 
 ## What to Write for Each Role
 
@@ -68,11 +85,12 @@ Role instructions apply the next time a draft is generated - editing them doesn'
 
 1. Save your new instructions.
 2. Generate a new draft with [Author a Feature](../user/feature-author.md) (or wait for the next Docflows suggestion).
-3. Open the draft's **History** on the Pipeline Review page and check the Editor's comments - they should reflect your new instruction.
+3. Open the draft's **History** on the Pipeline Review page - or a Docflows card's **Review history** - and check the Editor's comments. They should reflect your new instruction.
 
 ## See Also
 
 * [Configure the Knowledge Base](kb-config.md) - style guide, terminology, and product categories, which every role already reads alongside its instructions here.
 * [Author a Feature](../user/feature-author.md) - the manually-initiated path through this same pipeline.
 * [Manage Docflows](../user/doc-drift.md) - the automatically-initiated path through this same pipeline.
+* [Compose Release Notes](../user/release-composer.md) - release notes written by the Technical Writer and checked by the Editor.
 * [CLI Tasks → Doc Team Roles](../../cli-guide/admin/doc-team-roles.md) - script role instruction changes.

@@ -31,7 +31,18 @@ Admin-only. CLI equivalent of [Configure Screenshot Settings for Docflows](../..
 | `--header-name`, `--header-value` | For `header`. |
 | `--session-cookie-name`, `--session-cookie-value` | For `session_cookie`. |
 | `--login-url`, `--login-username-selector`, `--login-password-selector`, `--login-submit-selector` | For `form_login`. |
-| `--route-map` | `GLOB=>ROUTE1,ROUTE2` (repeatable) - maps a changed-file glob to preview routes to screenshot. |
+| `--login-code-selector`, `--totp-secret` | For `form_login` when the account uses two-factor: the code field's selector (`#code` for SudoDocs) and the account's 2FA setup key or `otpauth://` link, stored encrypted. Leave `--totp-secret` unset to keep the saved key. |
+| `--clear-totp-secret` | Removes the saved 2FA setup key. |
+| `--route-map` | Optional. `GLOB=>ROUTE1,ROUTE2` (repeatable) - always screenshot these routes when a matching file changes. Not needed with a [page index](#build-a-page-index). |
+
+## Build a Page Index
+
+```bash
+sudodocs admin integrations page-index 42 --url https://staging.example.com --build
+sudodocs admin integrations page-index 42
+```
+
+`--build` learns the app's pages (signing in with the repository's Screenshot Settings and following the app's links, read-only) and waits until it's done; without it, the command shows the app address, when the index was built and its pages. Admin-only. CLI equivalent of [Build the page index](../../saas-guide/admin/doc-drift.md#configure-screenshot-settings-for-docflows). API: `GET` or `POST /api/v1/admin/integrations/<id>/page-index` with `{"url": "...", "build": true}`.
 
 ## Trigger a Docflows Suggestion
 

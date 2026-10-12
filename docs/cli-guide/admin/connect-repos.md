@@ -54,9 +54,19 @@ SudoDocs automatically looks for an `/llms.txt` file or a `sitemap.xml` to disco
 sudodocs sync --integration-id 42
 ```
 
-This is the exact same action as clicking **Sync** on the Repositories tab - forces a Vector DB re-index of the repository's content. The command blocks and prints progress until the sync completes or fails.
+This is the exact same action as clicking **Sync** on the Repositories tab. The command blocks until the sync completes or fails, then prints what it read and what it cost, for example `Synced 7 changed files (1 credit).` - see [What a Sync Costs](../../saas-guide/admin/connect-repos.md#what-a-sync-costs).
 
 Find `--integration-id` via `sudodocs admin integrations list`.
+
+## See a Docs Repository's Layout
+
+```bash
+sudodocs admin integrations docs-profile 3
+sudodocs admin integrations docs-profile 3 --image-dir static/img/screens
+sudodocs admin integrations docs-profile 3 --use-detected
+```
+
+Shows what SudoDocs learned about a documentation repository when it synced: the docs framework, where images live, how pages reference them and how files are named. `--image-dir` makes Docflows save screenshots in another folder; `--use-detected` goes back to the detected one. `--json` prints everything. Admin-only. CLI equivalent of [What SudoDocs Learns About a Docs Repository](../../saas-guide/admin/connect-repos.md#what-sudodocs-learns-about-a-docs-repository). API: `GET` or `POST /api/v1/admin/integrations/<id>/docs-profile` with `{"image_dir": "..."}`.
 
 ## Cancel a Running Sync
 
@@ -66,12 +76,19 @@ sudodocs admin jobs cancel <job_id>
 
 Same as clicking the **Stop Sync** button that appears next to an in-progress sync's progress bar on the dashboard. The job ID is printed by `sudodocs sync` while it's running (`Waiting for SudoDocs worker (Job: ...)`).
 
-## Automatic Sync Schedule
+## Keep in Sync and Docs Branch
 
 ```bash
-sudodocs admin integrations sync-schedule 42 --hours 24    # sync every 24 hours
-sudodocs admin integrations sync-schedule 42               # omit --hours to turn scheduling off (manual sync only)
+sudodocs admin integrations keep-in-sync 42 --mode on-change
+sudodocs admin integrations keep-in-sync 42 --mode schedule --every 168
+sudodocs admin integrations keep-in-sync 42 --mode manual
+sudodocs admin integrations keep-in-sync 42 --docs-branch develop
+sudodocs admin integrations keep-in-sync 42 --default-branch
 ```
+
+Sets when SudoDocs re-reads a repository (`on-change`, `schedule` every `--every` hours, default 24, or `manual`) and, for a documentation repository, the branch it reads, checks and opens pull requests into. See [Keep in Sync](../../saas-guide/admin/connect-repos.md#keep-in-sync) and [Docs Branch](../../saas-guide/admin/connect-repos.md#docs-branch). `sudodocs admin integrations list` shows each repository's sync status and setting. The older `sudodocs admin integrations sync-schedule 42 --hours 24` still works: with `--hours` it sets a schedule, without it **Only when I click Sync**.
+
+API: `POST /api/v1/admin/integrations/<id>/keep-in-sync` with `sync_mode` (`on_change`, `schedule`, `manual`), `sync_frequency_hours` and `docs_branch` (`""` for the default branch). `GET /api/v1/admin/integrations` includes a `sync` summary for each repository; `GET /api/v1/admin/status` includes each repository's `sync` state.
 
 SudoDocs checks the token with GitHub before saving and prints its type, account, and expiry, plus a warning if access is missing - see [Add a Git Repository with a Token](../../saas-guide/admin/connect-repos.md#add-a-git-repository-with-a-token).
 

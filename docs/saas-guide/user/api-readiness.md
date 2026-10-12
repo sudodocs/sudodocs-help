@@ -41,8 +41,23 @@ The dashboard displays the results of your scan in four sections:
 
     * B. **AI Corrected Spec**: The final version with all requested AI technical and content fixes applied.
 
+## Scan History
+
+Every scan is listed under **Scan History** on the left, titled with when it ran (for example "OAS Validation - Oct 10, 2026 14:05"). Rename a scan, tag it with a release and a writer, or delete it from there - see [Tag work with a release and a writer](releases.md#tag-work-with-a-release-and-a-writer). New scans record who ran them as the writer; scans from before this change have no writer until you tag one.
+
 ## Push to Production
 
-Once you are satisfied with the AI corrected spec, click **📬 Send to Docflows**.
+Each spec under **Final Specification** has two ways to leave SudoDocs:
 
-This will route the updated `JSON` or `YAML` file directly to **Docflows** as a pending suggestion. From there, a writer can assign it to a target release and push the updated specification directly to your documentation repository via a pull request.
+* **🚀 Open Pull Request**: opens a pull request with the spec straight away, in the spec's own repository, a docs repository, or both.
+    1. Click **Open Pull Request** under the spec you want (pre-processed or AI-corrected).
+    2. Under **Open it in**, tick where it goes:
+        * **The spec's repository**: the repository, branch and file that API Specs validates, so engineering gets the corrections. Change the file path if needed. This needs API Specs to read the spec from a connected repository (Admin Dashboard > API Specs); if it reads from a repository URL instead, add that repository under **Repositories** and pick it there.
+        * **A docs repository**: for the published API reference, for example for this scan's release. Pick the repository; if a file with the spec's name is already there, SudoDocs fills in its path so the pull request updates it. Otherwise it's added at the spec's path, which you can change.
+    3. Click **Open Pull Request**.
+
+    Tick both to open a pull request in each. The scan moves to **In review** and shows the pull request's review status; it moves to **Done** when the pull request merges, or **Rejected** if it's closed - see [Track work and pull requests](releases.md#track-work-and-pull-requests). With both, the scan follows the docs pull request; the links to both appear once they're opened.
+
+* **📬 Send to Docflows**: creates a Docflows suggestion instead, so a writer can review the spec in Docflows before pushing it. The suggestion keeps the scan's release and writer, and once its pull request is opened the scan follows it the same way.
+
+Both use the scan you're viewing, so you can push an older scan's spec from **Scan History**.
