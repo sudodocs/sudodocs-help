@@ -36,7 +36,7 @@ The page is written by SudoDocs' Technical Writer, following your [Doc Team Role
 * **Checked against your source file by SudoDocs' Editor** means the Editor is satisfied.
 * **The Editor still has open issues with this page** lists what's left. Fix it in the editor and click **Save Changes**; saving clears the notice.
 
-This is included in the tool's usual credits.
+It costs 5 credits for every 25,000 characters of the file you upload (at least 5), since the AI reads the whole file and writes a page that grows with it - for example 15 credits for a 60,000-character spec. If there aren't enough credits, it says how many a file that size needs.
 
 ### Edit and Export Generated Specs
 

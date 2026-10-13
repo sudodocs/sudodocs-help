@@ -41,7 +41,9 @@ The dashboard displays the results of your scan in four sections:
 
     * B. **AI Corrected Spec**: The final version with all requested AI technical and content fixes applied.
 
-When the AI fix writes or changes descriptions, summaries or titles, SudoDocs' Technical Writer writes them following your [Doc Team Roles](../admin/doc-team-roles.md) instructions (when your API Specs settings apply your style guide), and its Editor reviews just that text against the original spec - for example, a description that promises a limit the spec doesn't state. If the Editor finds a blocking issue, the Writer rewrites only the flagged fields, once. The **AI Corrected Spec** card then shows **Descriptions reviewed by SudoDocs' Editor**, or **The Editor still has open issues with the descriptions this fix wrote** with what's left, next to its **Open Pull Request** button. This is included in the fix's usual credits.
+When the AI fix writes or changes descriptions, summaries or titles, SudoDocs' Technical Writer writes them following your [Doc Team Roles](../admin/doc-team-roles.md) instructions (when your API Specs settings apply your style guide), and its Editor reviews just that text against the original spec - for example, a description that promises a limit the spec doesn't state. If the Editor finds a blocking issue, the Writer rewrites only the flagged fields, once. The **AI Corrected Spec** card then shows **Descriptions reviewed by SudoDocs' Editor**, or **The Editor still has open issues with the descriptions this fix wrote** with what's left, next to its **Open Pull Request** button.
+
+The AI fix rewrites the whole spec, so it costs 5 credits for every 15,000 characters of the spec (at least 5) - for example 20 for a 60,000-character spec. A scan reserves 5 when it starts and the rest once it has read the spec; if there aren't enough credits for a spec that size, the scan finishes without the fix and its log says so. The content audit costs 3.
 
 ## Scan History
 
