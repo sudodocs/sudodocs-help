@@ -30,7 +30,26 @@ sudodocs release-notes push 12 --repo 3 --dry-run
 sudodocs release-notes push 12 --repo 3
 ```
 
-Opens a pull request with draft 12 where the docs repository keeps release notes - a new file in its release-notes folder, or this release's section at the top of its `CHANGELOG.md` (other releases untouched); see [Push to Your Docs](../../saas-guide/user/release-composer.md#push-to-your-docs). `--dry-run` only prints where it would go. `--path` uses a different file; `--message` sets the commit message. The draft then follows the pull request.
+Opens a pull request with draft 12 where the docs repository keeps release notes - a new file in its release-notes folder, or this release's section at the top of its `CHANGELOG.md` (other releases untouched), or where you've saved for that repository; see [Push to Your Docs](../../saas-guide/user/release-composer.md#push-to-your-docs). `--dry-run` only prints where it would go (one line per file). `--message` sets the commit message. The draft then follows the pull request.
+
+To put them somewhere else for this push:
+
+```bash
+sudodocs release-notes push 12 --repo 3 --file docs/whats-new.md
+sudodocs release-notes push 12 --repo 3 --developer-file docs/api/changelog.md --remember
+```
+
+`--file` is a file with every release (existing or new); `--folder` is a folder with one file per release. `--developer-file`, `--developer-folder` and `--developer-same` do the same for the draft's **Developer Release Notes** section; with its own file or folder, the pull request carries both files. `--remember` saves your choices for the repository.
+
+## Choose Where Release Notes Go
+
+```bash
+sudodocs release-notes targets --repo 3
+sudodocs release-notes targets --repo 3 --developer-folder docs/api/releases
+sudodocs release-notes targets --repo 3 --reset developer
+```
+
+Shows or sets where a docs repository keeps release notes and Developer Release Notes, without pushing - the same as **Change where it goes** with **Remember for this repository** on the web. Without options it shows the saved choices, or what SudoDocs finds automatically. `--reset product|developer|both` goes back to the default (the file found automatically; the same file for Developer Release Notes).
 
 ## Show Current Settings
 
@@ -69,5 +88,6 @@ Repeat `--header` for each column name your tracker might export (Jira, Linear, 
 | `/releases/<id>/notes-queue/<item>` | PATCH / DELETE | Change an item's `section`, `category`, `summary` or `description`; or remove it. |
 | `/releases/<id>/notes-queue/jira` | POST | `{"filters": {"bugs": "10003", ...}}` adds those tickets. |
 | `/releases/<id>/release-notes/draft` | POST | `{title?, writer_user_id?, target_format?, update_latest?}` - 202 with a job ID; the finished job has `draft_id`. |
-| `/release-notes/<draft id>/push` | GET / POST | GET `?integration_id=&path=` shows where it would go (`path`, `mode`, `summary`, `preview`); POST `{integration_id, path?, commit_message?}` opens the pull request. |
+| `/release-notes/<draft id>/push` | GET / POST | GET `?integration_id=` (plus `product_layout`/`product_path`, `developer_layout`/`developer_path`, `candidates=1`) shows where it would go: `targets` (one per file, with `kind`, `path`, `mode`, `summary`, `preview`, `source`), `warnings`, `settings`, `detected`, `saved`. POST `{integration_id, targets?, remember?, commit_message?}` opens the pull request and returns its `files`. `targets` is `{"product": {"layout", "path"}, "developer": {...}}`; `layout` is `single_file` (path = the file), `per_version` (path = the folder) or, for developer, `same`. |
+| `/integrations/<repo id>/release-notes-targets` | GET / PUT | GET: `saved`, `detected` and `candidates` (files and folders to pick from). PUT `{targets: {product: {...} or "default", developer: {...} or "default"}}` saves them. |
 | `/release-notes/settings` | POST | Only touches keys present in the request body - send just the one field you're changing. Wrapped by the four `set-*` commands above. |

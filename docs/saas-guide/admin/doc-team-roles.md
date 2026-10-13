@@ -26,7 +26,7 @@ These are SudoDocs' own built-in roles, not people on your team. Your writers an
 
 | Where | Information Architect | Technical Writer | Editor |
 |---|---|---|---|
-| [Author a Feature](../user/feature-author.md) | Plans the page | Drafts and revises | Reviews every round |
+| [Author a Feature](../user/feature-author.md) | Plans the page | Drafts and revises | Reviews every round, and suggests the release-notes line |
 | [Docflows](../user/doc-drift.md) suggestions | Plans which files change | Drafts and revises | Reviews the whole set |
 | [Request changes](../user/doc-drift.md#request-changes) on a Docflows card | - | Makes your requested changes | Reviews the result |
 | [Sync Latest Code](../user/assign-pr.md#manage-engineering-changes) | - | Writes what's missing | Reviews it |
