@@ -47,6 +47,14 @@ When the AI fix writes or changes descriptions, summaries or titles, SudoDocs' T
 
 Every scan is listed under **Scan History** on the left, titled with when it ran (for example "OAS Validation - Oct 10, 2026 14:05"). Rename a scan, tag it with a release and a writer, or delete it from there - see [Tag work with a release and a writer](releases.md#tag-work-with-a-release-and-a-writer). New scans record who ran them as the writer; scans from before this change have no writer until you tag one.
 
+## Decide and Publish
+
+The **Decide and publish** panel - beside the scan on wide screens, where it stays in view while you scroll, and first on narrow ones - holds what you decide before the spec leaves SudoDocs:
+
+* **Release notes** (required before you open a pull request): **Include** or **Not needed**. Include puts a line in the release's [release notes queue](release-composer.md#the-release-notes-queue) with an **API Readiness** badge. By default it goes under **Developer Release Notes**, with the sub-heading taken from the changes (**Breaking Changes**, **New Endpoints**, **Changes** or **Deprecations**); pick another section, such as **New Features** for a big new API, and a product category. The line is drafted from the changes. The scan needs a release - pick one here if it has none. Changing the scan's release moves its line; **Not needed** or deleting the scan removes it. **Save release notes decision** changes it later.
+* **Open Pull Request**, for the AI-corrected spec (or the pre-processed one) - see below. Your release-notes choice is saved with it.
+* **Changes since the published spec**: what this scan's spec changes in your public API compared with the spec your docs publish (API Specs > [the public spec in your docs](../admin/api-specs.md#the-public-spec-in-your-docs)) - added, changed, removed and deprecated endpoints and fields, breaking changes, and operations that aren't public yet. **Check again** re-reads your docs.
+
 ## Push to Production
 
 Each spec under **Final Specification** has two ways to leave SudoDocs:
@@ -55,11 +63,11 @@ Each spec under **Final Specification** has two ways to leave SudoDocs:
     1. Click **Open Pull Request** under the spec you want (pre-processed or AI-corrected).
     2. Under **Open it in**, tick where it goes:
         * **The spec's repository**: the repository, branch and file that API Specs validates, so engineering gets the corrections. Change the file path if needed. This needs API Specs to read the spec from a connected repository (Admin Dashboard > API Specs); if it reads from a repository URL instead, add that repository under **Repositories** and pick it there.
-        * **A docs repository**: for the published API reference, for example for this scan's release. Pick the repository; if a file with the spec's name is already there, SudoDocs fills in its path so the pull request updates it. Otherwise it's added at the spec's path, which you can change.
+        * **A docs repository**: for the published API reference, for example for this scan's release. Pick the repository; SudoDocs fills in where your public spec lives (API Specs > the public spec in your docs), or the path of a file with the spec's name that's already there. You can change it. Your docs get **only the public part** of the spec - the operations marked or ticked as public in [API Specs](../admin/api-specs.md#public-api-changes), without internal operations or fields. If nothing in the spec is public yet, SudoDocs says so instead of opening the pull request.
     3. Click **Open Pull Request**.
 
     Tick both to open a pull request in each. The scan moves to **In review** and shows the pull request's review status; it moves to **Done** when the pull request merges, or **Rejected** if it's closed - see [Track work and pull requests](releases.md#track-work-and-pull-requests). With both, the scan follows the docs pull request; the links to both appear once they're opened.
 
-* **📬 Send to Docflows**: creates a Docflows suggestion instead, so a writer can review the spec in Docflows before pushing it. The suggestion keeps the scan's release and writer, and once its pull request is opened the scan follows it the same way.
+* **📬 Send to Docflows**: creates a Docflows suggestion instead, so a writer can review the spec in Docflows before pushing it. Like a docs pull request, it carries only the public part of the spec. The suggestion keeps the scan's release and writer, and once its pull request is opened the scan follows it the same way.
 
 Both use the scan you're viewing, so you can push an older scan's spec from **Scan History**.

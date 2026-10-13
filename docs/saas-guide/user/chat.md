@@ -13,7 +13,7 @@ Select a mode to define the AI's behavior:
 * **Discuss**: Ask questions about the codebase or documentation. The AI treats code as the source of truth and cites file paths.
 * **Author**: Generate net-new documentation based on your prompt and context.
 * **Rewrite**: Paste an existing draft and instruct the AI to fix technical gaps and reformat it.
-* **Release Note**: Generate a clear release note entry for a bug fix, feature, or known limitation from Jira (or any other technical text description) details based on your internal style guide.
+* **Release Note**: Generate a clear release note entry for a bug fix, feature, known limitation or **Developer (API)** change from Jira (or any other technical text description) details based on your internal style guide.
 * **Analyze Doc Gaps**: Type a specific feature name to perform a direct comparative analysis between your codebase and published documentation. The AI cross-references both sources to uncover undocumented UI workflows, missing user features, and technical drift (where the docs no longer match the code).
 
 In **Author**, **Rewrite** and **Release Note**, the draft follows your [Doc Team Roles](../admin/doc-team-roles.md) Technical Writer instructions, and SudoDocs' Editor checks it against your request and the documentation the Assistant found. A blocking issue gets one Writer revision. The reply ends with **Reviewed by SudoDocs' Editor**, or with **The Editor still has open issues with this draft** and a list of them. This is included in the usual credits.

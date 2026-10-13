@@ -5,6 +5,7 @@ Every release has a **release notes queue**: the list of what goes into its note
 * **Docflows**: suggestions approved with **Include in release notes** - see [Manage Docflows](doc-drift.md#triage-suggestions).
 * **Feature Author**: drafts approved with **Include** - see [Author a Feature](feature-author.md#decide-on-release-notes).
 * **API changes**: Docflows suggestions whose public API changed, approved with **Developer Release Notes: Include** - see [API Changes](doc-drift.md#api-changes).
+* **API Readiness**: scans included in the release notes - see [Decide and Publish](api-readiness.md#decide-and-publish).
 * **Slack**: items your team sends to a release from Slack.
 * **Jira** and **CSV**: added from Release Composer (below).
 * **By hand**: added in Release Composer.
@@ -25,8 +26,10 @@ These settings are shared across every release's release notes for your org, not
 ## The Release Notes Queue
 
 1. Open **Release Composer** (Workspace, or **Draft release notes** on a release's Release Dashboard) and pick the **Release** at the top of the page - it opens on your newest unreleased release, and **+ New release...** creates one (a name and an optional target date). **Draft the release notes** comes first, then the queue.
-2. The queue lists every item, grouped by section and then by product category. Each one shows where it came from - **Docflows**, **Feature Author**, **API change**, **Slack**, **Jira**, **CSV** or **Manual** - and links to it (the pull request, ticket, suggestion or feature draft).
+2. The queue lists every item, grouped by section and then by product category. Each one shows where it came from - **Docflows**, **Feature Author**, **API change**, **API Readiness**, **Slack**, **Jira**, **CSV** or **Manual** - and links to it (the pull request, ticket, suggestion or feature draft).
 3. To change an item, pick a different section or category in its row; it's saved at once. **Remove** takes it out of the queue.
+
+Items under **Developer Release Notes** are grouped by kind of change instead of product category - **Breaking Changes** first (with a **Breaking** badge), then **New Endpoints**, **Changes** and **Deprecations** - and the drafted notes follow the same order. Their entries keep exact endpoint, field and parameter names in code formatting and, for breaking changes, say what developers must change.
 
 Items already written into a draft are listed under **Already in a draft**. A Jira ticket is only queued once per release, even if it arrives from several places (for example a Jira filter and a Jira-sourced Docflows suggestion). When a Feature Author draft for a ticket that's already queued from Jira is included, the queued item becomes the feature draft's item instead of a second one.
 
