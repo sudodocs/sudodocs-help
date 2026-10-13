@@ -33,6 +33,24 @@ An action item appears in your inbox whenever an engineer merges (or opens/updat
 
 > If the engineer keeps pushing to the pull request, the card shows **New commits since this draft**. SudoDocs doesn't redraft a suggestion you may already be working on; click **Sync Latest Code** (next to **Proposed changes**) to add what the draft is missing - you don't have to approve it first, and your edits are kept. See [Manage Engineering Changes](assign-pr.md#manage-engineering-changes).
 
+## API Changes
+
+When a pull request on the repository set in [API Specs](../admin/api-specs.md) changes the spec, SudoDocs compares the spec before and after the pull request - only its public part, as set under [Public API Changes](../admin/api-specs.md#public-api-changes). This uses no AI:
+
+* **Only internal operations changed**: nothing to document, so there's no suggestion and no credits.
+* **Only the spec changed, and its public part too**: a suggestion with the updated public spec, built without AI - **no credits**.
+* **Code changed as well**: the usual suggestion (Docflows' usual credits), written with the exact API changes as context, plus the updated public spec.
+
+The suggestion's **API changes** panel, right below **Proposed changes**, lists what was **Added**, **Changed**, **Removed** and **Deprecated**, with a **Breaking** badge when existing clients would break - for example a removed endpoint or response field, a new required parameter, or a narrower type. It also shows:
+
+* **Not public yet - decide in API Specs**: new operations that no marker or tick makes public. They're left out of the public spec until someone decides.
+* Where the public spec goes. The first time, SudoDocs suggests a place in your docs (or uses the OpenAPI file that's already there) and says why: click **Use this**, or type a path and click **Choose another path**. The choice is saved in API Specs for every later API change.
+* The public spec's API Readiness lint result, and pages in your docs that mention the changed endpoints - use [Request changes](#request-changes) to have the Writer update them.
+
+If your API Specs settings ask for reference pages, the suggestion also carries one Markdown page per tag, rendered straight from the public spec (no AI) and marked as generated.
+
+When you approve, **Developer Release Notes** asks whether the API changes go in the release notes: **Include** (the default, with a line drafted from the changes) or **Not needed**. Included changes join the release's [release notes queue](release-composer.md#the-release-notes-queue) with an **API change** badge, under **Developer Release Notes** and the right sub-heading: **Breaking Changes**, **New Endpoints**, **Changes** or **Deprecations**. This is separate from the usual **Release notes** choice, which covers the product side of the pull request; for a pull request that only changes the spec, it starts as **Not needed**.
+
 ## Request Changes
 
 When a suggestion needs more than a quick edit, tell SudoDocs what to change:

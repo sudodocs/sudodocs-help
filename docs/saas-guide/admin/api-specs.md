@@ -72,7 +72,7 @@ An operation added after you save that no marker or tick covers isn't public. AP
     * If it already has an OpenAPI file (the same file name as your spec, or any YAML or JSON file that starts with `openapi:` or `swagger:`), it says so and keeps that file up to date.
     * If not, it suggests where your docs framework expects one, and why - for example `static/openapi.yaml` for Docusaurus, `openapi.json` for Mintlify (it also adds the `openapi` field to `docs.json` or `mint.json`), `docs/api/openapi.yaml` for MkDocs, or `source/_static/openapi.yaml` for Sphinx.
 2. Click **Use this**, or **Choose another path** and type your own.
-3. Choose the **Reference pages**: **Spec file only**, **Spec file plus Markdown reference pages** (one page per tag, written like the [Universal Converter](../user/converter.md#generate-ai-reference-docs-pro)'s), or **Decide from the docs site** - the spec file alone when your site already renders OpenAPI (for example with the docusaurus-openapi-docs or Redocusaurus plugin, Mintlify, mkdocs-swagger-ui-tag or sphinxcontrib-openapi), otherwise with the pages too.
+3. Choose the **Reference pages**: **Spec file only**, **Spec file plus Markdown reference pages** (one page per tag, rendered straight from the public spec without AI, so nothing is invented and there's no charge), or **Decide from the docs site** - the spec file alone when your site already renders OpenAPI (for example with the docusaurus-openapi-docs or Redocusaurus plugin, Mintlify, mkdocs-swagger-ui-tag or sphinxcontrib-openapi), otherwise with the pages too.
 
 **Create Docflows suggestions for public API changes** turns the suggestions on or off.
 

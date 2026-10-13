@@ -85,6 +85,16 @@ sudodocs items release-notes feature-drafts 31 --notes skip
 
 `items release-notes` shows a Feature Author draft's release-notes decision, or what the Editor suggests while you haven't decided; with `--notes include|skip` (and `--section`, `--category`, `--note`, `--release` for a draft without one) it changes the decision at any stage. `items approve feature-drafts` is **Approve** on the draft's review page: it needs the Editor to have passed the draft, records the decision (leave out `--notes` to use the Editor's suggestion) and your sign-off. Included drafts join the [release notes queue](release-composer.md#release-notes-queue) with a **Feature Author** badge - see [Decide on Release Notes](../../saas-guide/user/feature-author.md#decide-on-release-notes). Sections: `feature`, `enhancement`, `bug`, `known-issue`, `developer`. API: `POST /api/v1/feature-drafts/<id>/approve` and `GET`/`PUT /api/v1/feature-drafts/<id>/release-notes`, with `release_notes`, `rn_section`, `rn_category`, `rn_note` and optionally `release_id`.
 
+## API Changes in a Docflows Suggestion
+
+```bash
+sudodocs items api-changes docflows 42
+sudodocs items api-changes docflows 42 --docs-path static/openapi.yaml
+sudodocs items approve docflows 42 --release 7 --api-notes include --api-note "Breaking: removed legacy_id from invoices."
+```
+
+`api-changes` prints a suggestion's [API changes](../../saas-guide/user/doc-drift.md#api-changes): what was added, changed, removed and deprecated (with **BREAKING** when clients would break), operations that aren't public yet, and where the public spec goes. `--docs-path` confirms that location for this and every later API change. On `items approve`, `--api-notes include|skip` and `--api-note` set the **Developer Release Notes** decision (default: include, with the drafted line). API: `api_change` on `GET /api/v1/docflows/<id>`, `api_release_notes` and `api_rn_note` on approve, and `POST /api/v1/docflows/<id>/api-docs-path` with `{"path"}`.
+
 ## Request Changes on a Docflows Suggestion
 
 ```bash

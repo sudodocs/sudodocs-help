@@ -4,6 +4,7 @@ Every release has a **release notes queue**: the list of what goes into its note
 
 * **Docflows**: suggestions approved with **Include in release notes** - see [Manage Docflows](doc-drift.md#triage-suggestions).
 * **Feature Author**: drafts approved with **Include** - see [Author a Feature](feature-author.md#decide-on-release-notes).
+* **API changes**: Docflows suggestions whose public API changed, approved with **Developer Release Notes: Include** - see [API Changes](doc-drift.md#api-changes).
 * **Slack**: items your team sends to a release from Slack.
 * **Jira** and **CSV**: added from Release Composer (below).
 * **By hand**: added in Release Composer.
@@ -24,7 +25,7 @@ These settings are shared across every release's release notes for your org, not
 ## The Release Notes Queue
 
 1. Open **Release Composer** (Workspace, or **Draft release notes** on a release's Release Dashboard) and pick the **Release** at the top of the page - it opens on your newest unreleased release, and **+ New release...** creates one (a name and an optional target date). **Draft the release notes** comes first, then the queue.
-2. The queue lists every item, grouped by section and then by product category. Each one shows where it came from - **Docflows**, **Feature Author**, **Slack**, **Jira**, **CSV** or **Manual** - and links to it (the pull request, ticket, suggestion or feature draft).
+2. The queue lists every item, grouped by section and then by product category. Each one shows where it came from - **Docflows**, **Feature Author**, **API change**, **Slack**, **Jira**, **CSV** or **Manual** - and links to it (the pull request, ticket, suggestion or feature draft).
 3. To change an item, pick a different section or category in its row; it's saved at once. **Remove** takes it out of the queue.
 
 Items already written into a draft are listed under **Already in a draft**. A Jira ticket is only queued once per release, even if it arrives from several places (for example a Jira filter and a Jira-sourced Docflows suggestion). When a Feature Author draft for a ticket that's already queued from Jira is included, the queued item becomes the feature draft's item instead of a second one.
@@ -44,7 +45,7 @@ SudoDocs picks a product category for Jira and CSV items from your [Product Cate
 1. Under **Draft the release notes**, check the **Title** (it labels the draft in your history), the **Writer** and the **Format**.
 2. Click **Draft from the queue**. SudoDocs writes every queued item in your house style, under its section and category, then opens the draft. This costs 10 AI credits.
 
-Release notes go through SudoDocs' built-in [Doc Team Roles](../admin/doc-team-roles.md): its Technical Writer writes each entry following your Technical Writer instructions, and its Editor checks that every queued item appears once, in its own section, with nothing invented and nothing internal. If the Editor finds a blocking issue, the Writer revises the notes once. If anything is still open after that, the draft opens with **The Editor still has open issues with these notes** and what they are, and the release's **Release notes** card shows **Editor: open issues**. Fix what's left and click **Save Notes**; saving clears the flag.
+Release notes go through SudoDocs' built-in [Doc Team Roles](../admin/doc-team-roles.md): its Technical Writer writes each entry following your Technical Writer instructions, and its Editor checks that every queued item appears once, in its own section, with nothing invented and nothing internal. If the Editor finds a blocking issue, the Writer revises the notes once, using only what's in the queue. If anything is still open after that, the draft opens with **The Editor still has open issues with these notes** and what they are, and the release's **Release notes** card shows **Editor: open issues**. Fix what's left and click **Save Notes**; saving clears the flag.
 
 When items are queued after a draft was written, Composer shows **N new items since** that draft. Click **Add them to that draft**: SudoDocs writes only the new items and adds them under their headings, leaving the rest of the draft - including your edits - as it is. This costs 5 AI credits.
 
