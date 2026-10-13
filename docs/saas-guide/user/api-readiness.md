@@ -41,6 +41,8 @@ The dashboard displays the results of your scan in four sections:
 
     * B. **AI Corrected Spec**: The final version with all requested AI technical and content fixes applied.
 
+When the AI fix writes or changes descriptions, summaries or titles, SudoDocs' Technical Writer writes them following your [Doc Team Roles](../admin/doc-team-roles.md) instructions (when your API Specs settings apply your style guide), and its Editor reviews just that text against the original spec - for example, a description that promises a limit the spec doesn't state. If the Editor finds a blocking issue, the Writer rewrites only the flagged fields, once. The **AI Corrected Spec** card then shows **Descriptions reviewed by SudoDocs' Editor**, or **The Editor still has open issues with the descriptions this fix wrote** with what's left, next to its **Open Pull Request** button. This is included in the fix's usual credits.
+
 ## Scan History
 
 Every scan is listed under **Scan History** on the left, titled with when it ran (for example "OAS Validation - Oct 10, 2026 14:05"). Rename a scan, tag it with a release and a writer, or delete it from there - see [Tag work with a release and a writer](releases.md#tag-work-with-a-release-and-a-writer). New scans record who ran them as the writer; scans from before this change have no writer until you tag one.

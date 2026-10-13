@@ -32,8 +32,11 @@ These are SudoDocs' own built-in roles, not people on your team. Your writers an
 | [Sync Latest Code](../user/assign-pr.md#manage-engineering-changes) | - | Writes what's missing | Reviews it |
 | [Mentioning SudoDocs on a docs pull request](../user/assign-pr.md#ask-sudodocs-to-revise-a-docs-pull-request) | - | Makes the change | Reviews it; nothing is pushed while it has blocking issues |
 | [Release Composer](../user/release-composer.md#draft-the-release-notes) | - | Writes every entry | Checks every queued item is there once, in its section, with nothing invented |
+| [Universal Converter](../user/converter.md#generate-ai-reference-docs-pro) reference pages | - | Writes the page | Checks it against your spec or values file: nothing invented, nothing missing |
+| [API Readiness](../user/api-readiness.md#review-results) AI fixes | - | Writes the descriptions and summaries | Reviews only the text the fix wrote or changed |
+| [DocOps Assistant](../user/chat.md#chat-modes) Author, Rewrite and Release Note | - | Writes the draft | Checks it against your request and the docs it found |
 
-The Universal Converter's reference pages, API Readiness fixes and content audits, and DocOps Assistant drafts use your style guide but don't go through the Editor yet.
+The Assistant's Discuss and Analyze Doc Gaps modes answer questions rather than write documentation, so they don't use the roles. Capture captions and Diagram Generator diagrams don't either.
 
 When the Editor marks something as blocking, the Writer gets another pass. If the Editor still has open issues after that, SudoDocs doesn't hide them: the draft or suggestion is flagged with what's still open.
 
