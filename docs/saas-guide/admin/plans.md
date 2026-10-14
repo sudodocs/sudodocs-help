@@ -16,9 +16,27 @@ SudoDocs has three plans - Free (Basic), Pro, and Enterprise - with Pro and Ente
 
 Every plan, including Free, includes the core documentation tools: Author a Feature, Release Composer, Docflows (automated doc PRs), the OAS Validator & Fixer, the Universal Doc Converter, Chat with Docs, Git, Code, Jira, Slack and web source sync, and [SudoDocs Capture](../user/capture.md).
 
-## Free Trial and the Basic Tier
+## What AI Actions Cost
 
-Syncing a repository is priced by what changed: free when nothing changed, 1 credit per 10 changed files, and up to 20 for a full read. See [What a Sync Costs](connect-repos.md#what-a-sync-costs).
+Each AI action uses credits. A failed action gives its credits back.
+
+| Action | Credits |
+|---|---|
+| [DocOps Assistant](../user/chat.md) question (Discuss) | 2 (3 with an attached image or video) |
+| DocOps Assistant draft (Author, Rewrite, Release Note - written, then checked by SudoDocs' Editor) | 5 (6 with an attachment) |
+| [Author a Feature](../user/feature-author.md) draft | 20 |
+| [Docflows](../user/doc-drift.md) suggestion from a pull request or Jira ticket | 20 |
+| Request changes on a Docflows suggestion, or mentioning SudoDocs on a docs pull request | 8 |
+| Sync Latest Code | 5, or 8 when the Editor reviews an update |
+| [Release Composer](../user/release-composer.md) draft / adding new items to it | 10 / 5 |
+| [Universal Converter](../user/converter.md) reference page | 5 per 25,000 characters of the spec or values file (at least 5) |
+| [API Readiness](../user/api-readiness.md) AI fix | 5 per 15,000 characters of the spec (at least 5) |
+| API Readiness content audit | 3 |
+| Repository sync | Free when nothing changed, 1 per 10 changed files, up to 20 - see [What a Sync Costs](connect-repos.md#what-a-sync-costs) |
+
+The Converter and the AI fix are priced by size because the AI reads the whole file and writes output that grows with it - a typical 60,000-character spec costs 15 to convert and 20 to fix. [Capture](../user/capture.md#ai-credit-costs) and screenshots have their own costs, listed on their pages.
+
+## Free Trial and the Basic Tier
 
 Every new organization starts with a 14-day trial with no credit card required. After 14 days, the organization moves automatically to the permanent free Basic tier - it doesn't expire and nothing is deleted. Basic keeps the same feature set but is limited to a single admin seat, so inviting writers requires upgrading to Pro.
 

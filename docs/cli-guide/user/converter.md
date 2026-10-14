@@ -15,7 +15,7 @@ sudodocs convert values.yaml --type helm --target sphinx -o docs/config-referenc
 | `--target` | No | Output format: `docusaurus` (Markdown), `sphinx` (reStructuredText), or the raw formats `md` / `rst` / `adoc`. Defaults to `docusaurus`. |
 | `-o`, `--output` | No | Local file path to write the result to. Defaults to the input filename with the target's extension. |
 
-Applies the same anti-hallucination rules as the web tool - it only extracts parameters explicitly present in your file (see [Generate AI Reference Docs](../../saas-guide/user/converter.md#generate-ai-reference-docs-pro)). The generated document is also saved to your SudoDocs workspace (visible in **AI Generated Specs** history) - the command prints a link to it alongside the local file path.
+Applies the same anti-hallucination rules as the web tool - it only extracts parameters explicitly present in your file (see [Generate AI Reference Docs](../../saas-guide/user/converter.md#generate-ai-reference-docs-pro)). The generated document is also saved to your SudoDocs workspace (visible in **AI Generated Specs** history) - the command prints a link to it alongside the local file path. SudoDocs' Editor checks the page against your file first (see [Generate AI Reference Docs](../../saas-guide/user/converter.md#generate-ai-reference-docs-pro)); if it still has open issues, the command says so in yellow, with what they are. `sudodocs items list conversions` and `items list api-scans` (and the API's `GET /items/<tool>`) include an `editor` field with the verdict.
 
 ## Other Automatable Dashboard Tools
 

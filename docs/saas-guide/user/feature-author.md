@@ -40,12 +40,22 @@ When it's done, you're redirected to the **Pipeline Review** page, showing the f
 
 From the Pipeline Review page, once a draft reaches **Ready For Technical Review**:
 
-* **Approve**: Records your internal sign-off. This doesn't publish anything by itself - it's a marker that you've looked at it and it's ready to go out for the real technical review, which happens on the pull request itself.
+* **Approve**: Records your internal sign-off, together with your [release-notes decision](#decide-on-release-notes). This doesn't publish anything by itself - it's a marker that you've looked at it and it's ready to go out for the real technical review, which happens on the pull request itself.
 * **Request Changes**: Send it back to the Writer with your own feedback for one more automated Writer/Editor pass.
 * **Open Pull Request**: Reveals a form pre-filled with the target repository, file path (taken from the Information Architect's placement decision), and a commit message. If the change updates an existing file, you'll see a diff against the current version rather than just the raw new text. Confirm to actually push the branch and open the pull request - **the real technical review happens there, on GitHub, not inside SudoDocs.**
 * **Reject**: Discards the draft. This is terminal.
 
 If a draft lands in **Needs Human** (the Editor and Writer couldn't fully agree after a couple of automated rounds), you can send it back to the Writer with your own explicit guidance for one more attempt, approve it anyway despite the open comments, or reject it.
+
+## Decide on Release Notes
+
+At the top of the actions, **Release notes** asks whether this feature goes in the release's notes - the same decision Docflows asks for. You can't approve or open the pull request without choosing.
+
+1. Choose **Include** or **Not needed**. SudoDocs' Editor suggests one while it reviews the draft ("Editor suggests: Include"), at no extra cost; nothing is saved until you choose.
+2. For **Include**, check the **Section** (**New Features**, **Enhancements**, **Bug Fixes**, **Known Issues** or **Developer Release Notes**), the **Product category** (from your [Product Categories](../admin/kb-config.md#product-categories), or **Other**) and the one-line **Note**. If the draft has no release yet, pick one - release notes belong to a release.
+3. Click **Approve** or **Open Pull Request**; the decision is saved with it. To change it later (also after the pull request is open), change it and click **Save release notes decision**.
+
+Included features join the release's [release notes queue](release-composer.md#the-release-notes-queue) with a **Feature Author** badge, and Release Composer writes them with the rest - it gets the start of the feature's documentation as context. The queue stays in step with the draft: moving the draft to another release moves its item, and **Not needed**, **Reject** or deleting the draft removes it. Once the item is written into a release-notes draft, it stays there.
 
 You can still edit the draft manually at any point - before or after approving - using the classic editor (see below). Opening the pull request always uses whatever content is currently saved, including your manual edits.
 

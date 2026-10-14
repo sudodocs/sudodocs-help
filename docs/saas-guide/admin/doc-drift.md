@@ -13,8 +13,8 @@ After connecting a repository or Jira instance in the **Admin Dashboard**, set u
 ### Step 1: Retrieve Webhook Credentials
 
 1. Navigate to the **Admin Dashboard** page.
-2. Under the **Repositories** tab, locate the **Active Repositories** list.
-3. Find the repository or service you want to connect and click the **Webhook** button.
+2. On the **Repositories** tab, find the repository you want to connect.
+3. Click **Manage** > **Webhook**.
 4. A dialog appears containing a unique **Payload URL** and a **Secret** for that specific integration. Keep this dialog open.
 
 ### Step 2: Set up the Webhook in GitHub
@@ -55,14 +55,14 @@ For code repositories, SudoDocs can sign in to your app and take screenshots for
 **1. Tell SudoDocs how to reach and sign in to your app**
 
 1. Go to **Admin Dashboard > Repositories**.
-2. Find the code repository and click **Screenshot Settings**.
+2. Find the code repository and click **Manage** > **Screenshot settings**.
 3. *(Optional)* Enter a **Preview URL Pattern** if each pull request gets its own preview site (for example `https://pr-{pr_number}.preview.example.com`). Without one, SudoDocs uses the app address from step 2 below.
 4. Choose the **Access Method** - how SudoDocs signs in (see [Supported Access Methods](#supported-access-methods)).
 5. Click **Save Preview Settings**.
 
 **2. Build the page index**
 
-1. Under the repository's name, open **Page index**.
+1. At the bottom of the repository, open **Page index settings**.
 2. Enter a stable address of your app - your test or staging site - and click **Build page index**.
 
 SudoDocs signs in and follows your app's own links to learn its pages: their addresses, titles and headings. It never clicks buttons or submits forms, never follows sign-out, delete or download links, stops at 150 pages, and replaces personal data before reading a page. Pages that differ only by an ID - like `/customers/42` and `/customers/7` - count as one page. It takes a few minutes and uses no credits. Build it again after big UI changes.

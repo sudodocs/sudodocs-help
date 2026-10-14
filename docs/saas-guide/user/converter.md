@@ -31,6 +31,13 @@ SudoDocs applies strict anti-hallucination rules to this tool: it will only extr
 3. Click **Upload Spec File** to attach your configuration document.
 4. Click **Generate AI Reference**.
 
+The page is written by SudoDocs' Technical Writer, following your [Doc Team Roles](../admin/doc-team-roles.md) instructions, and checked by its Editor against your file: every endpoint, parameter and default must be in the file, and nothing in the file may be missing. If the Editor finds a blocking issue, the Writer revises the page once. When it's done:
+
+* **Checked against your source file by SudoDocs' Editor** means the Editor is satisfied.
+* **The Editor still has open issues with this page** lists what's left. Fix it in the editor and click **Save Changes**; saving clears the notice.
+
+It costs 5 credits for every 25,000 characters of the file you upload (at least 5), since the AI reads the whole file and writes a page that grows with it - for example 15 credits for a 60,000-character spec. If there aren't enough credits, it says how many a file that size needs.
+
 ### Edit and Export Generated Specs
 
 Generated specs are listed on the left. Rename, tag (release and writer) or delete them from there - see [Tag work with a release and a writer](releases.md#tag-work-with-a-release-and-a-writer).

@@ -39,8 +39,6 @@ Under **Source**, pick one of the following:
 
 Select **Apply the Knowledge Base style guide to summaries and descriptions** to have the AI audit and fixes follow your style guide, not only Redocly's rules.
 
-The **Publish this spec as an API reference page** option is for SudoDocs Publish, which isn't available yet. It has no effect for now.
-
 ## Save
 
 Click **Save API Specs settings**. The next API Readiness scan uses the new settings.
