@@ -17,7 +17,7 @@ To give SudoDocs access to more repositories later, change the installation's re
 
 If you can't install the GitHub App, add a repository with a token:
 
-1.  Navigate to the **Admin Dashboard**, select the **Repositories** tab, and click **+ Add New Repository**.
+1.  Navigate to the **Admin Dashboard**, select the **Repositories** tab, and click **+ Add repository**.
 2.  In the **Integration Name** box, enter a recognizable name (e.g., "Main API Docs").
 3.  In the **Repository Type** list, select one of the following:
     * **Documentation**: For Markdown, MDX, reStructuredText, AsciiDoc, HTML, DITA XML (`.dita`/`.ditamap`), or plain text files.
@@ -39,23 +39,23 @@ If a token is valid but lacks write access, SudoDocs warns you. You can still sa
 
 ## Check a Repository's Credentials
 
-Each GitHub repository in **Active Repositories** shows a status:
+Each GitHub repository on the **Repositories** tab shows its status under **Access**:
 
 | Status | Meaning |
 |---|---|
 | **OK** | The token or app access works. |
 | **Limited access** | It works, but is missing permissions some features need. |
-| **Invalid** or **Revoked** | GitHub rejects it. Replace it with **Update Token**, or reconnect with GitHub. |
+| **Invalid** or **Revoked** | GitHub rejects it. Replace it with **Manage** > **Update token**, or reconnect with GitHub. |
 
 Hover over the status to see when it was last checked and any error. Click **Re-check** to check it now. SudoDocs also re-checks credentials that are more than a day old when an administrator opens the Admin Dashboard. Expiring tokens show their expiry date.
 
-To replace a token, click **Update Token** in the repository's row, paste the new token, and save.
+To replace a token, click **Manage** > **Update token** on the repository, paste the new token, and save.
 
 ## Add a Public Website
 
 To ingest a public documentation site:
 
-1.  On the **Repositories** tab, click **+ Add New Repository**.
+1.  On the **Repositories** tab, click **+ Add repository**.
 2.  Set **Repository Type** to **Public Website**.
 3.  In the **Website URL** box, enter the root URL (e.g., `https://docs.example.com`).
     * **Note**: SudoDocs automatically looks for an `/llms.txt` file or a `sitemap.xml` to discover pages.
@@ -65,9 +65,9 @@ To ingest a public documentation site:
 
 After adding a repository, you must sync it to index the content into the Vector Database. This creates a RAG pipeline.
 
-1.  Locate the repository in the **Active Repositories** list.
-2.  Click the **Sync** button.
-    * The button will change to a progress bar showing the percentage complete.
+1.  Find the repository on the **Repositories** tab.
+2.  Click **Sync now**.
+    * The button changes to a progress bar showing the percentage complete.
 3.  Wait for the status to change to **Synced**.
 
 > **Note**: Docflows' [Check against your docs](../user/doc-drift.md#which-version-of-your-docs-is-checked) doesn't depend on syncing: it reads the documentation repository's default branch live from GitHub. Syncing keeps the copy SudoDocs drafts from up to date.
@@ -104,15 +104,15 @@ When a **documentation** repository syncs, SudoDocs also works out how it's laid
 
 Docflows uses this to save screenshots in the right folder and to write each image reference the way that page needs, in its own format (Markdown, MDX, reStructuredText, AsciiDoc, HTML or DITA).
 
-To see it, look under the repository's name in **Active Repositories**: **Docs layout: Docusaurus · images in static/img**. Click it to choose a different **image folder**; leave it blank to go back to the detected one. Your choice is kept when the repository syncs again.
+To see it, look under **Docs layout** on the repository: for example **Docusaurus · images in static/img**. To choose a different **image folder**, open **Docs layout settings** at the bottom of the repository; leave it blank to go back to the detected one. Your choice is kept when the repository syncs again.
 
 ## Cancel a Running Sync
 
-If a sync is taking longer than expected or was started by mistake, click the small **Stop Sync** icon next to that repository's progress bar in the **Active Repositories** list. This works for any in-progress job, not just syncs - see [CLI Tasks → Organization](../../cli-guide/admin/settings.md#cancel-a-running-job) for the command-line equivalent.
+If a sync is taking longer than expected or was started by mistake, click the small **Stop Sync** icon next to that repository's progress bar on the **Repositories** tab. This works for any in-progress job, not just syncs - see [CLI Tasks → Organization](../../cli-guide/admin/settings.md#cancel-a-running-job) for the command-line equivalent.
 
 ## Keep in Sync
 
-Each repository has a **Keep in sync** setting that decides when SudoDocs re-reads it. Click **Keep in sync** next to the repository:
+Each repository has a **Keep in sync** setting that decides when SudoDocs re-reads it. Click **Manage** > **Keep in sync** on the repository:
 
 * **When it changes** (the default for documentation repositories): SudoDocs syncs after a pull request is merged into the repository - including the docs pull requests SudoDocs opens - and, within the hour, after any other change, such as a commit pushed straight to the branch. Merges close together are grouped: at most one sync every 30 minutes.
 * **On a schedule** (the default for code repositories: daily): every day, week, month, or a number of hours you choose - and only when the repository has new commits.
@@ -124,11 +124,11 @@ Repositories you connected before this setting existed sync when they change, as
 
 ### Sync Status
 
-Under each repository's name, **Active Repositories** shows whether SudoDocs' copy is current, checked every hour:
+Under **Sync**, each repository shows whether SudoDocs' copy is current, checked every hour:
 
 * **Up to date**: nothing new since the last sync.
 * **Behind GitHub: 12 commits**: the repository has changed since SudoDocs last read it.
-* **Not synced yet**: click **Sync** to read it for the first time.
+* **Not synced yet**: click **Sync now** to read it for the first time.
 
 It also shows when the repository was last synced and its Keep in sync setting. The **Overview** tab lists the repositories that need a sync.
 
@@ -149,13 +149,17 @@ Removed files are free. The sync's result says what it read and what it cost, fo
 
 ### Docs Branch
 
-By default SudoDocs works with a documentation repository's default branch on GitHub, usually `main`. If your team writes docs on another branch, set it in **Keep in sync** under **Docs branch**. SudoDocs then uses that branch for everything:
+By default SudoDocs works with a documentation repository's default branch on GitHub, usually `main`. If your team writes docs on another branch, set it in **Manage** > **Keep in sync** under **Docs branch**. SudoDocs then uses that branch for everything:
 
 * syncing,
 * Docflows' [Check against your docs](../user/doc-drift.md#which-version-of-your-docs-is-checked),
 * and every pull request it opens - Docflows, Author a Feature, release notes and API Readiness pull requests to this repository.
 
 Leave it blank to go back to the default branch. After you change the branch, the next sync reads the whole repository (20 credits).
+
+## Remove a Repository
+
+Click **Manage** > **Remove** on the repository and confirm. SudoDocs deletes its copy of the repository; the repository itself isn't changed.
 
 ## See Also
 
