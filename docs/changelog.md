@@ -21,6 +21,8 @@ Product updates to SudoDocs, newest first.
 - **A release notes queue for every release.** Everything going into a release's notes collects in one place - from Docflows, Slack, Jira, CSV files or added by hand - grouped under **New Features**, **Enhancements**, **Bug Fixes** and **Known Issues**, with where each item came from. See [The Release Notes Queue](saas-guide/user/release-composer.md#the-release-notes-queue).
 - **Drafted for you.** Draft the notes from the queue in one click, then add newly queued items to that draft without losing your edits. If no one has drafted them, SudoDocs does it automatically in the days before the release. See [Automatic Drafting](saas-guide/user/release-composer.md#automatic-drafting).
 - **Push to your docs.** **Push to docs** opens a pull request that puts the notes where your docs repository keeps release notes - a new file in its release-notes folder, or this release's section at the top of your changelog file. See [Push to Your Docs](saas-guide/user/release-composer.md#push-to-your-docs).
+- **Feature Author drafts join the queue.** When you accept a feature draft, decide whether it goes in the release notes - SudoDocs suggests the answer and the line - and it joins that release's queue like Docflows items do. See [Decide on Release Notes](saas-guide/user/feature-author.md#decide-on-release-notes).
+- **Choose where release notes go.** Pick the release notes file in your docs repository, or create one, and give **Developer Release Notes** their own file or folder if your API changelog lives apart. SudoDocs remembers your choice for each repository. See [Choose Where Release Notes Go](saas-guide/user/release-composer.md#choose-where-release-notes-go).
 
 ### Docflows
 
@@ -41,6 +43,7 @@ Product updates to SudoDocs, newest first.
 ### Doc Team Roles everywhere
 
 - **Every tool follows your role instructions.** Release notes, **Sync Latest Code** and revisions you ask for on a docs pull request now follow your Technical Writer instructions and pass SudoDocs' Editor review, like Author a Feature and Docflows already did. Anything the Editor can't sign off on is flagged, not hidden. See [Where the Roles Apply](saas-guide/admin/doc-team-roles.md#where-the-roles-apply).
+- **Converter, API Readiness and the Assistant too.** Universal Converter pages, API Readiness AI fixes and DocOps Assistant drafts now follow your Technical Writer instructions and pass the Editor's review. See [Where the Roles Apply](saas-guide/admin/doc-team-roles.md#where-the-roles-apply).
 
 ### Screenshots in Docflows
 
@@ -56,14 +59,18 @@ Product updates to SudoDocs, newest first.
 - **Writers can edit captures.** Captions, hotspots, redaction, voiceover and video export are open to writers, not just administrators.
 - **SudoDocs Capture 1.1.0.** In Interactive mode, the Chrome extension now notes which control you clicked - its label, not just where it was - so SudoDocs can find the same control again when it re-takes a screenshot after your product's layout changes. Chrome updates the extension automatically. See [When Your UI Changes](saas-guide/admin/doc-drift.md#when-your-ui-changes).
 - **Open an API scan's pull request where it belongs.** Send the corrected spec back to the spec's own repository, to a docs repository, or both. See [Push to Production](saas-guide/user/api-readiness.md#push-to-production).
+- **Specs keep their file name.** Downloads and pull requests from an API scan use your spec's own file name and path.
 
 ### For administrators
 
 - **Admin Overview.** A new **Overview** tab shows your setup progress, what's left to configure, and usage at a glance. See [Admin Overview](saas-guide/admin/overview.md).
 - **Add-ons.** Pro and Enterprise organizations can add seats and AI credit packs. See [Add-ons](saas-guide/admin/plans.md#add-ons); prices are on [sudodocs.com/#pricing](https://sudodocs.com/#pricing).
+- **A tidier Repositories tab.** Each repository is a card with its sync, access and settings at a glance; **Sync now** and a **Manage** menu hold the rest. See [Ingest Repositories](saas-guide/admin/connect-repos.md).
+- **AI credit costs, listed.** See what each AI action costs, including the Converter and API Readiness AI fix, which are now priced by the size of the file. See [What AI Actions Cost](saas-guide/admin/plans.md#what-ai-actions-cost).
 
 ### CLI
 
+- **sudodocs-cli 1.3.0** adds `sudodocs release-notes targets` to choose where release notes and Developer Release Notes go, the same choices on `sudodocs release-notes push`, and `sudodocs items release-notes` for a Feature Author draft's release-notes decision. Upgrade with `pip install --upgrade sudodocs-cli`. See [Choose Where Release Notes Go](cli-guide/user/release-composer.md#choose-where-release-notes-go).
 - **sudodocs-cli 1.2.0** adds commands for releases (`sudodocs releases`), tagged work (`sudodocs items`, including approving Docflows suggestions), the dashboard (`sudodocs dashboard --mine`, `sudodocs mywork`), release notes (`sudodocs release-notes queue`, `draft`, `push`), API scan pull requests (`sudodocs api-scan open-pr`) and capture zoom (`sudodocs capture zoom`). Upgrade with `pip install --upgrade sudodocs-cli`. See [Getting Started](cli-guide/getting-started.md).
 
 ### Improvements

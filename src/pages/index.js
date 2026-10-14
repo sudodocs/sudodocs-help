@@ -8,7 +8,7 @@ import styles from './index.module.css';
 // every new release in docs/changelog.md (see .claude/skills/changelog).
 const LATEST_UPDATE = {
   month: 'October 2026',
-  summary: 'Release Dashboard, release notes drafted from each release\'s queue and pushed to your docs, smarter Docflows screenshots, a check for suggestions your docs already have, repositories that stay in sync, and sudodocs-cli 1.2.0.',
+  summary: 'Release Dashboard, release notes drafted from each release\'s queue and pushed to your docs, Feature Author drafts in the release notes queue, your choice of release notes file, smarter Docflows screenshots, repositories that stay in sync, and sudodocs-cli 1.3.0.',
   anchor: 'october-2026',
 };
 
