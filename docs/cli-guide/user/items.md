@@ -130,17 +130,7 @@ Opens a pull request with the scan's AI-corrected spec (or the pre-processed one
 * `--to source`: the spec's own repository, on the branch and path set in API Specs. `--source-path` changes the file path.
 * `--to docs`: a documentation repository. `--repo` is its integration ID (`sudodocs admin integrations list`, System Administrators only); `--path` is the file path there (default: the spec's path).
 
-With both, the scan follows the docs pull request. If one can't be opened, the other still is and the reason is printed. Docs get only the public part of the spec (see [Push to Production](../../saas-guide/user/api-readiness.md#push-to-production)); `--path` defaults to where your public spec lives (API Specs).
-
-The release-notes decision is part of opening it, as on the web: `--notes include|skip`, `--section` (default `developer`), `--category` (for another section), `--note`. Leave them out to keep the saved decision, or use SudoDocs' suggestion.
-
-```bash
-sudodocs api-scan changes 12
-sudodocs api-scan release-notes 12
-sudodocs api-scan release-notes 12 --notes include --note "New PDF download endpoint."
-```
-
-`changes` prints what the scan's spec changes in your public API compared with the spec your docs publish (`--refresh` re-reads your docs). `release-notes` shows the scan's decision, or changes it with `--notes` (plus `--section`, `--category`, `--note`, `--release`). API: `GET /api/v1/oas/scans/<id>/changes`, `GET`/`PUT /api/v1/oas/scans/<id>/release-notes`, and `release_notes`, `rn_section`, `rn_category`, `rn_note` on the pull-request call. API: `POST /api/v1/oas/scans/<id>/pull-request` with `targets` (`["source"]`, `["docs"]` or both), `integration_id` and `file_path` for docs, optional `source_file_path`, `spec` and `commit_message`. It returns `pull_requests` (one URL per target) and any `errors`.
+With both, the scan follows the docs pull request. If one can't be opened, the other still is and the reason is printed. API: `POST /api/v1/oas/scans/<id>/pull-request` with `targets` (`["source"]`, `["docs"]` or both), `integration_id` and `file_path` for docs, optional `source_file_path`, `spec` and `commit_message`. It returns `pull_requests` (one URL per target) and any `errors`.
 
 ## Zoom on Clicks for a Capture
 
