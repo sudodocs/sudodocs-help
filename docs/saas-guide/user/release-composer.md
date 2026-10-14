@@ -8,7 +8,7 @@ Every release has a **release notes queue**: the list of what goes into its note
 * **Jira** and **CSV**: added from Release Composer (below).
 * **By hand**: added in Release Composer.
 
-Release Composer drafts the release notes from the queue - grouped into **New Features**, **Enhancements**, **Bug Fixes**, **Known Issues** and **Developer Release Notes** (API changes), then by product category - and pushes the finished notes to your docs repository where it keeps release notes. If no one drafts them, SudoDocs does it automatically before the release.
+Release Composer drafts the release notes from the queue - grouped into **New Features**, **Enhancements**, **Bug Fixes**, **Known Issues** and **Developer Release Notes** (for developer-facing changes), then by product category - and pushes the finished notes to your docs repository where it keeps release notes. If no one drafts them, SudoDocs does it automatically before the release.
 
 ## Release Notes Settings
 

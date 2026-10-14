@@ -25,7 +25,7 @@ Each AI action uses credits. A failed action gives its credits back.
 | [DocOps Assistant](../user/chat.md) question (Discuss) | 2 (3 with an attached image or video) |
 | DocOps Assistant draft (Author, Rewrite, Release Note - written, then checked by SudoDocs' Editor) | 5 (6 with an attachment) |
 | [Author a Feature](../user/feature-author.md) draft | 20 |
-| [Docflows](../user/doc-drift.md) suggestion from a pull request or Jira ticket | 20 (an API change with nothing else changed: free) |
+| [Docflows](../user/doc-drift.md) suggestion from a pull request or Jira ticket | 20 |
 | Request changes on a Docflows suggestion, or mentioning SudoDocs on a docs pull request | 8 |
 | Sync Latest Code | 5, or 8 when the Editor reviews an update |
 | [Release Composer](../user/release-composer.md) draft / adding new items to it | 10 / 5 |
