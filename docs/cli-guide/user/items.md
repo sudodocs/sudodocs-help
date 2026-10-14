@@ -93,7 +93,7 @@ sudodocs items api-changes docflows 42 --docs-path static/openapi.yaml
 sudodocs items approve docflows 42 --release 7 --api-notes include --api-note "Breaking: removed legacy_id from invoices."
 ```
 
-`api-changes` prints a suggestion's [API changes](../../saas-guide/user/doc-drift.md#api-changes): what was added, changed, removed and deprecated (with **BREAKING** when clients would break), operations that aren't public yet, and where the public spec goes. `--docs-path` confirms that location for this and every later API change (with several specs, add `--spec KEY` for which one). On `items approve`, `--api-notes include|skip` and `--api-note` set the **Developer Release Notes** decision (default: include, with the drafted line). API: `api_change` on `GET /api/v1/docflows/<id>`, `api_release_notes` and `api_rn_note` on approve, and `POST /api/v1/docflows/<id>/api-docs-path` with `{"path"}`.
+`api-changes` prints a suggestion's [API changes](../../saas-guide/user/doc-drift.md#api-changes): what was added, changed, removed and deprecated (with **BREAKING** when clients would break), operations that aren't public yet, and where the public spec goes. `--docs-path` confirms that location for this and every later API change. On `items approve`, `--api-notes include|skip` and `--api-note` set the **Developer Release Notes** decision (default: include, with the drafted line). API: `api_change` on `GET /api/v1/docflows/<id>`, `api_release_notes` and `api_rn_note` on approve, and `POST /api/v1/docflows/<id>/api-docs-path` with `{"path"}`.
 
 ## Request Changes on a Docflows Suggestion
 

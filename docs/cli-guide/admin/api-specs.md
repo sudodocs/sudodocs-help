@@ -41,16 +41,13 @@ sudodocs admin api-specs set --ruleset custom --ruleset-path .redocly.yaml
 ## Public API Changes
 
 ```bash
-sudodocs admin api-specs specs
-sudodocs admin api-specs specs --add "Payments API" --repo 12 --path api/payments.yaml
-sudodocs admin api-specs specs --spec 12:api/payments.yaml --docs-file static/payments.yaml
-sudodocs admin api-specs operations --spec 12:api/payments.yaml
+sudodocs admin api-specs operations
 sudodocs admin api-specs public --tag Invoices --op "POST /refunds"
 sudodocs admin api-specs docs-location --docs-repo 7
 sudodocs admin api-specs public --docs-repo 7 --docs-spec-path static/openapi.yaml --reference-pages auto
 ```
 
-The same as [Public API Changes](../../saas-guide/admin/api-specs.md#public-api-changes) on the API Specs tab. `specs` lists the specs public API changes follow (each with its key, such as `12:api/payments.yaml`) and adds one (`--add NAME --repo ID --path PATH [--branch]`), or changes one with `--spec KEY` and `--rename`, `--docs-file` or `--remove`. `operations` and `public --tag/--op` take `--spec KEY` (default: the main spec). `operations` lists your spec's operations by tag, marks the public ones `[x]` and new undecided ones `(new - decide)`. `public` shows the settings, or changes them:
+The same as [Public API Changes](../../saas-guide/admin/api-specs.md#public-api-changes) on the API Specs tab. `operations` lists your spec's operations by tag, marks the public ones `[x]` and new undecided ones `(new - decide)`. `public` shows the settings, or changes them:
 
 | Option | Description |
 |---|---|
@@ -70,4 +67,3 @@ The same as [Public API Changes](../../saas-guide/admin/api-specs.md#public-api-
 | `/admin/api-specs/public` | GET / PUT | Public API changes. PUT any of `public_mode`, `public_marker`, `public_selection` (`{tags, operations, seen}` or `null`), `docs_integration_id`, `docs_spec_path`, `reference_pages` (`spec_only`, `with_pages`, `auto`), `api_docflows`. Wrapped by `sudodocs admin api-specs public`. |
 | `/admin/api-specs/public/operations` | GET | The Public API picker: operations by tag, which are public, `has_markers`, `counts` and `undecided`. |
 | `/admin/api-specs/public/docs-location` | GET | `?integration_id=`: `status` (`found` or `suggested`), `path`, `reason`, `renders` and the default `reference_pages`. |
-| `/admin/api-specs/specs` | GET / POST | The specs public API changes follow. POST `{action: "add", name, integration_id, path, branch?}`, `{action: "update", spec, name?, branch?, docs_spec_path?}` or `{action: "remove", spec}`. `?spec=KEY` on `/public/operations`, and `spec_key` with `public_selection` on `PUT /public`, pick the spec. |

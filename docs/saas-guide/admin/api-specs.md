@@ -49,17 +49,6 @@ Click **Save API Specs settings**. The next API Readiness scan uses the new sett
 
 Below the settings, **Public API changes** decides which part of your spec your customers see, and where the public version goes in your docs. When a pull request changes that part, Docflows suggests the updated public spec and a line for the **Developer Release Notes**. Nothing is public unless you say so. Save this panel with **Save Public API settings**.
 
-### API Specs: One Spec or Many
-
-Public API changes follow every spec in the **API specs** list - one large spec, or a spec per team or service, in this repository or in other teams' repositories. Until you change the list, it's your **Main spec path** and **Other spec files** from above.
-
-* **Add a spec**: its name (for example **Payments API**), the repository it lives in (one of your connected repositories), its path and, optionally, its branch.
-* **Name**: shown on Docflows cards and in release notes when a pull request changes several specs.
-* **Public file in your docs**: where this spec's public version goes. Each spec gets its own file with its own file name - for example `static/billing.yaml` and `static/payments.yaml`. Leave it empty and SudoDocs suggests one on the first API change; two specs with the same file name are kept apart with their names.
-* **Remove**: stops following the spec. API Readiness keeps checking the main spec either way.
-
-The Public API picker below works per spec: choose the spec, then load and tick its operations.
-
 ### What's Public
 
 * **Operations marked public in the spec** (the default): an operation is public when it, its path or one of its tags has the marker - `x-public: true` unless you change the **Marker**. The most specific one wins, so `x-public: false` on an operation keeps it internal even when its tag is public.
@@ -71,7 +60,7 @@ Fields and parameters marked `x-internal: true` are always left out of the publi
 
 If your spec has no markers, tick what's public instead:
 
-1. With several specs, choose the spec. Click **Load operations from the spec**. SudoDocs reads your spec from the repository above, including path files it `$ref`s, and lists its operations by tag, with how many are public now.
+1. Click **Load operations from the spec**. SudoDocs reads your spec from the repository above, including path files it `$ref`s, and lists its operations by tag, with how many are public now.
 2. Tick whole tags (their operations, including ones added later) or single operations.
 3. Click **Save Public API settings**.
 
