@@ -41,10 +41,12 @@ When a pull request on the repository set in [API Specs](../admin/api-specs.md) 
 * **Only the spec changed, and its public part too**: a suggestion with the updated public spec, built without AI - **no credits**.
 * **Code changed as well**: the usual suggestion (Docflows' usual credits), written with the exact API changes as context, plus the updated public spec.
 
+When the pull request changes several specs (see [API specs](../admin/api-specs.md#api-specs-one-spec-or-many)), there's still one suggestion: each spec gets its own public file, and its changes and release-notes line are labelled with its name. Reworded descriptions or summaries of public operations update the public file too, without a release-notes line.
+
 The suggestion's **API changes** panel, right below **Proposed changes**, lists what was **Added**, **Changed**, **Removed** and **Deprecated**, with a **Breaking** badge when existing clients would break - for example a removed endpoint or response field, a new required parameter, or a narrower type. It also shows:
 
 * **Not public yet - decide in API Specs**: new operations that no marker or tick makes public. They're left out of the public spec until someone decides.
-* Where the public spec goes. The first time, SudoDocs suggests a place in your docs (or uses the OpenAPI file that's already there) and says why: click **Use this**, or type a path and click **Choose another path**. The choice is saved in API Specs for every later API change.
+* Where each spec's public file goes. The first time, SudoDocs suggests a place in your docs (or uses the OpenAPI file that's already there) and says why: click **Use this**, or type a path and click **Choose another path**. The choice is saved in API Specs for every later API change.
 * The public spec's API Readiness lint result, and pages in your docs that mention the changed endpoints - use [Request changes](#request-changes) to have the Writer update them.
 
 If your API Specs settings ask for reference pages, the suggestion also carries one Markdown page per tag, rendered straight from the public spec (no AI) and marked as generated.
