@@ -7,9 +7,9 @@ import styles from './index.module.css';
 // Newest Changelog release, shown as a strip on the home page. Update it with
 // every new release in docs/changelog.md (see .claude/skills/changelog).
 const LATEST_UPDATE = {
-  month: 'October 2026',
-  summary: 'Release Dashboard, release notes drafted from each release\'s queue and pushed to your docs, Feature Author drafts in the release notes queue, your choice of release notes file, smarter Docflows screenshots, repositories that stay in sync, and sudodocs-cli 1.3.0.',
-  anchor: 'october-2026',
+  date: 'October 14, 2026',
+  summary: 'Feature Author drafts join the release notes queue, choose where release notes and Developer Release Notes go, Doc Team Roles in the Converter, API Readiness and the Assistant, a tidier Repositories tab, and sudodocs-cli 1.3.0.',
+  anchor: '2026-10-14',
 };
 
 // Outline icons (Lucide, ISC licence), drawn in the current text colour.
@@ -65,7 +65,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <Link to={`/docs/changelog#${LATEST_UPDATE.anchor}`} className={styles.update}>
-          <span className={styles.updateBadge}><Icon d={ICONS.sparkle} size={14} /> New in {LATEST_UPDATE.month}</span>
+          <span className={styles.updateBadge}><Icon d={ICONS.sparkle} size={14} /> New on {LATEST_UPDATE.date}</span>
           <span className={styles.updateText}>{LATEST_UPDATE.summary}</span>
           <span className={styles.updateMore}>Changelog <Icon d={ICONS.arrow} size={14} /></span>
         </Link>
