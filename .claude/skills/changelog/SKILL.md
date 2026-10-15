@@ -62,11 +62,20 @@ Only changes a customer can see, use, or must act on:
 
 ## Format
 
-- Newest first. One `## Month YYYY` heading per release month; add to the
-  existing month if it's already there.
-- Group bullets under short `###` themes ("Sign in your way",
-  "Repositories and API specs", "CLI", "Improvements"). Put
-  **Improvements** last.
+`docs/changelog.md` holds **the current month only**. SudoDocs is a cloud
+app, so older months aren't maintained - they're archived, read-only.
+
+- Intro line names the month: "What's new in SudoDocs in **October 2026**,
+  newest release first." (also in the front-matter `description`).
+- **One `##` section per production release, by date**, newest first, with
+  a stable id: `## October 14, 2026 {#2026-10-14}`. Use the day the release
+  reached app.sudodocs.com (the production deploy), not the merge date.
+  Never mix two releases under one heading; a later release gets its own
+  section even on a busy day.
+- Inside a release, group bullets under short `###` themes ("Release notes",
+  "Doc Team Roles", "For administrators", "CLI", "Improvements"). Put
+  **CLI** next to last and **Improvements** last. Only the themes that
+  release needs.
 - Each bullet: a **bold short title**, then one or two sentences on what the
   customer can do now. Link to the help page with a relative Markdown link
   (`saas-guide/admin/users.md#anchor`), so the build checks it.
@@ -75,10 +84,28 @@ Only changes a customer can see, use, or must act on:
 - Keep each release to the handful of changes that matter. The help pages
   hold the details.
 
+## New month: archive the old one
+
+On the first production release of a new month, before adding its entry:
+
+1. Move the current file to `docs/changelog-archive/<month>-<year>.md`
+   (e.g. `october-2026.md`). Change its front matter to
+   `title: Changelog - October 2026`, its `# Changelog` heading to
+   `# Changelog: October 2026`, drop the "For earlier months" sentence, and
+   add `../` to every relative link (it's one folder deeper):
+   `sed -i '' -E 's/\]\((saas-guide|cli-guide)\//](..\/\1\//g' <file>`.
+2. Add it at the top of the list in `docs/changelog-archive/index.md`
+   (`- [October 2026](october-2026.md)`), and remove the "No earlier months
+   yet" line the first time.
+3. Start a fresh `docs/changelog.md` for the new month with the same front
+   matter, intro and "For earlier months, see [Past Changelogs]..." line,
+   then add the release.
+
 ## Before committing
 
-0. Update `LATEST_UPDATE` in `src/pages/index.js` when you add a new
-   release: month, one-line summary, and the anchor of the new `##` heading.
+0. Update `LATEST_UPDATE` in `src/pages/index.js` for every release: its
+   `date` ("October 14, 2026"), a one-line summary of **that release only**,
+   and `anchor` = the release's id (`2026-10-14`).
 
 1. Re-read every line against **Never include**.
 2. Every link points to an existing page and anchor.
