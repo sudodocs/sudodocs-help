@@ -7,6 +7,7 @@ Every release has a **release notes queue**: the list of what goes into its note
 * **Slack**: items your team sends to a release from Slack.
 * **Jira** and **CSV**: added from Release Composer (below).
 * **By hand**: added in Release Composer.
+* **API changes**: merged pull requests that changed an API spec, once a writer includes them - see [Incoming API Changes](#incoming-api-changes).
 
 Release Composer drafts the release notes from the queue - grouped into **New Features**, **Enhancements**, **Bug Fixes**, **Known Issues** and **Developer Release Notes** (for developer-facing changes), then by product category - and pushes the finished notes to your docs repository where it keeps release notes. If no one drafts them, SudoDocs does it automatically before the release.
 
@@ -24,10 +25,24 @@ These settings are shared across every release's release notes for your org, not
 ## The Release Notes Queue
 
 1. Open **Release Composer** (Workspace, or **Draft release notes** on a release's Release Dashboard) and pick the **Release** at the top of the page - it opens on your newest unreleased release, and **+ New release...** creates one (a name and an optional target date). **Draft the release notes** comes first, then the queue.
-2. The queue lists every item, grouped by section and then by product category. Each one shows where it came from - **Docflows**, **Feature Author**, **Slack**, **Jira**, **CSV** or **Manual** - and links to it (the pull request, ticket, suggestion or feature draft).
+2. The queue lists every item, grouped by section and then by product category. Each one shows where it came from - **Docflows**, **Feature Author**, **Slack**, **Jira**, **CSV**, **Manual** or **API changes** - and links to it (the pull request, ticket, suggestion or feature draft). **Developer Release Notes** are grouped by **Breaking Changes**, **New Endpoints**, **Changes** and **Deprecations** instead of product categories.
 3. To change an item, pick a different section or category in its row; it's saved at once. **Remove** takes it out of the queue.
 
 Items already written into a draft are listed under **Already in a draft**. A Jira ticket is only queued once per release, even if it arrives from several places (for example a Jira filter and a Jira-sourced Docflows suggestion). When a Feature Author draft for a ticket that's already queued from Jira is included, the queued item becomes the feature draft's item instead of a second one.
+
+## Incoming API Changes
+
+When a pull request that changes an API spec merges, SudoDocs compares the spec before and after it - with every file its `$ref`s reach, so a change to a shared file or to a file in another repository counts - and lists what changed for developers under **Incoming API changes**, between **Draft the release notes** and the queue. It covers every spec on the Admin Dashboard's [API Specs](../admin/api-specs.md) tab that has **Turn its API changes into Developer Release Notes** on, and only its public operations (by default, everything not marked `x-internal: true`). Comparing is free.
+
+Each item is one spec's changes in one pull request: a file several specs share gives an item for each of them. It shows:
+
+* the spec, **Breaking** when a change can break existing clients (a removed endpoint, field or parameter, a new required input, a narrower type), its sub-heading, and a link to the pull request;
+* the changes, one line each (expand **N changes**);
+* a drafted **Release note**, which you can edit.
+
+For each, pick the **Release** and click **Include**: it joins that release's queue under **Developer Release Notes** and its sub-heading, and is drafted like every other item. Or click **Not needed**; **Marked Not needed** lists those, with **Bring back**. Taking an included item out of the queue (**Remove**) sends it back to **Incoming API changes**.
+
+Only merges into the branch the spec is read from count. Changes arrive through the GitHub webhook of the spec's repository, or the SudoDocs GitHub App. Missed one - for example a merge from before you set up the spec? Click **Check a merged pull request**, pick the repository, enter the pull request number and click **Check it**.
 
 ## Add to the Queue
 

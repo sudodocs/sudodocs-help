@@ -16,11 +16,15 @@ Verify it installed correctly:
 sudodocs --help
 ```
 
-Already installed? Upgrade to get new commands. Version 1.2.0 or later is needed for:
+Already installed? Upgrade to get new commands. Version 1.4.0 or later is needed for:
+
+* Your API spec list and dependency locations (`sudodocs admin api-specs specs`, `deps`, `check`), [API Readiness](user/api-readiness.md) scans (`sudodocs api-scan run`, `show`, `fix`, `download`) and [Incoming API changes](user/release-composer.md#incoming-api-changes) (`sudodocs api-changes ...`).
+
+Version 1.2.0 or later is needed for:
 
 * [Releases](user/releases.md) (`sudodocs releases ...`) and [work items](user/items.md) (`sudodocs items ...`), including approving and dismissing Docflows suggestions.
 * The [dashboard](user/items.md#dashboard) (`sudodocs dashboard`, `--mine`) and `sudodocs mywork`.
-* Opening a pull request from an API scan (`sudodocs api-scan open-pr`), and a capture's zoom setting (`sudodocs capture zoom`).
+* Opening a pull request from an API scan (`sudodocs api-scan open-pr`; `--all-specs` needs 1.4.0), and a capture's zoom setting (`sudodocs capture zoom`).
 * `sudodocs admin status`, the screenshot style and recipes (`sudodocs admin kb screenshot-style`, `screenshot-recipes`), and a repository's page index and docs layout (`sudodocs admin integrations page-index`, `docs-profile`).
 
 The sign-in management commands under `sudodocs admin users`, the GitHub token checks under `sudodocs admin integrations`, and `sudodocs admin api-specs` need version 1.1.0 or later:

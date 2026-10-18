@@ -109,18 +109,7 @@ Compares suggestions with your docs repository as it is today and prints, for ea
 
 ## Open a Pull Request from an API Scan
 
-```bash
-sudodocs api-scan open-pr 12 --repo 3 --path openapi/spec.yaml
-sudodocs api-scan open-pr 12 --to source
-sudodocs api-scan open-pr 12 --to source --to docs --repo 3 --spec prepped
-```
-
-Opens a pull request with the scan's AI-corrected spec (or the pre-processed one with `--spec prepped`), and the scan tracks it. `--to` picks where, and can be repeated for both (default: `docs`):
-
-* `--to source`: the spec's own repository, on the branch and path set in API Specs. `--source-path` changes the file path.
-* `--to docs`: a documentation repository. `--repo` is its integration ID (`sudodocs admin integrations list`, System Administrators only); `--path` is the file path there (default: the spec's path).
-
-With both, the scan follows the docs pull request. If one can't be opened, the other still is and the reason is printed. API: `POST /api/v1/oas/scans/<id>/pull-request` with `targets` (`["source"]`, `["docs"]` or both), `integration_id` and `file_path` for docs, optional `source_file_path`, `spec` and `commit_message`. It returns `pull_requests` (one URL per target) and any `errors`.
+Moved to [API Readiness](api-readiness.md#open-pull-requests), with the other `sudodocs api-scan` commands.
 
 ## Zoom on Clicks for a Capture
 

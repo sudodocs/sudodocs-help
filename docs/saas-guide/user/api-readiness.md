@@ -4,64 +4,60 @@ The API Readiness tool validates your OpenAPI Specifications (OAS) against indus
 
 ## Before You Start
 
-A System Administrator sets which repository, branch, and spec file API Readiness scans, and which style rules apply, on the Admin Dashboard's [API Specs](../admin/api-specs.md) tab.
+A System Administrator lists your specs - one large spec, many team specs in any repository, or both - and sets the style rules on the Admin Dashboard's [API Specs](../admin/api-specs.md) tab.
 
 1. Open **API Readiness** from the Workspace and click **Open Validator**.
-2. Check the **Configuration** summary: repository, branch and main spec, API style rules, and whether your style guide is applied.
+2. Check **Your API specs**: each spec with its repository, branch and file. A spec with `$ref`s SudoDocs couldn't follow says so; an administrator can add a dependency location for them.
 
-If it says **No API spec is set up yet**, ask an administrator to set it up. Administrators see an **Edit in Admin** link that goes straight to the tab.
+If it says **No API spec is set up yet**, ask an administrator to add your specs. Administrators see an **Edit in Admin** link that goes straight to the tab.
 
 ## Run a Scan
 
-1. Under the configuration form, select the validation checks you wish to run:
+1. Under **Check**, pick **All specs** (every spec set to be checked) or one spec.
+2. Select the checks to run:
 
-    * **Swagger CLI**: Validates basic OAS structure and syntax.
+    * **Swagger CLI**: validates basic OpenAPI structure and syntax.
+    * **Redocly CLI**: lints the spec with your organization's rules.
+    * **AI Tech Fixes**: analyzes the problems and fixes them, file by file.
+    * **AI Content Audit**: reviews summaries, descriptions and tone against your style guide.
 
-    * **Redocly CLI**: Lints the spec for best practices and style violations.
+3. Click **🚀 Check API Specs**.
 
-    * **AI Tech Fixes**: Uses AI to analyze validation errors and suggest raw code corrections.
-
-    * **AI Content Audit**: Uses AI to review endpoint descriptions, summaries, and tone for clarity.
-
-2. Click **🚀 Check API Specs** to start the pipeline.
+SudoDocs reads each spec with every file its `$ref`s reach - split files, a shared folder, or files in another repository - and checks them together. Your files are never changed by a scan.
 
 ## Review Results
 
-The dashboard displays the results of your scan in four sections:
+A scan of **All specs** shows a tab for each spec with its error count. For the spec you're viewing:
 
-* **CLI Validation Logs**: Raw output and error tracing from the Swagger and Redocly tools.
+* **The summary** at the top: how many files, errors and warnings, and any `$ref`s SudoDocs couldn't follow. After an AI fix it shows the errors before and after (SudoDocs checks the fixed files again) and the Editor's verdict. **Open Pull Request**, **Send to Docflows** and **Download** are here too.
+* **1. Problems by file**: each file of the spec, with every problem's line, severity, rule and message - in the file that holds it, even a dependency file in another repository. Files the AI fixed are marked **Fixed** and show **Before** and **After the AI fix**. **CLI log** has the tools' output.
+* **2. Technical Analysis** and **3. Content Audit**: what the AI found. **Apply Technical Fixes** or **Apply Content Fixes** fixes the spec with that analysis (a new scan, titled "(AI fix)").
+* **4. The whole spec as one file**: the spec with every `$ref` file put in (bundled), as checked and with the AI fix - for a docs site that needs one file.
 
-* **Technical Analysis**: A breakdown of structural errors found, with an option to **Apply Technical Fixes** automatically via AI.
+### How the AI Fix Works
 
-* **Content Audit**: Qualitative feedback on your API descriptions, with an option to **Apply Content Fixes** via AI.
+The AI fixes each file that has a problem (and, with the content audit, each file with descriptions), and changes nothing else: every file keeps its name and path, every `$ref` stays as written, and content doesn't move between files. It doesn't invent facts the spec doesn't give - server URLs, licenses, security schemes or requirements, or behaviour. A problem that needs those is left for you, and the summary shows how many errors are left.
 
-* Final Specification:
+When the AI fix writes or changes descriptions, summaries or titles, SudoDocs' Technical Writer writes them following your [Doc Team Roles](../admin/doc-team-roles.md) instructions (when your API Specs settings apply your style guide), and its Editor reviews just that text against the original - for example, a description that promises something the spec doesn't state. If the Editor finds a blocking issue, the Writer rewrites only the flagged fields, once. The summary then shows **Descriptions reviewed by SudoDocs' Editor**, or **The Editor still has open issues with the descriptions this fix wrote** with what's left.
 
-    * A. **Pre-Processed Spec**: The original file with basic programmatic fixes applied.
-
-    * B. **AI Corrected Spec**: The final version with all requested AI technical and content fixes applied.
-
-When the AI fix writes or changes descriptions, summaries or titles, SudoDocs' Technical Writer writes them following your [Doc Team Roles](../admin/doc-team-roles.md) instructions (when your API Specs settings apply your style guide), and its Editor reviews just that text against the original spec - for example, a description that promises a limit the spec doesn't state. If the Editor finds a blocking issue, the Writer rewrites only the flagged fields, once. The **AI Corrected Spec** card then shows **Descriptions reviewed by SudoDocs' Editor**, or **The Editor still has open issues with the descriptions this fix wrote** with what's left, next to its **Open Pull Request** button.
-
-The AI fix rewrites the whole spec, so it costs 5 credits for every 15,000 characters of the spec (at least 5) - for example 20 for a 60,000-character spec. A scan reserves 5 when it starts and the rest once it has read the spec; if there aren't enough credits for a spec that size, the scan finishes without the fix and its log says so. The content audit costs 3.
+**Credits.** The checks are free. For each spec, a scan reserves 5 credits for the AI fix and 3 for the content audit when it starts. The fix costs 5 credits for every 15,000 characters of the files it fixes (at least 5); for bigger files SudoDocs reserves the rest once it has read them. If there aren't enough credits, that spec gets the free checks only and its log says so; the other specs still run.
 
 ## Scan History
 
-Every scan is listed under **Scan History** on the left, titled with when it ran (for example "OAS Validation - Oct 10, 2026 14:05"). Rename a scan, tag it with a release and a writer, or delete it from there - see [Tag work with a release and a writer](releases.md#tag-work-with-a-release-and-a-writer). New scans record who ran them as the writer; scans from before this change have no writer until you tag one.
+Every scan is listed under **Scan History** on the left, titled with its spec and when it ran (for example "Billing API - Oct 18, 2026 14:05"). A scan of **All specs** adds one entry per spec. Rename a scan, tag it with a release and a writer, or delete it from there - see [Tag work with a release and a writer](releases.md#tag-work-with-a-release-and-a-writer). New scans record who ran them as the writer; scans from before this change have no writer until you tag one.
 
 ## Push to Production
 
-Each spec under **Final Specification** has two ways to leave SudoDocs:
+The summary's buttons send the scan's spec out of SudoDocs:
 
-* **🚀 Open Pull Request**: opens a pull request with the spec straight away, in the spec's own repository, a docs repository, or both.
-    1. Click **Open Pull Request** under the spec you want (pre-processed or AI-corrected).
-    2. Under **Open it in**, tick where it goes:
-        * **The spec's repository**: the repository, branch and file that API Specs validates, so engineering gets the corrections. Change the file path if needed. This needs API Specs to read the spec from a connected repository (Admin Dashboard > API Specs); if it reads from a repository URL instead, add that repository under **Repositories** and pick it there.
-        * **A docs repository**: for the published API reference, for example for this scan's release. Pick the repository; if a file with the spec's name is already there, SudoDocs fills in its path so the pull request updates it. Otherwise it's added at the spec's path, which you can change.
-    3. Click **Open Pull Request**.
+* **🚀 Open Pull Request**: opens pull requests straight away. Under **Open it in**, tick where they go:
+    * **The spec's repositories**: the changed files go back to the repositories they came from, each with its own name and path, so engineering gets the corrections. SudoDocs opens one pull request per repository, against the branch the spec (or its dependency location) is read from, and lists the files each one gets. A spec read from a repository URL can't get pull requests; add that repository under **Repositories** first.
+    * **A docs repository**: the whole spec as one file, for the published API reference. Pick the repository; if a file with the spec's name is already there, SudoDocs fills in its path so the pull request updates it. Otherwise it's added at the spec's path, which you can change.
 
-    Tick both to open a pull request in each. The scan moves to **In review** and shows the pull request's review status; it moves to **Done** when the pull request merges, or **Rejected** if it's closed - see [Track work and pull requests](releases.md#track-work-and-pull-requests). With both, the scan follows the docs pull request; the links to both appear once they're opened.
+    Tick both to open both. The scan moves to **In review** and shows the pull request's review status; it moves to **Done** when the pull request merges, or **Rejected** if it's closed - see [Track work and pull requests](releases.md#track-work-and-pull-requests). With both, the scan follows the docs pull request.
 
-* **📬 Send to Docflows**: creates a Docflows suggestion instead, so a writer can review the spec in Docflows before pushing it. The suggestion keeps the scan's release and writer, and once its pull request is opened the scan follows it the same way.
+* **Open pull requests for all specs** (a scan of **All specs**): the same, for every spec in the scan. A file several specs share - for example `common/errors.yaml` - goes into its pull request once.
+* **📬 Send to Docflows**: creates a Docflows suggestion with the whole spec instead, so a writer can review it in Docflows before pushing it. The suggestion keeps the scan's release and writer.
+* **⬇️ Download fixed files (.zip)**: the changed files in their folders (with the repository's name first when a spec spans repositories), plus the bundled spec. **Download all fixed files** does it for every spec in the scan.
 
-Both use the scan you're viewing, so you can push an older scan's spec from **Scan History**.
+Everything uses the scan you're viewing, so you can push an older scan from **Scan History**.
