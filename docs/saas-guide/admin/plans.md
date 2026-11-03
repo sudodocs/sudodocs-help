@@ -14,7 +14,37 @@ SudoDocs has three plans - Free (Basic), Pro, and Enterprise - with Pro and Ente
 | **CLI & Headless API** | - | - | ✅ |
 | **Add-ons (seats, credit packs)** | - | ✅ | ✅ (credit packs only until you connect your own LLM key) |
 
-Every plan, including Free, includes the core documentation tools: Author a Feature, Release Composer, Docflows (automated doc PRs), the OAS Validator & Fixer, the Universal Doc Converter, Chat with Docs, Git, Code, Jira, Slack and web source sync, and [SudoDocs Capture](../user/capture.md).
+Every plan, including Free, includes the core documentation tools: Author mode, Release Changelog, Docflows (automated doc PRs), the OAS Validator & Fixer, the Universal Doc Converter, Chat with Docs, Git, Code, Jira, Slack and web source sync, and [SudoDocs Capture](../user/capture.md).
+
+## Publish
+
+[Publish](../publish/index.md) is part of every plan, with these limits. Prices are on [sudodocs.com](https://sudodocs.com/#pricing).
+
+| | Basic | Pro | Enterprise |
+|---|---|---|---|
+| Sites | 1 | 3 | 25 |
+| Skins and starter templates | Manual (Product manual) | All seven | All seven |
+| Colours, fonts and corners | Accent colours | All | All |
+| Custom domains | - | 3 | 25 |
+| Pull request previews | - | Yes | Yes |
+| Versions of a site | 1 | 5 | No limit |
+| Languages | 1 | 3 | No limit |
+| API specs in the reference | 1 | 10 | No limit |
+| Analytics history | 7 days | 90 days | 395 days, with CSV |
+| Your own Plausible or Google Analytics | - | Yes | Yes |
+| [Ask AI](../publish/ask-ai.md) | - | Yes (up to 300 answers a day) | Yes (up to 2,000 a day), with instructions |
+| Hide the "Published with SudoDocs" badge | - | Yes | Yes |
+| [Protected docs](../publish/protected-docs.md) | - | Password and access keys | Password, single sign-on, your own login page, folder rules |
+| [SAML](sso-saml-scim.md) and SCIM | - | - | Yes |
+| [Site health](../publish/site-health.md) monitoring | - | 3 sites, weekly | 25 sites, daily |
+| Publishing your docs tool's own build | - | - | Yes |
+| Outside reviewers (per organization) | 3 | 25 | No limit |
+
+The public docs health check is free for everyone.
+
+### Startup offer
+
+SudoDocs can give eligible early-stage teams **Pro free for a number of months**. While it lasts, the header shows **PRO · STARTUP OFFER**, and **Admin Dashboard > Organization** shows when it ends: there is nothing to cancel. Administrators see a reminder in the last 30 days (and a stronger one in the last 7), and get emails 30 and 7 days before the end. When it ends your organization moves to Basic unless you have chosen a plan; nothing is deleted, and protected sites stay protected. Choose a plan any time to keep Pro.
 
 ## What AI Actions Cost
 
@@ -24,11 +54,11 @@ Each AI action uses credits. A failed action gives its credits back.
 |---|---|
 | [DocOps Assistant](../user/chat.md) question (Discuss) | 2 (3 with an attached image or video) |
 | DocOps Assistant draft (Author, Rewrite, Release Note - written, then checked by SudoDocs' Editor) | 5 (6 with an attachment) |
-| [Author a Feature](../user/feature-author.md) draft | 20 |
+| [Author mode](../user/author-mode.md): draft from a ticket or pull request | 20 |
 | [Docflows](../user/doc-drift.md) suggestion from a pull request or Jira ticket | 20 |
 | Request changes on a Docflows suggestion, or mentioning SudoDocs on a docs pull request | 8 |
 | Sync Latest Code | 5, or 8 when the Editor reviews an update |
-| [Release Composer](../user/release-composer.md) draft / adding new items to it | 10 / 5 |
+| [Release Changelog](../user/release-composer.md) draft / adding new items to it | 10 / 5 |
 | [Universal Converter](../user/converter.md) reference page | 5 per 25,000 characters of the spec or values file (at least 5) |
 | [API Readiness](../user/api-readiness.md) AI fix | 5 per 15,000 characters of the spec (at least 5) |
 | API Readiness content audit | 3 |

@@ -81,9 +81,9 @@ A sync gives SudoDocs its own searchable copy of a repository: the text of every
 | Tool | What it uses the synced copy for |
 |---|---|
 | [Docflows](../user/doc-drift.md) | Which of your pages a change affects, what they say now, and whether a file is new or an update. Also where screenshots go and which existing screenshots a new one replaces. |
-| [Author a Feature](../user/feature-author.md) | Your existing pages and related code, so drafts fit what's there. |
+| [Author mode](../user/author-mode.md) | Your existing pages and related code, so drafts fit what's there. |
 | [Sync Latest Code](../user/assign-pr.md#manage-engineering-changes) | Related docs, for context. |
-| [Release Composer](../user/release-composer.md) | Context for writing each entry, and your docs framework when pushing release notes. |
+| [Release Changelog](../user/release-composer.md) | Context for writing each entry, and your docs framework when pushing release notes. |
 | [DocOps Assistant](../user/index.md) | Searching your docs and code to answer questions and find gaps. |
 | [Knowledge Base Auto-Learn](kb-config.md) | Your writing style and screenshot style. |
 
@@ -153,7 +153,7 @@ By default SudoDocs works with a documentation repository's default branch on Gi
 
 * syncing,
 * Docflows' [Check against your docs](../user/doc-drift.md#which-version-of-your-docs-is-checked),
-* and every pull request it opens - Docflows, Author a Feature, release notes and API Readiness pull requests to this repository.
+* and every pull request it opens - Docflows, Author mode, release notes and API Readiness pull requests to this repository.
 
 Leave it blank to go back to the default branch. After you change the branch, the next sync reads the whole repository (20 credits).
 

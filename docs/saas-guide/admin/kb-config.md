@@ -16,13 +16,13 @@ Select a foundational formatting rule set for the AI.
 
 ## Product Categories
 
-List your product areas (one per line) to help the AI sort and place content. They're the categories release notes are grouped by: the **Product category** choice when approving Docflows for release notes, the categories in Release Composer's queue - see [Compose Release Notes](../user/release-composer.md) - and a hint for [Author a Feature](../user/feature-author.md)'s Information Architect step when deciding where new content belongs. Items that match none of them go under **Other**.
+List your product areas (one per line) to help the AI sort and place content. They're the categories release notes are grouped by: the **Product category** choice when approving Docflows for release notes, the categories in Release Changelog's queue - see [Release Changelog](../user/release-composer.md) - and a hint for [Author mode](../user/author-mode.md)'s Information Architect step when deciding where new content belongs. Items that match none of them go under **Other**.
 
 1. On the **Knowledge Base** tab, find the **Product Categories** card.
 2. Edit the **Product Categories** box (one category per line, e.g. "API", "Frontend", "Security"). This box is also populated automatically by Auto-Learn, but you can edit it manually at any time.
 3. Click **Override and Save**.
 
-> Looking for Deployment Tags or CSV Column Mappings? Those moved to [Compose Release Notes](../user/release-composer.md#release-notes-settings) - they're specific to Bulk Release Notes generation, not a Knowledge Base concern shared across features the way Product Categories is.
+> Looking for Deployment Tags or CSV Column Mappings? Those moved to [Release Changelog](../user/release-composer.md#release-notes-settings) - they're specific to Bulk Release Notes generation, not a Knowledge Base concern shared across features the way Product Categories is.
 
 ## Neural Overrides (Style Guide)
 

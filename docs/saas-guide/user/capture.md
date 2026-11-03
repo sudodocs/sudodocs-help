@@ -1,16 +1,32 @@
 # Capture
 
-Capture is the **SudoDocs Capture** Chrome extension plus its dashboard - a way to turn what you actually do in a live product into something you can share with a link. It supports three different modes, each producing a different kind of result:
+Capture is the **SudoDocs Capture** Chrome extension plus its dashboard - a way to turn what you actually do in a live product into something you can share with a link. It supports four different modes, each producing a different kind of result:
 
 * **Interactive**: click through a workflow yourself; SudoDocs turns each click into a captioned step with an on-image hotspot.
 * **Recording**: a continuous screen recording of the tab, with the tab's own audio and, optionally, your narration mixed in, Loom-style.
 * **Screenshot**: one screenshot, annotated (arrows, boxes, highlights, text) and cropped in a built-in editor before upload.
+* **Audio**: a narration or voice note on its own, with an optional "Include tab sound", for voice-overs and spoken explanations.
 
 All three live under **Capture** in the Workspace's **Tools**, and are captured entirely from the extension - not from this dashboard page, which is for editing, redacting, and sharing what you've already captured.
 
-Every capture is listed under **History** on the left. Writers and admins can rename it, tag it with a release and a writer, or delete it from there - see [Tag work with a release and a writer](releases.md#tag-work-with-a-release-and-a-writer).
+Captures live in a **library** and open in one editor, whatever their kind. See [The library and the editor](#the-library-and-the-editor).
 
 Capture has **no approval workflow**: every capture is shareable the moment it finishes, for all three modes. It's fully user-controlled - you own editing, redacting, and deleting whatever you captured directly, the same way you would any other file. AI still flags likely PII on Interactive and Screenshot captures so it's easy to spot (see [Redaction](#redaction) below), but nothing blocks on that flag - if you need to hide something, you redact it whenever you notice, not before anyone can see the capture at all.
+
+## The library and the editor
+
+**Tools > Capture** opens the **library**: your captures as cards with a picture, in three columns, twelve to a page. The left side filters by **type** (Interactive, Recording, Screenshot, Audio), **needs attention** (captures that failed, are partial or may hold personal data), **release** and **narration**, with counts, a search box and sorting. A card shows its type, length or step count and size; hover it for **Copy link**, **Rename**, **Tag** and **Delete**. Tag captures with a release and a writer: see [Tag work with a release and a writer](releases.md#tag-work-with-a-release-and-a-writer).
+
+Open a card and every kind of capture opens in the same editor: a **Library** link back, a name you can change, a **release** chip, **Save**, **Download**, copy and preview of the embed, and **Review** (see [Reviews](reviews.md)).
+
+- **Interactive**: a rail of **slides** on the left (drag to reorder, arrow keys to move), one step at a time in the middle and a **properties** panel on the right (caption, hotspot, redaction). Voice-over and **Export video** are in the bar. You can add a **note slide**. Deleted steps stay for 7 days under **Deleted steps** and can be restored with their caption, hotspot, redactions and voice-over. Most edits can be undone (not redactions, which are permanent by design).
+- **Screenshot**: the annotation editor with a tool rail, including a **Redact** tool that is burned into the image when you save.
+- **Recording**: a small timeline. **Split**, **delete** and **trim** pieces, set the **volume** or mute, then **Export edits**. Edits are non-destructive: the original is kept and nothing is rendered until you export, which creates a new video (5 credits). The anonymous embed plays the last export, or the original if you have not exported.
+- **Audio**: a waveform, trimming and the embed. If a recording has separate **microphone** and **tab sound** tracks, each shows as a lane with its own mute and volume, and the export mixes them.
+
+With extension version 1.2.0 or later, the popup shows icons for each mode, and microphone and tab audio are recorded as separate tracks. Update from the Chrome Web Store to get it; older versions keep working.
+
+You can manage captures from a terminal: see [Capture commands](../../cli-guide/user/capture-diagrams.md).
 
 ## Install and Connect the Extension
 

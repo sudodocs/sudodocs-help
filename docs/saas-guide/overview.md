@@ -21,10 +21,17 @@ Set up SudoDocs for your organization from the Admin Dashboard.
 - [Invite and manage users](admin/users.md), and set your organization's sign-in policy.
 - [See all admin tasks](admin/index.md)
 
+## Publish your docs
+
+- [Publish your docs](publish/index.md): a hosted docs site from your repository, with an API reference, analytics, Ask AI and private docs.
+- [Create a site](publish/create-a-site.md), pick a [look](publish/design.md), and check it with [Validate](publish/validate.md).
+
 ## For writers
 
 Draft, review, and ship documentation from the Workspace.
 
+- [Author mode](user/author-mode.md): write and edit your docs pages in SudoDocs, with a live preview and review.
+- [Reviews](user/reviews.md): comments, @mentions and outside reviewers on every tool.
 - [DocOps Assistant](user/chat.md): ask questions about your code and docs.
 - [Releases](user/releases.md) and the [Release Dashboard](user/dashboards.md): your work and your team's, release by release.
 - [Docflows](user/doc-drift.md): documentation suggestions from pull requests and Jira tickets.

@@ -12,7 +12,20 @@ sudodocs release-notes queue --release 7 remove 31
 sudodocs release-notes queue --release 7 jira --bugs 10003 --stories 10002
 ```
 
-Without a subcommand it lists the queue by section, each item with its ID, source (`docflows`, `slack`, `jira`, `csv`, `manual`) and category, plus the latest draft and the automatic-drafting schedule. `--section` is `feature`, `enhancement`, `bug` or `known-issue`. `jira` adds the tickets from saved filters (`--epics`, `--stories`, `--bugs`, `--known-issues`, `--escalations`); tickets already queued are skipped.
+Without a subcommand it lists the queue by section, each item with its ID, source (`docflows`, `slack`, `jira`, `csv`, `manual`, `api`) and category, plus the latest draft and the automatic-drafting schedule. `--section` is `feature`, `enhancement`, `bug`, `known-issue` or `developer`; for `developer`, `--category` can be a sub-heading: `Breaking Changes`, `New Endpoints`, `Changes` or `Deprecations`. `jira` adds the tickets from saved filters (`--epics`, `--stories`, `--bugs`, `--known-issues`, `--escalations`); tickets already queued are skipped.
+
+## Incoming API Changes
+
+```bash
+sudodocs api-changes list
+sudodocs api-changes show 14
+sudodocs api-changes include 14 --release 7 --note "Errors no longer have a code field."
+sudodocs api-changes dismiss 15
+sudodocs api-changes reopen 15
+sudodocs api-changes check --repo 42 --pr 318
+```
+
+API changes from merged pull requests, as under [Incoming API changes](../../saas-guide/user/release-composer.md#incoming-api-changes) (needs `sudodocs-cli` 1.4.0). `list` shows those waiting (`--status included`, `dismissed` or `all` for the others); `show` prints every change. `include` adds one to a release's queue under **Developer Release Notes** and its sub-heading (`--note` replaces the drafted line); `dismiss` marks it Not needed and `reopen` brings it back. `check` reads a merged pull request now, for one the webhook missed. Queue items from API changes have the source `api`.
 
 ## Draft Release Notes
 
@@ -90,4 +103,9 @@ Repeat `--header` for each column name your tracker might export (Jira, Linear, 
 | `/releases/<id>/release-notes/draft` | POST | `{title?, writer_user_id?, target_format?, update_latest?}` - 202 with a job ID; the finished job has `draft_id`. |
 | `/release-notes/<draft id>/push` | GET / POST | GET `?integration_id=` (plus `product_layout`/`product_path`, `developer_layout`/`developer_path`, `candidates=1`) shows where it would go: `targets` (one per file, with `kind`, `path`, `mode`, `summary`, `preview`, `source`), `warnings`, `settings`, `detected`, `saved`. POST `{integration_id, targets?, remember?, commit_message?}` opens the pull request and returns its `files`. `targets` is `{"product": {"layout", "path"}, "developer": {...}}`; `layout` is `single_file` (path = the file), `per_version` (path = the folder) or, for developer, `same`. |
 | `/integrations/<repo id>/release-notes-targets` | GET / PUT | GET: `saved`, `detected` and `candidates` (files and folders to pick from). PUT `{targets: {product: {...} or "default", developer: {...} or "default"}}` saves them. |
+| `/api-changes` | GET | `?status=pending` (default), `included`, `dismissed` or `all`. |
+| `/api-changes/<id>` | GET | One API change with its `changes`, `note`, `subheading` and pull request. |
+| `/api-changes/<id>/include` | POST | `{release_id, note?}` - returns the `queue_item_id`. |
+| `/api-changes/<id>/dismiss`, `/api-changes/<id>/reopen` | POST | Not needed, and back. |
+| `/api-changes/check` | POST | `{integration_id, pr_number}` - 202 with a job ID; the job's result lists each spec. |
 | `/release-notes/settings` | POST | Only touches keys present in the request body - send just the one field you're changing. Wrapped by the four `set-*` commands above. |

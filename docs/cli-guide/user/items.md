@@ -6,7 +6,7 @@ Every command takes a **tool** name:
 
 | Tool name | Web tool |
 |---|---|
-| `feature-drafts` | Feature Author |
+| `feature-drafts` | Older drafts from the retired Feature Author: list, tag, rename and delete only. Its approve and release-notes commands were removed; use [Author mode](../../saas-guide/user/author-mode.md)'s ticket tool instead. |
 | `release-notes` | Release Composer |
 | `captures` | Capture |
 | `conversions` | Universal Converter (generated specs) |
@@ -75,16 +75,6 @@ sudodocs items sync docflows 42
 
 Does what **Approve** and **Dismiss** do on the Docflows page - see [Manage Docflows](../../saas-guide/user/doc-drift.md#triage-suggestions). `approve` needs a release: `--release` (an ID from `sudodocs releases list`) or `--new-release` (creates it, or uses an existing release with that name). `--writer` is a user ID or `me` (the default); it must be someone in your organization. `--notes include|skip` is the release-notes decision; leave it out to use SudoDocs' suggestion. With `include`, `--section` (`feature`, `enhancement`, `bug`, `known-issue`, `developer`), `--category` (one of your product categories, or `Other`) and `--note` set what goes into the [release notes queue](release-composer.md#release-notes-queue). `dismiss` asks first unless you add `--yes`; the suggestion's status becomes **Rejected**, or **Done** with `--done` (your docs already have it; its release notes stay queued). `sync` is **Sync Latest Code**: it adds what the draft is missing from the pull request's newest code and waits for it (5 credits, or 8 when there's an update for the Editor to review); the API's `new_commits` (on `GET /api/v1/docflows/<id>`) says whether there are new commits. API: `POST /api/v1/docflows/<id>/approve` with `release_id` or `new_release_name`, `assignee_id` (an ID or `"me"`), and `release_notes` (`include`/`skip`, default: the suggestion) with `rn_section`, `rn_category` and `rn_note`; `POST /api/v1/docflows/<id>/dismiss` (with `{"reason": "done"}` for **Dismiss as done**); `POST /api/v1/docflows/<id>/sync` (202 with a job ID).
 
-## Approve a Feature Author Draft
-
-```bash
-sudodocs items release-notes feature-drafts 31
-sudodocs items approve feature-drafts 31 --notes include --section feature --category Billing --note "Download invoices as PDFs."
-sudodocs items release-notes feature-drafts 31 --notes skip
-```
-
-`items release-notes` shows a Feature Author draft's release-notes decision, or what the Editor suggests while you haven't decided; with `--notes include|skip` (and `--section`, `--category`, `--note`, `--release` for a draft without one) it changes the decision at any stage. `items approve feature-drafts` is **Approve** on the draft's review page: it needs the Editor to have passed the draft, records the decision (leave out `--notes` to use the Editor's suggestion) and your sign-off. Included drafts join the [release notes queue](release-composer.md#release-notes-queue) with a **Feature Author** badge - see [Decide on Release Notes](../../saas-guide/user/feature-author.md#decide-on-release-notes). Sections: `feature`, `enhancement`, `bug`, `known-issue`, `developer`. API: `POST /api/v1/feature-drafts/<id>/approve` and `GET`/`PUT /api/v1/feature-drafts/<id>/release-notes`, with `release_notes`, `rn_section`, `rn_category`, `rn_note` and optionally `release_id`.
-
 ## Request Changes on a Docflows Suggestion
 
 ```bash
@@ -109,18 +99,7 @@ Compares suggestions with your docs repository as it is today and prints, for ea
 
 ## Open a Pull Request from an API Scan
 
-```bash
-sudodocs api-scan open-pr 12 --repo 3 --path openapi/spec.yaml
-sudodocs api-scan open-pr 12 --to source
-sudodocs api-scan open-pr 12 --to source --to docs --repo 3 --spec prepped
-```
-
-Opens a pull request with the scan's AI-corrected spec (or the pre-processed one with `--spec prepped`), and the scan tracks it. `--to` picks where, and can be repeated for both (default: `docs`):
-
-* `--to source`: the spec's own repository, on the branch and path set in API Specs. `--source-path` changes the file path.
-* `--to docs`: a documentation repository. `--repo` is its integration ID (`sudodocs admin integrations list`, System Administrators only); `--path` is the file path there (default: the spec's path).
-
-With both, the scan follows the docs pull request. If one can't be opened, the other still is and the reason is printed. API: `POST /api/v1/oas/scans/<id>/pull-request` with `targets` (`["source"]`, `["docs"]` or both), `integration_id` and `file_path` for docs, optional `source_file_path`, `spec` and `commit_message`. It returns `pull_requests` (one URL per target) and any `errors`.
+Moved to [API Readiness](api-readiness.md#open-pull-requests), with the other `sudodocs api-scan` commands.
 
 ## Zoom on Clicks for a Capture
 

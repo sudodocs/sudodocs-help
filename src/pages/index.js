@@ -7,9 +7,9 @@ import styles from './index.module.css';
 // Newest Changelog release, shown as a strip on the home page. Update it with
 // every new release in docs/changelog.md (see .claude/skills/changelog).
 const LATEST_UPDATE = {
-  date: 'October 14, 2026',
-  summary: 'Feature Author drafts join the release notes queue, choose where release notes and Developer Release Notes go, Doc Team Roles in the Converter, API Readiness and the Assistant, a tidier Repositories tab, and sudodocs-cli 1.3.0.',
-  anchor: '2026-10-14',
+  date: 'November DD, 2026',
+  summary: 'Publish your docs with SudoDocs, Author mode, one way to review everything, a Mermaid diagram library, a new Capture library and editor, Ask AI, protected docs and sudodocs-cli 1.4.0.',
+  anchor: '2026-11-DD',
 };
 
 // Outline icons (Lucide, ISC licence), drawn in the current text colour.
