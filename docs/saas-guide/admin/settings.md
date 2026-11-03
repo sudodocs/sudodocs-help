@@ -8,6 +8,7 @@ The **Organization** tab of the Admin Dashboard lets System Administrators manag
 
 This section provides a real-time overview of your current billing status (e.g., `ACTIVE`, `TRIALING`, `CANCELLED`). For what each plan includes, see [Plans & Billing](plans.md).
 
+* **Startup offer**: If SudoDocs gave your organization Pro free for a while, this card shows when it ends and a **Choose a plan** button instead of **Cancel Subscription**; there is nothing to cancel. See [Startup offer](plans.md#startup-offer).
 * **Cancel Subscription**: If you are on a paid plan, you can initiate a cancellation from this menu.
 
 > **Note**: Canceling your subscription does not immediately lock your account. You will retain full access to your Pro or Enterprise features until the end of your current billing period. Once the period expires, your workspace will be downgraded, and premium features will be locked.

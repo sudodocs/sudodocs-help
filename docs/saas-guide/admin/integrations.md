@@ -4,7 +4,7 @@ Connect external tools to fetch data and push notifications.
 
 ## Connect Jira
 
-Connecting Jira allows you to import tickets directly into the Release Composer.
+Connecting Jira allows you to import tickets directly into the Release Changelog.
 
 1.  Go to **Admin Dashboard** > **Services**.
 2.  Click **+ Add New Connection**.

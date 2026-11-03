@@ -1,21 +1,24 @@
-# Compose Release Notes
+# Release Changelog
 
 Every release has a **release notes queue**: the list of what goes into its notes. Items reach it from:
 
 * **Docflows**: suggestions approved with **Include in release notes** - see [Manage Docflows](doc-drift.md#triage-suggestions).
-* **Feature Author**: drafts approved with **Include** - see [Author a Feature](feature-author.md#decide-on-release-notes).
 * **Slack**: items your team sends to a release from Slack.
-* **Jira** and **CSV**: added from Release Composer (below).
-* **By hand**: added in Release Composer.
+* **Jira** and **CSV**: added from Release Changelog (below).
+* **By hand**: added in Release Changelog.
 * **API changes**: merged pull requests that changed an API spec, once a writer includes them - see [Incoming API Changes](#incoming-api-changes).
 
-Release Composer drafts the release notes from the queue - grouped into **New Features**, **Enhancements**, **Bug Fixes**, **Known Issues** and **Developer Release Notes** (for developer-facing changes), then by product category - and pushes the finished notes to your docs repository where it keeps release notes. If no one drafts them, SudoDocs does it automatically before the release.
+Release Changelog drafts the release notes from the queue - grouped into **New Features**, **Enhancements**, **Bug Fixes**, **Known Issues** and **Developer Release Notes** (for developer-facing changes), then by product category - and pushes the finished notes to your docs repository where it keeps release notes. If no one drafts them, SudoDocs does it automatically before the release.
+
+Open it from the **Releases** menu with **Open Changelog**, or with **Draft release notes** on a release's Release Dashboard.
+
+Two things connect the Release Changelog to the rest of SudoDocs. On a draft, **Insert in Author mode** puts the text into a page you are editing (see [Author mode](author-mode.md)). And a draft can be [reviewed](reviews.md): select words in the rendered draft and comment on them, @mention a colleague, or ask for a verdict, before you push it.
 
 ## Release Notes Settings
 
 Before your first import, it's worth checking two optional settings that shape how generation categorizes and tags content - both have sensible built-in defaults, so you can skip this section entirely and come back to it later.
 
-1. On the **Release Composer** page, click **Release Notes Settings** to expand the panel.
+1. On the **Release Changelog** page, click **Release Notes Settings** to expand the panel.
 2. **Deployment Tags** (one per line): the set of environment tags SudoDocs can apply to each item (e.g. "Cloud", "On-Premise", "Both"). Leave blank to use the defaults.
 3. **CSV Column Mappings**: map your tracker's CSV export headers (Jira, Linear, Asana, or anything else) to the fields SudoDocs looks for - Ticket ID/Key, Summary, and Description. Each of the three is independent and optional; leave any of them blank to fall back to common default header names (e.g. "Key"/"Issue key" for the ticket ID).
 4. Click **Save Release Notes Settings**.
@@ -24,8 +27,8 @@ These settings are shared across every release's release notes for your org, not
 
 ## The Release Notes Queue
 
-1. Open **Release Composer** (Workspace, or **Draft release notes** on a release's Release Dashboard) and pick the **Release** at the top of the page - it opens on your newest unreleased release, and **+ New release...** creates one (a name and an optional target date). **Draft the release notes** comes first, then the queue.
-2. The queue lists every item, grouped by section and then by product category. Each one shows where it came from - **Docflows**, **Feature Author**, **Slack**, **Jira**, **CSV**, **Manual** or **API changes** - and links to it (the pull request, ticket, suggestion or feature draft). **Developer Release Notes** are grouped by **Breaking Changes**, **New Endpoints**, **Changes** and **Deprecations** instead of product categories.
+1. Open **Release Changelog** (Workspace, or **Draft release notes** on a release's Release Dashboard) and pick the **Release** at the top of the page - it opens on your newest unreleased release, and **+ New release...** creates one (a name and an optional target date). **Draft the release notes** comes first, then the queue.
+2. The queue lists every item, grouped by section and then by product category. Each one shows where it came from - **Docflows**, **Slack**, **Jira**, **CSV**, **Manual** or **API changes** - and links to it (the pull request, ticket, suggestion or feature draft). **Developer Release Notes** are grouped by **Breaking Changes**, **New Endpoints**, **Changes** and **Deprecations** instead of product categories.
 3. To change an item, pick a different section or category in its row; it's saved at once. **Remove** takes it out of the queue.
 
 Items already written into a draft are listed under **Already in a draft**. A Jira ticket is only queued once per release, even if it arrives from several places (for example a Jira filter and a Jira-sourced Docflows suggestion). When a Feature Author draft for a ticket that's already queued from Jira is included, the queued item becomes the feature draft's item instead of a second one.

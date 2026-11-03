@@ -7,7 +7,7 @@ A release groups the work for one version of your product. Anything any tool pro
 You can create a release in any of these places:
 
 * **On the Workspace:** click **New Release** at the top. Enter a **Release Name**, and optionally a **Target Date** and **Build Number**, then click **Create**. Its Release Dashboard opens.
-* **While tagging:** choose **+ New release...** in any release list - on the Feature Author or Release Composer form, or in the **Tag** dialog - and type a name.
+* **While tagging:** choose **+ New release...** in any release list - on the Release Changelog form, or in the **Tag** dialog - and type a name.
 * **In Docflows:** type a new name in **Target Release** when you assign a suggestion.
 
 ## Tag Work with a Release and a Writer
@@ -48,9 +48,8 @@ Only an item's writer or a System Administrator can change its status. To work o
 
 Some statuses change on their own:
 
-* **Author a Feature**: the draft is **In progress** while the review pipeline works on it, and **In review** once it's ready for your technical review.
 * **Docflows**: assigning a suggestion moves it to **In progress**; dismissing it moves it to **Rejected**.
-* **Pull requests**: when SudoDocs opens a pull request for an item (Author a Feature's **Open Pull Request**, Docflows' **Push PR**, or **Push to Git** on a draft or release notes), the item moves to **In review** and SudoDocs follows the pull request on GitHub:
+* **Pull requests**: when SudoDocs opens a pull request for an item (Author mode's **Open pull request**, Docflows' **Push PR**, or **Push to Git** on a draft or release notes), the item moves to **In review** and SudoDocs follows the pull request on GitHub:
 
 | On GitHub | In SudoDocs |
 |---|---|
@@ -66,7 +65,7 @@ SudoDocs checks open pull requests every 15 minutes. If your administrator has s
 
 ## Open a Release Dashboard
 
-Click **Release Dashboard** at the top of the Workspace, then pick the release in the list on the left. A new release opens its Release Dashboard as soon as you create it. It leads with the **Release timeline** - where the release stands against its target date, every date change and how much work is done - then each writer's work, what needs attention and a board for moving work along - see [Dashboards](dashboards.md). It also links to Feature Author and Release Composer filtered to that release, and shows the Docflows assigned to it (see [Review and Push Docflows](assign-pr.md)).
+Click **Release Dashboard** at the top of the Workspace, then pick the release in the list on the left. A new release opens its Release Dashboard as soon as you create it. It leads with the **Release timeline** - where the release stands against its target date, every date change and how much work is done - then each writer's work, what needs attention and a board for moving work along - see [Dashboards](dashboards.md). It also links to Feature Author and Release Changelog filtered to that release, and shows the Docflows assigned to it (see [Review and Push Docflows](assign-pr.md)).
 
 For all releases at once, click **Overall** in that list - it's what **Release Dashboard** opens first.
 

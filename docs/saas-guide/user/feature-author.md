@@ -1,82 +1,22 @@
-# Author a Feature
+---
+title: Author a Feature (retired)
+description: Author a Feature has moved into Author mode.
+---
 
-Author comprehensive feature documentation from a Jira ticket, a linked engineering Pull Request, or both.
+# Author a Feature (retired)
 
-## Open Feature Author
+**Author a Feature** has been retired. What it did now lives in [Author mode](author-mode.md), where you can also edit the pages by hand.
 
-On the Workspace, click **Open Feature Author** on the **Feature Author** card. The left sidebar lists every feature draft in your organization; use **Show in history** above it to show only one release's drafts, or only drafts not tagged to a release.
+## Where things went
 
-At the top of the form, you can tag the new draft:
+| What you did in Author a Feature | Where it is now |
+|---|---|
+| Draft documentation from a Jira ticket or a linked pull request | **Author > Tools > Draft from a ticket or pull request**: fetch the ticket or pull request, draft the changes into the affected files, pick the files, and save them into your change. If Docflows already made a suggestion for the same ticket, it is shown and you can edit it in Author mode. |
+| Include the feature in the release notes | The [Release Changelog](release-composer.md) queue, with **Insert in Author mode** on release notes drafts. |
+| Generate a diagram | [Mermaid diagrams](diagram-gen.md), or **Tools > Mermaid diagram** in Author mode. |
+| Open a pull request | **Request review** or **Open pull request** in Author mode. |
+| Review the draft | [Reviews](reviews.md): comments, @mentions, outside reviewers and the AI helpers. |
 
-* **Release** (optional): the release the draft belongs to. Choose **+ New release...** to create one.
-* **Writer**: who's responsible for the draft. It defaults to you.
+The same Information Architect, Technical Writer and Editor roles apply: see [Doc Team Roles](../admin/doc-team-roles.md).
 
-See [Tag work with a release and a writer](releases.md#tag-work-with-a-release-and-a-writer) for how tags work, and [Track work and pull requests](releases.md#track-work-and-pull-requests) for how the draft's status follows its review and pull request.
-
-## Import Source Context
-
-Choose one of four modes for **Import Source** - each reveals only the fields it needs:
-
-* **Jira**: Type a Jira key or part of a summary into the search box. As you type, SudoDocs looks up matching issues (same idea as linking an issue inside a Jira ticket) - pick the right one from the dropdown to import its summary and description.
-* **PR**: Pick a connected **Repository**, then pick one of its open or draft pull requests from the second dropdown (drafts are labeled). SudoDocs uses that PR's title and description as the summary, and pulls its code diff in as supporting evidence - no Jira ticket required.
-* **Jira + PR**: Search and select a Jira issue the same way as **Jira** mode. SudoDocs then automatically looks up pull requests associated with that issue across every repository your org has connected, and lists all of them (a ticket can have more than one linked PR, e.g. a frontend and a backend change) - you still explicitly pick which one to use. If a matching PR turns up in a repository that isn't connected to SudoDocs yet, it's shown greyed out with a note to connect that repository under **Admin Dashboard > Repositories** first.
-* **Start from Blank**: Manually enter the feature summary and technical details yourself - no Jira or PR link at all.
-
-You must provide at least a Feature Summary or a linked repository/PR - SudoDocs has nothing to draft from otherwise.
-
-Before submitting, choose a **Target Format** for the draft: Markdown, reStructuredText, AsciiDoc, HTML, MDX, or DITA XML. The Writer and Editor both follow the syntax conventions of whichever format you pick.
-
-## How Your Draft Gets Reviewed
-
-Once you submit the form, your draft doesn't go straight to a blank page - it goes through the same three-role pipeline every SudoDocs-generated draft goes through (see [Doc Team Roles](../admin/doc-team-roles.md) for how your admin can customize each role):
-
-1. **Information Architect** decides where this content belongs - a new page or an update to an existing one - and outlines the sections before any prose exists.
-2. **Technical Writer** drafts against that outline.
-3. **Editor** reviews the draft with fresh eyes and either approves it or sends it back to the Writer with specific feedback. This can repeat for a couple of rounds automatically before it's handed to you.
-
-When it's done, you're redirected to the **Pipeline Review** page, showing the full history - the Information Architect's placement decision and outline, every draft the Writer produced, and every comment the Editor left (marked **blocking** or **suggestion**). If the Editor and Writer couldn't fully resolve every issue automatically, the draft is marked **Needs Human** instead, with the open issues shown so you know exactly what to look at.
-
-## Accept, Revise, or Reject
-
-From the Pipeline Review page, once a draft reaches **Ready For Technical Review**:
-
-* **Approve**: Records your internal sign-off, together with your [release-notes decision](#decide-on-release-notes). This doesn't publish anything by itself - it's a marker that you've looked at it and it's ready to go out for the real technical review, which happens on the pull request itself.
-* **Request Changes**: Send it back to the Writer with your own feedback for one more automated Writer/Editor pass.
-* **Open Pull Request**: Reveals a form pre-filled with the target repository, file path (taken from the Information Architect's placement decision), and a commit message. If the change updates an existing file, you'll see a diff against the current version rather than just the raw new text. Confirm to actually push the branch and open the pull request - **the real technical review happens there, on GitHub, not inside SudoDocs.**
-* **Reject**: Discards the draft. This is terminal.
-
-If a draft lands in **Needs Human** (the Editor and Writer couldn't fully agree after a couple of automated rounds), you can send it back to the Writer with your own explicit guidance for one more attempt, approve it anyway despite the open comments, or reject it.
-
-## Decide on Release Notes
-
-At the top of the actions, **Release notes** asks whether this feature goes in the release's notes - the same decision Docflows asks for. You can't approve or open the pull request without choosing.
-
-1. Choose **Include** or **Not needed**. SudoDocs' Editor suggests one while it reviews the draft ("Editor suggests: Include"), at no extra cost; nothing is saved until you choose.
-2. For **Include**, check the **Section** (**New Features**, **Enhancements**, **Bug Fixes**, **Known Issues** or **Developer Release Notes**), the **Product category** (from your [Product Categories](../admin/kb-config.md#product-categories), or **Other**) and the one-line **Note**. If the draft has no release yet, pick one - release notes belong to a release.
-3. Click **Approve** or **Open Pull Request**; the decision is saved with it. To change it later (also after the pull request is open), change it and click **Save release notes decision**.
-
-Included features join the release's [release notes queue](release-composer.md#the-release-notes-queue) with a **Feature Author** badge, and Release Composer writes them with the rest - it gets the start of the feature's documentation as context. The queue stays in step with the draft: moving the draft to another release moves its item, and **Not needed**, **Reject** or deleting the draft removes it. Once the item is written into a release-notes draft, it stays there.
-
-You can still edit the draft manually at any point - before or after approving - using the classic editor (see below). Opening the pull request always uses whatever content is currently saved, including your manual edits.
-
-## Edit and Export from the Classic Editor
-
-Click **Edit Draft** from the Pipeline Review page (or open a draft from the sidebar) to reach the full editor, with tabs for the draft content, the Information Architect's placement/audit notes, and any generated diagram.
-
-* **Push to GDoc**: Exports the content to Google Docs, preserving headers and table formats.
-* **Push to Git**: Opens a pull request directly from the editor, letting you type the target repository, file path, and commit message yourself - useful for re-publishing after manual edits without going back through Pipeline Review.
-* **Download**: Export locally as Markdown, RST, AsciiDoc, or Word (.docx).
-
-## Generate Architecture Diagrams
-
-Every draft's Information Architect also decides whether the feature is significant enough to warrant a Mermaid architecture/sequence diagram - a new subsystem, a multi-service integration, or a complex sequence of interactions, not a minor UI tweak or a small bug fix. When it decides yes, a diagram is generated automatically alongside the outline, with no action needed from you.
-
-You can also force one yourself: check **Generate Architecture Diagram** when creating the draft. Your request is never overridden by the Information Architect's own judgment - checking the box always produces a diagram, even for a change it wouldn't have flagged on its own.
-
-If the target file already has a diagram in it, SudoDocs updates that diagram in place - incorporating your new feature while preserving what's still accurate - rather than always starting from scratch. You can also upload a reference image of an existing diagram (e.g. a screenshot) when creating the draft; SudoDocs redraws its logic as Mermaid, incorporating the new feature.
-
-The diagram lives in its own tab in the classic editor, alongside a live preview (rendered from the generated Mermaid code) and options to download the raw `.mmd` source or the rendered `.svg`.
-
-## Change a Draft's Release or Writer
-
-To move a draft to another release, hand it to another writer or change its status, open the draft and click **Status and tags** under **Feature Author** in the sidebar. You can also hover over the draft in the history list and click the tag icon. See [Tag work with a release and a writer](releases.md#tag-work-with-a-release-and-a-writer).
+Drafts you made earlier are kept. You can still list, tag and delete them with [`sudodocs items`](../../cli-guide/user/items.md), and bring their text into a page with **Author > Tools > From other tools**.

@@ -15,6 +15,7 @@ Command-line equivalents of every [SaaS Guide → Admin Tasks](../../saas-guide/
 | [Security & SSO](../../saas-guide/admin/sso-setup.md) | [Security & SSO](sso-setup.md) |
 | [Provider](../../saas-guide/admin/llm-provider.md) | [Provider](llm-provider.md) |
 | [Organization](../../saas-guide/admin/settings.md) | [Organization](settings.md) |
+| [Publishing policy](../../saas-guide/admin/publish-admin.md) | [Publishing policy commands](publish-admin.md) |
 
 ## Admin Status
 

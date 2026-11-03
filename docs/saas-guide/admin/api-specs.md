@@ -1,6 +1,6 @@
 # API Specs
 
-The **API Specs** tab of the Admin Dashboard lists your OpenAPI specs and sets how they're checked. It works the same whether you keep one large spec, many smaller specs that different teams own (in one repository or many), or both. [API Readiness](../user/api-readiness.md) checks every spec on the list, and [Release Composer](../user/release-composer.md#incoming-api-changes) turns merged API changes into Developer Release Notes. Writers don't need repository access or tokens of their own.
+The **API Specs** tab of the Admin Dashboard lists your OpenAPI specs and sets how they're checked. It works the same whether you keep one large spec, many smaller specs that different teams own (in one repository or many), or both. [API Readiness](../user/api-readiness.md) checks every spec on the list, and [Release Changelog](../user/release-composer.md#incoming-api-changes) turns merged API changes into Developer Release Notes. Writers don't need repository access or tokens of their own.
 
 Set up the [Knowledge Base](kb-config.md) first if you want spec descriptions checked against your style guide - that's why this tab comes after it.
 

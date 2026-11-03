@@ -1,6 +1,6 @@
 # Configure Single Sign-On (SSO)
 
-Enterprise organizations can enforce authentication through identity providers like Okta, Azure AD, or Auth0 using OpenID Connect (OIDC). Single Sign-On is strictly an Enterprise feature.
+Enterprise organizations can enforce authentication through identity providers like Okta, Microsoft Entra ID or Auth0 using OpenID Connect (OIDC). Single Sign-On is strictly an Enterprise feature. For SAML 2.0 and automatic user provisioning (SCIM), see [SAML and SCIM](sso-saml-scim.md). To protect your published documentation with your identity provider, see [Protected docs](../publish/protected-docs.md).
 
 ## Prerequisites
 
@@ -25,3 +25,5 @@ Create an OIDC application in your IdP and set the **Sign-in Redirect URI** to:
 ## See Also
 
 * [CLI Tasks → Security & SSO](../../cli-guide/admin/sso-setup.md) - configure SSO from a script.
+
+> **Signing in to read protected documentation never signs anyone in to SudoDocs.** A reader gets no account and no seat.

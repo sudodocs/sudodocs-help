@@ -1,128 +1,54 @@
 ---
 title: Changelog
-description: Product updates to SudoDocs in October 2026, newest release first.
+description: Product updates to SudoDocs in November 2026, newest release first.
 ---
 
 # Changelog
 
-What's new in SudoDocs in **October 2026**, newest release first. SudoDocs updates for everyone at once, so there's nothing to install - except the CLI, which says how to upgrade. For earlier months, see [Past Changelogs](changelog-archive/index.md).
+What's new in SudoDocs in **November 2026**, newest release first. SudoDocs updates for everyone at once, so there's nothing to install - except the CLI, which says how to upgrade. For earlier months, see [Past Changelogs](changelog-archive/index.md).
 
-## October 14, 2026 {#2026-10-14}
+## November DD, 2026 {#2026-11-DD}
 
-### Release notes
+### Publish
 
-- **Feature Author drafts join the queue.** When you accept a feature draft, decide whether it goes in the release notes - SudoDocs suggests the answer and the line - and it joins that release's queue like Docflows items do. See [Decide on Release Notes](saas-guide/user/feature-author.md#decide-on-release-notes).
-- **Choose where release notes go.** Pick the release notes file in your docs repository, or create one, and give **Developer Release Notes** their own file or folder if your API changelog lives apart. SudoDocs remembers your choice for each repository. See [Choose Where Release Notes Go](saas-guide/user/release-composer.md#choose-where-release-notes-go).
+- **Publish your docs with SudoDocs.** Turn the documentation in your GitHub repository into a fast, searchable site at your own address or domain, with versions, translations, pull request previews and an API reference. It reads the docs tool you already use. See [Publish your docs](saas-guide/publish/index.md) and [Supported docs tools](saas-guide/publish/supported-tools.md).
+- **Seven skins and starter templates.** Pick a look, start from a template, and optionally add its starter announcement, button, footer and landing page through a pull request. See [Design](saas-guide/publish/design.md).
+- **Ask AI on your site.** Readers ask a question and get an answer from your own pages only, with links to its sources. See [Ask AI](saas-guide/publish/ask-ai.md).
+- **AI-ready by default.** Every site has `llms.txt`, a Markdown copy of each page and an MCP server for AI tools. See [AI-ready docs](saas-guide/publish/ai-ready.md).
+- **Analytics without cookies.** See readers, AI agents and bots separately, what people search for and which questions your docs could not answer. See [Analytics](saas-guide/publish/analytics.md).
+- **Private docs.** Protect a site, or some folders, with a password, single sign-on or your own login page, and give AI tools an access key. See [Protected docs](saas-guide/publish/protected-docs.md).
+- **Site health.** Check any public docs site for broken links, AI readiness, structure and speed, and monitor your own sites on a schedule. See [Site health](saas-guide/publish/site-health.md).
+- **Validate before you publish.** Find broken links and API problems, and fix many of them with a pull request. See [Validate](saas-guide/publish/validate.md).
 
-### Doc Team Roles
+### Author mode
 
-- **Converter, API Readiness and the Assistant too.** Universal Converter pages, API Readiness AI fixes and DocOps Assistant drafts now follow your Technical Writer instructions and pass the Editor's review. See [Where the Roles Apply](saas-guide/admin/doc-team-roles.md#where-the-roles-apply).
+- **Write and edit your docs in SudoDocs.** Author mode replaces Author a Feature: edit pages with a live preview in your site's skin, insert blocks, variables, snippets and embeds, move pages, see who else is editing, and review through a pull request. It also drafts changes from a Jira ticket or pull request. See [Author mode](saas-guide/user/author-mode.md).
 
-### For administrators
+### Reviews
 
-- **A tidier Repositories tab.** Each repository is a card with its sync, access and settings at a glance; **Sync now** and a **Manage** menu hold the rest. See [Ingest Repositories](saas-guide/admin/connect-repos.md).
-- **AI credit costs, listed.** See what each AI action costs, including the Converter and API Readiness AI fix, which are now priced by the size of the file. See [What AI Actions Cost](saas-guide/admin/plans.md#what-ai-actions-cost).
+- **One way to review.** Comment, @mention colleagues, invite outside reviewers by email and give a verdict on Mermaid diagrams, captures, release notes drafts, Docflows suggestions and API scans. Call **@Editor**, **@Writer** or **@IA** in a comment. See [Reviews](saas-guide/user/reviews.md).
+- **Notices in Slack and Jira.** Administrators can send review events to a Slack channel or as a comment on a Jira issue. See [Publishing policy](saas-guide/admin/publish-admin.md#review-notices-in-slack-and-jira).
 
-### CLI
+### Diagrams and Capture
 
-- **sudodocs-cli 1.3.0** adds `sudodocs release-notes targets` to choose where release notes and Developer Release Notes go, the same choices on `sudodocs release-notes push`, and `sudodocs items release-notes` for a Feature Author draft's release-notes decision. Upgrade with `pip install --upgrade sudodocs-cli`. See [Choose Where Release Notes Go](cli-guide/user/release-composer.md#choose-where-release-notes-go).
-
-### Improvements
-
-- Downloads and pull requests from an API scan use your spec's own file name and path.
-
-## October 12, 2026 {#2026-10-12}
-
-### Releases and your work
-
-- **Releases on the Release Dashboard.** Each release has its own dashboard: a timeline with its target date and every date change, progress by status, a board to move work along, and **Mark as released**. Open it with **Release Dashboard** at the top of the Workspace, which is now where your releases live. See [Dashboards](saas-guide/user/dashboards.md).
-- **Tag work with a release and a writer.** Feature drafts, release notes, captures, diagrams, API scans, conversions and Docflows suggestions can each be tagged, so a release shows everything going into it. See [Tag Work with a Release and a Writer](saas-guide/user/releases.md#tag-work-with-a-release-and-a-writer).
-- **Status that follows your pull requests.** Work moves through To do, In progress, In review and Done; when SudoDocs opens a pull request in your docs, the item follows it until it's merged. See [Track Work and Pull Requests](saas-guide/user/releases.md#track-work-and-pull-requests).
-- **Your work first.** Writers see their own work by default - switch between **Mine** and **Everyone** - and the Workspace sums up what's assigned to you under **Your work**. See [Your Work or Everyone's](saas-guide/user/dashboards.md#your-work-or-everyones).
+- **A library of Mermaid diagrams.** Generate, edit visually, version and insert diagrams into pages. See [Mermaid diagrams](saas-guide/user/diagram-gen.md).
+- **A new Capture library and editor.** Browse captures as cards, edit Interactive, Screenshot, Recording and the new Audio captures in one editor, cut and trim recordings, and restore deleted steps. See [Capture](saas-guide/user/capture.md#the-library-and-the-editor).
 
 ### Release notes
 
-- **A release notes queue for every release.** Everything going into a release's notes collects in one place - from Docflows, Slack, Jira, CSV files or added by hand - grouped under **New Features**, **Enhancements**, **Bug Fixes** and **Known Issues**, with where each item came from. See [The Release Notes Queue](saas-guide/user/release-composer.md#the-release-notes-queue).
-- **Drafted for you.** Draft the notes from the queue in one click, then add newly queued items to that draft without losing your edits. If no one has drafted them, SudoDocs does it automatically in the days before the release. See [Automatic Drafting](saas-guide/user/release-composer.md#automatic-drafting).
-- **Push to your docs.** **Push to docs** opens a pull request that puts the notes where your docs repository keeps release notes - a new file in its release-notes folder, or this release's section at the top of your changelog file. See [Push to Your Docs](saas-guide/user/release-composer.md#push-to-your-docs).
-
-### Docflows
-
-- **Review changes like a pull request.** See each file's changes side by side or in one column, edit in place, and tick files as reviewed before you push. See [Review & Push Workflow](saas-guide/user/assign-pr.md#review--push-workflow).
-- **Release notes at approval.** When you approve a suggestion, choose **Include** or **Not needed** for the release notes, with its section and product category - SudoDocs suggests the answer. You can also create a release right there with **+ New release...**. See [Triage Suggestions](saas-guide/user/doc-drift.md#triage-suggestions).
-- **Is it still needed?** Check suggestions against your docs as they are today: SudoDocs tells you which your docs already have - even when they say it in other words - updates the rest to fit docs that changed since, and shows whether the engineering pull request was merged or closed. **Dismiss as done** clears the finished ones and keeps their release notes. See [Is a Suggestion Still Needed?](saas-guide/user/doc-drift.md#is-a-suggestion-still-needed)
-- **Request changes.** Tell SudoDocs what to change on a suggestion; it revises and reviews it again, and **Review history** shows every round. See [Request Changes](saas-guide/user/doc-drift.md#request-changes).
-- **Your edits stay yours.** New commits on a pull request no longer redraft its suggestion; you'll see **New commits since this draft** and can sync when you're ready.
-
-### Repositories stay in sync
-
-- **Keep in sync.** Choose for each repository when SudoDocs re-reads it: when it changes (after merges and pushes - the default for docs), on a schedule (the default for code), or only when you click Sync. See [Keep in Sync](saas-guide/admin/connect-repos.md#keep-in-sync).
-- **Syncs cost what they read.** A sync is free when nothing changed and costs 1 credit per 10 changed files, up to 20. See [What a Sync Costs](saas-guide/admin/connect-repos.md#what-a-sync-costs).
-- **Know when a repository is behind.** Repositories show whether SudoDocs' copy is up to date; writers see a notice on Docflows and the Release Dashboard and can let admins know in one click. See [When a Repository Needs a Sync](saas-guide/user/doc-drift.md#when-a-repository-needs-a-sync).
-- **Docs branch.** Work on a branch other than `main`? Set it once, and syncing, checks and every pull request SudoDocs opens use it. See [Docs Branch](saas-guide/admin/connect-repos.md#docs-branch).
-- **Earlier versions of a suggestion.** Review history keeps each version of a Docflows suggestion's text, to view or restore. See [Earlier Versions](saas-guide/user/doc-drift.md#earlier-versions).
-
-### Doc Team Roles everywhere
-
-- **Every tool follows your role instructions.** Release notes, **Sync Latest Code** and revisions you ask for on a docs pull request now follow your Technical Writer instructions and pass SudoDocs' Editor review, like Author a Feature and Docflows already did. Anything the Editor can't sign off on is flagged, not hidden. See [Where the Roles Apply](saas-guide/admin/doc-team-roles.md#where-the-roles-apply).
-
-### Screenshots in Docflows
-
-- **No route maps needed.** SudoDocs reads the pull request and picks the pages worth a screenshot; tick more or add any page. See [Screenshots in a Suggestion](saas-guide/user/doc-drift.md#screenshots-in-a-suggestion).
-- **Your screenshot style.** Set window size, theme, annotation colour and more under **Screenshot Style** in the Knowledge Base, or let Auto-Learn pick it up from your existing screenshots. See [Screenshot Style](saas-guide/admin/kb-config.md#screenshot-style).
-- **Personal data kept out.** Emails, names, keys and other personal details are replaced with demo values before each shot, and checked again afterwards. See [How SudoDocs Takes Screenshots](saas-guide/admin/doc-drift.md#how-sudodocs-takes-screenshots).
-- **Before and after, annotated.** Compare a new screenshot with the one in your docs, and box, number, cover or crop it before you push. When your UI changes, screenshots are re-taken the same way. See [When Your UI Changes](saas-guide/admin/doc-drift.md#when-your-ui-changes).
-- **Apps with two-factor sign-in.** The screenshot account can now sign in to apps that ask for an authenticator code. See [Sign in to an App That Uses Two-Factor](saas-guide/admin/doc-drift.md#sign-in-to-an-app-that-uses-two-factor).
-
-### Capture and API Readiness
-
-- **Zoom on clicks.** Interactive walkthroughs zoom in on what's being clicked - most helpful on phones - and viewers can switch back to the whole screen. See [Zoom on Clicks](saas-guide/user/capture.md#zoom-on-clicks).
-- **Writers can edit captures.** Captions, hotspots, redaction, voiceover and video export are open to writers, not just administrators.
-- **SudoDocs Capture 1.1.0.** In Interactive mode, the Chrome extension now notes which control you clicked - its label, not just where it was - so SudoDocs can find the same control again when it re-takes a screenshot after your product's layout changes. Chrome updates the extension automatically. See [When Your UI Changes](saas-guide/admin/doc-drift.md#when-your-ui-changes).
-- **Open an API scan's pull request where it belongs.** Send the corrected spec back to the spec's own repository, to a docs repository, or both. See [Push to Production](saas-guide/user/api-readiness.md#push-to-production).
+- **Release Composer is now Release Changelog.** Same queue and drafts, with **Insert in Author mode** and reviews on drafts. See [Release Changelog](saas-guide/user/release-composer.md).
 
 ### For administrators
 
-- **Admin Overview.** A new **Overview** tab shows your setup progress, what's left to configure, and usage at a glance. See [Admin Overview](saas-guide/admin/overview.md).
-- **Add-ons.** Pro and Enterprise organizations can add seats and AI credit packs. See [Add-ons](saas-guide/admin/plans.md#add-ons); prices are on [sudodocs.com/#pricing](https://sudodocs.com/#pricing).
+- **Publishing policy.** Choose who may change site settings, which repositories Writers may edit, which embed hosts are allowed and which email domains can be invited to review. See [Publishing policy](saas-guide/admin/publish-admin.md).
+- **SAML, SCIM and protected docs for Enterprise.** Sign in with SAML, create and remove users automatically, and let your identity provider decide who reads private docs. See [SAML and SCIM](saas-guide/admin/sso-saml-scim.md).
+- **Startup offer.** Teams on the Startup offer see when it ends. See [Plans & Billing](saas-guide/admin/plans.md#startup-offer).
 
 ### CLI
 
-- **sudodocs-cli 1.2.0** adds commands for releases (`sudodocs releases`), tagged work (`sudodocs items`, including approving Docflows suggestions), the dashboard (`sudodocs dashboard --mine`, `sudodocs mywork`), release notes (`sudodocs release-notes queue`, `draft`, `push`), API scan pull requests (`sudodocs api-scan open-pr`) and capture zoom (`sudodocs capture zoom`). Upgrade with `pip install --upgrade sudodocs-cli`. See [Getting Started](cli-guide/getting-started.md).
+- **sudodocs-cli 1.4.0** adds `sudodocs publish`, `sudodocs edit`, `sudodocs health`, `sudodocs review`, `sudodocs capture`, `sudodocs diagram` and more `sudodocs admin` commands. The Feature Author commands `sudodocs items approve feature-drafts` and `sudodocs items release-notes` are removed. Upgrade with `pip install --upgrade sudodocs-cli`. See [Publish commands](cli-guide/user/publish.md) and [Author mode commands](cli-guide/user/edit.md).
 
 ### Improvements
 
-- SudoDocs works better on phones and tablets: menus, tables, dialogs and side panels fit the screen.
-- Keyboard users see a clear focus outline; clicking with a mouse no longer leaves one behind.
-- Release notes drafts from Release Composer now save reliably.
-- Docflows changes use the full width of the card, and new files show in a single column.
-
-## October 9, 2026 {#2026-10-09}
-
-### Sign in your way
-
-- **Email and password sign-in.** Sign in with a SudoDocs password, Google, or your company's SSO. A password and Google sign-in lead to the same account, so you can use either. See [Sign In and Create an Account](saas-guide/user/sign-in.md).
-- **Two-factor authentication.** Add an authenticator app under **Profile & security**. Administrators who sign in with a password are asked to set it up. See [Profile & Security](saas-guide/user/profile-security.md).
-- **Sign-in policy for your organization.** Administrators can choose which sign-in methods members may use and require two-factor for everyone. See [Set the Sign-In Policy](saas-guide/admin/users.md#set-the-sign-in-policy).
-- **Manage members' sign-in.** From the **Users** tab, send a password reset, reset two-factor, sign someone out everywhere, or disable an account.
-
-### Easier to find your way around
-
-- **New profile menu.** Click your initials in the top-right corner for **Profile & security**, **Admin Dashboard**, and **Sign out**.
-- **The Admin Dashboard's Account tab is now Organization**, so it's clear it holds your organization's subscription and API keys, not your personal settings.
-
-### Repositories and API specs
-
-- **Connect with GitHub.** Add repositories in one click with the SudoDocs GitHub App, or paste a fine-grained, classic, or GitHub CLI token. SudoDocs checks each token and shows its status. See [Ingest Repositories](saas-guide/admin/connect-repos.md).
-- **API Specs tab.** Administrators set where your OpenAPI spec lives and which style rules check it in one place. See [API Specs](saas-guide/admin/api-specs.md).
-
-### CLI
-
-- **sudodocs-cli 1.1.0** adds commands to manage members' sign-in and your organization's sign-in policy, check GitHub tokens before saving them, and change API Specs settings. Upgrade with `pip install --upgrade sudodocs-cli`. See [CLI Users](cli-guide/admin/users.md).
-
-### Improvements
-
-- Role changes and removals now take effect immediately.
-- The trial countdown shows the full number of days left.
-- Walkthrough Auditors now open straight into Capture after signing in.
-- Emails from SudoDocs have a cleaner design.
+- Author a Feature is retired: its drafts are kept, and its work moves to [Author mode](saas-guide/user/author-mode.md).
+- The Diagram Generator is now the [Mermaid diagrams](saas-guide/user/diagram-gen.md) library.
