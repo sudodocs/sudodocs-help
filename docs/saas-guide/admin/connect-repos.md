@@ -83,7 +83,7 @@ A sync gives SudoDocs its own searchable copy of a repository: the text of every
 | [Docflows](../user/doc-drift.md) | Which of your pages a change affects, what they say now, and whether a file is new or an update. Also where screenshots go and which existing screenshots a new one replaces. |
 | [Author mode](../user/author-mode.md) | Your existing pages and related code, so drafts fit what's there. |
 | [Sync Latest Code](../user/assign-pr.md#manage-engineering-changes) | Related docs, for context. |
-| [Release Changelog](../user/release-composer.md) | Context for writing each entry, and your docs framework when pushing release notes. |
+| [Changelog](../user/release-composer.md) | Context for writing each entry, and your docs framework when pushing release notes. |
 | [DocOps Assistant](../user/index.md) | Searching your docs and code to answer questions and find gaps. |
 | [Knowledge Base Auto-Learn](kb-config.md) | Your writing style and screenshot style. |
 

@@ -44,7 +44,7 @@ What's new in SudoDocs in **October 2026**, newest release first. SudoDocs updat
 
 - **A release notes queue for every release.** Everything going into a release's notes collects in one place - from Docflows, Slack, Jira, CSV files or added by hand - grouped under **New Features**, **Enhancements**, **Bug Fixes** and **Known Issues**, with where each item came from. See [The Release Notes Queue](../saas-guide/user/release-composer.md#the-release-notes-queue).
 - **Drafted for you.** Draft the notes from the queue in one click, then add newly queued items to that draft without losing your edits. If no one has drafted them, SudoDocs does it automatically in the days before the release. See [Automatic Drafting](../saas-guide/user/release-composer.md#automatic-drafting).
-- **Push to your docs.** **Push to docs** opens a pull request that puts the notes where your docs repository keeps release notes - a new file in its release-notes folder, or this release's section at the top of your changelog file. See [Push to Your Docs](../saas-guide/user/release-composer.md#push-to-your-docs).
+- **Push to your docs.** **Push to docs** opens a pull request that puts the notes where your docs repository keeps release notes - a new file in its release-notes folder, or this release's section at the top of your changelog file. See [Push to Your Docs](../saas-guide/user/release-composer.md#push-to-source).
 
 ### Docflows
 

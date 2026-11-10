@@ -6,8 +6,8 @@ A release groups the work for one version of your product. Anything any tool pro
 
 You can create a release in any of these places:
 
-* **On the Workspace:** click **New Release** at the top. Enter a **Release Name**, and optionally a **Target Date** and **Build Number**, then click **Create**. Its Release Dashboard opens.
-* **While tagging:** choose **+ New release...** in any release list - on the Release Changelog form, or in the **Tag** dialog - and type a name.
+* **On Home, the Release Dashboard or Changelog:** click **New release** at the top. Enter a name, and optionally a target date, then create it.
+* **While tagging:** choose **New release** in any release list - on the Changelog page, or in the **Tags** dialog - and type a name.
 * **In Docflows:** type a new name in **Target Release** when you assign a suggestion.
 
 ## Tag Work with a Release and a Writer
@@ -65,9 +65,7 @@ SudoDocs checks open pull requests every 15 minutes. If your administrator has s
 
 ## Open a Release Dashboard
 
-Click **Release Dashboard** at the top of the Workspace, then pick the release in the list on the left. A new release opens its Release Dashboard as soon as you create it. It leads with the **Release timeline** - where the release stands against its target date, every date change and how much work is done - then each writer's work, what needs attention and a board for moving work along - see [Dashboards](dashboards.md). It also links to Feature Author and Release Changelog filtered to that release, and shows the Docflows assigned to it (see [Review and Push Docflows](assign-pr.md)).
-
-For all releases at once, click **Overall** in that list - it's what **Release Dashboard** opens first.
+Open **Release Dashboard** in the left pane (it comes right after Home). The **Overview** tab shows everything across your releases, with the filters at the top; the **Releases** tab lists every release with its progress, target date and how much is open or blocked - click a release to open its own dashboard. A new release opens its Release Dashboard as soon as you create it. It leads with the **Release timeline** - where the release stands against its target date, every date change and how much work is done - then each writer's work and the release's board.
 
 ## Edit a Release, Move Its Date, or Mark It Released
 
@@ -76,7 +74,7 @@ At the top of the Release Dashboard, next to the release's name:
 * Click **Edit release** to change its name, **Target date** or build number. If you move the date, add a reason - it's kept in the timeline's **Date changes**. The first target date is kept too, so the timeline shows "First planned for" the original. You can also hover over the release in the list on the left and click the pencil icon.
 * When the release ships, click **Mark as released**, check the date (it defaults to today) and click **Mark as released** in the dialog. The timeline then says whether it shipped on time, early or late. Click **Reopen** if you marked it by mistake.
 
-Renames, build changes and releases also appear in the dashboard's **Recent activity**.
+Renames, build changes and releases also appear in the dashboard's **History**.
 
 Writers and System Administrators can both edit releases.
 

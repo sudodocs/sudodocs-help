@@ -31,7 +31,7 @@ These are SudoDocs' own built-in roles, not people on your team. Your writers an
 | [Request changes](../user/doc-drift.md#request-changes) on a Docflows card | - | Makes your requested changes | Reviews the result |
 | [Sync Latest Code](../user/assign-pr.md#manage-engineering-changes) | - | Writes what's missing | Reviews it |
 | [Mentioning SudoDocs on a docs pull request](../user/assign-pr.md#ask-sudodocs-to-revise-a-docs-pull-request) | - | Makes the change | Reviews it; nothing is pushed while it has blocking issues |
-| [Release Changelog](../user/release-composer.md#draft-the-release-notes) | - | Writes every entry | Checks every queued item is there once, in its section, with nothing invented |
+| [Changelog](../user/release-composer.md#draft-the-release-notes) | - | Writes every entry | Checks every queued item is there once, in its section, with nothing invented |
 | [Universal Converter](../user/converter.md#generate-ai-reference-docs-pro) reference pages | - | Writes the page | Checks it against your spec or values file: nothing invented, nothing missing |
 | [API Readiness](../user/api-readiness.md#review-results) AI fixes | - | Writes the descriptions and summaries | Reviews only the text the fix wrote or changed |
 | [DocOps Assistant](../user/chat.md#chat-modes) Author, Rewrite and Release Note | - | Writes the draft | Checks it against your request and the docs it found |
@@ -95,5 +95,5 @@ Role instructions apply the next time a draft is generated - editing them doesn'
 * [Configure the Knowledge Base](kb-config.md) - style guide, terminology, and product categories, which every role already reads alongside its instructions here.
 * [Author mode](../user/author-mode.md) - the manually-initiated path through this same pipeline.
 * [Manage Docflows](../user/doc-drift.md) - the automatically-initiated path through this same pipeline.
-* [Release Changelog](../user/release-composer.md) - release notes written by the Technical Writer and checked by the Editor.
+* [Changelog](../user/release-composer.md) - release notes written by the Technical Writer and checked by the Editor.
 * [CLI Tasks → Doc Team Roles](../../cli-guide/admin/doc-team-roles.md) - script role instruction changes.

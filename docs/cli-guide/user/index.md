@@ -7,7 +7,7 @@ Command-line equivalents of the [SaaS Guide → User Tasks](../../saas-guide/use
 | [Manage Releases](../../saas-guide/user/releases.md) | [Manage Releases](releases.md) |
 | [Tag work with a release and a writer](../../saas-guide/user/releases.md#tag-work-with-a-release-and-a-writer) (every tool's history list) | [Tool Items and Tags](items.md) |
 | [Universal Converter](../../saas-guide/user/converter.md) | [Universal Converter](converter.md) |
-| [Release Changelog](../../saas-guide/user/release-composer.md) | [Release Changelog](release-composer.md) |
+| [Changelog](../../saas-guide/user/release-composer.md) | [Changelog](release-composer.md) |
 | [API Readiness](../../saas-guide/user/api-readiness.md) | [API Readiness](api-readiness.md) |
 | [Publish](../../saas-guide/publish/index.md) | [Publish commands](publish.md) |
 | [Author mode](../../saas-guide/user/author-mode.md) | [Author mode commands](edit.md) |

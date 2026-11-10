@@ -48,6 +48,7 @@ sudodocs publish set acme-docs --tracking plausible --plausible-domain docs.exam
 | `--hide-badge` / `--show-badge` | The "Published with SudoDocs" badge (Pro and Enterprise). |
 | `--social-cards` / `--no-social-cards`, `--edit-in-sudodocs` / `--no-edit-in-sudodocs` | Sharing images and the edit link. |
 | `--feedback`, `--feedback-email` | Page feedback. |
+| `--changelog-path` | The Changelog page of the site (for example `docs/changelog.md`; `.md`, `.mdx`, `.rst` or `.adoc`) that `sudodocs release-notes push` adds each release to. Empty text goes back to finding it. See [Push to source](../../saas-guide/user/release-composer.md#push-to-source). |
 | `--ask-ai`, `--ask-ai-cap`, `--ask-ai-instructions` | [Ask AI](../../saas-guide/publish/ask-ai.md). |
 | `--tracking plausible|ga4|none` and related options | [Your own analytics](../../saas-guide/publish/analytics.md#your-own-analytics-tool). |
 

@@ -11,7 +11,7 @@ Not sure whether to write a page yourself in **Author mode** or let **Docflows**
 
 Every tool is a card in the **Tools** grid on your Workspace:
 
-* [Release Changelog](release-composer.md): Each release's queue of what goes into its notes - from Docflows, Slack, Jira, CSVs or added by hand - drafted for you (automatically before the release if no one gets to it) and pushed to your docs.
+* [Changelog](release-composer.md): Each release's queue of what goes into its notes - from Docflows, Slack, Jira, CSVs or added by hand - drafted for you (automatically before the release if no one gets to it) and pushed to your docs.
 * [Author mode](author-mode.md): Write and edit your docs pages in SudoDocs, with a live preview, AI tools and review. It replaces Author a Feature.
 * [Reviews](reviews.md): Comments, @mentions, outside reviewers and AI helpers on diagrams, captures, release notes, Docflows and API scans.
 * [DocOps Assistant](chat.md): Bridges the gap between your engineering codebase and your published documentation. By querying your synced code and documentation repositories in real-time, it acts as a technical co-pilot that understands your actual product logic. It streamlines your entire documentation lifecycle—from answering highly technical codebase queries and generating first drafts, to automating release notes and proactively auditing your site for technical drift.

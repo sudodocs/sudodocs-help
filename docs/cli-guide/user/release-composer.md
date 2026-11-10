@@ -43,7 +43,7 @@ sudodocs release-notes push 12 --repo 3 --dry-run
 sudodocs release-notes push 12 --repo 3
 ```
 
-Opens a pull request with draft 12 where the docs repository keeps release notes - a new file in its release-notes folder, or this release's section at the top of its `CHANGELOG.md` (other releases untouched), or where you've saved for that repository; see [Push to Your Docs](../../saas-guide/user/release-composer.md#push-to-your-docs). `--dry-run` only prints where it would go (one line per file). `--message` sets the commit message. The draft then follows the pull request.
+Opens a pull request with draft 12 on the Changelog page of the site built from that repository - the page set for the site, or the repository's changelog or release-notes file or folder, or a new `changelog` page; see [Push to source](../../saas-guide/user/release-composer.md#push-to-source). The notes are written the way the page is written (Markdown, Mintlify `<Update>` entries, reStructuredText or AsciiDoc). The command prints the site, the file or files, and - when a new page is added to your navigation - the navigation file; when the pull request is open it says the page is live after the merge and the next publish. `--dry-run` only prints where it would go (one line per file). `--message` sets the commit message. The draft then follows the pull request.
 
 To put them somewhere else for this push:
 
@@ -52,7 +52,7 @@ sudodocs release-notes push 12 --repo 3 --file docs/whats-new.md
 sudodocs release-notes push 12 --repo 3 --developer-file docs/api/changelog.md --remember
 ```
 
-`--file` is a file with every release (existing or new); `--folder` is a folder with one file per release. `--developer-file`, `--developer-folder` and `--developer-same` do the same for the draft's **Developer Release Notes** section; with its own file or folder, the pull request carries both files. `--remember` saves your choices for the repository.
+`--file` is a file with every release (existing or new; `.md`, `.mdx`, `.rst` or `.adoc`); `--folder` is a folder with one file per release. `--developer-file`, `--developer-folder` and `--developer-same` do the same for the draft's **Developer Release Notes** section; with its own file or folder, the pull request carries both files. `--remember` saves your choices for the repository.
 
 ## Choose Where Release Notes Go
 

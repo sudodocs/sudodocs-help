@@ -14,7 +14,7 @@ SudoDocs has three plans - Free (Basic), Pro, and Enterprise - with Pro and Ente
 | **CLI & Headless API** | - | - | ✅ |
 | **Add-ons (seats, credit packs)** | - | ✅ | ✅ (credit packs only until you connect your own LLM key) |
 
-Every plan, including Free, includes the core documentation tools: Author mode, Release Changelog, Docflows (automated doc PRs), the OAS Validator & Fixer, the Universal Doc Converter, Chat with Docs, Git, Code, Jira, Slack and web source sync, and [SudoDocs Capture](../user/capture.md).
+Every plan, including Free, includes the core documentation tools: Author mode, Changelog, Docflows (automated doc PRs), the OAS Validator & Fixer, the Universal Doc Converter, Chat with Docs, Git, Code, Jira, Slack and web source sync, and [SudoDocs Capture](../user/capture.md).
 
 ## Publish
 
@@ -58,7 +58,7 @@ Each AI action uses credits. A failed action gives its credits back.
 | [Docflows](../user/doc-drift.md) suggestion from a pull request or Jira ticket | 20 |
 | Request changes on a Docflows suggestion, or mentioning SudoDocs on a docs pull request | 8 |
 | Sync Latest Code | 5, or 8 when the Editor reviews an update |
-| [Release Changelog](../user/release-composer.md) draft / adding new items to it | 10 / 5 |
+| [Changelog](../user/release-composer.md) draft / adding new items to it | 10 / 5 |
 | [Universal Converter](../user/converter.md) reference page | 5 per 25,000 characters of the spec or values file (at least 5) |
 | [API Readiness](../user/api-readiness.md) AI fix | 5 per 15,000 characters of the spec (at least 5) |
 | API Readiness content audit | 3 |

@@ -2,7 +2,7 @@
 
 CLI equivalents of [Admin Tasks → Knowledge Base](../../saas-guide/admin/kb-config.md). All commands are admin-only, same as the Knowledge Base tab.
 
-> Looking for Doc Team Roles, Deployment Tags, or CSV Column Mappings? Those are separate pages: [Doc Team Roles](doc-team-roles.md) and [Release Changelog](../user/release-composer.md) - see [Configure the Knowledge Base](../../saas-guide/admin/kb-config.md#product-categories) for why they live where they do.
+> Looking for Doc Team Roles, Deployment Tags, or CSV Column Mappings? Those are separate pages: [Doc Team Roles](doc-team-roles.md) and [Changelog](../user/release-composer.md) - see [Configure the Knowledge Base](../../saas-guide/admin/kb-config.md#product-categories) for why they live where they do.
 
 ## Show Current Configuration
 

@@ -36,7 +36,8 @@ What's new in SudoDocs in **November 2026**, newest release first. SudoDocs upda
 
 ### Release notes
 
-- **Release Composer is now Release Changelog.** Same queue and drafts, with **Insert in Author mode** and reviews on drafts. See [Release Changelog](saas-guide/user/release-composer.md).
+- **Release Composer is now Changelog.** Same queue and drafts, now with reviews on drafts and a clearer draft page. See [Changelog](saas-guide/user/release-composer.md).
+- **Push to source puts release notes on your site's Changelog page.** The pull request targets the changelog page of the site built from your repository (set it once per site if you like), adds a new page to your navigation, writes Mintlify `<Update>` entries, and converts the notes for reStructuredText and AsciiDoc sites. The draft then shows when the page is live. See [Push to source](saas-guide/user/release-composer.md#push-to-source).
 
 ### For administrators
 
@@ -52,3 +53,4 @@ What's new in SudoDocs in **November 2026**, newest release first. SudoDocs upda
 
 - Author a Feature is retired: its drafts are kept, and its work moves to [Author mode](saas-guide/user/author-mode.md).
 - The Diagram Generator is now the [Mermaid diagrams](saas-guide/user/diagram-gen.md) library.
+- The Release Dashboard is now second in the left pane, with **Overview**, **Board** and **Releases** tabs, a **History** drawer and a **New release** button. See [Dashboards](saas-guide/user/dashboards.md).

@@ -12,7 +12,7 @@ description: Author a Feature has moved into Author mode.
 | What you did in Author a Feature | Where it is now |
 |---|---|
 | Draft documentation from a Jira ticket or a linked pull request | **Author > Tools > Draft from a ticket or pull request**: fetch the ticket or pull request, draft the changes into the affected files, pick the files, and save them into your change. If Docflows already made a suggestion for the same ticket, it is shown and you can edit it in Author mode. |
-| Include the feature in the release notes | The [Release Changelog](release-composer.md) queue, with **Insert in Author mode** on release notes drafts. |
+| Include the feature in the release notes | The [Changelog](release-composer.md) queue, with **Insert in Author mode** on release notes drafts. |
 | Generate a diagram | [Mermaid diagrams](diagram-gen.md), or **Tools > Mermaid diagram** in Author mode. |
 | Open a pull request | **Request review** or **Open pull request** in Author mode. |
 | Review the draft | [Reviews](reviews.md): comments, @mentions, outside reviewers and the AI helpers. |

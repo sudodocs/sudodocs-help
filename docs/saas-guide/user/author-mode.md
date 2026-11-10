@@ -80,7 +80,7 @@ The **Tools** tab lists what applies to the file you have open. Anything that co
 | **Doc Assistant** | Chat about your code and docs, in the context of the open page. |
 | **Converter** | Converts pasted text into the page's format. |
 | **Draft from a ticket or pull request** | Fetches a Jira ticket or a GitHub pull request and drafts the changes it needs into the affected files; you pick the files. It shows any existing Docflow for the same ticket and lets you edit it here. |
-| **From other tools** | Brings in a Release Changelog draft, or a Capture as an embed. |
+| **From other tools** | Brings in a Changelog draft, or a Capture as an embed. |
 
 ## Review before you ask
 
