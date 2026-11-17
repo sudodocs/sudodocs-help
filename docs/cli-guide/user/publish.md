@@ -91,11 +91,12 @@ Saving or turning it off builds the site again. The file looks like this:
   "title": "Acme Docs",
   "subtitle": "Guides and reference for Acme.",
   "actions": [{ "label": "Get started", "href": "/docs/intro/" }],
-  "links": [{ "label": "Introduction", "href": "/docs/intro/", "description": "What Acme does." }]
+  "links": [{ "label": "Introduction", "href": "/docs/intro/", "description": "What Acme does." }],
+  "locales": { "fr": { "title": "Documentation Acme", "subtitle": "Guides pour Acme.", "actions": ["Commencer"] } }
 }
 ```
 
-`template` is `hero` (a list of pages) or `sections` (a heading and a line of text for each page). Addresses of your own pages start with `/`; a link to a page that does not exist is left out and the build says so.
+`template` is `hero` (a list of pages) or `sections` (a heading and a line of text for each page). Addresses of your own pages start with `/`; a link to a page that does not exist is left out and the build says so. `locales` is optional: for each other language of the site, a title, short text and button names. That language's links go to its own translated pages.
 
 ## Versions
 
