@@ -39,7 +39,7 @@ With previews on (Pro and Enterprise), every pull request gets a preview site at
 
 ## Your own build
 
-On Enterprise you can publish your docs tool's own build output as it is (**Build mode: your own build**), for sites that depend on custom plugins. Most sites should keep **SudoDocs renders it**, which gives you every feature on these pages.
+On Enterprise you can publish your docs tool's own build output as it is (**Build mode: your own build**), for sites that depend on custom plugins. Most sites should keep **SudoDocs renders it**, which gives you every feature on these pages. If your own build fails, SudoDocs publishes its own rendering of the site instead, so the site still goes live; open the latest build in **Activity** to see which one you got. Pages written as React code are covered in [Supported docs tools](supported-tools.md#pages-built-by-your-own-react-code).
 
 ## Things that are not published
 
