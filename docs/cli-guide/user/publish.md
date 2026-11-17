@@ -72,6 +72,31 @@ sudodocs publish exclude include acme-docs internal/keep-me.md
 
 Changes go through a pull request. See [Navigation](../../saas-guide/publish/navigation.md).
 
+## Replace a React home page
+
+If the home page of your docs site is React code that SudoDocs cannot run (for example `src/pages/index.js` in a Docusaurus site), readers see a note there. SudoDocs can show a replacement home page that it keeps itself, so your repository is not changed. See [Pages built by your own React code](../../saas-guide/publish/supported-tools.md#pages-built-by-your-own-react-code).
+
+```bash
+sudodocs publish home my-site                 # is the home page React code? what is saved? what is suggested?
+sudodocs publish home my-site --use-suggestion  # save the suggestion made from the live site
+sudodocs publish home my-site --file home.json  # save your own
+sudodocs publish home my-site --off             # turn it off
+```
+
+Saving or turning it off builds the site again. The file looks like this:
+
+```json
+{
+  "template": "hero",
+  "title": "Acme Docs",
+  "subtitle": "Guides and reference for Acme.",
+  "actions": [{ "label": "Get started", "href": "/docs/intro/" }],
+  "links": [{ "label": "Introduction", "href": "/docs/intro/", "description": "What Acme does." }]
+}
+```
+
+`template` is `hero` (a list of pages) or `sections` (a heading and a line of text for each page). Addresses of your own pages start with `/`; a link to a page that does not exist is left out and the build says so.
+
 ## Versions
 
 ```bash
