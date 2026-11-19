@@ -4,11 +4,11 @@
 
 ## Setup Progress
 
-The ring shows the share of setup steps that are done. Steps your plan doesn't include aren't counted. **Next step** names the most useful thing to set up next - the Essentials come first - with a button that opens the right tab.
+The ring shows the share of setup steps that are done. Steps your plan doesn't include aren't counted. **Next step** names the most useful thing to set up next - the Essentials come first - with a button that opens the right page.
 
 ## Setup Steps
 
-Steps are grouped in three cards. Each shows whether it's done, with a button to set it up (or **Edit** once it's done).
+Steps are grouped in three groups on one checklist. Each shows whether it's done, with a button to set it up (or **Edit** once it's done).
 
 | Group | Steps |
 |---|---|
@@ -23,8 +23,12 @@ Some steps are marked:
 
 ## Usage and Repositories
 
-* **Team seats**: members against your plan's seats, and how many are free.
+* **Team seats**: members and reviewers against your plan's seats and reviewer allowance, and how many are free.
 * **AI credits**: credits used this period and when they reset. With your own AI key on Enterprise, credits are unlimited.
-* **Repositories**: whether SudoDocs can still reach each connected repository. A repository with an invalid, expired or revoked token, or limited access, is listed with the reason. Repositories that need a sync (behind GitHub, or never synced) are listed too. Click **Manage repositories** to fix it - see [Keep in Sync](connect-repos.md#keep-in-sync).
+* **Repositories**: whether SudoDocs can still reach each connected repository. A repository with an invalid, expired or revoked token, or limited access, is listed with the reason. Repositories that need a sync (behind GitHub, or never synced) are listed too. The **Needs attention** card shows only when something needs doing. Click **Manage repositories** to fix it - see [Keep in Sync](connect-repos.md#keep-in-sync).
 
 To get the same overview from a terminal, see [CLI Admin Tasks → Admin Status](../../cli-guide/admin/index.md#admin-status).
+
+## History
+
+The **History** button opens a drawer with your organization's recent admin activity, ten to a page.

@@ -11,9 +11,9 @@ This guide is for the administrator of an **Enterprise** organization. SAML is a
 
 SudoDocs is the **service provider**; your provider is the **identity provider**. Sign-in always starts at SudoDocs.
 
-Open **Admin > Single sign-on**, choose **SAML**, enter your **corporate email domain** (for example `company.com`) and save. People with an email on that domain then sign in at **Sign in > Company SSO**. A domain belongs to one organization; if another organization has claimed it, saving is refused. New users who sign in are created as **Writers**, subject to your plan's seats.
+Open **Admin > Single sign-on**, choose **SAML 2.0** as the **Protocol**, enter your **Email domain** (for example `company.com`) and save. People with an email on that domain then sign in at **Sign in > Company SSO**. A domain belongs to one organization; if another organization has claimed it, saving is refused. New users who sign in are created as **Writers**, subject to your plan's seats.
 
-**1. Give your provider these three values** (shown on the SSO tab, each with a copy button):
+**1. Give your provider these three values** (shown under **Give your provider these** on the same page, each with a copy button):
 
 | Value | What it is called in providers |
 |---|---|

@@ -1,17 +1,15 @@
 ---
-title: Design
+title: Skins and reader settings
 description: Pick a skin and colours, start from a template, set the announcement bar, navbar button and footer, and control sharing images and the edit link.
 ---
 
-# Design
+# Skins and reader settings
 
-The **Studio** brings the look, the home page, the navigation and the header and footer into one screen: see [Design your site in the Studio](studio.md). This page describes the settings behind the look.
-
-the site's **Studio** > **Skin** controls how the site looks and what readers can do on it. Beside the controls there is a live preview of a sample site or, once the site is published, of your own pages with the choices you have not saved yet.
+The look of a site is set in the [Studio](studio.md) (the site's **Studio** tab, **Skin** mode). What readers can do on the site (feedback, sharing images, the edit link, Ask AI and your own analytics) is set on the site's **Readers** tab. This page describes both.
 
 ## Skins
 
-A skin is the layout and typography of the whole site. Pro and Enterprise can use all seven; Basic uses **Manual**.
+A skin is the layout and typography of the whole site. In **Skin** mode, pick one of the cards; the preview next to them shows your own pages in that skin once the site is published, or a sample site before that. Pro and Enterprise can use all seven; Basic uses **Manual**.
 
 | Skin | Feel |
 |---|---|
@@ -25,21 +23,23 @@ A skin is the layout and typography of the whole site. Pro and Enterprise can us
 
 Every skin works in light and dark mode (the reader's device decides). Docs, Midnight and Editorial also have print styles, support right-to-left languages, and bring their own fonts, so nothing is loaded from other servers.
 
-## Colours, fonts and corners
+Press **Apply** to put the skin on the live site. It changes within a minute and pages are not rebuilt. **Discard** throws the draft away.
 
-Pick an **accent colour** and one for dark mode. On Pro and Enterprise you can also set the **corner radius** and name your own **body** and **heading fonts**. Fonts you name yourself must be installed on the reader's device (a system font); SudoDocs sites load no fonts from other servers.
+## Colours and type
+
+Under **Colours and type**, pick an **Accent colour** and one for dark mode (**Accent in dark mode**). On Pro and Enterprise you can also set the **Corner radius** and name your own **Body font** and **Heading font**. A font you name yourself must be installed on the reader's device (a system font); SudoDocs sites load no fonts from other servers. **Reset colours** goes back to the skin's own.
 
 ## Start from a template
 
-A **template** is a ready-made starting look: a skin and its colours. Choose one when you create the site (**Start from**), or in the Studio's **Skin** mode: click a card and the skin and colours fill in below, the preview updates, and nothing is saved until you press **Save settings**.
+The seven skin cards are ready-made starting looks: a skin and its colours. When you create a site, choose one in step 2. Later, click a card in **Skin** mode and the colours fill in below, the preview updates, and nothing goes live until you press **Apply**.
 
-| Template | Skin | For |
+| Card | Skin | For |
 |---|---|---|
 | Developer docs | Docs | SDKs, guides and API references |
 | API product | Midnight | An API or platform with a technical audience |
 | Handbook | Editorial | Handbooks, policies, long guides |
 | Product manual | Manual | The all-round default |
-| Command-line tool | Terminal | A tool used in a terminal |
+| CLI tool | Terminal | A tool used in a terminal |
 | Internal console | Console | Admin panels and runbooks |
 | Field guide | Field Guide | Knowledge bases, tutorials, how-to collections |
 
@@ -47,14 +47,14 @@ On Basic only **Product manual** is available; the others are marked **Pro**.
 
 ### Add the template's starter content
 
-After you choose a template on an existing, published site, **Also open a pull request with its starter content** adds, to your repository:
+On an existing, published site, **Add starter content** opens a pull request that adds, to your repository:
 
 - an **announcement bar** that links to your first page,
 - a **Get started** button in the navbar,
 - a **footer** with links to your first pages,
 - and, if the site has no home page, a **landing page** with a hero.
 
-Only what your repository does not have yet is added; nothing you already wrote is replaced, and every link points at a page of your own site. Review and edit the wording before you merge: it is a starting point. Nothing changes on the site until the pull request is merged and published. (A landing page is not made for reStructuredText or AsciiDoc repositories.)
+Only what your repository does not have yet is added; nothing you already wrote is replaced, and every link points at a page of your own site. Review and edit the wording before you merge: it is a starting point. Nothing changes on the site until the pull request is merged and published. (A landing page is not made for reStructuredText or AsciiDoc repositories.) You can also design the home page in [Home mode](studio.md#the-home-page-designer), without a pull request.
 
 ## Announcement bar, navbar button, footer, landing page
 
@@ -70,19 +70,23 @@ These live in your repository, in `sudodocs.json`, or are read from your docs to
 
 A page becomes a landing page with `layout: landing` and a `hero:` block in its front matter (title, subtitle, buttons, optional image).
 
-## Page feedback
+## Readers tab
 
-**Show "Was this page helpful?" on every page** adds a short form hosted by SudoDocs. Answers appear under **Activity > Feedback**. Add a **feedback email** to add an "Email us" link. Your site itself stores nothing.
+Open **Publish**, choose the site, then **Readers**. Changes here apply to the live site when you press **Apply**.
 
-## Sharing images, structured data and the edit link
+### Page feedback
 
-- **Sharing image.** Every page gets a picture for when it is shared in chat or on social media: the page title on your site's colours. Turn it off under **Sharing and editing links**, or choose one page's own picture with `image: https://...` in its front matter. See [Search and sharing](seo.md).
+**Show "Was this page helpful?" on every page** adds a short form hosted by SudoDocs. Answers appear in **History > Feedback**. Add a **feedback email** to add an "Email us" link. Your site itself stores nothing.
+
+### Sharing images, structured data and the edit link
+
+- **Sharing image.** Every page gets a picture for when it is shared in chat or on social media: the page title on your site's colours. Turn it off under **Sharing and editing links** on the Readers tab, or choose one page's own picture with `image: https://...` in its front matter. See [Search and sharing](seo.md).
 - **Edit in SudoDocs.** Next to **Edit this page**, readers who belong to your organization get **Edit in SudoDocs**, which opens the page in [Author mode](../user/author-mode.md). Everyone else is told to use **Edit this page**. Turn it off in the same section.
 
-## The "Published with SudoDocs" badge
+### The "Published with SudoDocs" badge
 
-Hide it on Pro and Enterprise with **Hide "Published with SudoDocs" in the footer**.
+Hide it on Pro and Enterprise with **Hide the SudoDocs badge** in **Skin** mode.
 
-## Your own visitor analytics
+### Your own visitor analytics
 
 Pro and Enterprise sites can also load Plausible or Google Analytics 4. See [Analytics](analytics.md#your-own-analytics-tool).

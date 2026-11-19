@@ -1,4 +1,4 @@
-# Profile & Security
+# Profile and Security
 
 Manage your own sign-in settings from the **Profile and security** page. Every member has one, whatever their role.
 
