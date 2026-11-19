@@ -5,7 +5,7 @@ description: Create, edit and keep Mermaid diagrams in a library, draw them with
 
 # Mermaid diagrams
 
-**Tools > Mermaid diagrams** is a library of the diagrams your team uses in its docs. A diagram is Mermaid text: it lives in your pages and draws on your published site. The library keeps each diagram's versions, lets you edit it visually, and lets you insert it into any page from [Author mode](author-mode.md).
+**Diagrams** in the left menu is a library of the diagrams your team uses in its docs. A diagram is Mermaid text: it lives in your pages and draws on your published site. The library keeps each diagram's versions, lets you edit it visually, and lets you insert it into any page from [Author mode](author-mode.md).
 
 ## The library
 

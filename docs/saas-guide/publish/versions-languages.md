@@ -12,7 +12,7 @@ Readers pick a version in the site header. The newest is served at the root; old
 SudoDocs finds versions in three ways:
 
 - **Your docs tool's own versions** (Docusaurus versioned docs, Mintlify versions).
-- **Branches and tags**: **Admin Dashboard > Publish > Versions** adds a version from a branch or a tag of the repository.
+- **Branches and tags**: **Publish** > your site > **Sources** > **Versions** adds a version from a branch or a tag of the repository.
 - **`versions` in `sudodocs.json`**, which also lets you list tags for MkDocs sites that use `mike`.
 
 You can **rename** any version (for example "v3 (current)"). Older versions point their canonical address at the latest page so search engines do not index every copy. Pro keeps up to 5 versions, Enterprise has no limit, and Basic has one.

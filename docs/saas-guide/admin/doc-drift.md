@@ -8,11 +8,11 @@ To enable this feature, configure a webhook for each connected repository or Jir
 
 ## Configuring Webhooks for Automated Suggestions
 
-After connecting a repository or Jira instance in the **Admin Dashboard**, set up the corresponding webhook to begin receiving automated suggestions.
+After connecting a repository or Jira instance in **Admin**, set up the corresponding webhook to begin receiving automated suggestions.
 
 ### Step 1: Retrieve Webhook Credentials
 
-1. Navigate to the **Admin Dashboard** page.
+1. Open **Admin** in the left menu.
 2. On the **Repositories** tab, find the repository you want to connect.
 3. Click **Manage** > **Webhook**.
 4. A dialog appears containing a unique **Payload URL** and a **Secret** for that specific integration. Keep this dialog open.
@@ -54,7 +54,7 @@ For code repositories, SudoDocs can sign in to your app and take screenshots for
 
 **1. Tell SudoDocs how to reach and sign in to your app**
 
-1. Go to **Admin Dashboard > Repositories**.
+1. Go to **Admin > Repositories**.
 2. Find the code repository and click **Manage** > **Screenshot settings**.
 3. *(Optional)* Enter a **Preview URL Pattern** if each pull request gets its own preview site (for example `https://pr-{pr_number}.preview.example.com`). Without one, SudoDocs uses the app address from step 2 below.
 4. Choose the **Access Method** - how SudoDocs signs in (see [Supported Access Methods](#supported-access-methods)).
@@ -125,7 +125,7 @@ When a screenshot from Docflows is pushed to your docs, SudoDocs remembers how i
 * **The screen changed a lot** (the controls are gone, or it's a different screen): AI reads the docs text around the image and your page index and works out what the screenshot should show now - maybe another page - and points at the new controls (2 credits). The review says why, for example "Refunds moved into the Payments page".
 * **Not sure**: if the AI isn't confident, the screenshot is marked **Needs your eyes** and can't be pushed until a writer reviews it.
 
-SudoDocs never replaces a doc image without telling you. To see or forget what it remembers, go to **Admin Dashboard > Knowledge Base > Screenshot Style > Remembered screenshots**.
+SudoDocs never replaces a doc image without telling you. To see or forget what it remembers, go to **Admin > Knowledge Base > Screenshot style > Remembered screenshots**.
 
 A flagged screenshot - or one the check couldn't run on - can't be pushed until someone looks at it and ticks **Reviewed** in [Review & Push](../user/assign-pr.md#review--push-workflow). Screenshots your own CI sends with `sudodocs docflow --screenshot` go through the same check.
 

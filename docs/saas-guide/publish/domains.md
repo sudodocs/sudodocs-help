@@ -5,7 +5,7 @@ description: Serve your docs on your own domain, such as docs.company.com.
 
 # Custom domains
 
-Pro and Enterprise sites can be served on your own domain. In **Admin Dashboard > Publish > Settings**, under **Custom domain**:
+Pro and Enterprise sites can be served on your own domain. In **Publish** > your site > **Settings**, under **Custom domain**:
 
 1. Enter the domain (for example `docs.company.com`) and press **Add**.
 2. Create the DNS record SudoDocs shows you at your domain provider.

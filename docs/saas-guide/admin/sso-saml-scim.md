@@ -11,7 +11,7 @@ This guide is for the administrator of an **Enterprise** organization. SAML is a
 
 SudoDocs is the **service provider**; your provider is the **identity provider**. Sign-in always starts at SudoDocs.
 
-Open **Admin Dashboard > SSO**, choose **SAML**, enter your **corporate email domain** (for example `company.com`) and save. People with an email on that domain then sign in at **Sign in > Company SSO**. A domain belongs to one organization; if another organization has claimed it, saving is refused. New users who sign in are created as **Writers**, subject to your plan's seats.
+Open **Admin > Single sign-on**, choose **SAML**, enter your **corporate email domain** (for example `company.com`) and save. People with an email on that domain then sign in at **Sign in > Company SSO**. A domain belongs to one organization; if another organization has claimed it, saving is refused. New users who sign in are created as **Writers**, subject to your plan's seats.
 
 **1. Give your provider these three values** (shown on the SSO tab, each with a copy button):
 
@@ -63,7 +63,7 @@ The signature (against your certificates), the audience, the destination and rec
 
 Without SCIM, SudoDocs creates a user when someone first signs in, and a person who leaves keeps their account until an administrator disables it. With SCIM your provider does both.
 
-1. On **Admin Dashboard > SSO**, press **Turn on SCIM and create a token**. Copy the token now: it is shown once and only a fingerprint is kept. Pressing the button again replaces the token (the old one stops working at once). **Turn off** removes it.
+1. On **Admin > Single sign-on**, press **Turn on SCIM and create a token**. Copy the token now: it is shown once and only a fingerprint is kept. Pressing the button again replaces the token (the old one stops working at once). **Turn off** removes it.
 2. In your provider, add SudoDocs for provisioning with the **base URL** shown on the card (it ends in `/scim/v2`) and the token as the **bearer token** (Okta: "HTTP Header" authentication; Entra ID: Secret Token). Use **userName = email**.
 3. Switch on **Create users** and **Deactivate users**.
 

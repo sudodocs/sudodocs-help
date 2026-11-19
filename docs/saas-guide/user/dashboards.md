@@ -1,6 +1,6 @@
 # Dashboards
 
-Dashboards show all of your team's documentation work in one place: what's done, what's in progress, who's working on what, and what needs attention. They read from every tool - Changelog, Docflows, Capture, Mermaid diagrams, API Readiness and the Universal Converter. DocOps Assistant chats aren't included.
+Dashboards show all of your team's documentation work in one place: what's done, what's in progress, who's working on what, and what needs attention. They read from every tool - Changelog, Docflows, Capture, Mermaid diagrams, API Readiness and the Universal Converter. Doc Assistant chats aren't included.
 
 When a repository SudoDocs drafts from needs a sync, a notice at the top of the dashboard says so - see [When a Repository Needs a Sync](doc-drift.md#when-a-repository-needs-a-sync).
 

@@ -14,7 +14,7 @@ Everything you can do in the SudoDocs web app at [app.sudodocs.com](https://app.
 
 ## For administrators
 
-Set up SudoDocs for your organization from the Admin Dashboard.
+Set up SudoDocs for your organization from **Admin** in the left menu.
 
 - [Connect repositories](admin/connect-repos.md) with **Connect with GitHub** or a token.
 - [Configure the Knowledge Base](admin/kb-config.md) so every draft follows your style guide.
@@ -32,7 +32,7 @@ Draft, review, and ship documentation from the Workspace.
 
 - [Author mode](user/author-mode.md): write and edit your docs pages in SudoDocs, with a live preview and review.
 - [Reviews](user/reviews.md): comments, @mentions and outside reviewers on every tool.
-- [DocOps Assistant](user/chat.md): ask questions about your code and docs.
+- [Doc Assistant](user/chat.md): ask questions about your code and docs.
 - [Releases](user/releases.md) and the [Release Dashboard](user/dashboards.md): your work and your team's, release by release.
 - [Docflows](user/doc-drift.md): documentation suggestions from pull requests and Jira tickets.
 - [Release notes](user/release-composer.md): every release's notes, collected from Docflows, Slack and Jira, drafted for you and pushed to your docs.

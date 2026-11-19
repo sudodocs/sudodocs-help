@@ -37,7 +37,7 @@ A reviewer can **Approve** or **Request changes**. A verdict belongs to the vers
 
 ## Outside reviewers
 
-Writers can invite people outside SudoDocs to review a single item. They get an emailed link (valid for 14 days) that opens a read-only page with the item and the comments. They get no account and no seat; a Reviewer allowance in your plan counts them. An administrator decides which email domains can be invited (**Admin Dashboard > Organization > Publishing policy**): by default only your members' company domains, plus single addresses the administrator adds. Invitations can be withdrawn. The same invitation works with Google sign-in for the invited address.
+Writers can invite people outside SudoDocs to review a single item. They get an emailed link (valid for 14 days) that opens a read-only page with the item and the comments. They get no account and no seat; a Reviewer allowance in your plan counts them. An administrator decides which email domains can be invited (**Admin > Site rules**): by default only your members' company domains, plus single addresses the administrator adds. Invitations can be withdrawn. The same invitation works with Google sign-in for the invited address.
 
 ## The AI helpers: @Editor, @Writer, @IA
 

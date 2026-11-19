@@ -4,7 +4,7 @@ The API Readiness tool validates your OpenAPI Specifications (OAS) against indus
 
 ## Before You Start
 
-A System Administrator lists your specs - one large spec, many team specs in any repository, or both - and sets the style rules on the Admin Dashboard's [API Specs](../admin/api-specs.md) tab.
+A System Administrator lists your specs - one large spec, many team specs in any repository, or both - and sets the style rules on the [API Specs](../admin/api-specs.md) page.
 
 1. Open **API Readiness** from the Workspace and click **Open Validator**.
 2. Check **Your API specs**: each spec with its repository, branch and file. A spec with `$ref`s SudoDocs couldn't follow says so; an administrator can add a dependency location for them.

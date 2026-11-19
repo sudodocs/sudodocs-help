@@ -15,7 +15,7 @@ Capture has **no approval workflow**: every capture is shareable the moment it f
 
 ## The library and the editor
 
-**Tools > Capture** opens the **library**: your captures as cards with a picture, in three columns, twelve to a page. The left side filters by **type** (Interactive, Recording, Screenshot, Audio), **needs attention** (captures that failed, are partial or may hold personal data), **release** and **narration**, with counts, a search box and sorting. A card shows its type, length or step count and size; hover it for **Copy link**, **Rename**, **Tag** and **Delete**. Tag captures with a release and a writer: see [Tag work with a release and a writer](releases.md#tag-work-with-a-release-and-a-writer).
+**Capture** in the left menu opens the **library**: your captures as cards with a picture, in three columns, twelve to a page. The left side filters by **type** (Interactive, Recording, Screenshot, Audio), **needs attention** (captures that failed, are partial or may hold personal data), **release** and **narration**, with counts, a search box and sorting. A card shows its type, length or step count and size; hover it for **Copy link**, **Rename**, **Tag** and **Delete**. Tag captures with a release and a writer: see [Tag work with a release and a writer](releases.md#tag-work-with-a-release-and-a-writer).
 
 Open a card and every kind of capture opens in the same editor: a **Library** link back, a name you can change, a **release** chip, **Save**, **Download**, copy and preview of the embed, and **Review** (see [Reviews](reviews.md)).
 
@@ -34,7 +34,7 @@ You can manage captures from a terminal: see [Capture commands](../../cli-guide/
 2. Click the new SudoDocs Capture icon in your toolbar, then **Connect to SudoDocs**. This opens a tab to approve the connection - confirm the code shown matches the popup, then **Approve**.
 3. Back in the popup, click **I approved it - check again**.
 
-This is a one-time setup. The extension links to your SudoDocs organization the same way `sudodocs login` links the CLI - a personal, revocable API key, listed as **SudoDocs Capture** under **API Keys** on the Admin Dashboard's [Organization](../admin/settings.md#api-keys) tab, where an administrator can revoke it.
+This is a one-time setup. The extension links to your SudoDocs organization the same way `sudodocs login` links the CLI - a personal, revocable API key, listed as **SudoDocs Capture** in the **History** drawer of [Admin > Organization](../admin/settings.md#api-keys), where an administrator can revoke it.
 
 If you're pointing the extension at a non-default SudoDocs deployment (a test instance, for example), set that first under the extension's **Options** page before connecting.
 

@@ -5,17 +5,17 @@ description: Who may change site settings, which repositories Writers may edit, 
 
 # Publishing policy
 
-Administrators decide what Writers may do with sites and pages. These controls are in **Admin Dashboard > Organization > Publishing policy**, and in **Admin Dashboard > Publish** for a single site.
+Administrators decide what Writers may do with sites and pages. These controls are in **Admin > Site rules**, and in **Publish** for a single site.
 
 ## Who can change site settings
 
-By default only administrators change a site's navigation, design, versions, source, domains, address, protection and crawler settings (**Admin Dashboard > Publish**). Writers check and publish sites, see Analytics, Validate and Activity, and write pages.
+By default only administrators change a site's navigation, design, versions, source, domains, address, protection and crawler settings (**Publish**). Writers check and publish sites, see Analytics, Validate and Activity, and write pages.
 
 Turn on **Writers may manage site settings** to give Writers the same controls. Creating a site, restoring an old build as live and deleting a site are always administrator-only.
 
 ## What Writers may edit
 
-- **Per repository.** In **Admin Dashboard > Repositories**, **Writers may edit this repository** is on by default. Turn it off for any repository (including code repositories) to block writes and starting changes there; reading, building and publishing still work.
+- **Per repository.** In **Admin > Repositories**, **Writers may edit this repository** is on by default. Turn it off for any repository (including code repositories) to block writes and starting changes there; reading, building and publishing still work.
 - **CSS, scripts and configuration.** Writers edit pages, images, snippets and the files that give the docs their structure. **Writers may edit site CSS/JS and docs-tool config** (off by default) lets them edit stylesheets, scripts and build settings too. Package and CI files stay locked either way.
 - A Writer who hits a lock can **Request access**: every administrator gets an email (at most once an hour per item).
 

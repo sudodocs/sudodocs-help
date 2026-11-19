@@ -11,7 +11,7 @@ It handles one large spec and many small specs from different repositories: each
 
 ## Set it up in one place
 
-**Admin Dashboard > API reference** shows, for the site:
+**Publish** > your site > **Sources** > **API and Helm** shows, for the site:
 
 - the specs **published in the reference**, each with **Take out of the reference**;
 - specs you have already registered under **API Specs** but not published, with **Publish in the API reference**;
@@ -20,6 +20,10 @@ It handles one large spec and many small specs from different repositories: each
 Registered specs belong to the organization, so every site with the tab on shows them. See [API Specs](../admin/api-specs.md) for registering and checking specs. Your plan decides how many specs you can publish.
 
 If two specs describe the same operation (same path and method), the first one wins and the build report names the clash. The same spec listed twice is shown once and the tab says so.
+
+## Helm charts
+
+The same screen lists the Helm charts you have published and has its own switch, **Helm reference tab**, for the site. See [Helm charts](helm-charts.md).
 
 ## Versions of an API
 

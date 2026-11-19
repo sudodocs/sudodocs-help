@@ -5,7 +5,7 @@ description: Find broken links, missing descriptions, API problems and drift bet
 
 # Validate
 
-**Workspace > Publish > Validate** checks a site's repository and branch against rules before you publish, with a plain explanation and a fix for each finding. A finding that **blocks publishing** holds the build (an email goes to the owner of builds started by a push); everything else is advice.
+**Publish** > your site > **Overview**, under **Validate**, checks a site's repository and branch against rules before you publish, with a plain explanation and a fix for each finding. A finding that **blocks publishing** holds the build (an email goes to the owner of builds started by a push); everything else is advice.
 
 Findings are grouped as **Blocks publishing**, **Should fix** and **Optional**, with a short rule code on each. Four sub-tabs show counts and open on what needs attention: **Docs**, **API**, **Consistency** and **Fixes**. You can download the report as a log or JSON.
 

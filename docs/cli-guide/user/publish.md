@@ -26,7 +26,7 @@ A build that would make the live site worse (fewer pages, more parts not shown, 
 
 ## Change settings
 
-`publish set` takes the same options as `publish create`. Look and feedback settings go live at once; source settings apply at the next build.
+`publish set` takes the same options as `publish create`. Skin and Readers settings go live at once; source settings apply at the next build.
 
 ```bash
 sudodocs publish set acme-docs --skin midnight --accent "#6d5efc" --accent-dark "#a29bff"

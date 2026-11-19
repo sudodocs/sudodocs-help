@@ -11,7 +11,7 @@ Select a foundational formatting rule set for the AI.
 * **Apple Style**: Minimalist and user-focused.
 * **IBM Style**: Strict and enterprise-grade.
 
-1. Navigate to **Admin Dashboard > Knowledge Base**.
+1. Navigate to **Admin > Knowledge Base**.
 2. Choose a framework from the **Base Framework** dropdown - it saves automatically.
 
 ## Product Categories
@@ -41,7 +41,7 @@ There's no separate structured field for terminology rules - write them directly
 The Auto-Learn agent scans your connected documentation and public web repositories to extract your company's writing style and terminology, merging what it finds into your Product Categories and Neural Overrides above rather than replacing them. SudoDocs explicitly ignores code repositories during this process to prevent a robotic tone.
 
 1. Ensure you have synced at least one Documentation or Web repository.
-2. Navigate to **Admin Dashboard > Knowledge Base**.
+2. Navigate to **Admin > Knowledge Base**.
 3. Click **Run Auto-Learn**.
 
 Auto-Learn also looks at up to six screenshots already in your documentation repository and adds what it notices - annotation colour, theme, cropping, whether personal data is hidden - to your [Screenshot Style](#screenshot-style). That part costs 5 credits on top of Auto-Learn's usual cost, and only when there are screenshots to look at.
@@ -54,7 +54,7 @@ How SudoDocs takes screenshots for your docs - for Docflows today, and for every
 2. **Learned from your existing screenshots**: what [Auto-Learn](#auto-learn-tone) noticed.
 3. **Your settings**: anything you set wins over both.
 
-To change it, go to **Admin Dashboard > Knowledge Base > Screenshot Style**. Each setting shows where its current value comes from - **Yours**, **Learned** or **Default** - and a field left blank uses the value shown.
+To change it, go to **Admin > Knowledge Base > Screenshot style**. Each setting shows where its current value comes from - **Yours**, **Learned** or **Default** - and a field left blank uses the value shown.
 
 | Setting | What it does |
 |---|---|

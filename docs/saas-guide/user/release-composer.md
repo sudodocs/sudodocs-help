@@ -31,11 +31,11 @@ These settings are shared across every release's release notes for your org, not
 2. The queue lists every item, grouped by section and then by product category. Each one shows where it came from - **Docflows**, **Slack**, **Jira**, **CSV**, **Manual** or **API changes** - and links to it (the pull request, ticket, suggestion or feature draft). **Developer Release Notes** are grouped by **Breaking Changes**, **New Endpoints**, **Changes** and **Deprecations** instead of product categories.
 3. To change an item, pick a different section or category in its row; it's saved at once. **Remove** takes it out of the queue.
 
-Items already written into a draft are listed under **Already in a draft**. A Jira ticket is only queued once per release, even if it arrives from several places (for example a Jira filter and a Jira-sourced Docflows suggestion). When a Feature Author draft for a ticket that's already queued from Jira is included, the queued item becomes the feature draft's item instead of a second one.
+Items already written into a draft are listed under **Already in a draft**. A Jira ticket is only queued once per release, even if it arrives from several places (for example a Jira filter and a Jira-sourced Docflows suggestion). When an older draft from the retired Feature Author is included for a ticket that is already queued from Jira, the queued item becomes that draft's item instead of a second one.
 
 ## Incoming API Changes
 
-When a pull request that changes an API spec merges, SudoDocs compares the spec before and after it - with every file its `$ref`s reach, so a change to a shared file or to a file in another repository counts - and lists what changed for developers under **Incoming API changes**, between **Draft the release notes** and the queue. It covers every spec on the Admin Dashboard's [API Specs](../admin/api-specs.md) tab that has **Turn its API changes into Developer Release Notes** on, and only its public operations (by default, everything not marked `x-internal: true`). Comparing is free.
+When a pull request that changes an API spec merges, SudoDocs compares the spec before and after it - with every file its `$ref`s reach, so a change to a shared file or to a file in another repository counts - and lists what changed for developers under **Incoming API changes**, between **Draft the release notes** and the queue. It covers every spec on the [API Specs](../admin/api-specs.md) page that has **Turn its API changes into Developer Release Notes** on, and only its public operations (by default, everything not marked `x-internal: true`). Comparing is free.
 
 Each item is one spec's changes in one pull request: a file several specs share gives an item for each of them. It shows:
 

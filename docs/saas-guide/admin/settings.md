@@ -1,8 +1,8 @@
 # Organization
 
-The **Organization** tab of the Admin Dashboard lets System Administrators manage the organization's subscription and API keys, and delete the organization. It used to be called **Account**.
+**Admin > Organization** lets System Administrators manage the organization's subscription and API keys, and delete the organization. It used to be called **Account**.
 
-> **Note**: Your own name, password, and two-factor settings aren't here - they're on [Profile & security](../user/profile-security.md), in the menu under your initials.
+> **Note**: Your own name, password, and two-factor settings aren't here - they're on [Profile and security](../user/profile-security.md), in the menu under your initials.
 
 ## Subscription Management
 

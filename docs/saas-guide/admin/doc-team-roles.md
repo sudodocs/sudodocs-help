@@ -10,7 +10,7 @@ Each role's judgment is admin-configurable per organization, separately from you
 
 ## Edit Role Instructions
 
-1. Navigate to **Admin Dashboard**.
+1. Open **Admin** in the left menu.
 2. Open the **Roles** tab.
 3. You'll see three boxes, one per role, each pre-filled with a greyed-out placeholder showing the built-in default. An empty box means that role is using the default - you don't need to fill in all three to customize one.
 4. Type your own instructions into any box to override the default for that role.
@@ -34,9 +34,9 @@ These are SudoDocs' own built-in roles, not people on your team. Your writers an
 | [Changelog](../user/release-composer.md#draft-the-release-notes) | - | Writes every entry | Checks every queued item is there once, in its section, with nothing invented |
 | [Universal Converter](../user/converter.md#generate-ai-reference-docs-pro) reference pages | - | Writes the page | Checks it against your spec or values file: nothing invented, nothing missing |
 | [API Readiness](../user/api-readiness.md#review-results) AI fixes | - | Writes the descriptions and summaries | Reviews only the text the fix wrote or changed |
-| [DocOps Assistant](../user/chat.md#chat-modes) Author, Rewrite and Release Note | - | Writes the draft | Checks it against your request and the docs it found |
+| [Doc Assistant](../user/chat.md#chat-modes) Author, Rewrite and Release Note | - | Writes the draft | Checks it against your request and the docs it found |
 
-The Assistant's Discuss and Analyze Doc Gaps modes answer questions rather than write documentation, so they don't use the roles. Capture captions and Diagram Generator diagrams don't either.
+The Assistant's Discuss and Analyze Doc Gaps modes answer questions rather than write documentation, so they don't use the roles. Capture captions and diagrams don't either.
 
 When the Editor marks something as blocking, the Writer gets another pass. If the Editor still has open issues after that, SudoDocs doesn't hide them: the draft or suggestion is flagged with what's still open.
 

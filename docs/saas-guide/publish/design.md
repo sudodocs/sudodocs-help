@@ -7,7 +7,7 @@ description: Pick a skin and colours, start from a template, set the announcemen
 
 The **Studio** brings the look, the home page, the navigation and the header and footer into one screen: see [Design your site in the Studio](studio.md). This page describes the settings behind the look.
 
-**Admin Dashboard > Publish > Design** controls how the site looks and what readers can do on it. Beside the controls there is a live preview of a sample site or, once the site is published, of your own pages with the choices you have not saved yet.
+the site's **Studio** > **Skin** controls how the site looks and what readers can do on it. Beside the controls there is a live preview of a sample site or, once the site is published, of your own pages with the choices you have not saved yet.
 
 ## Skins
 
@@ -31,7 +31,7 @@ Pick an **accent colour** and one for dark mode. On Pro and Enterprise you can a
 
 ## Start from a template
 
-A **template** is a ready-made starting look: a skin and its colours. Choose one when you create the site (**Start from**), or at the top of **Design > Look**: click a card and the skin and colours fill in below, the preview updates, and nothing is saved until you press **Save settings**.
+A **template** is a ready-made starting look: a skin and its colours. Choose one when you create the site (**Start from**), or in the Studio's **Skin** mode: click a card and the skin and colours fill in below, the preview updates, and nothing is saved until you press **Save settings**.
 
 | Template | Skin | For |
 |---|---|---|

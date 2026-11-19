@@ -11,7 +11,7 @@ Ask AI is available on Pro and Enterprise and is **off by default** for each sit
 
 ## Turn it on
 
-**Admin Dashboard > Publish > Design > Ask AI on the site**.
+**Publish** > your site > **Readers** > **Ask AI on the site**.
 
 | Setting | What it does |
 |---|---|

@@ -26,7 +26,7 @@ Hover over an item to also **Rename** it (pencil icon) or **Delete** it (trash i
 To see only some items, use **Show in history** above a tool's history list: **Everything**, **Not tagged to a release**, or one release. It only filters the list; it doesn't change any item or the form.
 
 :::note
-DocOps Assistant chats are private: only the person who started a chat sees it, so only they can tag, rename or delete it.
+Doc Assistant chats are private: only the person who started a chat sees it, so only they can tag, rename or delete it.
 :::
 
 ## Track Work and Pull Requests

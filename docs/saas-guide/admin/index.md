@@ -2,7 +2,7 @@
 
 Instructions for System Administrators to configure, manage, and secure the SudoDocs workspace.
 
-The Admin Dashboard's tabs, in the order they appear:
+The Admin pages, in the order they appear in the left menu:
 
 * [Overview](overview.md): How much of SudoDocs is set up, the next step, seats and AI credits, and repository health. Opens first.
 * [Provider](llm-provider.md): Bring your own key for text generation and/or embeddings & search (OpenAI, Claude, DeepSeek, Voyage AI, or a custom endpoint) instead of the platform Gemini key.
@@ -21,6 +21,6 @@ Also for administrators:
 * [Configure Docflows Webhook](doc-drift.md): Configure your GitHub webhook settings to connect SudoDocs.
 * [Plans & Billing](plans.md): What each plan includes - seats, AI credits, add-ons, and Enterprise-only features.
 
-Your own password and two-factor settings are on [Profile & security](../user/profile-security.md), not in the Admin Dashboard.
+Your own password and two-factor settings are on [Profile and security](../user/profile-security.md), not in Admin.
 
 Every task above - and most [User Tasks](../user/index.md) too - has a scriptable equivalent for Enterprise organizations: see the [CLI Guide](../../cli-guide/getting-started.md) to automate them from the command line or CI/CD pipelines instead of the dashboard.

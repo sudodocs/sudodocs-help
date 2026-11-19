@@ -7,12 +7,12 @@ Every command takes a **tool** name:
 | Tool name | Web tool |
 |---|---|
 | `feature-drafts` | Older drafts from the retired Feature Author: list, tag, rename and delete only. Its approve and release-notes commands were removed; use [Author mode](../../saas-guide/user/author-mode.md)'s ticket tool instead. |
-| `release-notes` | Release Composer |
+| `release-notes` | Changelog |
 | `captures` | Capture |
 | `conversions` | Universal Converter (generated specs) |
-| `chats` | DocOps Assistant (only your own chats) |
+| `chats` | Doc Assistant (only your own chats) |
 | `api-scans` | API Readiness |
-| `diagrams` | Diagram Generator |
+| `diagrams` | Mermaid diagrams |
 | `docflows` | Docflows suggestions (they're dismissed in Docflows, not deleted) |
 
 ## List Items

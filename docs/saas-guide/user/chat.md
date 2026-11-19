@@ -1,6 +1,6 @@
-# DocOps Assistant
+# Doc Assistant
 
-The DocOps Assistant is your global Retrieval-Augmented Generation (RAG) workspace. Query your codebase, draft new topics, enforce style guides, generate release notes, or find documentation gaps.
+The Doc Assistant is your global Retrieval-Augmented Generation (RAG) workspace. Query your codebase, draft new topics, enforce style guides, generate release notes, or find documentation gaps.
 
 ## Chat History
 

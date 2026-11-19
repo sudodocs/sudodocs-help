@@ -24,4 +24,4 @@ sudodocs admin status
 sudodocs admin status --json
 ```
 
-Prints the same setup progress as the Admin Dashboard's [Overview](../../saas-guide/admin/overview.md): how many setup steps are done, the next step, each step's status (done, built-in, to do, or not on your plan), seats and AI credits, and any repository whose access needs fixing. `--json` prints everything. API: `GET /api/v1/admin/status`.
+Prints the same setup progress as the Admin [Overview](../../saas-guide/admin/overview.md): how many setup steps are done, the next step, each step's status (done, built-in, to do, or not on your plan), seats and AI credits, and any repository whose access needs fixing. `--json` prints everything. API: `GET /api/v1/admin/status`.

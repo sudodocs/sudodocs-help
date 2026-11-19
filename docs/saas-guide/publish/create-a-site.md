@@ -5,11 +5,11 @@ description: Connect a repository, create a docs site, publish it, preview pull 
 
 # Create a site
 
-Creating a site is an administrator task: **Admin Dashboard > Publish > + New site**.
+Creating a site is an administrator task: **Publish** > **Create a site**.
 
 ## Before you start
 
-- Connect the GitHub repository that holds your docs under **Admin Dashboard > Repositories** (see [Connect repositories](../admin/connect-repos.md)).
+- Connect the GitHub repository that holds your docs under **Admin > Repositories** (see [Connect repositories](../admin/connect-repos.md)).
 - Know where the docs live. SudoDocs finds the folder from your docs tool's settings (Docusaurus, MkDocs, Sphinx, Mintlify, GitBook, mdBook, Antora) or a `docs` folder. You can set it by hand with **Content folder**, and **Site folder** for a monorepo where the docs tool's settings are in a subfolder.
 
 ## Create it

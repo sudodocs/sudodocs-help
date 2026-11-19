@@ -5,7 +5,7 @@ description: See who reads your docs, what they search for and which pages fail 
 
 # Analytics
 
-**Workspace > Publish > Analytics** shows how your site is used. SudoDocs counts every request at the edge of the network, so pages that were served from a cache are counted too. **No cookies are set, no IP addresses are stored, and readers are not tracked across visits.**
+**Publish** > your site > **Analytics** shows how your site is used. SudoDocs counts every request at the edge of the network, so pages that were served from a cache are counted too. **No cookies are set, no IP addresses are stored, and readers are not tracked across visits.**
 
 Analytics is part of every plan with a different history: Basic 7 days, Pro 90 days, Enterprise 395 days (and a CSV download).
 
@@ -33,7 +33,7 @@ These are honest estimates, not certainties. A reader on a VPN or a company netw
 
 ## Your own analytics tool
 
-Pro and Enterprise sites can also load **Plausible** or **Google Analytics 4** on every page: **Admin Dashboard > Publish > Design > Your own visitor analytics**. Plausible sets no cookies (you can use your own server). Google Analytics sets cookies, so saving it asks you to confirm that you will ask readers for consent where the law requires it. The tool loads on sites that SudoDocs renders. If you already use one in your Mintlify settings, it is picked up when you move; a setting saved on the site wins.
+Pro and Enterprise sites can also load **Plausible** or **Google Analytics 4** on every page: **Publish** > your site > **Readers** > **Your own visitor analytics**. Plausible sets no cookies (you can use your own server). Google Analytics sets cookies, so saving it asks you to confirm that you will ask readers for consent where the law requires it. The tool loads on sites that SudoDocs renders. If you already use one in your Mintlify settings, it is picked up when you move; a setting saved on the site wins.
 
 ## Via the CLI
 

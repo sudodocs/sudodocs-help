@@ -22,6 +22,7 @@ const sidebars = {
         'saas-guide/publish/navigation',
         'saas-guide/publish/versions-languages',
         'saas-guide/publish/api-reference',
+        'saas-guide/publish/helm-charts',
         'saas-guide/publish/domains',
         'saas-guide/publish/validate',
         'saas-guide/publish/analytics',
@@ -104,7 +105,7 @@ const sidebars = {
       label: 'User Tasks',
       collapsed: false,
       link: {type: 'doc', id: 'cli-guide/user/index'},
-      items: ['cli-guide/user/releases', 'cli-guide/user/items', 'cli-guide/user/release-composer', 'cli-guide/user/api-readiness', 'cli-guide/user/converter', 'cli-guide/user/publish', 'cli-guide/user/edit', 'cli-guide/user/reviews', 'cli-guide/user/health', 'cli-guide/user/capture-diagrams'],
+      items: ['cli-guide/user/releases', 'cli-guide/user/items', 'cli-guide/user/release-composer', 'cli-guide/user/api-readiness', 'cli-guide/user/converter', 'cli-guide/user/publish', 'cli-guide/user/helm-charts', 'cli-guide/user/edit', 'cli-guide/user/reviews', 'cli-guide/user/health', 'cli-guide/user/capture-diagrams'],
     },
   ],
 };

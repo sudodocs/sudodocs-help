@@ -1,6 +1,6 @@
 # Admin Overview
 
-The **Overview** tab is the first thing you see in the Admin Dashboard. It shows how much of SudoDocs your organization has set up, what to do next, and how much of your plan you're using.
+**Admin > Overview** is the first page you see in Admin. It shows how much of SudoDocs your organization has set up, what to do next, and how much of your plan you're using.
 
 ## Setup Progress
 

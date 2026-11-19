@@ -30,7 +30,7 @@ A site that asks readers for a password or a sign-in cannot be read by a public 
 
 ## Monitor your sites
 
-Pro and Enterprise organizations can check their sites on a schedule: **Tools > Site health**.
+Pro and Enterprise organizations can check their sites on a schedule: **Site health** in the left menu.
 
 - **Add** a site (a duplicate site address is refused), and **Check now** whenever you like.
 - Pro monitors up to **3** sites **weekly**; Enterprise up to **25** sites **daily**.

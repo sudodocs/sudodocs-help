@@ -17,7 +17,7 @@ To give SudoDocs access to more repositories later, change the installation's re
 
 If you can't install the GitHub App, add a repository with a token:
 
-1.  Navigate to the **Admin Dashboard**, select the **Repositories** tab, and click **+ Add repository**.
+1.  Open **Admin > Repositories** and click **+ Add repository**.
 2.  In the **Integration Name** box, enter a recognizable name (e.g., "Main API Docs").
 3.  In the **Repository Type** list, select one of the following:
     * **Documentation**: For Markdown, MDX, reStructuredText, AsciiDoc, HTML, DITA XML (`.dita`/`.ditamap`), or plain text files.
@@ -47,7 +47,7 @@ Each GitHub repository on the **Repositories** tab shows its status under **Acce
 | **Limited access** | It works, but is missing permissions some features need. |
 | **Invalid** or **Revoked** | GitHub rejects it. Replace it with **Manage** > **Update token**, or reconnect with GitHub. |
 
-Hover over the status to see when it was last checked and any error. Click **Re-check** to check it now. SudoDocs also re-checks credentials that are more than a day old when an administrator opens the Admin Dashboard. Expiring tokens show their expiry date.
+Hover over the status to see when it was last checked and any error. Click **Re-check** to check it now. SudoDocs also re-checks credentials that are more than a day old when an administrator opens Admin. Expiring tokens show their expiry date.
 
 To replace a token, click **Manage** > **Update token** on the repository, paste the new token, and save.
 
@@ -84,12 +84,12 @@ A sync gives SudoDocs its own searchable copy of a repository: the text of every
 | [Author mode](../user/author-mode.md) | Your existing pages and related code, so drafts fit what's there. |
 | [Sync Latest Code](../user/assign-pr.md#manage-engineering-changes) | Related docs, for context. |
 | [Changelog](../user/release-composer.md) | Context for writing each entry, and your docs framework when pushing release notes. |
-| [DocOps Assistant](../user/index.md) | Searching your docs and code to answer questions and find gaps. |
+| [Doc Assistant](../user/index.md) | Searching your docs and code to answer questions and find gaps. |
 | [Knowledge Base Auto-Learn](kb-config.md) | Your writing style and screenshot style. |
 
 If a documentation repository hasn't been synced since people changed it, Docflows drafts against the older pages. A page added since the last sync can even look like a new file, so the review shows all of it as added. Sync after big changes to your docs.
 
-These don't depend on syncing - they read GitHub directly when you use them: Docflows' [Check against your docs](../user/doc-drift.md#is-a-suggestion-still-needed), pushing pull requests to your repositories, and where release notes go in your docs. Capture, Diagram Generator, API Readiness and the Universal Converter don't use synced repositories.
+These don't depend on syncing - they read GitHub directly when you use them: Docflows' [Check against your docs](../user/doc-drift.md#is-a-suggestion-still-needed), pushing pull requests to your repositories, and where release notes go in your docs. Capture, Diagrams, API Specs and the Converter don't use synced repositories.
 
 How often SudoDocs refreshes its copy is up to you - see [Keep in Sync](#keep-in-sync).
 
@@ -172,7 +172,7 @@ SudoDocs follows the pull requests it opens in your documentation repositories -
 
 For updates within seconds on a token-connected documentation repository, add a webhook to it:
 
-1. In SudoDocs, open **Admin Dashboard > Repositories** and copy the repository's **Payload URL** and **Secret** (the same webhook dialog Docflows uses).
+1. In SudoDocs, open **Admin > Repositories** and copy the repository's **Payload URL** and **Secret** (the same webhook dialog Docflows uses).
 2. In GitHub, open the documentation repository's **Settings** > **Webhooks** > **Add webhook**, paste both, and set **Content type** to `application/json`.
 3. Choose **Let me select individual events**, deselect **Pushes**, and select **Pull requests** and **Pull request reviews**.
 4. Click **Add webhook**.

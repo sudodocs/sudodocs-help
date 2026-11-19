@@ -5,7 +5,7 @@ description: Put a password, single sign-on or your own login page in front of a
 
 # Protected docs
 
-Keep a site, or part of one, private. Open **Admin Dashboard > Publish**, choose the site, then **Settings > Protect this site**. (If your organization lets Writers manage site settings, Writers see it too.) Choose **how readers get in**:
+Keep a site, or part of one, private. Open **Publish**, choose the site, then **Settings > Access > Protect this site**. (If your organization lets Writers manage site settings, Writers see it too.) Choose **how readers get in**:
 
 | Method | Plans | Good for |
 |---|---|---|

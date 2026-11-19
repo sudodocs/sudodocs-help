@@ -7,7 +7,7 @@ SudoDocs has three plans - Free (Basic), Pro, and Enterprise - with Pro and Ente
 | | Free (Basic) | Pro | Enterprise |
 |---|---|---|---|
 | **Seats** | 1 (admin only) | 2, expandable with seat add-ons | 25, expandable with seat add-ons (up to 100) |
-| **AI credits** | 100 / month | 500 / month (Pro Annual: 6,000 / year) | Unlimited with your own LLM key; 2,000 / month until one is configured |
+| **AI credits** | 100 / month | 1,000 / month (Pro Annual: 12,000 / year) | Unlimited with your own LLM key; 3,000 / month until one is configured |
 | **Capture recording length** | 5 minutes | 10 minutes | 30 minutes |
 | **LLM provider** | Platform Gemini key | Platform Gemini key | Platform Gemini key, or [bring your own key](llm-provider.md) |
 | **Single Sign-On (SSO)** | - | - | ✅ |
@@ -30,6 +30,7 @@ Every plan, including Free, includes the core documentation tools: Author mode, 
 | Versions of a site | 1 | 5 | No limit |
 | Languages | 1 | 3 | No limit |
 | API specs in the reference | 1 | 10 | No limit |
+| Helm charts in the reference | 1 | 10 | No limit |
 | Analytics history | 7 days | 90 days | 395 days, with CSV |
 | Your own Plausible or Google Analytics | - | Yes | Yes |
 | [Ask AI](../publish/ask-ai.md) | - | Yes (up to 300 answers a day) | Yes (up to 2,000 a day), with instructions |
@@ -44,7 +45,7 @@ The public docs health check is free for everyone.
 
 ### Startup offer
 
-SudoDocs can give eligible early-stage teams **Pro free for a number of months**. While it lasts, the header shows **PRO · STARTUP OFFER**, and **Admin Dashboard > Organization** shows when it ends: there is nothing to cancel. Administrators see a reminder in the last 30 days (and a stronger one in the last 7), and get emails 30 and 7 days before the end. When it ends your organization moves to Basic unless you have chosen a plan; nothing is deleted, and protected sites stay protected. Choose a plan any time to keep Pro.
+SudoDocs can give eligible early-stage teams **Pro free for a number of months**. While it lasts, the header shows **PRO · STARTUP OFFER**, and **Admin > Organization** shows when it ends: there is nothing to cancel. Administrators see a reminder in the last 30 days (and a stronger one in the last 7), and get emails 30 and 7 days before the end. When it ends your organization moves to Basic unless you have chosen a plan; nothing is deleted, and protected sites stay protected. Choose a plan any time to keep Pro.
 
 ## What AI Actions Cost
 
@@ -52,8 +53,8 @@ Each AI action uses credits. A failed action gives its credits back.
 
 | Action | Credits |
 |---|---|
-| [DocOps Assistant](../user/chat.md) question (Discuss) | 2 (3 with an attached image or video) |
-| DocOps Assistant draft (Author, Rewrite, Release Note - written, then checked by SudoDocs' Editor) | 5 (6 with an attachment) |
+| [Doc Assistant](../user/chat.md) question (Discuss) | 2 (3 with an attached image or video) |
+| Doc Assistant draft (Author, Rewrite, Release Note - written, then checked by SudoDocs' Editor) | 5 (6 with an attachment) |
 | [Author mode](../user/author-mode.md): draft from a ticket or pull request | 20 |
 | [Docflows](../user/doc-drift.md) suggestion from a pull request or Jira ticket | 20 |
 | Request changes on a Docflows suggestion, or mentioning SudoDocs on a docs pull request | 8 |
@@ -74,16 +75,16 @@ SSO, BYOK and the CLI are Enterprise-only and aren't included in the trial.
 
 ## Annual Billing
 
-Pro and Enterprise can both be billed annually instead of monthly, at a discount equivalent to two months free. Pro Annual gives the same seats and features as Pro, with AI credits granted as a 6,000-credit yearly bucket instead of 500 per month.
+Pro and Enterprise can both be billed annually instead of monthly, at a discount equivalent to two months free. Pro Annual gives the same seats and features as Pro, with AI credits granted as a 12,000-credit yearly bucket instead of 1,000 per month.
 
 ## Add-ons
 
-Organizations on Pro, Pro Annual or Enterprise can buy add-ons from the Admin Dashboard (**Organization** tab):
+Organizations on Pro, Pro Annual or Enterprise can buy add-ons from **Admin > Organization**:
 
 * **Seats**: one additional user seat per add-on, billed monthly. See [Users](users.md#expand-seat-limits).
-* **Credit packs**: 250 additional AI credits per month, billed monthly.
+* **Credit packs**: additional AI credits every month, billed monthly. The size of a pack is shown when you buy it.
 
-The Free tier can't buy add-ons - upgrade to Pro first. On Enterprise, seats can be added beyond the included 25, up to 100 in total; for more, contact us. Credit packs add to Enterprise's 2,000 monthly credits until you [connect your own LLM key](llm-provider.md) - after that, credits are unlimited and credit packs aren't offered.
+The Free tier can't buy add-ons - upgrade to Pro first. On Enterprise, seats can be added beyond the included 25, up to 100 in total; for more, contact us. Credit packs add to Enterprise's 3,000 monthly credits until you [connect your own LLM key](llm-provider.md) - after that, credits are unlimited and credit packs aren't offered.
 
 ## Upgrade, Downgrade or Cancel
 

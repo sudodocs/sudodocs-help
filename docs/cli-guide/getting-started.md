@@ -58,7 +58,7 @@ base_url: https://api.sudodocs.com
 integration_id: 42   # required only for `sudodocs docflow` - find this via `sudodocs admin integrations webhook <id>`
 ```
 
-`sudodocs.yaml` is meant to stay out of version control - prefer environment variables for the key itself, generated with [`sudodocs admin api-keys create`](admin/settings.md#generate-an-api-key) (or from the Admin Dashboard's **Organization** tab):
+`sudodocs.yaml` is meant to stay out of version control - prefer environment variables for the key itself, generated with [`sudodocs admin api-keys create`](admin/settings.md#generate-an-api-key) (or from **Admin > Organization**):
 
 ```bash
 export SUDODOCS_API_KEY="sudo_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
@@ -72,8 +72,8 @@ If no API key is found by any of these methods, every command exits immediately 
 Commands are grouped by who can run them, mirroring the two sections this page sits alongside:
 
 * **Top-level commands** (`sync`, `convert`, `docflow`, `style-guide`, `release-notes`) - available to any doc-team member (Writer or System Administrator), same as the corresponding dashboard feature. These back the [User Tasks](user/index.md) pages. [Capture](../saas-guide/user/capture.md) has no CLI equivalent - it's a browser-first tool (Chrome extension plus dashboard) with no terminal-friendly workflow.
-* **`sudodocs admin ...`** - require the System Administrator role, same as the Admin Dashboard pages they mirror. Running an admin command as a Writer fails with `Error: This action requires a System Administrator.`, the same 403 the API returns. These back the [Admin Tasks](admin/index.md) pages.
+* **`sudodocs admin ...`** - require the System Administrator role, same as the Admin pages they mirror. Running an admin command as a Writer fails with `Error: This action requires a System Administrator.`, the same 403 the API returns. These back the [Admin Tasks](admin/index.md) pages.
 
 Every command that kicks off AI work (`sync`, `convert`, `docflow`, `admin kb auto-learn`) blocks and prints progress until the job completes or fails, polling the same job-status endpoint the dashboard's own progress bars use.
 
-Not every dashboard feature has a CLI equivalent yet - anything that's fundamentally a review/editing workflow (editing in Docflows' Review & Push, the DocOps Assistant chat, running an API Readiness scan, recording a capture) is a browser-first experience without a CLI wrapper today. Some pieces of those tools do have commands - opening a pull request from an API scan, and a capture's zoom setting - see [CLI Tasks](user/items.md). Writing and reviewing pages ([`sudodocs edit`](user/edit.md)), Publish ([`sudodocs publish`](user/publish.md)), reviews, Site health, Capture and diagram libraries have their own commands. To read a Docflows suggestion's changes from a terminal, use [`sudodocs items diff docflows`](user/items.md#see-a-docflows-suggestions-changes).
+Not every dashboard feature has a CLI equivalent yet - anything that's fundamentally a review/editing workflow (editing in Docflows' Review & Push, the Doc Assistant chat, running an API Readiness scan, recording a capture) is a browser-first experience without a CLI wrapper today. Some pieces of those tools do have commands - opening a pull request from an API scan, and a capture's zoom setting - see [CLI Tasks](user/items.md). Writing and reviewing pages ([`sudodocs edit`](user/edit.md)), Publish ([`sudodocs publish`](user/publish.md)), reviews, Site health, Capture and diagram libraries have their own commands. To read a Docflows suggestion's changes from a terminal, use [`sudodocs items diff docflows`](user/items.md#see-a-docflows-suggestions-changes).
