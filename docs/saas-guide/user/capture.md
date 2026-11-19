@@ -104,12 +104,35 @@ The exported video zooms the same way. To override the setting on one embed, add
 ## Recording: Narrated Screen Recordings
 
 1. Select **Recording** in the popup, optionally give it a title (see [Auto-Naming](#auto-naming) above).
-2. Optional - click **Allow microphone access** for narration. This is a one-time browser permission grant, and it's entirely skippable: a recording works fine with just the tab's own video and audio and no mic input at all, e.g. for capturing something already playing in the tab with no narration.
+2. Optional - click **Allow mic** for narration (see [Allow the Microphone](#allow-the-microphone)). This is a one-time browser permission grant, and it's entirely skippable: a recording works fine with just the tab's own video and audio and no mic input at all, e.g. for capturing something already playing in the tab with no narration.
 3. Optional - **Select Region** and **Follow across tabs and windows** work the same as in Interactive mode (see above). With following on, switching tabs or windows mid-recording doesn't cut the recording short - it's stitched into one continuous video across every tab/window you visited, even ones at different resolutions.
 4. Click **Start**, narrate and act normally (if you granted mic access). **Pause**/**Resume** are available throughout.
 5. Click **Stop**. The video uploads directly and is shareable the moment the upload finishes.
 
 Recording length is capped by your plan: **5 minutes** on Basic, **10 minutes** on Pro (and Trial), **30 minutes** on Enterprise. A recording longer than your plan's limit is rejected at upload - stay under the cap, or upgrade for longer recordings. Uploaded recordings also have a flat 300MB file size cap.
+
+## Audio: Voice Recordings
+
+Audio mode records your voice, and optionally the tab's sound, without any video. It needs extension version 1.2.0 or later. Use it for narration you want to add to a screen recording, or on its own as a shareable audio file.
+
+1. Open the page you want to capture, then open the extension and select **Audio**. The popup uses the page you are on as the source, so it must be an ordinary web page: browser pages such as `chrome://` or `brave://`, and extension pages, can't be used.
+2. If the button says **Allow mic**, follow [Allow the Microphone](#allow-the-microphone) once.
+3. Optional - tick **Include tab sound** to record what the page plays, such as a video, together with your voice.
+4. Click **Record**, speak, and click **Stop**. The audio uploads and appears in the library with a waveform, a player and an embed. See [The library and the editor](#the-library-and-the-editor).
+
+Audio recordings follow the same length limit as screen recordings.
+
+### Allow the Microphone
+
+Your browser asks for microphone access once, the first time you use it.
+
+1. In the popup, click **Allow mic**. A new browser tab opens and your browser shows a prompt near the address bar.
+2. Choose **Allow**. If the prompt lets you choose how long to remember the decision, choose the longest option so it doesn't ask again. If it offers a choice of microphone, check that it's the one you want.
+3. The tab closes by itself. Open the extension again on the page you want to capture. The button now says **Mic on**.
+
+If the tab doesn't close, close it yourself before you open the extension again. The extension captures the tab you are on, so with its own tab in front you would see an "Invalid or unsafe target URL" message.
+
+If the prompt doesn't appear or you chose **Block**, allow the microphone for SudoDocs Capture in your browser's site settings for microphone access. On a Mac, the browser also needs permission under **System Settings**, **Privacy & Security**, **Microphone**.
 
 ## Editing a Recording: Timeline, Replace Audio, and Export
 
