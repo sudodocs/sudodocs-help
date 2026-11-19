@@ -1,0 +1,74 @@
+{
+  "$schema": "https://sudodocs.com/schema/sudodocs.v1.json",
+  "logo": {
+    "light": "/img/logo.png"
+  },
+  "favicon": "/img/favicon.ico",
+  "footer": {
+    "columns": [
+      {
+        "title": "Docs",
+        "links": [
+          {
+            "label": "Guides",
+            "href": "/docs/saas-guide/overview"
+          },
+          {
+            "label": "CLI & API",
+            "href": "/docs/cli-guide/getting-started"
+          },
+          {
+            "label": "Changelog",
+            "href": "/docs/changelog"
+          },
+          {
+            "label": "llms.txt",
+            "href": "https://docs.sudodocs.com/llms.txt"
+          }
+        ]
+      },
+      {
+        "title": "SudoDocs",
+        "links": [
+          {
+            "label": "Go to App",
+            "href": "https://app.sudodocs.com"
+          },
+          {
+            "label": "Pricing",
+            "href": "https://sudodocs.com/#pricing"
+          },
+          {
+            "label": "SudoDocs TV",
+            "href": "https://youtube.com/@sudodocs-tv"
+          },
+          {
+            "label": "Docs on GitHub",
+            "href": "https://github.com/sudodocs/sudodocs-help"
+          }
+        ]
+      },
+      {
+        "title": "Legal",
+        "links": [
+          {
+            "label": "Terms of Service",
+            "href": "https://sudodocs.com/terms"
+          },
+          {
+            "label": "Privacy Policy",
+            "href": "https://sudodocs.com/privacy"
+          },
+          {
+            "label": "Refund Policy",
+            "href": "https://sudodocs.com/refund.html"
+          },
+          {
+            "label": "Contact",
+            "href": "mailto:admin@sudodocs.com"
+          }
+        ]
+      }
+    ]
+  }
+}
