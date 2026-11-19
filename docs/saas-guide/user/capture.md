@@ -42,8 +42,8 @@ If you're pointing the extension at a non-default SudoDocs deployment (a test in
 
 1. Switch to the tab you want to capture, open the extension popup, and select **Interactive**.
 2. Optional - give it a short title. Leave it blank and SudoDocs auto-names it for you (see [Auto-Naming](#auto-naming) below).
-3. Optional - **Follow across tabs and windows**: off by default. With it on, the recording follows wherever you click next, even in a different tab or window, instead of staying pinned to the tab you started on. Leave it off if you don't want a stray click somewhere unrelated (checking email mid-recording) captured as a step.
-4. Either click **Start** and use the product normally, **or** optionally click **Select Region** first to draw a rectangle constraining every step's screenshot to that area instead of the full tab - confirming the region starts the capture immediately, the same as clicking Start, so there's no separate Start click needed afterward. Either way, every click becomes a step, screenshot and all, and the recorder survives real page navigations and reloads.
+3. Optional - **Follow tabs**: off by default. With it on, the recording follows wherever you click next, even in a different tab or window, instead of staying pinned to the tab you started on. Leave it off if you don't want a stray click somewhere unrelated (checking email mid-recording) captured as a step.
+4. Either click **Start** and use the product normally, **or** optionally click **Region** first to draw a rectangle constraining every step's screenshot to that area instead of the full tab - confirming the region starts the capture immediately, the same as clicking Start, so there's no separate Start click needed afterward. Either way, every click becomes a step, screenshot and all, and the recorder survives real page navigations and reloads.
 5. Click **Finish** when done. AI captions each step and flags likely PII in the background; the capture appears in the Capture library right away and is shareable immediately - editing continues to work for as long as the capture exists, there's no lock-out point.
 
 With extension version 1.1.0 or later, each step also records what you clicked - the control's role (such as button or link), the name it shows, and a way to find it again - not just where you clicked. SudoDocs uses this to find the same control after your product's layout changes. Update the extension from the Chrome Web Store to get it.
@@ -105,8 +105,8 @@ The exported video zooms the same way. To override the setting on one embed, add
 
 1. Select **Recording** in the popup, optionally give it a title (see [Auto-Naming](#auto-naming) above).
 2. Optional - click **Allow mic** for narration (see [Allow the Microphone](#allow-the-microphone)). This is a one-time browser permission grant, and it's entirely skippable: a recording works fine with just the tab's own video and audio and no mic input at all, e.g. for capturing something already playing in the tab with no narration.
-3. Optional - **Select Region** and **Follow across tabs and windows** work the same as in Interactive mode (see above). With following on, switching tabs or windows mid-recording doesn't cut the recording short - it's stitched into one continuous video across every tab/window you visited, even ones at different resolutions.
-4. Click **Start**, narrate and act normally (if you granted mic access). **Pause**/**Resume** are available throughout.
+3. Optional - **Region** and **Follow tabs** work the same as in Interactive mode (see above). With following on, switching tabs or windows mid-recording doesn't cut the recording short - it's stitched into one continuous video across every tab/window you visited, even ones at different resolutions.
+4. Click **Record**, narrate and act normally (if you granted mic access). **Pause**/**Resume** are available throughout.
 5. Click **Stop**. The video uploads directly and is shareable the moment the upload finishes.
 
 Recording length is capped by your plan: **5 minutes** on Basic, **10 minutes** on Pro (and Trial), **30 minutes** on Enterprise. A recording longer than your plan's limit is rejected at upload - stay under the cap, or upgrade for longer recordings. Uploaded recordings also have a flat 300MB file size cap.
@@ -146,7 +146,7 @@ A finished Recording-mode capture opens in the editor with a small **timeline**,
 
 ## Screenshot: Annotated Screenshots
 
-1. Select **Screenshot** in the popup, optionally give it a title (see [Auto-Naming](#auto-naming) above). Either click **Capture Screenshot** directly, or optionally click **Select Region** first to draw a rectangle constraining the screenshot to just that area - confirming the region captures immediately, the same as clicking Capture Screenshot. Either way, this opens a new editor tab with the captured image.
+1. Select **Screenshot** in the popup, optionally give it a title (see [Auto-Naming](#auto-naming) above). Either click **Capture** directly, or optionally click **Region** first to draw a rectangle constraining the screenshot to just that area - confirming the region captures immediately, the same as clicking Capture. Either way, this opens a new editor tab with the captured image.
 2. In the editor, use the toolbar to mark up the image:
    * **Select** - click an existing annotation to select it, then drag to move it or use its handle to resize it.
    * **Arrow** / **Box** / **Highlight** (a translucent color, for drawing attention *to* something) / **Text** - drag or click to place, pick a color with the swatch.
@@ -156,7 +156,7 @@ A finished Recording-mode capture opens in the editor with a small **timeline**,
 
 ## Cross-Tab and Window Following
 
-The **Follow across tabs and windows** toggle (Interactive and Recording modes, off by default) is the one setting that changes what "the recording" actually covers:
+The **Follow tabs** toggle (Interactive and Recording modes, off by default) is the one setting that changes what "the recording" actually covers:
 
 * **Off** (default): pinned to the one tab you started on. Real page navigations and reloads of that tab are still followed; switching to a different tab or window is not.
 * **On**: the capture follows your focus anywhere in the browser. For Interactive mode this just means the click listener moves with you. For Recording mode, since there's no way to redirect a single video stream to a different tab, a followed recording is actually several segments stitched into one video at upload time - segments from different tabs or window sizes are automatically normalized to a common resolution first, so the result still plays back as one clean video.
