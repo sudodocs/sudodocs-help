@@ -7,7 +7,7 @@ description: Product updates to SudoDocs in November 2026, newest release first.
 
 What's new in SudoDocs in **November 2026**, newest release first. SudoDocs updates for everyone at once, so there's nothing to install - except the CLI, which says how to upgrade. For earlier months, see [Past Changelogs](changelog-archive/index.md).
 
-## November DD, 2026 {#2026-11-DD}
+## November 19, 2026 {#2026-11-19}
 
 ### Publish
 
