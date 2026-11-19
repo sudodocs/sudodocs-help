@@ -18,6 +18,8 @@ What's new in SudoDocs in **November 2026**, newest release first. SudoDocs upda
 - **Analytics without cookies.** See readers, AI agents and bots separately, what people search for and which questions your docs could not answer. See [Analytics](saas-guide/publish/analytics.md).
 - **Private docs.** Protect a site, or some folders, with a password, single sign-on or your own login page, and give AI tools an access key. See [Protected docs](saas-guide/publish/protected-docs.md).
 - **Site health.** Check any public docs site for broken links, AI readiness, structure and speed, and monitor your own sites on a schedule. See [Site health](saas-guide/publish/site-health.md).
+- **Design your site in the Studio.** One screen with four modes: skin, home page, navigation, and header and footer. Drafts save themselves, and you publish them together. The home page designer builds a page from blocks (hero with search, cards, steps, latest updates and more), previews it in your skin and in every language, and keeps a history. See [Studio](saas-guide/publish/studio.md).
+- **Helm charts.** Register a chart, check it, have AI write the missing value descriptions, and publish a Helm reference next to your API reference. See [Helm charts](saas-guide/publish/helm-charts.md).
 - **Validate before you publish.** Find broken links and API problems, and fix many of them with a pull request. See [Validate](saas-guide/publish/validate.md).
 
 ### Author mode
@@ -47,10 +49,13 @@ What's new in SudoDocs in **November 2026**, newest release first. SudoDocs upda
 
 ### CLI
 
-- **sudodocs-cli 1.4.0** adds `sudodocs publish`, `sudodocs edit`, `sudodocs health`, `sudodocs review`, `sudodocs capture`, `sudodocs diagram` and more `sudodocs admin` commands. The Feature Author commands `sudodocs items approve feature-drafts` and `sudodocs items release-notes` are removed. Upgrade with `pip install --upgrade sudodocs-cli`. See [Publish commands](cli-guide/user/publish.md) and [Author mode commands](cli-guide/user/edit.md).
+- **sudodocs-cli 1.4.0** adds `sudodocs publish`, `sudodocs edit`, `sudodocs health`, `sudodocs review`, `sudodocs capture`, `sudodocs diagram` `sudodocs admin charts`, `sudodocs chart-scan` and more `sudodocs admin` commands. The Feature Author commands `sudodocs items approve feature-drafts` and `sudodocs items release-notes` are removed. Upgrade with `pip install --upgrade sudodocs-cli`. See [Publish commands](cli-guide/user/publish.md) and [Author mode commands](cli-guide/user/edit.md).
 
 ### Improvements
 
+- **A new left menu.** Home, Author, Docflows, Reviews, API Specs, Triage, Release Dashboard, Changelog and Publish, with the tools and Admin below. Admin is now one page for each job. See [Find your way around](saas-guide/user/find-your-way.md).
+- **A redesigned Docflows page and a Triage page.** Filter the suggestions, review a diff with its files beside it, and decide many suggestions at once. See [Manage Docflows](saas-guide/user/doc-drift.md).
+- **One API Specs page.** The registry, the checks and their results are together, and Helm charts have their own view. See [API specs](saas-guide/admin/api-specs.md).
 - Author a Feature is retired: its drafts are kept, and its work moves to [Author mode](saas-guide/user/author-mode.md).
 - The Diagram Generator is now the [Mermaid diagrams](saas-guide/user/diagram-gen.md) library.
 - The Release Dashboard is now second in the left pane, with **Overview**, **Board** and **Releases** tabs, a **History** drawer and a **New release** button. See [Dashboards](saas-guide/user/dashboards.md).
