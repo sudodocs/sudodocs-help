@@ -5,6 +5,8 @@ description: Pick a skin and colours, start from a template, set the announcemen
 
 # Design
 
+The **Studio** brings the look, the home page, the navigation and the header and footer into one screen: see [Design your site in the Studio](studio.md). This page describes the settings behind the look.
+
 **Admin Dashboard > Publish > Design** controls how the site looks and what readers can do on it. Beside the controls there is a live preview of a sample site or, once the site is published, of your own pages with the choices you have not saved yet.
 
 ## Skins

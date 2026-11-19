@@ -52,6 +52,17 @@ sudodocs publish set acme-docs --tracking plausible --plausible-domain docs.exam
 | `--ask-ai`, `--ask-ai-cap`, `--ask-ai-instructions` | [Ask AI](../../saas-guide/publish/ask-ai.md). |
 | `--tracking plausible|ga4|none` and related options | [Your own analytics](../../saas-guide/publish/analytics.md#your-own-analytics-tool). |
 
+### The home page
+
+```bash
+sudodocs publish home acme-docs                    # what the site uses
+sudodocs publish home acme-docs --export home.json # the designed page, with its translations
+sudodocs publish home acme-docs --file home.json   # publish a changed page; the site builds again
+sudodocs publish home acme-docs --off              # go back to the repository's home page
+```
+
+The page is the one the Studio's [home page designer](../../saas-guide/publish/studio.md#the-home-page-designer) makes: sections, columns and blocks, plus each language's own words. It is kept in SudoDocs, not in your repository.
+
 ### Add a template's starter content
 
 ```bash

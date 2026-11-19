@@ -17,6 +17,7 @@ const sidebars = {
       items: [
         'saas-guide/publish/create-a-site',
         'saas-guide/publish/supported-tools',
+        'saas-guide/publish/studio',
         'saas-guide/publish/design',
         'saas-guide/publish/navigation',
         'saas-guide/publish/versions-languages',
