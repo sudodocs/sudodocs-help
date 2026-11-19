@@ -1,10 +1,10 @@
 # API Specs
 
-The **API Specs** page lists your OpenAPI specs and sets how they're checked. It works the same whether you keep one large spec, many smaller specs that different teams own (in one repository or many), or both. [API Readiness](../user/api-readiness.md) checks every spec on the list, and [Changelog](../user/release-composer.md#incoming-api-changes) turns merged API changes into Developer Release Notes. Writers don't need repository access or tokens of their own.
+**API Specs** in the left menu is one page for everyone: it lists your OpenAPI specs, runs the checks and shows the results. Administrators register specs and set how they are checked; Writers run the checks. Under the page title, a switch chooses **API specs** or [Helm charts](../publish/helm-charts.md). It works the same whether you keep one large spec, many smaller specs that different teams own (in one repository or many), or both. The [check](../user/api-readiness.md) covers every spec on the list, and [Changelog](../user/release-composer.md#incoming-api-changes) turns merged API changes into Developer Release Notes. Writers don't need repository access or tokens of their own.
 
-Set up the [Knowledge Base](kb-config.md) first if you want spec descriptions checked against your style guide - that's why this tab comes after it.
+Set up the [Knowledge Base](kb-config.md) first if you want spec descriptions checked against your style guide - that's why it comes first.
 
-> **Note**: API Readiness isn't included in every plan. If it isn't in yours, the tab says so. See [Plans & Billing](plans.md).
+> **Note**: The API checks aren't included in every plan. If they aren't in yours, the page says so. See [Plans & Billing](plans.md).
 
 ## How Are Your Specs Organized?
 
@@ -18,10 +18,10 @@ Pick the option that matches your team. It changes the wording on this tab and l
 
 A spec is one root file. SudoDocs follows its `$ref`s to find every other file it uses, so you don't list those files yourself.
 
-1. Click **+ Add a spec**.
+1. Click **Add a spec**.
 2. Fill in:
     * **Name**: for example `Billing API`. Scans, release notes and pull requests use it.
-    * **Repository**: one from the [Repositories](connect-repos.md) tab, so SudoDocs uses its saved GitHub token or GitHub App access. **A public repository (enter its URL)** also works, but SudoDocs can't open pull requests there.
+    * **Repository**: one from [Admin > Repositories](connect-repos.md), so SudoDocs uses its saved GitHub token or GitHub App access. **A public repository (enter its URL)** also works, but SudoDocs can't open pull requests there.
     * **Branch**: defaults to `main`. If the repository has no `main` branch, SudoDocs reads its default branch and says so in the scan log.
     * **Spec file (root)**: the path to the spec in the repository, for example `billing/openapi.yaml`. It must be a `.yaml`, `.yml` or `.json` file.
     * **This spec is** (with **A combined spec plus independent specs**): **An independent spec** or **The combined spec**.
@@ -29,7 +29,7 @@ A spec is one root file. SudoDocs follows its `$ref`s to find every other file i
     * **Check it in API Readiness**: include it when someone checks **All specs**.
     * **Turn its API changes into Developer Release Notes**: see [Incoming API changes](../user/release-composer.md#incoming-api-changes).
     * **Which operations are public**: **Everything except operations marked `x-internal: true`** (the default), or **Only operations marked** with a marker you choose (`x-public: true` by default) on the operation, its path, or one of its tags. Release notes cover only public operations.
-3. Click **Add spec**.
+3. Click **Save**.
 
 SudoDocs then reads the spec. The card shows how many dependency files it found and when it read them; expand **Files** to see each one. Use **↑** and **↓** to set the order specs appear in, **Edit** to change a spec, and **Remove** to take it off the list. Removing a spec keeps its scans in the history.
 
@@ -72,7 +72,7 @@ Select **Apply the Knowledge Base style guide to summaries and descriptions** to
 
 Optional. SudoDocs sets it as the `base-url` server variable of each root spec file before checking it.
 
-Click **Save settings**. The next API Readiness scan uses them.
+Click **Save**. The next check uses them.
 
 ## Coming From the Old Settings
 

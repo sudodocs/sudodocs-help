@@ -8,7 +8,7 @@ Docflows allows technical writers to review, edit, and assign automated document
 
 ## Find the Docflows on a Release
 
-To see your workload for a specific release, open the release from **Release Dashboard** on the Workspace (pick it in the list on the left) and click the **Docflows** button under its name. It shows how many are assigned to you, for example **Docflows: 2 for you**.
+To see your workload for a specific release, open **Release Dashboard** in the left menu, pick the release (the **Releases** tab lists them all) and open its **Docflows**. It shows how many are assigned to you, for example **Docflows: 2 for you**.
 
 The list is grouped, with a count for each group:
 
@@ -19,15 +19,15 @@ The list is grouped, with a count for each group:
 Each row shows:
 
 * **Source PR** & **Target File**: Links back to the original engineering pull request and displays the destination file path.
-* **Batch Updates**: If the AI detected that multiple files need updating (e.g., creating a new Markdown file and updating the navigation menu), it will be clearly marked with a **📦 BATCH UPDATE** badge.
-* **Review Status**: A **✓ IA + Editor Reviewed** badge means the automated review found no blocking issues. A **⚠️ Editor Flagged Open Issues** badge means it didn't fully resolve everything on its own - hover the badge for what's still open, and give those specific files a closer read before pushing. See [Manage Docflows](doc-drift.md#automated-review-before-it-reaches-your-inbox) for how this review works.
+* **Batch Updates**: If the AI detected that multiple files need updating (e.g., creating a new Markdown file and updating the navigation menu), it is marked with a **Batch** tag.
+* **Review Status**: A **Reviewed** tag means the automated review found no blocking issues. A **Flagged** tag means it didn't fully resolve everything on its own - hover the badge for what's still open, and give those specific files a closer read before pushing. See [Manage Docflows](doc-drift.md#automated-review-before-it-reaches-you) for how this review works.
 * **Release notes**: whether it's **queued** for the release notes, already **in draft**, **not needed**, or has **no decision yet** (approved before release-notes choices existed), with its section and category.
 * **Writer**: who it's assigned to (**You**, a teammate, or **No writer**).
-* **Screenshot Status**: If a preview environment screenshot capture failed or was unreachable, a **⚠️ No Screenshots** alert badge is displayed on the dashboard suggestion card.
+* **Screenshot Status**: If a preview environment screenshot capture failed or was unreachable, an alert tag is displayed on the dashboard suggestion card.
 
-## Review & Push Workflow
+## Review and Push Workflow
 
-Click **Review & Push** on any item. Like a pull request on GitHub, you see exactly what each file will change before it reaches your docs repository:
+Click **Review** on any item, then **Push** when you are done. Like a pull request on GitHub, you see exactly what each file will change before it reaches your docs repository:
 
 * **Target Repo Integration**: choose the documentation repository to publish to.
 * **Files**: every file in the suggestion, with how many lines are added (green) and removed (red). Click a file in the list to jump to it. Images are marked **image**.
@@ -53,7 +53,7 @@ What a file looked like before the suggestion is kept as you edit, so the compar
 If an engineer pushes new commits to their Pull Request after the AI has already generated your documentation draft, you do not need to start over:
 
 * **New commits since this draft**: this badge shows on the suggestion - on its Docflows card and in the release's Docflows list - when the engineer has pushed to the pull request since the draft was written.
-* **Sync Latest Code**: fetches the pull request's newest code and adds a **### 🔄 Latest Engineering Updates** section with what the draft is missing, without overwriting your edits. SudoDocs' Technical Writer writes it following your [Doc Team Roles](../admin/doc-team-roles.md) instructions and style guide, and its Editor reviews it. It's on the Docflows card (before or after approval) and in **Review & Push**. It costs 5 credits, or 8 when there's an update for the Editor to review. It only appears for suggestions from a pull request - a Jira-sourced one has no commits to sync from.
+* **Sync code**: fetches the pull request's newest code and adds a **Latest Engineering Updates** section with what the draft is missing, without overwriting your edits. SudoDocs' Technical Writer writes it following your [Doc Team Roles](../admin/doc-team-roles.md) instructions and style guide, and its Editor reviews it. It's on the Docflows card (before or after approval) and in **Review & Push**. It costs 5 credits, or 8 when there's an update for the Editor to review. It only appears for suggestions from a pull request - a Jira-sourced one has no commits to sync from.
 
 New pushes to the pull request don't redraft the suggestion, so your edits are never replaced; the badge tells you there's something to sync.
 

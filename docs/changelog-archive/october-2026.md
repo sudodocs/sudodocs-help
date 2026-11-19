@@ -48,7 +48,7 @@ What's new in SudoDocs in **October 2026**, newest release first. SudoDocs updat
 
 ### Docflows
 
-- **Review changes like a pull request.** See each file's changes side by side or in one column, edit in place, and tick files as reviewed before you push. See [Review & Push Workflow](../saas-guide/user/assign-pr.md#review--push-workflow).
+- **Review changes like a pull request.** See each file's changes side by side or in one column, edit in place, and tick files as reviewed before you push. See [Review & Push Workflow](../saas-guide/user/assign-pr.md#review-and-push-workflow).
 - **Release notes at approval.** When you approve a suggestion, choose **Include** or **Not needed** for the release notes, with its section and product category - SudoDocs suggests the answer. You can also create a release right there with **+ New release...**. See [Triage Suggestions](../saas-guide/user/doc-drift.md#triage-suggestions).
 - **Is it still needed?** Check suggestions against your docs as they are today: SudoDocs tells you which your docs already have - even when they say it in other words - updates the rest to fit docs that changed since, and shows whether the engineering pull request was merged or closed. **Dismiss as done** clears the finished ones and keeps their release notes. See [Is a Suggestion Still Needed?](../saas-guide/user/doc-drift.md#is-a-suggestion-still-needed)
 - **Request changes.** Tell SudoDocs what to change on a suggestion; it revises and reviews it again, and **Review history** shows every round. See [Request Changes](../saas-guide/user/doc-drift.md#request-changes).

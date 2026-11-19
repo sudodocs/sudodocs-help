@@ -12,7 +12,7 @@ You do not need to migrate. Publish reads the repository you already have (see [
 ## What you get
 
 - **A site that matches your docs tool.** Mermaid diagrams, tabs, callouts, math, versions and translations work the way they do in Docusaurus, Mintlify and MkDocs.
-- **A choice of looks.** Seven skins and ready-made [starter templates](design.md#start-from-a-template).
+- **A choice of skins.** Seven skins and ready-made [starter templates](design.md#start-from-a-template).
 - **An API reference** from your OpenAPI files, with versions: see [API reference](api-reference.md).
 - **Writing and review in SudoDocs.** [Author mode](../user/author-mode.md) edits pages on a work branch, and [reviews](../user/reviews.md) happen on a pull request.
 - **Checks before you publish.** [Validate](validate.md) finds broken links, missing descriptions and API problems.
@@ -24,14 +24,14 @@ You do not need to migrate. Publish reads the repository you already have (see [
 
 ## Who does what
 
-- **Administrators** create sites and change their settings in **Publish**: source, design, navigation, versions, domains and protection. An administrator can let Writers manage site settings too (see [Publishing policy](../admin/publish-admin.md)).
-- **Writers** check and publish sites, read the analytics and activity, and write pages in **Author** from the left menu.
+- **Administrators** create sites and change their settings in **Publish**: source, design, navigation, versions, domains and protection. The left menu's **Publish** opens your sites; an administrator can let Writers manage site settings too (see [Publishing policy](../admin/publish-admin.md)).
+- **Writers** check and publish sites, read the analytics and the history, and write pages in **Author** from the left menu.
 - **Reviewers** read and comment on the changes and items they are asked about.
 
 ## Start here
 
 1. An administrator connects the repository (**Admin > Repositories**) and creates the site: [Create a site](create-a-site.md).
-2. Pick a look: [Design](design.md).
+2. Pick a skin in the [Studio](studio.md): [Skins and reader settings](design.md).
 3. Press **Publish**. The first build usually takes a minute or two.
 4. Check the site, then add a [custom domain](domains.md) if you want one.
 

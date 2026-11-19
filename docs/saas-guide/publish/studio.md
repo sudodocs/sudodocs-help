@@ -9,7 +9,7 @@ The **Studio** is where you shape how a site looks. It has four modes in one scr
 
 | Mode | What you do there |
 |---|---|
-| **Skin** | Pick one of the seven skins, set the colours, fonts and logo. See [Design](design.md). |
+| **Skin** | Pick one of the seven skins, set the colours, fonts and logo. See [Skins and reader settings](design.md). |
 | **Home** | Design the home page from blocks. See [below](#the-home-page-designer). |
 | **Navigation** | Reorder, rename, hide and add pages in the sidebar, with a preview that opens on the page you select. See [Navigation](navigation.md). |
 | **Header & footer** | Edit the announcement bar, the header links and button, and the footer. |

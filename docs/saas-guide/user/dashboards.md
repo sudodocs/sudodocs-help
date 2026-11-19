@@ -67,4 +67,4 @@ Status changes made on the board are the same as changing the status in the tool
 * A **Release notes** card: how many items are queued for the release notes and where from, the latest draft (and how many items arrived since), its pull request once pushed, when SudoDocs drafts automatically, and **Automatic drafting settings** - see [Changelog](release-composer.md#automatic-drafting). Its button opens Changelog for the release.
 * Shortcuts under the header: **Compose release notes**, **Draft from ticket** and **Open release page** for the release. For the release's Docflows, see [Review and Push Docflows](assign-pr.md).
 
-To get the same numbers from a terminal, see [CLI Tasks → Dashboard](../../cli-guide/user/items.md#dashboard). Your own summary is also at the top of the Workspace - see [Your Work](index.md#your-work).
+To get the same numbers from a terminal, see [CLI Tasks → Dashboard](../../cli-guide/user/items.md#dashboard). Your own summary is also on **Home** - see [Your Work](index.md#your-work).

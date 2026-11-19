@@ -7,7 +7,7 @@ const sidebars = {
       type: 'category',
       label: 'Get Started',
       collapsed: false,
-      items: ['saas-guide/user/sign-in', 'saas-guide/user/profile-security'],
+      items: ['saas-guide/user/find-your-way', 'saas-guide/user/sign-in', 'saas-guide/user/profile-security'],
     },
     {
       type: 'category',

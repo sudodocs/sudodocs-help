@@ -1,15 +1,15 @@
-# API Readiness
+# Check your API specs (API Readiness)
 
-The API Readiness tool validates your OpenAPI Specifications (OAS) against industry standards and your own style guide. It supports Swagger and Redocly workflows, and leverages AI to automatically repair technical syntax errors and improve content descriptions.
+The API checks on the **API Specs** page validate your OpenAPI Specifications (OAS) against industry standards and your own style guide. It supports Swagger and Redocly workflows, and leverages AI to automatically repair technical syntax errors and improve content descriptions.
 
 ## Before You Start
 
 A System Administrator lists your specs - one large spec, many team specs in any repository, or both - and sets the style rules on the [API Specs](../admin/api-specs.md) page.
 
-1. Open **API Readiness** from the Workspace and click **Open Validator**.
+1. Open **API Specs** in the left menu.
 2. Check **Your API specs**: each spec with its repository, branch and file. A spec with `$ref`s SudoDocs couldn't follow says so; an administrator can add a dependency location for them.
 
-If it says **No API spec is set up yet**, ask an administrator to add your specs. Administrators see an **Edit in Admin** link that goes straight to the tab.
+If it says **No API spec is set up yet**, ask an administrator to add your specs. Administrators see **Add a spec** on the same page.
 
 ## Run a Scan
 
@@ -21,7 +21,7 @@ If it says **No API spec is set up yet**, ask an administrator to add your specs
     * **AI Tech Fixes**: analyzes the problems and fixes them, file by file.
     * **AI Content Audit**: reviews summaries, descriptions and tone against your style guide.
 
-3. Click **🚀 Check API Specs**.
+3. Click **Check API specs**.
 
 SudoDocs reads each spec with every file its `$ref`s reach - split files, a shared folder, or files in another repository - and checks them together. Your files are never changed by a scan.
 
@@ -29,9 +29,9 @@ SudoDocs reads each spec with every file its `$ref`s reach - split files, a shar
 
 A scan of **All specs** shows a tab for each spec with its error count. For the spec you're viewing:
 
-* **The summary** at the top: how many files, errors and warnings, and any `$ref`s SudoDocs couldn't follow. After an AI fix it shows the errors before and after (SudoDocs checks the fixed files again) and the Editor's verdict. **Open Pull Request**, **Send to Docflows** and **Download** are here too.
+* **The summary** at the top: how many files, errors and warnings, and any `$ref`s SudoDocs couldn't follow. After an AI fix it shows the errors before and after (SudoDocs checks the fixed files again) and the Editor's verdict. **Open pull request**, **Send to Docflows** and **Download** are here too.
 * **1. Problems by file**: each file of the spec, with every problem's line, severity, rule and message - in the file that holds it, even a dependency file in another repository. Files the AI fixed are marked **Fixed** and show **Before** and **After the AI fix**. **CLI log** has the tools' output.
-* **2. Technical Analysis** and **3. Content Audit**: what the AI found. **Apply Technical Fixes** or **Apply Content Fixes** fixes the spec with that analysis (a new scan, titled "(AI fix)").
+* **2. Technical Analysis** and **3. Content Audit**: what the AI found. **Apply AI fixes** fixes the spec with that analysis (a new scan, titled "(AI fix)").
 * **4. The whole spec as one file**: the spec with every `$ref` file put in (bundled), as checked and with the AI fix - for a docs site that needs one file.
 
 ### How the AI Fix Works
@@ -50,7 +50,7 @@ Every scan is listed under **Scan History** on the left, titled with its spec an
 
 The summary's buttons send the scan's spec out of SudoDocs:
 
-* **🚀 Open Pull Request**: opens pull requests straight away. Under **Open it in**, tick where they go:
+* **Open pull request**: opens pull requests straight away. Under **Open it in**, tick where they go:
     * **The spec's repositories**: the changed files go back to the repositories they came from, each with its own name and path, so engineering gets the corrections. SudoDocs opens one pull request per repository, against the branch the spec (or its dependency location) is read from, and lists the files each one gets. A spec read from a repository URL can't get pull requests; add that repository under **Repositories** first.
     * **A docs repository**: the whole spec as one file, for the published API reference. Pick the repository; if a file with the spec's name is already there, SudoDocs fills in its path so the pull request updates it. Otherwise it's added at the spec's path, which you can change.
 

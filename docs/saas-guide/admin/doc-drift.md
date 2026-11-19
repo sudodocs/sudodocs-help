@@ -127,7 +127,7 @@ When a screenshot from Docflows is pushed to your docs, SudoDocs remembers how i
 
 SudoDocs never replaces a doc image without telling you. To see or forget what it remembers, go to **Admin > Knowledge Base > Screenshot style > Remembered screenshots**.
 
-A flagged screenshot - or one the check couldn't run on - can't be pushed until someone looks at it and ticks **Reviewed** in [Review & Push](../user/assign-pr.md#review--push-workflow). Screenshots your own CI sends with `sudodocs docflow --screenshot` go through the same check.
+A flagged screenshot - or one the check couldn't run on - can't be pushed until someone looks at it and ticks **Reviewed** in [Review and Push](../user/assign-pr.md#review-and-push-workflow). Screenshots your own CI sends with `sudodocs docflow --screenshot` go through the same check.
 
 ### Troubleshooting Screenshot Failures
 

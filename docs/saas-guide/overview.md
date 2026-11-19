@@ -24,18 +24,19 @@ Set up SudoDocs for your organization from **Admin** in the left menu.
 ## Publish your docs
 
 - [Publish your docs](publish/index.md): a hosted docs site from your repository, with an API reference, analytics, Ask AI and private docs.
-- [Create a site](publish/create-a-site.md), pick a [look](publish/design.md), and check it with [Validate](publish/validate.md).
+- [Create a site](publish/create-a-site.md), pick a skin in the [Studio](publish/studio.md), and check it with [Validate](publish/validate.md).
 
 ## For writers
 
-Draft, review, and ship documentation from the Workspace.
+Draft, review, and ship documentation from **Home** and the left menu: see [Find your way around](user/find-your-way.md).
 
 - [Author mode](user/author-mode.md): write and edit your docs pages in SudoDocs, with a live preview and review.
 - [Reviews](user/reviews.md): comments, @mentions and outside reviewers on every tool.
 - [Doc Assistant](user/chat.md): ask questions about your code and docs.
 - [Releases](user/releases.md) and the [Release Dashboard](user/dashboards.md): your work and your team's, release by release.
 - [Docflows](user/doc-drift.md): documentation suggestions from pull requests and Jira tickets.
-- [Release notes](user/release-composer.md): every release's notes, collected from Docflows, Slack and Jira, drafted for you and pushed to your docs.
+- [Changelog](user/release-composer.md): every release's notes, collected from Docflows, Slack and Jira, drafted for you and pushed to your docs.
+- [Helm charts](publish/helm-charts.md): check a chart and publish a Helm reference.
 - [Capture](user/capture.md): turn a live product into a walkthrough, recording, or annotated screenshot.
 - [See all user tasks](user/index.md)
 
