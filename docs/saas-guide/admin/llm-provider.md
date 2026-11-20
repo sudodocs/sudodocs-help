@@ -2,7 +2,7 @@
 
 Enterprise organizations can bring their own API keys instead of using SudoDocs' platform Gemini key. Bring Your Own Key (BYOK) exists for data trust and residency: with BYOK configured, your organization's content is only ever sent to the vendor you chose, not to SudoDocs' own key.
 
-The **Provider** tab (the first tab in the Admin Dashboard) has two independent settings - configuring one does not configure the other:
+The **AI provider** page (**Admin > AI provider**) has two independent settings - configuring one does not configure the other:
 
 * **Text Generation**: powers drafting, editing, and all AI-generated content.
 * **Embeddings & Search**: powers search, "Chat with Docs," and RAG context retrieval.
@@ -15,7 +15,7 @@ The **Provider** tab (the first tab in the Admin Dashboard) has two independent 
 
 ## Text Generation
 
-1. Navigate to the **Admin Dashboard** and select the **Provider** tab.
+1. Open **Admin > AI provider**.
 2. Under **Text Generation**, choose your **Provider**: Gemini, OpenAI, Claude, DeepSeek, or Custom (for any other OpenAI-compatible endpoint, such as a self-hosted vLLM/Ollama deployment or a third-party router like OpenRouter).
 3. **Base URL**: (Custom only) Enter the full base URL of your OpenAI-compatible endpoint.
 4. Enter the **Model Name** exactly as your provider identifies it (e.g. `claude-opus-5`, `gpt-5`, `deepseek-chat`). SudoDocs does not restrict this to a fixed list, since model names change frequently - use whatever your provider currently supports.

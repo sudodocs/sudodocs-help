@@ -14,21 +14,29 @@ Everything you can do in the SudoDocs web app at [app.sudodocs.com](https://app.
 
 ## For administrators
 
-Set up SudoDocs for your organization from the Admin Dashboard.
+Set up SudoDocs for your organization from **Admin** in the left menu.
 
 - [Connect repositories](admin/connect-repos.md) with **Connect with GitHub** or a token.
 - [Configure the Knowledge Base](admin/kb-config.md) so every draft follows your style guide.
 - [Invite and manage users](admin/users.md), and set your organization's sign-in policy.
 - [See all admin tasks](admin/index.md)
 
+## Publish your docs
+
+- [Publish your docs](publish/index.md): a hosted docs site from your repository, with an API reference, analytics, Ask AI and private docs.
+- [Create a site](publish/create-a-site.md), pick a skin in the [Studio](publish/studio.md), and check it with [Validate](publish/validate.md).
+
 ## For writers
 
-Draft, review, and ship documentation from the Workspace.
+Draft, review, and ship documentation from **Home** and the left menu: see [Find your way around](user/find-your-way.md).
 
-- [DocOps Assistant](user/chat.md): ask questions about your code and docs.
+- [Author mode](user/author-mode.md): write and edit your docs pages in SudoDocs, with a live preview and review.
+- [Reviews](user/reviews.md): comments, @mentions and outside reviewers on every tool.
+- [Doc Assistant](user/chat.md): ask questions about your code and docs.
 - [Releases](user/releases.md) and the [Release Dashboard](user/dashboards.md): your work and your team's, release by release.
 - [Docflows](user/doc-drift.md): documentation suggestions from pull requests and Jira tickets.
-- [Release notes](user/release-composer.md): every release's notes, collected from Docflows, Slack and Jira, drafted for you and pushed to your docs.
+- [Changelog](user/release-composer.md): every release's notes, collected from Docflows, Slack and Jira, drafted for you and pushed to your docs.
+- [Helm charts](publish/helm-charts.md): check a chart and publish a Helm reference.
 - [Capture](user/capture.md): turn a live product into a walkthrough, recording, or annotated screenshot.
 - [See all user tasks](user/index.md)
 

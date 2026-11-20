@@ -1,8 +1,8 @@
 # Configure Doc Team Roles
 
-Every documentation draft SudoDocs produces - whether you started it yourself with **Author a Feature** or it arrived automatically through **Docflows** - passes through three roles before a human ever sees it:
+Every documentation draft SudoDocs produces - whether you started it yourself in **Author mode** (the ticket tool) or it arrived automatically through **Docflows** - passes through three roles before a human ever sees it:
 
-* **Information Architect**: Decides where the content belongs (a new page, or an update to an existing one), audits your existing documentation for anything the change makes outdated, sets the section outline the Writer must follow, and decides whether the change is significant enough to warrant a generated architecture diagram (see [Author a Feature](../user/feature-author.md#generate-architecture-diagrams)). This diagram judgment isn't part of the editable instructions below - it's a fixed part of the role.
+* **Information Architect**: Decides where the content belongs (a new page, or an update to an existing one), audits your existing documentation for anything the change makes outdated, sets the section outline the Writer must follow, and decides whether the change is significant enough to warrant a generated architecture diagram (see [Author mode](../user/author-mode.md)). This diagram judgment isn't part of the editable instructions below - it's a fixed part of the role.
 * **Technical Writer**: Drafts the content against that outline.
 * **Editor**: Reviews the Writer's draft with fresh eyes - it never sees the Writer's own instructions, only the finished draft, the outline it should match, and the same source material the Writer had. It decides whether an issue is **blocking** (sends the draft back to the Writer for one more pass) or a **suggestion** (recorded, doesn't hold up the draft).
 
@@ -10,7 +10,7 @@ Each role's judgment is admin-configurable per organization, separately from you
 
 ## Edit Role Instructions
 
-1. Navigate to **Admin Dashboard**.
+1. Open **Admin** in the left menu.
 2. Open the **Roles** tab.
 3. You'll see three boxes, one per role, each pre-filled with a greyed-out placeholder showing the built-in default. An empty box means that role is using the default - you don't need to fill in all three to customize one.
 4. Type your own instructions into any box to override the default for that role.
@@ -26,17 +26,17 @@ These are SudoDocs' own built-in roles, not people on your team. Your writers an
 
 | Where | Information Architect | Technical Writer | Editor |
 |---|---|---|---|
-| [Author a Feature](../user/feature-author.md) | Plans the page | Drafts and revises | Reviews every round, and suggests the release-notes line |
+| [Author mode](../user/author-mode.md) | Plans the page | Drafts and revises | Reviews every round, and suggests the release-notes line |
 | [Docflows](../user/doc-drift.md) suggestions | Plans which files change | Drafts and revises | Reviews the whole set |
 | [Request changes](../user/doc-drift.md#request-changes) on a Docflows card | - | Makes your requested changes | Reviews the result |
 | [Sync Latest Code](../user/assign-pr.md#manage-engineering-changes) | - | Writes what's missing | Reviews it |
 | [Mentioning SudoDocs on a docs pull request](../user/assign-pr.md#ask-sudodocs-to-revise-a-docs-pull-request) | - | Makes the change | Reviews it; nothing is pushed while it has blocking issues |
-| [Release Composer](../user/release-composer.md#draft-the-release-notes) | - | Writes every entry | Checks every queued item is there once, in its section, with nothing invented |
+| [Changelog](../user/release-composer.md#draft-the-release-notes) | - | Writes every entry | Checks every queued item is there once, in its section, with nothing invented |
 | [Universal Converter](../user/converter.md#generate-ai-reference-docs-pro) reference pages | - | Writes the page | Checks it against your spec or values file: nothing invented, nothing missing |
 | [API Readiness](../user/api-readiness.md#review-results) AI fixes | - | Writes the descriptions and summaries | Reviews only the text the fix wrote or changed |
-| [DocOps Assistant](../user/chat.md#chat-modes) Author, Rewrite and Release Note | - | Writes the draft | Checks it against your request and the docs it found |
+| [Doc Assistant](../user/chat.md#chat-modes) Author, Rewrite and Release Note | - | Writes the draft | Checks it against your request and the docs it found |
 
-The Assistant's Discuss and Analyze Doc Gaps modes answer questions rather than write documentation, so they don't use the roles. Capture captions and Diagram Generator diagrams don't either.
+The Assistant's Discuss and Analyze Doc Gaps modes answer questions rather than write documentation, so they don't use the roles. Capture captions and diagrams don't either.
 
 When the Editor marks something as blocking, the Writer gets another pass. If the Editor still has open issues after that, SudoDocs doesn't hide them: the draft or suggestion is flagged with what's still open.
 
@@ -87,13 +87,13 @@ for factual gaps, missing required sections, or compliance issues.
 Role instructions apply the next time a draft is generated - editing them doesn't retroactively change drafts already in progress or already published. To confirm a change is live:
 
 1. Save your new instructions.
-2. Generate a new draft with [Author a Feature](../user/feature-author.md) (or wait for the next Docflows suggestion).
-3. Open the draft's **History** on the Pipeline Review page - or a Docflows card's **Review history** - and check the Editor's comments. They should reflect your new instruction.
+2. Generate a new draft with [Author mode](../user/author-mode.md)'s **Draft from a ticket or pull request** (or wait for the next Docflows suggestion).
+3. Open a Docflows card's **Review history** and check the Editor's comments. They should reflect your new instruction.
 
 ## See Also
 
 * [Configure the Knowledge Base](kb-config.md) - style guide, terminology, and product categories, which every role already reads alongside its instructions here.
-* [Author a Feature](../user/feature-author.md) - the manually-initiated path through this same pipeline.
+* [Author mode](../user/author-mode.md) - the manually-initiated path through this same pipeline.
 * [Manage Docflows](../user/doc-drift.md) - the automatically-initiated path through this same pipeline.
-* [Compose Release Notes](../user/release-composer.md) - release notes written by the Technical Writer and checked by the Editor.
+* [Changelog](../user/release-composer.md) - release notes written by the Technical Writer and checked by the Editor.
 * [CLI Tasks → Doc Team Roles](../../cli-guide/admin/doc-team-roles.md) - script role instruction changes.

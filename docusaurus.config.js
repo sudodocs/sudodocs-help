@@ -131,7 +131,6 @@ const config = {
             items: [
               {label: 'Go to App', href: 'https://app.sudodocs.com'},
               {label: 'Pricing', href: 'https://sudodocs.com/#pricing'},
-              {label: 'Blog', href: 'https://hackernoon.com/u/sudodocs'},
               {label: 'SudoDocs TV', href: 'https://youtube.com/@sudodocs-tv'},
               {label: 'Docs on GitHub', href: 'https://github.com/sudodocs/sudodocs-help'},
             ],

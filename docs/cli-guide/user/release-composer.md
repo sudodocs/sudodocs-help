@@ -12,7 +12,20 @@ sudodocs release-notes queue --release 7 remove 31
 sudodocs release-notes queue --release 7 jira --bugs 10003 --stories 10002
 ```
 
-Without a subcommand it lists the queue by section, each item with its ID, source (`docflows`, `slack`, `jira`, `csv`, `manual`) and category, plus the latest draft and the automatic-drafting schedule. `--section` is `feature`, `enhancement`, `bug` or `known-issue`. `jira` adds the tickets from saved filters (`--epics`, `--stories`, `--bugs`, `--known-issues`, `--escalations`); tickets already queued are skipped.
+Without a subcommand it lists the queue by section, each item with its ID, source (`docflows`, `slack`, `jira`, `csv`, `manual`, `api`) and category, plus the latest draft and the automatic-drafting schedule. `--section` is `feature`, `enhancement`, `bug`, `known-issue` or `developer`; for `developer`, `--category` can be a sub-heading: `Breaking Changes`, `New Endpoints`, `Changes` or `Deprecations`. `jira` adds the tickets from saved filters (`--epics`, `--stories`, `--bugs`, `--known-issues`, `--escalations`); tickets already queued are skipped.
+
+## Incoming API Changes
+
+```bash
+sudodocs api-changes list
+sudodocs api-changes show 14
+sudodocs api-changes include 14 --release 7 --note "Errors no longer have a code field."
+sudodocs api-changes dismiss 15
+sudodocs api-changes reopen 15
+sudodocs api-changes check --repo 42 --pr 318
+```
+
+API changes from merged pull requests, as under [Incoming API changes](../../saas-guide/user/release-composer.md#incoming-api-changes) (needs `sudodocs-cli` 1.4.0). `list` shows those waiting (`--status included`, `dismissed` or `all` for the others); `show` prints every change. `include` adds one to a release's queue under **Developer Release Notes** and its sub-heading (`--note` replaces the drafted line); `dismiss` marks it Not needed and `reopen` brings it back. `check` reads a merged pull request now, for one the webhook missed. Queue items from API changes have the source `api`.
 
 ## Draft Release Notes
 
@@ -30,7 +43,7 @@ sudodocs release-notes push 12 --repo 3 --dry-run
 sudodocs release-notes push 12 --repo 3
 ```
 
-Opens a pull request with draft 12 where the docs repository keeps release notes - a new file in its release-notes folder, or this release's section at the top of its `CHANGELOG.md` (other releases untouched), or where you've saved for that repository; see [Push to Your Docs](../../saas-guide/user/release-composer.md#push-to-your-docs). `--dry-run` only prints where it would go (one line per file). `--message` sets the commit message. The draft then follows the pull request.
+Opens a pull request with draft 12 on the Changelog page of the site built from that repository - the page set for the site, or the repository's changelog or release-notes file or folder, or a new `changelog` page; see [Push to source](../../saas-guide/user/release-composer.md#push-to-source). The notes are written the way the page is written (Markdown, Mintlify `<Update>` entries, reStructuredText or AsciiDoc). The command prints the site, the file or files, and - when a new page is added to your navigation - the navigation file; when the pull request is open it says the page is live after the merge and the next publish. `--dry-run` only prints where it would go (one line per file). `--message` sets the commit message. The draft then follows the pull request.
 
 To put them somewhere else for this push:
 
@@ -39,7 +52,7 @@ sudodocs release-notes push 12 --repo 3 --file docs/whats-new.md
 sudodocs release-notes push 12 --repo 3 --developer-file docs/api/changelog.md --remember
 ```
 
-`--file` is a file with every release (existing or new); `--folder` is a folder with one file per release. `--developer-file`, `--developer-folder` and `--developer-same` do the same for the draft's **Developer Release Notes** section; with its own file or folder, the pull request carries both files. `--remember` saves your choices for the repository.
+`--file` is a file with every release (existing or new; `.md`, `.mdx`, `.rst` or `.adoc`); `--folder` is a folder with one file per release. `--developer-file`, `--developer-folder` and `--developer-same` do the same for the draft's **Developer Release Notes** section; with its own file or folder, the pull request carries both files. `--remember` saves your choices for the repository.
 
 ## Choose Where Release Notes Go
 
@@ -90,4 +103,9 @@ Repeat `--header` for each column name your tracker might export (Jira, Linear, 
 | `/releases/<id>/release-notes/draft` | POST | `{title?, writer_user_id?, target_format?, update_latest?}` - 202 with a job ID; the finished job has `draft_id`. |
 | `/release-notes/<draft id>/push` | GET / POST | GET `?integration_id=` (plus `product_layout`/`product_path`, `developer_layout`/`developer_path`, `candidates=1`) shows where it would go: `targets` (one per file, with `kind`, `path`, `mode`, `summary`, `preview`, `source`), `warnings`, `settings`, `detected`, `saved`. POST `{integration_id, targets?, remember?, commit_message?}` opens the pull request and returns its `files`. `targets` is `{"product": {"layout", "path"}, "developer": {...}}`; `layout` is `single_file` (path = the file), `per_version` (path = the folder) or, for developer, `same`. |
 | `/integrations/<repo id>/release-notes-targets` | GET / PUT | GET: `saved`, `detected` and `candidates` (files and folders to pick from). PUT `{targets: {product: {...} or "default", developer: {...} or "default"}}` saves them. |
+| `/api-changes` | GET | `?status=pending` (default), `included`, `dismissed` or `all`. |
+| `/api-changes/<id>` | GET | One API change with its `changes`, `note`, `subheading` and pull request. |
+| `/api-changes/<id>/include` | POST | `{release_id, note?}` - returns the `queue_item_id`. |
+| `/api-changes/<id>/dismiss`, `/api-changes/<id>/reopen` | POST | Not needed, and back. |
+| `/api-changes/check` | POST | `{integration_id, pr_number}` - 202 with a job ID; the job's result lists each spec. |
 | `/release-notes/settings` | POST | Only touches keys present in the request body - send just the one field you're changing. Wrapped by the four `set-*` commands above. |

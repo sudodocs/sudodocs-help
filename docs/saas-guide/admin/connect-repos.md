@@ -2,32 +2,34 @@
 
 SudoDocs ingests content from your repositories to power its AI features. You can connect Documentation repositories (for auditing and chat) and Source Code repositories (for technical drift detection).
 
+Open **Admin > Repositories**. Each repository is a row with its type, its sync state, **Used by** (the sites built from it), a **Writers may edit** switch, a **Sync now** button and **Manage**. **Manage** opens a dialog with the repository's sync, access, webhook, token and screenshot settings, and a confirmed **Remove**.
+
 ## Connect with GitHub (Recommended)
 
 The quickest way to add GitHub repositories is the SudoDocs GitHub App. There's nothing to copy, and its access doesn't expire.
 
-1. On the **Repositories** tab, click **Connect with GitHub**.
+1. On **Admin > Repositories**, click **Connect GitHub**.
 2. On GitHub, choose the account or organization, select which repositories SudoDocs can access, and install the app.
-3. Back in SudoDocs, under **Choose repositories**, select the repositories to add and their **Repository type** (**Documentation** or **Source Code**).
+3. Back in SudoDocs, under **Choose repositories**, select the repositories to add and their **Repository type** (**Documentation** or **Source code**).
 4. Click **Add selected repositories**.
 
-To give SudoDocs access to more repositories later, change the installation's repository list on GitHub, then click **Connect with GitHub** again.
+To give SudoDocs access to more repositories later, change the installation's repository list on GitHub, then click **Connect GitHub** again.
 
 ## Add a Git Repository with a Token
 
 If you can't install the GitHub App, add a repository with a token:
 
-1.  Navigate to the **Admin Dashboard**, select the **Repositories** tab, and click **+ Add repository**.
-2.  In the **Integration Name** box, enter a recognizable name (e.g., "Main API Docs").
-3.  In the **Repository Type** list, select one of the following:
-    * **Documentation**: For Markdown, MDX, reStructuredText, AsciiDoc, HTML, DITA XML (`.dita`/`.ditamap`), or plain text files.
-    * **Source Code**: For programming languages (Python, JS, Go, etc.). Available on every plan, including Free.
-4.  In the **Git URL** box, enter the HTTPS clone URL (e.g., `https://github.com/org/repo.git`).
-5.  Under **Authentication Type**, select one of the following:
-    * **GitHub token (PAT or gh CLI)**: Paste a token. SudoDocs recognizes its type as you paste - see the table below.
-    * **Self-managed GitHub App** (Enterprise only): Enter your own app's App ID, Installation ID, and Private Key.
+1.  Open **Admin > Repositories** and click **Connect a repository**.
+2.  In **Name**, enter a recognizable name (e.g., "Main API Docs").
+3.  In **Repository type**, select one of the following:
+    * **Documentation (Git)**: For Markdown, MDX, reStructuredText, AsciiDoc, HTML, DITA XML (`.dita`/`.ditamap`), or plain text files.
+    * **Source code (Git)**: For programming languages (Python, JS, Go, etc.). Available on every plan, including Free.
+4.  In **Git URL (HTTPS)**, enter the HTTPS clone URL (e.g., `https://github.com/org/repo.git`).
+5.  Under **Authentication**, select one of the following:
+    * **GitHub token**: Paste a token. SudoDocs recognizes its type as you paste - see the table below.
+    * **Own GitHub App (Enterprise)**: Enter your own app's **App ID**, **Installation ID** and **Private key (PEM)**.
 6.  Click **Verify** to check the token against the repository before saving. The result shows the GitHub account it belongs to and any missing access.
-7.  Click **Add Repository**.
+7.  Click **Connect a repository** to save it.
 
 | Token | Starts with | Notes |
 |---|---|---|
@@ -39,36 +41,37 @@ If a token is valid but lacks write access, SudoDocs warns you. You can still sa
 
 ## Check a Repository's Credentials
 
-Each GitHub repository on the **Repositories** tab shows its status under **Access**:
+Each GitHub repository on **Admin > Repositories** shows a tag for its credentials:
 
 | Status | Meaning |
 |---|---|
-| **OK** | The token or app access works. |
+| **Working** | The token or app access works. |
 | **Limited access** | It works, but is missing permissions some features need. |
 | **Invalid** or **Revoked** | GitHub rejects it. Replace it with **Manage** > **Update token**, or reconnect with GitHub. |
+| **Not checked** | SudoDocs has not checked it yet. |
 
-Hover over the status to see when it was last checked and any error. Click **Re-check** to check it now. SudoDocs also re-checks credentials that are more than a day old when an administrator opens the Admin Dashboard. Expiring tokens show their expiry date.
+Hover over the tag to see when it was last checked and any error. In **Manage**, click **Check again** to check it now. SudoDocs also re-checks credentials that are more than a day old when an administrator opens Admin. Expiring tokens show their expiry date.
 
-To replace a token, click **Manage** > **Update token** on the repository, paste the new token, and save.
+To replace a token, click **Manage** > **Update token** on the repository, paste the new token, and save. It is checked with GitHub before it replaces the current one.
 
 ## Add a Public Website
 
 To ingest a public documentation site:
 
-1.  On the **Repositories** tab, click **+ Add repository**.
-2.  Set **Repository Type** to **Public Website**.
-3.  In the **Website URL** box, enter the root URL (e.g., `https://docs.example.com`).
+1.  On **Admin > Repositories**, click **Connect a repository**.
+2.  Set **Repository type** to **Public website**.
+3.  In the website address box, enter the root URL (e.g., `https://docs.example.com`).
     * **Note**: SudoDocs automatically looks for an `/llms.txt` file or a `sitemap.xml` to discover pages.
-4.  Click **Add Repository**.
+4.  Click **Connect a repository** to save it.
 
 ## Sync a Repository (RAG)
 
 After adding a repository, you must sync it to index the content into the Vector Database. This creates a RAG pipeline.
 
-1.  Find the repository on the **Repositories** tab.
+1.  Find the repository on **Admin > Repositories**.
 2.  Click **Sync now**.
-    * The button changes to a progress bar showing the percentage complete.
-3.  Wait for the status to change to **Synced**.
+    * The button shows the progress as **Syncing 40%**, then **Synced** (or **Sync failed**).
+3.  Wait for it to say **Synced**.
 
 > **Note**: Docflows' [Check against your docs](../user/doc-drift.md#which-version-of-your-docs-is-checked) doesn't depend on syncing: it reads the documentation repository's default branch live from GitHub. Syncing keeps the copy SudoDocs drafts from up to date.
 
@@ -81,15 +84,15 @@ A sync gives SudoDocs its own searchable copy of a repository: the text of every
 | Tool | What it uses the synced copy for |
 |---|---|
 | [Docflows](../user/doc-drift.md) | Which of your pages a change affects, what they say now, and whether a file is new or an update. Also where screenshots go and which existing screenshots a new one replaces. |
-| [Author a Feature](../user/feature-author.md) | Your existing pages and related code, so drafts fit what's there. |
+| [Author mode](../user/author-mode.md) | Your existing pages and related code, so drafts fit what's there. |
 | [Sync Latest Code](../user/assign-pr.md#manage-engineering-changes) | Related docs, for context. |
-| [Release Composer](../user/release-composer.md) | Context for writing each entry, and your docs framework when pushing release notes. |
-| [DocOps Assistant](../user/index.md) | Searching your docs and code to answer questions and find gaps. |
+| [Changelog](../user/release-composer.md) | Context for writing each entry, and your docs framework when pushing release notes. |
+| [Doc Assistant](../user/index.md) | Searching your docs and code to answer questions and find gaps. |
 | [Knowledge Base Auto-Learn](kb-config.md) | Your writing style and screenshot style. |
 
 If a documentation repository hasn't been synced since people changed it, Docflows drafts against the older pages. A page added since the last sync can even look like a new file, so the review shows all of it as added. Sync after big changes to your docs.
 
-These don't depend on syncing - they read GitHub directly when you use them: Docflows' [Check against your docs](../user/doc-drift.md#is-a-suggestion-still-needed), pushing pull requests to your repositories, and where release notes go in your docs. Capture, Diagram Generator, API Readiness and the Universal Converter don't use synced repositories.
+These don't depend on syncing - they read GitHub directly when you use them: Docflows' [Check against your docs](../user/doc-drift.md#is-a-suggestion-still-needed), pushing pull requests to your repositories, and where release notes go in your docs. Capture, Diagrams, API Specs and the Converter don't use synced repositories.
 
 How often SudoDocs refreshes its copy is up to you - see [Keep in Sync](#keep-in-sync).
 
@@ -108,15 +111,15 @@ To see it, look under **Docs layout** on the repository: for example **Docusauru
 
 ## Cancel a Running Sync
 
-If a sync is taking longer than expected or was started by mistake, click the small **Stop Sync** icon next to that repository's progress bar on the **Repositories** tab. This works for any in-progress job, not just syncs - see [CLI Tasks → Organization](../../cli-guide/admin/settings.md#cancel-a-running-job) for the command-line equivalent.
+If a sync is taking longer than expected or was started by mistake, click **Stop sync** while the repository is syncing on **Admin > Repositories**, and confirm. Progress is saved. This works for any in-progress job, not just syncs - see [CLI Tasks → Organization](../../cli-guide/admin/settings.md#cancel-a-running-job) for the command-line equivalent.
 
 ## Keep in Sync
 
-Each repository has a **Keep in sync** setting that decides when SudoDocs re-reads it. Click **Manage** > **Keep in sync** on the repository:
+Each repository has a **Keep in sync** setting that decides when SudoDocs re-reads it. Click **Manage** > **Keep in sync** on the repository, then choose under **Sync**:
 
 * **When it changes** (the default for documentation repositories): SudoDocs syncs after a pull request is merged into the repository - including the docs pull requests SudoDocs opens - and, within the hour, after any other change, such as a commit pushed straight to the branch. Merges close together are grouped: at most one sync every 30 minutes.
 * **On a schedule** (the default for code repositories: daily): every day, week, month, or a number of hours you choose - and only when the repository has new commits.
-* **Only when I click Sync**: nothing happens on its own.
+* **Only when I click Sync now**: nothing happens on its own.
 
 Repositories you connected before this setting existed sync when they change, as they did before. Websites can sync on a schedule or by hand.
 
@@ -130,7 +133,7 @@ Under **Sync**, each repository shows whether SudoDocs' copy is current, checked
 * **Behind GitHub: 12 commits**: the repository has changed since SudoDocs last read it.
 * **Not synced yet**: click **Sync now** to read it for the first time.
 
-It also shows when the repository was last synced and its Keep in sync setting. The **Overview** tab lists the repositories that need a sync.
+It also shows when the repository was last synced and its Keep in sync setting. **Admin > Overview** lists the repositories that need a sync.
 
 Writers see a notice on **Docflows** and the **Release Dashboard** when a documentation repository is behind (for a repository set to **When it changes**, only if it hasn't caught up within the hour) or hasn't been synced yet - or when a code repository has been behind for a week. They can click **Let admins know**, which emails your organization's System Administrators (at most once a day per repository). Admins see **Sync now** in the notice instead.
 
@@ -153,7 +156,7 @@ By default SudoDocs works with a documentation repository's default branch on Gi
 
 * syncing,
 * Docflows' [Check against your docs](../user/doc-drift.md#which-version-of-your-docs-is-checked),
-* and every pull request it opens - Docflows, Author a Feature, release notes and API Readiness pull requests to this repository.
+* and every pull request it opens - Docflows, Author mode, release notes and API Readiness pull requests to this repository.
 
 Leave it blank to go back to the default branch. After you change the branch, the next sync reads the whole repository (20 credits).
 
@@ -172,7 +175,7 @@ SudoDocs follows the pull requests it opens in your documentation repositories -
 
 For updates within seconds on a token-connected documentation repository, add a webhook to it:
 
-1. In SudoDocs, open **Admin Dashboard > Repositories** and copy the repository's **Payload URL** and **Secret** (the same webhook dialog Docflows uses).
+1. In SudoDocs, open **Admin > Repositories** and copy the repository's **Payload URL** and **Secret** (the same webhook dialog Docflows uses).
 2. In GitHub, open the documentation repository's **Settings** > **Webhooks** > **Add webhook**, paste both, and set **Content type** to `application/json`.
 3. Choose **Let me select individual events**, deselect **Pushes**, and select **Pull requests** and **Pull request reviews**.
 4. Click **Add webhook**.

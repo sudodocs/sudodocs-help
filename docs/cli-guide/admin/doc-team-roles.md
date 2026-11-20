@@ -21,7 +21,7 @@ sudodocs admin doc-team-roles set \
 
 Each option is independent - pass only the ones you want to change. Leaving one blank uses the built-in default for that role, the same as leaving its box empty on the web form.
 
-Changes apply to every draft generated afterward, in both Author a Feature and Docflows - see [Verifying a Change Took Effect](../../saas-guide/admin/doc-team-roles.md#verifying-a-change-took-effect) for how to confirm a new instruction is live.
+Changes apply to every draft generated afterward, in both Docflows and Author mode's ticket tool - see [Verifying a Change Took Effect](../../saas-guide/admin/doc-team-roles.md#verifying-a-change-took-effect) for how to confirm a new instruction is live.
 
 ## Headless API
 
