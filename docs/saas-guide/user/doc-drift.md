@@ -57,6 +57,15 @@ SudoDocs' Technical Writer makes the change, following your [Doc Team Roles](../
 
 SudoDocs drafts suggestions from its own copy of your repositories. When your docs repository has changed since SudoDocs last read it, Docflows and the Release Dashboard show a notice such as **acme/docs is 12 commits behind GitHub**. Click **Let admins know** to email your organization's admins (once a day per repository), or **Hide** to hide it for the day. Admins see **Sync now** instead. See [Keep in Sync](../admin/connect-repos.md#keep-in-sync).
 
+## Keeping Documentation Written With Start from Code Up to Date
+
+If you wrote your documentation from scratch with [Start from code](start-from-code.md), Docflows takes over after the first draft:
+
+1. After you merge the pull request, click **Sync now** for the documentation repository on **Admin > Repositories**, so Docflows can find the pages SudoDocs wrote.
+2. Turn on **Use the public-facing rules everywhere** on **Admin > Roles**, so new suggestions follow the same rules as the first draft. See [Public-facing documentation](../admin/doc-team-roles.md#public-facing-documentation).
+
+See [Write from scratch or maintain existing docs](two-ways.md#using-both-together).
+
 ## Is a Suggestion Still Needed?
 
 Suggestions can wait a while, and in the meantime your docs move on - a writer may even have made the same change by hand. **Check against your docs** compares a suggestion with your documentation repository as it is today:

@@ -146,6 +146,10 @@ SudoDocs checks pull requests every 15 minutes, so allow a little time after the
 
 Leave **Remember for this repository** on to use the same places for every later push to that repository, by anyone on your team. A file you pick or create must be a `.md`, `.mdx`, `.rst` or `.adoc` page. To set or reset these from a script, see [CLI Tasks → Compose Release Notes](../../cli-guide/user/release-composer.md#choose-where-release-notes-go).
 
+## The First Release of Docs Written From Scratch
+
+[Start from code](start-from-code.md) writes a Changelog page that treats the documentation as the **first release**: one entry with the version found in your code (or 1.0.0) and a short summary of the product. It is a normal Changelog page: edit it to add the releases that came before, and later releases are added above it by **Push to source**.
+
 ## The Changelog Page of a Site
 
 To always use the same page for a site, set it once. Open **Publish**, choose the site, then **Content** > **Navigation** and use the **Changelog page** card: type a path such as `docs/changelog.md` (the list suggests the pages of the live site) and click **Save**. Leave it empty and SudoDocs finds your changelog, or starts a `changelog` page. The page can be `.md`, `.mdx`, `.rst` or `.adoc`.

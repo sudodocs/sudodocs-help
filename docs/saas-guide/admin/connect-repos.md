@@ -13,6 +13,8 @@ The quickest way to add GitHub repositories is the SudoDocs GitHub App. There's 
 3. Back in SudoDocs, under **Choose repositories**, select the repositories to add and their **Repository type** (**Documentation** or **Source code**).
 4. Click **Add selected repositories**.
 
+To write documentation from scratch with [Start from code](../user/start-from-code.md), connect your code repository as **Source code** and a new, empty repository as **Documentation**.
+
 To give SudoDocs access to more repositories later, change the installation's repository list on GitHub, then click **Connect GitHub** again.
 
 ## Add a Git Repository with a Token

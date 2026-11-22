@@ -12,7 +12,7 @@ Everything in SudoDocs is reached from the **left menu**. What you see depends o
 | Group | Item | What it is |
 |---|---|---|
 | **Work** | **Home** | Your start page: what to continue, what waits for your review, your sites, and a quick start. |
-| | **Author** | Write and edit docs pages on a work branch: [Author mode](author-mode.md). |
+| | **Author** | Write and edit docs pages on a work branch: [Author mode](author-mode.md). Its **Start from code** button drafts documentation from a code repository: [Start from code](start-from-code.md). |
 | | **Docflows** | Documentation suggestions drafted from pull requests and Jira tickets: [Manage Docflows](doc-drift.md). |
 | | **Reviews** | Everything people asked you to look at, across tools: [Reviews](reviews.md). |
 | | **API Specs** | Your OpenAPI specs and Helm charts, and their checks: [API specs](../admin/api-specs.md). |

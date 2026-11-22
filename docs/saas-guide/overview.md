@@ -12,6 +12,13 @@ Everything you can do in the SudoDocs web app at [app.sudodocs.com](https://app.
 - [Sign In and Create an Account](user/sign-in.md): sign in with a password, Google, or company SSO; create an organization; accept an invitation.
 - [Profile & Security](user/profile-security.md): change your password and turn on two-factor authentication.
 
+## Two ways to use SudoDocs
+
+- **Write docs from scratch.** Have code and no documentation? [Start from code](user/start-from-code.md) drafts public documentation, one type at a time: a user guide, an admin guide, a command-line reference and an API reference.
+- **Maintain an existing docs repository.** Keep a documentation repository current with Docflows, Author mode, Validate, the Changelog and Publish.
+
+Not sure which? See [Write from scratch or maintain existing docs](user/two-ways.md).
+
 ## For administrators
 
 Set up SudoDocs for your organization from **Admin** in the left menu.

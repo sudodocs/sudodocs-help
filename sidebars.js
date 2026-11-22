@@ -64,6 +64,8 @@ const sidebars = {
       items: [
         'saas-guide/user/releases',
         'saas-guide/user/dashboards',
+        'saas-guide/user/two-ways',
+        'saas-guide/user/start-from-code',
         'saas-guide/user/author-mode',
         'saas-guide/user/reviews',
         'saas-guide/user/feature-author-vs-docflows',

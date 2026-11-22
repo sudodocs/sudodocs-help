@@ -8,6 +8,9 @@ New here? Start with:
 * [Sign In and Create an Account](sign-in.md): Sign in with a password, Google, or company SSO; create an organization; accept an invitation; reset a forgotten password.
 * [Profile and Security](profile-security.md): Change your password, turn on two-factor authentication, and see your recent sign-ins.
 
+* [Write from scratch or maintain existing docs](two-ways.md): the two ways to use SudoDocs, and when to use each.
+* [Write docs from scratch with Start from code](start-from-code.md): draft public documentation from a code repository, one type at a time.
+
 Not sure whether to write a page yourself in **Author mode** or let **Docflows** handle it? See [Author mode and Docflows](feature-author-vs-docflows.md).
 
 Every tool is an item in the **left menu** (see [Find your way around](find-your-way.md)):

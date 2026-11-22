@@ -7,6 +7,19 @@ description: Product updates to SudoDocs in November 2026, newest release first.
 
 What's new in SudoDocs in **November 2026**, newest release first. SudoDocs updates for everyone at once, so there's nothing to install - except the CLI, which says how to upgrade. For earlier months, see [Past Changelogs](changelog-archive/index.md).
 
+## November DD, 2026 {#2026-11-DD}
+
+### Write docs from scratch
+
+- **Start from code.** Have a code repository and no documentation? Choose **Author > Start from code**, pick a documentation type (user guide, admin guide, CLI reference or API reference), review the plan, and SudoDocs drafts every page, checks it against your code, and sends it to an empty documentation repository as one pull request. The documentation is public by default: no internal names and no deployment steps. See [Start from code](saas-guide/user/start-from-code.md).
+- **Two ways to use SudoDocs.** Write documentation from scratch, or maintain an existing documentation repository with Docflows, Author mode, Validate and the Changelog. See [Write from scratch or maintain existing docs](saas-guide/user/two-ways.md).
+- **A first-release Changelog and your API file, ready.** The generated Changelog starts as the first release for you to extend, and **Create site** adds the generated OpenAPI file to **API Specs**. Running a type again keeps the pages you edited. See [Start from code](saas-guide/user/start-from-code.md#running-it-again).
+
+### Doc Team Roles
+
+- **Skill files.** Give the Information Architect, Technical Writer and Editor a skill by uploading Markdown files. Download a template for each role, or download a role's current skill to edit and upload again. See [Configure Doc Team Roles](saas-guide/admin/doc-team-roles.md#give-a-role-its-skill).
+- **Public-facing rules everywhere.** A new switch on **Admin > Roles** applies the public-facing rules to Docflows, the Changelog, reviews, Self review and the Author mode rewrite tools. See [Public-facing documentation](saas-guide/admin/doc-team-roles.md#public-facing-documentation).
+
 ## November 19, 2026 {#2026-11-19}
 
 ### Publish

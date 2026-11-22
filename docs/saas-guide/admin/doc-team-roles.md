@@ -6,19 +6,40 @@ Every documentation draft SudoDocs produces - whether you started it yourself in
 * **Technical Writer**: Drafts the content against that outline.
 * **Editor**: Reviews the Writer's draft with fresh eyes - it never sees the Writer's own instructions, only the finished draft, the outline it should match, and the same source material the Writer had. It decides whether an issue is **blocking** (sends the draft back to the Writer for one more pass) or a **suggestion** (recorded, doesn't hold up the draft).
 
-Each role's judgment is admin-configurable per organization, separately from your [Knowledge Base](kb-config.md) style guide and terminology - the Knowledge Base controls *how things are worded*, Doc Team Roles controls *what each role prioritizes and checks for*.
+Each role's judgment is configurable per organization (as skill files), separately from your [Knowledge Base](kb-config.md) style guide and terminology - the Knowledge Base controls *how things are worded*, Doc Team Roles controls *what each role prioritizes and checks for*.
 
-## Edit Role Instructions
+## Give a Role Its Skill
 
-1. Open **Admin** in the left menu.
-2. Open the **Roles** tab.
-3. You'll see three boxes, one per role, each pre-filled with a greyed-out placeholder showing the built-in default. An empty box means that role is using the default - you don't need to fill in all three to customize one.
-4. Type your own instructions into any box to override the default for that role.
-5. Click **Save Role Instructions**.
+Each role runs on a **skill**: Markdown files you upload. With no file, a role uses SudoDocs' built-in instructions. You don't need to customize all three roles.
+
+1. Open **Admin** in the left menu and open **Roles**.
+2. On a role's card, click **Download template**. The file explains the format and starts from the role's built-in instructions, so you can edit what is already there.
+3. Edit the file on your computer. Describe what the role should always do, check or avoid (see [What to Write for Each Role](#what-to-write-for-each-role)).
+4. Click **Upload skill** and choose your file. You can choose several files at once. The upload starts as soon as you choose.
+
+Each card then lists the files for that role with **Download** and **Remove** next to each. To change a skill, click **Download skill** (it gives you all the role's files joined into one file), edit it, remove the old files and upload the new one. Uploading a file with the same name replaces it.
+
+| Limit | Value |
+|---|---|
+| File types | `.md`, `.markdown` or `.txt`, as UTF-8 text |
+| Size | 100 KB for the upload, 20,000 characters of text for each file |
+| Files per role | 5, with up to 20,000 characters in total |
+
+SudoDocs reads each file before it keeps it. An optional header at the top (`name` and `description`) sets the file's title in the list, comments are removed, and a file that is empty, too large or not text is refused with the reason. **Reset to default** at the top of the page removes every uploaded file.
 
 Changes apply to everything written afterward - you don't configure each tool separately. See [Where the Roles Apply](#where-the-roles-apply).
 
-> **Note:** Only the *judgment* portion of each role's prompt is editable here. The structural contract that keeps SudoDocs' review pipeline working - what format each role responds in, how a draft moves between roles - stays fixed, so nothing you write here can break the pipeline itself.
+> **Note:** A skill changes only the *judgment* part of each role: what to prioritize and check. The structural contract that keeps SudoDocs' review pipeline working - what format each role responds in, how a draft moves between roles - stays fixed, so nothing you write here can break the pipeline itself.
+
+> **Note:** If you set role instructions with the [CLI or API](../../cli-guide/admin/doc-team-roles.md), that text is used instead of the uploaded files until you clear it. The card says so.
+
+## Public-Facing Documentation
+
+When SudoDocs writes documentation from your code with [Start from code](../user/start-from-code.md), every role works under built-in **public-facing rules**: no internal file or code names, no installation or deployment steps, only what the code supports, and users and administrators kept on separate pages. Your skill files are added after these rules and can adjust them.
+
+To apply the same rules to the rest of SudoDocs, turn on **Use the public-facing rules everywhere** on the **Roles** page and click **Save**. The rules are then added to the roles' instructions for [Docflows](../user/doc-drift.md), the [Changelog](../user/release-composer.md), reviews, Self review and the rewrite tools in [Author mode](../user/author-mode.md). Use it when your documentation is for customers and you want to keep it that way as it changes.
+
+The switch changes what the AI is asked to do. The automatic checks that look for leaked internal names and invented paths run in Start from code, which has your code to compare with.
 
 ## Where the Roles Apply
 
@@ -31,6 +52,7 @@ These are SudoDocs' own built-in roles, not people on your team. Your writers an
 | [Request changes](../user/doc-drift.md#request-changes) on a Docflows card | - | Makes your requested changes | Reviews the result |
 | [Sync Latest Code](../user/assign-pr.md#manage-engineering-changes) | - | Writes what's missing | Reviews it |
 | [Mentioning SudoDocs on a docs pull request](../user/assign-pr.md#ask-sudodocs-to-revise-a-docs-pull-request) | - | Makes the change | Reviews it; nothing is pushed while it has blocking issues |
+| [Start from code](../user/start-from-code.md) | Plans the pages of a documentation type | Drafts every page | Reviews every page against the facts |
 | [Changelog](../user/release-composer.md#draft-the-release-notes) | - | Writes every entry | Checks every queued item is there once, in its section, with nothing invented |
 | [Universal Converter](../user/converter.md#generate-ai-reference-docs-pro) reference pages | - | Writes the page | Checks it against your spec or values file: nothing invented, nothing missing |
 | [API Readiness](../user/api-readiness.md#review-results) AI fixes | - | Writes the descriptions and summaries | Reviews only the text the fix wrote or changed |
@@ -42,7 +64,7 @@ When the Editor marks something as blocking, the Writer gets another pass. If th
 
 ## What to Write for Each Role
 
-Think of each box as onboarding notes for a new hire in that role: what should they always check, always do, or never do, that a generic technical writer or editor wouldn't automatically know about your organization?
+Think of each skill file as onboarding notes for a new hire in that role: what should they always check, always do, or never do, that a generic technical writer or editor wouldn't automatically know about your organization?
 
 ### Information Architect
 
@@ -84,9 +106,9 @@ for factual gaps, missing required sections, or compliance issues.
 
 ## Verifying a Change Took Effect
 
-Role instructions apply the next time a draft is generated - editing them doesn't retroactively change drafts already in progress or already published. To confirm a change is live:
+Skill files apply the next time a draft is generated - editing them doesn't retroactively change drafts already in progress or already published. To confirm a change is live:
 
-1. Save your new instructions.
+1. Upload your skill file.
 2. Generate a new draft with [Author mode](../user/author-mode.md)'s **Draft from a ticket or pull request** (or wait for the next Docflows suggestion).
 3. Open a Docflows card's **Review history** and check the Editor's comments. They should reflect your new instruction.
 

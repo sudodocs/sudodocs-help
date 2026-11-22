@@ -16,6 +16,8 @@ Open **Author**. The start page lists:
 - **Open changes to continue**, and your earlier changes (a discarded change can be removed from your list).
 - **Where you can write**: your Publish sites and documentation repositories, one row for each repository. Choose **Start writing**.
 
+Starting from a code repository with no documentation? Click **Start from code** at the top of the page: see [Write docs from scratch with Start from code](start-from-code.md).
+
 A **change** is one work branch with any number of files. Most writing starts on a Publish site; you can also write in a documentation repository that has no site yet, or in a folder you saved as a source.
 
 > Only documentation is editable by Writers: pages, images, snippets and the files that give the docs their structure (such as `sudodocs.json`, `docs.json`, `mkdocs.yml`). Scripts, stylesheets and build settings show a lock and are read-only unless an administrator allows them. See [Publishing policy](../admin/publish-admin.md).
