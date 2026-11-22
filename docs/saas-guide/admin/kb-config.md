@@ -1,6 +1,6 @@
 # Configure the Knowledge Base
 
-Configure how the SudoDocs AI understands your product terminology, tone, and structure. See [CLI Tasks → Knowledge Base](../../cli-guide/admin/kb-config.md) for the command-line equivalent of everything on this page.
+Configure how the SudoDocs AI understands your product terminology, tone, and structure. Open **Admin > Knowledge Base**: it is four numbered cards - **Learn from your docs** (Auto-Learn), **Start from a style guide**, **Your own rules** and **Screenshot style** - and the **Product categories** list. See [CLI Tasks → Knowledge Base](../../cli-guide/admin/kb-config.md) for the command-line equivalent of everything on this page.
 
 ## Set Base Frameworks
 
@@ -11,28 +11,28 @@ Select a foundational formatting rule set for the AI.
 * **Apple Style**: Minimalist and user-focused.
 * **IBM Style**: Strict and enterprise-grade.
 
-1. Navigate to **Admin Dashboard > Knowledge Base**.
-2. Choose a framework from the **Base Framework** dropdown - it saves automatically.
+1. Open **Admin > Knowledge Base**.
+2. In **Start from a style guide**, choose **Google developer documentation style guide**, **Microsoft style**, **Apple style** or **IBM style**. It saves automatically.
 
 ## Product Categories
 
-List your product areas (one per line) to help the AI sort and place content. They're the categories release notes are grouped by: the **Product category** choice when approving Docflows for release notes, the categories in Release Composer's queue - see [Compose Release Notes](../user/release-composer.md) - and a hint for [Author a Feature](../user/feature-author.md)'s Information Architect step when deciding where new content belongs. Items that match none of them go under **Other**.
+List your product areas (one per line) to help the AI sort and place content. They're the categories release notes are grouped by: the **Product category** choice when approving Docflows for release notes, the categories in Changelog's queue - see [Changelog](../user/release-composer.md) - and a hint for [Author mode](../user/author-mode.md)'s Information Architect step when deciding where new content belongs. Items that match none of them go under **Other**.
 
-1. On the **Knowledge Base** tab, find the **Product Categories** card.
-2. Edit the **Product Categories** box (one category per line, e.g. "API", "Frontend", "Security"). This box is also populated automatically by Auto-Learn, but you can edit it manually at any time.
-3. Click **Override and Save**.
+1. On **Admin > Knowledge Base**, find the **Product categories** card.
+2. Edit the **Categories** box (one category per line, e.g. "API", "Frontend", "Security"). This box is also populated automatically by Auto-Learn, but you can edit it manually at any time.
+3. Click **Save**.
 
-> Looking for Deployment Tags or CSV Column Mappings? Those moved to [Compose Release Notes](../user/release-composer.md#release-notes-settings) - they're specific to Bulk Release Notes generation, not a Knowledge Base concern shared across features the way Product Categories is.
+> Looking for Deployment Tags or CSV Column Mappings? Those moved to [Changelog](../user/release-composer.md#release-notes-settings) - they're specific to Bulk Release Notes generation, not a Knowledge Base concern shared across features the way Product Categories is.
 
 ## Neural Overrides (Style Guide)
 
 Define absolute laws for the AI regarding your brand: product ontology and taxonomy, tone and terminology rules, and structural writing instructions - as one free-form Markdown document. This is the mechanism for customizing your style guide on top of whichever Base Framework you selected above.
 
-1. On the **Knowledge Base** tab, click **Configure Markdown** under **Neural Overrides**.
-2. Paste your content into the text box - typically the combined contents of a product overview, a style guide, and writing instructions, each as its own `.md` file you already maintain elsewhere. (Scripting this instead? [CLI Tasks → Knowledge Base](../../cli-guide/admin/kb-config.md#neural-style-guide-overrides) uploads a local file directly.)
-3. Click **Save Overrides**.
+1. On **Admin > Knowledge Base**, in **Your own rules**, click **Open setup** (the **Neural style overrides** page).
+2. Paste your content under **Your rules** - typically the combined contents of a product overview, a style guide, and writing instructions, each as its own `.md` file you already maintain elsewhere. (Scripting this instead? [CLI Tasks → Knowledge Base](../../cli-guide/admin/kb-config.md#neural-style-guide-overrides) uploads a local file directly.)
+3. Click **Save**.
 
-Auto-Learn (below) appends a **Auto-Learned Rules** section to this same box rather than overwriting it, so anything you've written by hand is preserved.
+Auto-Learn (below) appends an **Auto-Learned Rules** section to this same box rather than overwriting it, so anything you've written by hand is preserved.
 
 There's no separate structured field for terminology rules - write them directly into this Markdown document in whatever format you want (e.g. a table, or a list like `InternalTerm → PublicTerm`); the AI treats the whole document as a strict instruction set, not a specific schema.
 
@@ -41,8 +41,8 @@ There's no separate structured field for terminology rules - write them directly
 The Auto-Learn agent scans your connected documentation and public web repositories to extract your company's writing style and terminology, merging what it finds into your Product Categories and Neural Overrides above rather than replacing them. SudoDocs explicitly ignores code repositories during this process to prevent a robotic tone.
 
 1. Ensure you have synced at least one Documentation or Web repository.
-2. Navigate to **Admin Dashboard > Knowledge Base**.
-3. Click **Run Auto-Learn**.
+2. Open **Admin > Knowledge Base**.
+3. In **Learn from your docs**, click **Run Auto-Learn**.
 
 Auto-Learn also looks at up to six screenshots already in your documentation repository and adds what it notices - annotation colour, theme, cropping, whether personal data is hidden - to your [Screenshot Style](#screenshot-style). That part costs 5 credits on top of Auto-Learn's usual cost, and only when there are screenshots to look at.
 
@@ -54,19 +54,19 @@ How SudoDocs takes screenshots for your docs - for Docflows today, and for every
 2. **Learned from your existing screenshots**: what [Auto-Learn](#auto-learn-tone) noticed.
 3. **Your settings**: anything you set wins over both.
 
-To change it, go to **Admin Dashboard > Knowledge Base > Screenshot Style**. Each setting shows where its current value comes from - **Yours**, **Learned** or **Default** - and a field left blank uses the value shown.
+To change it, open **Admin > Knowledge Base** and go to the **Screenshot style** card (**How screenshots look**, **Keep private data out of screenshots** and **Your screenshot rules**). Each setting shows where its current value comes from - **Yours**, **Learned** or **Default** - and a field left blank uses the value shown.
 
 | Setting | What it does |
 |---|---|
-| **Theme**, **Window size**, **Sharpness** | The browser SudoDocs captures in. Sharpness is pixel density: 2× looks crisp on high-resolution screens. |
+| **Theme**, **Window size**, **Sharpness (pixel density)** | The browser SudoDocs captures in. 2× looks crisp on high-resolution screens. |
 | **Annotation colour**, **Numbered callouts** | How boxes, arrows and numbers are drawn, and when numbers are used. |
-| **Space around a crop**, **Largest width in the docs** | How tightly to crop, and the widest an image should appear. |
+| **Crop padding (px)**, **Largest width (px)** | How tightly to crop, and the widest an image should appear. |
 | **Alt text length** | The most characters SudoDocs uses for an image's alt text. |
 | **Always hide these elements** | CSS selectors (for example `.account-email`) covered on every screenshot. |
 | **Also treat as private** | Text patterns of your own, such as account numbers. Emails, phone numbers, tokens and keys are always handled. |
 | **Never screenshot these pages** | Page addresses SudoDocs must not capture; `*` matches anything. |
 | **Your team's rules** | Anything else, in plain words. |
 
-Click **Save screenshot style**. **Reset to default** clears your settings and rules; **Forget what was learned** removes what Auto-Learn picked up and keeps yours.
+Click **Save**. **Reset to default** clears your settings and rules (after a confirmation); **Reset learning** removes what Auto-Learn picked up and keeps yours.
 
 **Remembered screenshots** lists the Docflows screenshots SudoDocs knows how to re-take - each image, its page and the controls it points at, and when it was last taken and checked (see [When Your UI Changes](doc-drift.md#when-your-ui-changes)). Click **Forget** to have SudoDocs treat one as a new screenshot next time.

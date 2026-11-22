@@ -1,16 +1,32 @@
 # Capture
 
-Capture is the **SudoDocs Capture** Chrome extension plus its dashboard - a way to turn what you actually do in a live product into something you can share with a link. It supports three different modes, each producing a different kind of result:
+Capture is the **SudoDocs Capture** Chrome extension plus its dashboard - a way to turn what you actually do in a live product into something you can share with a link. It supports four different modes, each producing a different kind of result:
 
 * **Interactive**: click through a workflow yourself; SudoDocs turns each click into a captioned step with an on-image hotspot.
 * **Recording**: a continuous screen recording of the tab, with the tab's own audio and, optionally, your narration mixed in, Loom-style.
 * **Screenshot**: one screenshot, annotated (arrows, boxes, highlights, text) and cropped in a built-in editor before upload.
+* **Audio**: a narration or voice note on its own, with an optional "Include tab sound", for voice-overs and spoken explanations.
 
-All three live under **Capture** in the Workspace's **Tools**, and are captured entirely from the extension - not from this dashboard page, which is for editing, redacting, and sharing what you've already captured.
+All of them live under **Capture** in the left menu, and are captured entirely from the extension - not from this dashboard page, which is for editing, redacting, and sharing what you've already captured.
 
-Every capture is listed under **History** on the left. Writers and admins can rename it, tag it with a release and a writer, or delete it from there - see [Tag work with a release and a writer](releases.md#tag-work-with-a-release-and-a-writer).
+Captures live in a **library** and open in one editor, whatever their kind. See [The library and the editor](#the-library-and-the-editor).
 
-Capture has **no approval workflow**: every capture is shareable the moment it finishes, for all three modes. It's fully user-controlled - you own editing, redacting, and deleting whatever you captured directly, the same way you would any other file. AI still flags likely PII on Interactive and Screenshot captures so it's easy to spot (see [Redaction](#redaction) below), but nothing blocks on that flag - if you need to hide something, you redact it whenever you notice, not before anyone can see the capture at all.
+Capture has **no approval workflow**: every capture is shareable the moment it finishes, for every mode. It's fully user-controlled - you own editing, redacting, and deleting whatever you captured directly, the same way you would any other file. AI still flags likely PII on Interactive and Screenshot captures so it's easy to spot (see [Redaction](#redaction) below), but nothing blocks on that flag - if you need to hide something, you redact it whenever you notice, not before anyone can see the capture at all.
+
+## The library and the editor
+
+**Capture** in the left menu opens the **library**: your captures as cards with a picture, in three columns, twelve to a page. The left side filters by **type** (Interactive, Recording, Screenshot, Audio), **needs attention** (captures that failed, are partial or may hold personal data), **release** and **narration**, with counts, a search box and sorting. A card shows its type, length or step count and size; hover it for **Copy link**, **Rename**, **Tag** and **Delete**. Tag captures with a release and a writer: see [Tag work with a release and a writer](releases.md#tag-work-with-a-release-and-a-writer).
+
+Open a card and every kind of capture opens in the same editor: a **Library** link back, a name you can change, a **release** chip, **Save**, **Download**, copy and preview of the embed, and **Review** (see [Reviews](reviews.md)).
+
+- **Interactive**: a rail of **slides** on the left (drag to reorder, arrow keys to move), one step at a time in the middle and a **properties** panel on the right (caption, hotspot, redaction). Voice-over and **Export video** are in the bar. You can add a **note slide**. Deleted steps stay for 7 days under **Deleted steps** and can be restored with their caption, hotspot, redactions and voice-over. Most edits can be undone (not redactions, which are permanent by design).
+- **Screenshot**: the annotation editor with a tool rail, including a **Redact** tool that is burned into the image when you save.
+- **Recording**: a small timeline. **Split**, **delete** and **trim** pieces, set the **volume** or mute, then **Export edits**. Edits are non-destructive: the original is kept and nothing is rendered until you export, which creates a new video (5 credits). The anonymous embed plays the last export, or the original if you have not exported.
+- **Audio**: a waveform, trimming and the embed. If a recording has separate **microphone** and **tab sound** tracks, each shows as a lane with its own mute and volume, and the export mixes them.
+
+With extension version 1.2.0 or later, the popup shows icons for each mode, and microphone and tab audio are recorded as separate tracks. Update from the Chrome Web Store to get it; older versions keep working.
+
+You can manage captures from a terminal: see [Capture commands](../../cli-guide/user/capture-diagrams.md).
 
 ## Install and Connect the Extension
 
@@ -18,7 +34,7 @@ Capture has **no approval workflow**: every capture is shareable the moment it f
 2. Click the new SudoDocs Capture icon in your toolbar, then **Connect to SudoDocs**. This opens a tab to approve the connection - confirm the code shown matches the popup, then **Approve**.
 3. Back in the popup, click **I approved it - check again**.
 
-This is a one-time setup. The extension links to your SudoDocs organization the same way `sudodocs login` links the CLI - a personal, revocable API key, listed as **SudoDocs Capture** under **API Keys** on the Admin Dashboard's [Organization](../admin/settings.md#api-keys) tab, where an administrator can revoke it.
+This is a one-time setup. The extension links to your SudoDocs organization the same way `sudodocs login` links the CLI - a personal, revocable API key, listed as **SudoDocs Capture** in the **History** drawer of [Admin > Organization](../admin/settings.md#api-keys), where an administrator can revoke it.
 
 If you're pointing the extension at a non-default SudoDocs deployment (a test instance, for example), set that first under the extension's **Options** page before connecting.
 
@@ -26,9 +42,9 @@ If you're pointing the extension at a non-default SudoDocs deployment (a test in
 
 1. Switch to the tab you want to capture, open the extension popup, and select **Interactive**.
 2. Optional - give it a short title. Leave it blank and SudoDocs auto-names it for you (see [Auto-Naming](#auto-naming) below).
-3. Optional - **Follow across tabs and windows**: off by default. With it on, the recording follows wherever you click next, even in a different tab or window, instead of staying pinned to the tab you started on. Leave it off if you don't want a stray click somewhere unrelated (checking email mid-recording) captured as a step.
-4. Either click **Start** and use the product normally, **or** optionally click **Select Region** first to draw a rectangle constraining every step's screenshot to that area instead of the full tab - confirming the region starts the capture immediately, the same as clicking Start, so there's no separate Start click needed afterward. Either way, every click becomes a step, screenshot and all, and the recorder survives real page navigations and reloads.
-5. Click **Finish** when done. AI captions each step and flags likely PII in the background; the capture appears in the Capture dashboard right away and is shareable immediately - editing continues to work for as long as the capture exists, there's no lock-out point.
+3. Optional - **Follow tabs**: off by default. With it on, the recording follows wherever you click next, even in a different tab or window, instead of staying pinned to the tab you started on. Leave it off if you don't want a stray click somewhere unrelated (checking email mid-recording) captured as a step.
+4. Either click **Start** and use the product normally, **or** optionally click **Region** first to draw a rectangle constraining every step's screenshot to that area instead of the full tab - confirming the region starts the capture immediately, the same as clicking Start, so there's no separate Start click needed afterward. Either way, every click becomes a step, screenshot and all, and the recorder survives real page navigations and reloads.
+5. Click **Finish** when done. AI captions each step and flags likely PII in the background; the capture appears in the Capture library right away and is shareable immediately - editing continues to work for as long as the capture exists, there's no lock-out point.
 
 With extension version 1.1.0 or later, each step also records what you clicked - the control's role (such as button or link), the name it shows, and a way to find it again - not just where you clicked. SudoDocs uses this to find the same control after your product's layout changes. Update the extension from the Chrome Web Store to get it.
 
@@ -38,21 +54,21 @@ The title field is optional in every mode. Leave it blank and SudoDocs names it 
 
 ### Editing Steps
 
-Writers, Walkthrough Auditors and System Administrators can, at any time:
+Writers, Walkthrough Auditors and System Administrators can edit an Interactive capture at any time. Select a slide in the rail on the left; the **properties** panel on the right shows its settings, and changes save by themselves (the editor shows **Saving** and **Saved**):
 
-* **Caption**: edit the AI-generated text and click **Save Caption**.
-* **Hotspot**: a red box drawn on the screenshot. Drag it to reposition, drag its corner handle to resize - saves automatically. Steps with no hotspot yet show a **+ Add Hotspot** button; an existing one shows a small **×** handle in its corner to remove it entirely.
+* **Caption**: edit the AI-generated text.
+* **Hotspot**: a red box drawn on the screenshot. Drag it to reposition, drag its corner handle to resize. A step with no hotspot yet shows **Add hotspot**; an existing one shows a small **×** handle in its corner to remove it entirely.
 * **Redact**: see [Redaction](#redaction) below.
 * **Zoom**: for a step with a hotspot, choose whether the player zooms in on it - see [Zoom on Clicks](#zoom-on-clicks) below.
-* **Move Up / Move Down / Delete Step**: reorder or remove individual steps.
+* **Reorder, add a note, delete**: drag a slide in the rail (or use the arrow keys) to reorder, **Add note** for a slide with only text, and delete a step you do not need. A deleted step goes to **Deleted steps** for seven days: restore it from there, or use **Undo**. **Undo** and **Redo** also cover caption, hotspot and zoom edits.
 
 ## Redaction
 
 Interactive and Screenshot mode both support redacting sensitive content directly on the stored image - an API key, a customer name, anything AI flagged or you noticed yourself:
 
-1. Click **Draw Redaction**.
+1. Click **Draw redaction**.
 2. Drag a box over the area to hide.
-3. Confirm - this **permanently** blacks out that area of the stored image; there's no undo.
+3. Confirm **Black out** - this **permanently** blacks out that area of the stored image; there's no undo. (Everything else in the editor can be undone; this cannot.)
 
 The image updates in place immediately (no page reload) and a **Redacted** badge appears once at least one redaction has been applied. Interactive mode redacts per step; Screenshot mode redacts the one whole-image capture the same way.
 
@@ -60,7 +76,7 @@ Recording mode has no redaction control - there's no video editor to black out a
 
 ### AI PII Flagging
 
-Interactive (per step) and Screenshot (the whole image) both get an automatic **⚠️ Possible PII** badge from AI - a real name, email address, API token/secret, or another user's data it noticed in the screenshot. It's advisory, not a gate: it doesn't block sharing, it just makes something worth redacting easy to spot in the sidebar and on the capture itself. Recording mode has no PII detection (matching its lack of a redaction tool - flagging something you can't act on wouldn't help).
+Interactive (per step) and Screenshot (the whole image) both get an automatic **Possible PII** tag from AI - a real name, email address, API token/secret, or another user's data it noticed in the screenshot. It's advisory, not a gate: it doesn't block sharing, it just makes something worth redacting easy to spot in the sidebar and on the capture itself. Recording mode has no PII detection (matching its lack of a redaction tool - flagging something you can't act on wouldn't help).
 
 ## Voiceover, Video Export, and Embedding (Interactive mode)
 
@@ -69,13 +85,13 @@ Available as soon as an Interactive capture finishes - no approval needed:
 * **Generate Voiceover**: narrates each step's caption using one of four AI voices - **Ava** (US, Female), **Andrew** (US, Male), **Sonia** (UK, Female), or **Ryan** (UK, Male). Once generated, each step gets an inline audio player to preview its narration right next to its caption. Pick a different voice and click **Regenerate Voiceover** at any time to replace every step's narration - there's no separate "include voiceover" toggle, export automatically narrates whatever's been generated and holds silently on any step that hasn't.
 * **Export Video**: stitches every step into one downloadable `.mp4`, held on each frame for its voiceover's duration (or a fixed 3 seconds per step where there's none, 4 when the step zooms). It zooms the same way as the embed player - see [Zoom on Clicks](#zoom-on-clicks). A progress bar (with elapsed time, and percent-complete once per-step progress is available) shows above the buttons while either job runs, with a **Stop** button to cancel it - both action buttons gray out while a job is in flight so you can't start a second one against the same steps. Once it finishes, the video plays inline right there on the dashboard - it also keeps showing up on later visits, not just right after the export completes.
 * **Export for Resolve/Premiere/Final Cut (FCPXML) / Export for Kdenlive**: builds an editable timeline project - each step's screenshot and voiceover as separate clips on the timeline, not a flattened video - for finishing in a real editor. These keep the full screenshots (no zoom), so you can frame each clip yourself.
-* **Copy Embed Code** / **Preview Embed**: the `<iframe>` snippet for the interactive click-to-advance player (see [Sharing and Embedding](#sharing-and-embedding)) - **Preview Embed** expands an inline preview of exactly what that snippet renders, without leaving the dashboard.
+* **Copy embed code** / **Preview embed**: the `<iframe>` snippet for the interactive click-to-advance player (see [Sharing and Embedding](#sharing-and-embedding)) - **Preview embed** expands an inline preview of exactly what that snippet renders, without leaving the dashboard.
 
 ### Zoom on Clicks
 
 The embed player zooms toward what each step clicks, so readers can see it - especially on a phone, where a full desktop screenshot makes buttons tiny. Each step opens on the whole screen for a moment, so the reader sees where they are, then zooms in on the hotspot; it zooms back out before the next step. Nothing is cropped: readers can click **Whole screen** in the player to see everything, and **Zoom in** to go back. People who've turned on reduced motion in their system settings get the zoomed view without the animation.
 
-Choose how it works for the whole capture with **🔍 Zoom on clicks** next to the embed buttons:
+Choose how it works for the whole capture with **Zoom on clicks** next to the embed buttons:
 
 * **Auto** (default): zooms only when the clicked element is small on screen - a button or a menu item, not a large panel. The same capture may zoom on a phone and not on a wide screen.
 * **Always**: zooms in on every step with a hotspot.
@@ -88,24 +104,49 @@ The exported video zooms the same way. To override the setting on one embed, add
 ## Recording: Narrated Screen Recordings
 
 1. Select **Recording** in the popup, optionally give it a title (see [Auto-Naming](#auto-naming) above).
-2. Optional - click **Allow microphone access** for narration. This is a one-time browser permission grant, and it's entirely skippable: a recording works fine with just the tab's own video and audio and no mic input at all, e.g. for capturing something already playing in the tab with no narration.
-3. Optional - **Select Region** and **Follow across tabs and windows** work the same as in Interactive mode (see above). With following on, switching tabs or windows mid-recording doesn't cut the recording short - it's stitched into one continuous video across every tab/window you visited, even ones at different resolutions.
-4. Click **Start**, narrate and act normally (if you granted mic access). **Pause**/**Resume** are available throughout.
+2. Optional - click **Allow mic** for narration (see [Allow the Microphone](#allow-the-microphone)). This is a one-time browser permission grant, and it's entirely skippable: a recording works fine with just the tab's own video and audio and no mic input at all, e.g. for capturing something already playing in the tab with no narration.
+3. Optional - **Region** and **Follow tabs** work the same as in Interactive mode (see above). With following on, switching tabs or windows mid-recording doesn't cut the recording short - it's stitched into one continuous video across every tab/window you visited, even ones at different resolutions.
+4. Click **Record**, narrate and act normally (if you granted mic access). **Pause**/**Resume** are available throughout.
 5. Click **Stop**. The video uploads directly and is shareable the moment the upload finishes.
 
 Recording length is capped by your plan: **5 minutes** on Basic, **10 minutes** on Pro (and Trial), **30 minutes** on Enterprise. A recording longer than your plan's limit is rejected at upload - stay under the cap, or upgrade for longer recordings. Uploaded recordings also have a flat 300MB file size cap.
 
-## Editing a Recording: Trim, Replace Audio, and Export
+## Audio: Voice Recordings
 
-A finished Recording-mode capture can be touched up from the Capture dashboard - no need to re-record for a rough start/end or a flubbed narration. Only one of **Trim** and **Replace Audio** can run at a time on a given recording:
+Audio mode records your voice, and optionally the tab's sound, without any video. It needs extension version 1.2.0 or later. Use it for narration you want to add to a screen recording, or on its own as a shareable audio file.
 
-* **Trim**: mark an in-point and out-point (**Mark A** / **Mark B**) against the video's own current playback position, then confirm. This is a single range, not a multi-cut timeline, and it's destructive - everything outside that range is discarded and the recording is overwritten in place, with no undo beyond re-uploading a fresh recording. Costs 5 credits.
-* **Replace Audio**: swaps out the *entire* audio track - the original mic + tab audio, already mixed together - with new audio, either typed as a script (up to 5,000 characters) and narrated with AI voiceover, or a direct audio file upload. There's no way to replace just the narration and keep the tab's original sound. If the new audio is shorter than the video, the video is trimmed to match; if longer, the video's last frame holds for the difference. Costs 5 credits.
-* **Export for Resolve/Premiere/Final Cut (FCPXML) / Export for Kdenlive**: same editable-timeline export offered for Interactive mode (see above) - the raw recording as an editable clip, for finishing in a real video editor. Screenshot mode has no timeline (it's a single still), so this export isn't offered there.
+1. Open the page you want to capture, then open the extension and select **Audio**. The popup uses the page you are on as the source, so it must be an ordinary web page: browser pages such as `chrome://` or `brave://`, and extension pages, can't be used.
+2. If the button says **Allow mic**, follow [Allow the Microphone](#allow-the-microphone) once.
+3. Optional - tick **Include tab sound** to record what the page plays, such as a video, together with your voice.
+4. Click **Record**, speak, and click **Stop**. The audio uploads and appears in the library with a waveform, a player and an embed. See [The library and the editor](#the-library-and-the-editor).
+
+Audio recordings follow the same length limit as screen recordings.
+
+### Allow the Microphone
+
+Your browser asks for microphone access once, the first time you use it.
+
+1. In the popup, click **Allow mic**. A new browser tab opens and your browser shows a prompt near the address bar.
+2. Choose **Allow**. If the prompt lets you choose how long to remember the decision, choose the longest option so it doesn't ask again. If it offers a choice of microphone, check that it's the one you want.
+3. The tab closes by itself. Open the extension again on the page you want to capture. The button now says **Mic on**.
+
+If the tab doesn't close, close it yourself before you open the extension again. The extension captures the tab you are on, so with its own tab in front you would see an "Invalid or unsafe target URL" message.
+
+If the prompt doesn't appear or you chose **Block**, allow the microphone for SudoDocs Capture in your browser's site settings for microphone access. On a Mac, the browser also needs permission under **System Settings**, **Privacy & Security**, **Microphone**.
+
+## Editing a Recording: Timeline, Replace Audio, and Export
+
+A finished Recording-mode capture opens in the editor with a small **timeline**, so there is no need to re-record for a rough start or end or a flubbed narration. Edits are **non-destructive**: the original recording is kept, and nothing is rendered until you export.
+
+* **Split, delete and trim**: split the recording at the playhead, delete the pieces you do not want and trim the ends. **Undo**, **Redo** and **Reset edits** are in the editor, and edits save by themselves.
+* **Volume and mute**: set the volume or mute the audio. If the recording has separate **microphone** and **tab sound** tracks (extension 1.2.0 and later), each shows as a lane with its own mute and volume.
+* **Export edits**: renders your edits into a new video. It costs a flat 5 credits, and the original is not changed. The embed and the sharing link use the latest export; until you export they show the original.
+* **Replace audio**: swaps out the *entire* audio track with new audio, either typed as a script (up to 5,000 characters) and narrated with AI voiceover, or a direct audio file upload. This one **changes the original** recording, and the editor asks you to confirm. There's no way to replace just the narration and keep the tab's original sound.
+* **Export for Resolve/Premiere/Final Cut (FCPXML) / Export for Kdenlive**: the same editable-timeline export offered for Interactive mode (see above), for finishing in a real video editor.
 
 ## Screenshot: Annotated Screenshots
 
-1. Select **Screenshot** in the popup, optionally give it a title (see [Auto-Naming](#auto-naming) above). Either click **Capture Screenshot** directly, or optionally click **Select Region** first to draw a rectangle constraining the screenshot to just that area - confirming the region captures immediately, the same as clicking Capture Screenshot. Either way, this opens a new editor tab with the captured image.
+1. Select **Screenshot** in the popup, optionally give it a title (see [Auto-Naming](#auto-naming) above). Either click **Capture** directly, or optionally click **Region** first to draw a rectangle constraining the screenshot to just that area - confirming the region captures immediately, the same as clicking Capture. Either way, this opens a new editor tab with the captured image.
 2. In the editor, use the toolbar to mark up the image:
    * **Select** - click an existing annotation to select it, then drag to move it or use its handle to resize it.
    * **Arrow** / **Box** / **Highlight** (a translucent color, for drawing attention *to* something) / **Text** - drag or click to place, pick a color with the swatch.
@@ -115,7 +156,7 @@ A finished Recording-mode capture can be touched up from the Capture dashboard -
 
 ## Cross-Tab and Window Following
 
-The **Follow across tabs and windows** toggle (Interactive and Recording modes, off by default) is the one setting that changes what "the recording" actually covers:
+The **Follow tabs** toggle (Interactive and Recording modes, off by default) is the one setting that changes what "the recording" actually covers:
 
 * **Off** (default): pinned to the one tab you started on. Real page navigations and reloads of that tab are still followed; switching to a different tab or window is not.
 * **On**: the capture follows your focus anywhere in the browser. For Interactive mode this just means the click listener moves with you. For Recording mode, since there's no way to redirect a single video stream to a different tab, a followed recording is actually several segments stitched into one video at upload time - segments from different tabs or window sizes are automatically normalized to a common resolution first, so the result still plays back as one clean video.
@@ -129,13 +170,13 @@ A click inside an `<iframe>` embedded in the page you're capturing is handled ba
 
 ## Sharing and Embedding
 
-Every capture, shareable the moment it finishes for all three modes, gets the same **Copy Embed Code** button, producing:
+Every capture, shareable the moment it finishes for every mode, gets the same **Copy embed code** button, producing:
 
 ```html
 <iframe src="https://<your-instance>/embed/capture/<id>" width="800" height="600" frameborder="0"></iframe>
 ```
 
-Paste this into any page that allows iframes. The embed itself needs no login - it's a public link scoped to that one capture, and renders the right player automatically (the interactive click-through player for Interactive mode, a plain video player for Recording, a plain image for Screenshot). Use **Preview Embed** on the dashboard to see exactly what that snippet renders before copying it anywhere.
+Paste this into any page that allows iframes. The embed itself needs no login - it's a public link scoped to that one capture, and renders the right player automatically (the interactive click-through player for Interactive mode, a plain video player for Recording, a plain image for Screenshot). Use **Preview embed** on the dashboard to see exactly what that snippet renders before copying it anywhere.
 
 ## AI Credit Costs
 

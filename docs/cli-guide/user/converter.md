@@ -1,8 +1,10 @@
 # Universal Converter
 
-CLI equivalent of [User Tasks → Universal Doc Converter](../../saas-guide/user/converter.md#generate-ai-reference-docs-pro) - specifically the **API / Helm to Docs** tool. Not admin-only - available to any doc-team member, matching the underlying dashboard page. The plain format-to-format converter (Markdown ↔ RST ↔ AsciiDoc ↔ HTML ↔ Word) has no CLI equivalent yet.
+CLI equivalent of [User Tasks → Universal Doc Converter](../../saas-guide/user/converter.md#generate-ai-reference-docs-pro) - specifically the **API spec to docs** tool. Not admin-only - available to any doc-team member, matching the underlying dashboard page. The plain format-to-format converter (Markdown ↔ RST ↔ AsciiDoc ↔ HTML ↔ Word) has no CLI equivalent yet.
 
 ## Convert a Spec to Docs
+
+> Helm values files are no longer converted in the web Converter. `--type helm` still works here for now but is deprecated; use the [Helm charts commands](helm-charts.md) instead.
 
 ```bash
 sudodocs convert openapi.yaml --type openapi --target docusaurus
@@ -19,10 +21,9 @@ Applies the same anti-hallucination rules as the web tool - it only extracts par
 
 ## Other Automatable Dashboard Tools
 
-Two other tools have a Headless API endpoint but no `sudodocs` command wrapping them yet - call the API directly if you need to script them:
+[API Readiness](api-readiness.md) has its own commands (`sudodocs api-scan ...`). One other tool has a Headless API endpoint but no `sudodocs` command wrapping it yet - call the API directly if you need to script it:
 
-* [API Readiness](../../saas-guide/user/api-readiness.md) - `POST /oas/validate`, body `{"run_swagger", "run_redocly", "run_ai_fix", "run_ai_content"}` (all optional booleans), runs your saved config the same as clicking **Check API Specs**.
-* [Diagram Generator](../../saas-guide/user/diagram-gen.md) - `POST /diagram/generate`, `multipart/form-data` (not JSON) with a `description` field and an optional `image_file`.
+* [Mermaid diagrams](../../saas-guide/user/diagram-gen.md) - `POST /diagram/generate`, `multipart/form-data` (not JSON) with a `description` field and an optional `image_file`.
 
 ## Headless API
 
