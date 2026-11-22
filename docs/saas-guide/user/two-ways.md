@@ -11,12 +11,12 @@ SudoDocs works in two modes. Pick the one that matches where your documentation 
 |---|---|---|
 | **Use it when** | You have a code repository and little or no documentation. | You already have a documentation repository, in the docs tool you use today. |
 | **Where it starts** | **Author > Start from code**. | Connect your documentation repository, then open **Author**, **Docflows** or **Publish**. |
-| **What SudoDocs does** | Reads your code, plans the documentation with you, drafts every page, checks it, and sends it to an empty documentation repository as one pull request. | Suggests changes from pull requests and Jira tickets, lets you edit pages with a live preview, checks your docs and API files, drafts release notes, and publishes the site. |
+| **What SudoDocs does** | Reads your code, plans the documentation with you, drafts every page into an Author mode change, checks it, and sends it to an empty documentation repository as one pull request. | Suggests changes from pull requests and Jira tickets, lets you edit pages with a live preview, checks your docs and API files, drafts release notes, and publishes the site. |
 | **Learn more** | [Write docs from scratch](start-from-code.md) | [Maintain your docs](#maintain-your-docs) |
 
 ## Write docs from scratch
 
-[Start from code](start-from-code.md) turns a code repository into a first draft of **public** documentation, one type at a time: a user guide, an admin guide, a command-line reference and an API reference. You review and edit every page before anything reaches your repository, and a person always merges the pull request.
+[Start from code](start-from-code.md) turns a code repository into a first draft of **public** documentation, one type at a time: a user guide, an admin guide, a command-line reference and an API reference. The drafts open in [Author mode](author-mode.md), so you review, edit and invite reviewers in the same place you write everything else, and a person always merges the pull request.
 
 ## Maintain your docs
 
@@ -32,7 +32,7 @@ Connect your documentation repository as a **Documentation** repository (see [Co
 
 When you write documentation from scratch, SudoDocs leaves you with a normal documentation repository, and everything above applies to it:
 
-1. After you merge the pull request, **sync the repository** (**Admin > Repositories > Sync now**). Docflows needs the sync to find the pages it should update.
+1. After you merge the pull request, **sync the documentation repository** (**Admin > Repositories > Sync now**). Docflows needs the sync to find the pages it should update.
 2. Create the site from the same page where you merged the work. For an API run, the API file is added to **API Specs** for you.
 3. Turn on **Use the public-facing rules everywhere** in **Admin > Roles** so Docflows and the AI tools keep following the same rules as the first draft. See [Configure Doc Team Roles](../admin/doc-team-roles.md#public-facing-documentation).
 4. Edit pages in Author mode whenever you like. If you run Start from code again for the same type, pages you edited are kept unless you choose to overwrite them.

@@ -16,7 +16,7 @@ Open **Author**. The start page lists:
 - **Open changes to continue**, and your earlier changes (a discarded change can be removed from your list).
 - **Where you can write**: your Publish sites and documentation repositories, one row for each repository. Choose **Start writing**.
 
-Starting from a code repository with no documentation? Click **Start from code** at the top of the page: see [Write docs from scratch with Start from code](start-from-code.md).
+Starting from a code repository with no documentation? Click **Start from code** at the top of the page: see [Write docs from scratch with Start from code](start-from-code.md). The drafts open here as a normal change: a strip at the top shows the progress, pages appear in the file list as they are written, the checks' notes are comments labelled **SudoDocs Editor (AI)**, and **Tools > Redraft from code** rewrites a page and shows the result beside the page to apply or discard.
 
 A **change** is one work branch with any number of files. Most writing starts on a Publish site; you can also write in a documentation repository that has no site yet, or in a folder you saved as a source.
 
@@ -82,6 +82,7 @@ The **Tools** tab lists what applies to the file you have open. Anything that co
 | **Doc Assistant** | Chat about your code and docs, in the context of the open page. |
 | **Converter** | Converts pasted text into the page's format. |
 | **Draft from a ticket or pull request** | Fetches a Jira ticket or a GitHub pull request and drafts the changes it needs into the affected files; you pick the files. It shows any existing Docflow for the same ticket and lets you edit it here. |
+| **Redraft from code** | Only in a change started with Start from code. Writes the open page again from your code (the cost is shown first) and shows the result in a compare view to **Apply** or **Discard**. |
 | **From other tools** | Brings in a Changelog draft, or a Capture as an embed. |
 
 ## Review before you ask

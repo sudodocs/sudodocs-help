@@ -10,10 +10,12 @@ The quickest way to add GitHub repositories is the SudoDocs GitHub App. There's 
 
 1. On **Admin > Repositories**, click **Connect GitHub**.
 2. On GitHub, choose the account or organization, select which repositories SudoDocs can access, and install the app.
-3. Back in SudoDocs, under **Choose repositories**, select the repositories to add and their **Repository type** (**Documentation** or **Source code**).
+3. Back in SudoDocs, under **Choose repositories**, select the repositories to add and set the **Repository type** for each one separately (**Documentation** or **Source code**). A short tag after the name shows the type: **Docs** or **Code**.
 4. Click **Add selected repositories**.
 
-To write documentation from scratch with [Start from code](../user/start-from-code.md), connect your code repository as **Source code** and a new, empty repository as **Documentation**.
+To change a type later, open **Manage** on the repository and use **Repository type**.
+
+To write documentation from scratch with [Start from code](../user/start-from-code.md), connect your code repository as **Source code** and a new, empty repository as **Documentation**. Start from code lists only repositories of the right type, and it reads the code without a sync. A repository with no files yet has nothing to sync, so it shows no **Sync now** button.
 
 To give SudoDocs access to more repositories later, change the installation's repository list on GitHub, then click **Connect GitHub** again.
 
@@ -72,7 +74,7 @@ After adding a repository, you must sync it to index the content into the Vector
 
 1.  Find the repository on **Admin > Repositories**.
 2.  Click **Sync now**.
-    * The button shows the progress as **Syncing 40%**, then **Synced** (or **Sync failed**).
+    * The button shows the state: **Queued**, **Syncing 40%** with a progress bar, then **Synced** (or **Sync failed**, with the reason). If you reload the page, it reconnects to a sync that is still running.
 3.  Wait for it to say **Synced**.
 
 > **Note**: Docflows' [Check against your docs](../user/doc-drift.md#which-version-of-your-docs-is-checked) doesn't depend on syncing: it reads the documentation repository's default branch live from GitHub. Syncing keeps the copy SudoDocs drafts from up to date.
@@ -113,7 +115,7 @@ To see it, look under **Docs layout** on the repository: for example **Docusauru
 
 ## Cancel a Running Sync
 
-If a sync is taking longer than expected or was started by mistake, click **Stop sync** while the repository is syncing on **Admin > Repositories**, and confirm. Progress is saved. This works for any in-progress job, not just syncs - see [CLI Tasks → Organization](../../cli-guide/admin/settings.md#cancel-a-running-job) for the command-line equivalent.
+If a sync is taking longer than expected or was started by mistake, click **Stop sync** while the repository is syncing on **Admin > Repositories**, and confirm. Progress is saved. If a sync is stuck, for example after a worker stopped, open **Manage** and click **Reset sync** to release it, then start again. A failed sync does not keep the repository locked. This works for any in-progress job, not just syncs - see [CLI Tasks → Organization](../../cli-guide/admin/settings.md#cancel-a-running-job) for the command-line equivalent.
 
 ## Keep in Sync
 
