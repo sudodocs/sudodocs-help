@@ -33,7 +33,7 @@ A spec is one root file. SudoDocs follows its `$ref`s to find every other file i
 
 SudoDocs then reads the spec. The card shows how many dependency files it found and when it read them; expand **Files** to see each one. Use **↑** and **↓** to set the order specs appear in, **Edit** to change a spec, and **Remove** to take it off the list. Removing a spec keeps its scans in the history.
 
-> **From Start from code:** when you create the site after an API reference run of [Start from code](../user/start-from-code.md), SudoDocs adds the OpenAPI file it wrote to this list and publishes it in the site's API reference for you.
+> **From Start from code:** when you create the site after an API reference run of [Start from code](../user/start-from-code.md), SudoDocs adds the OpenAPI file it wrote (`api/openapi.yaml`) to this list and publishes it in the site's API reference for you.
 
 ## Dependency Locations
 

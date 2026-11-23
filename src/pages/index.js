@@ -7,9 +7,9 @@ import styles from './index.module.css';
 // Newest Changelog release, shown as a strip on the home page. Update it with
 // every new release in docs/changelog.md (see .claude/skills/changelog).
 const LATEST_UPDATE = {
-  date: 'November 22, 2026',
-  summary: 'Write documentation from scratch with Start from code, skill files for the Doc Team Roles, and public-facing rules for Docflows and the AI tools.',
-  anchor: '2026-11-22',
+  date: 'November 23, 2026',
+  summary: 'Preview a whole site from Start from code before you merge it, add several guides to one change, and write the API reference as one OpenAPI file.',
+  anchor: '2026-11-23',
 };
 
 // Outline icons (Lucide, ISC licence), drawn in the current text colour.

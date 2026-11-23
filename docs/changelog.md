@@ -7,6 +7,16 @@ description: Product updates to SudoDocs in November 2026, newest release first.
 
 What's new in SudoDocs in **November 2026**, newest release first. SudoDocs updates for everyone at once, so there's nothing to install - except the CLI, which says how to upgrade. For earlier months, see [Past Changelogs](changelog-archive/index.md).
 
+## November 23, 2026 {#2026-11-23}
+
+### Write docs from scratch
+
+- **Preview the whole site before you merge.** **Preview site** builds a private copy of your documentation site from the change, with a home page, navigation and a Changelog. Only members of your organization can open it. After the merge, **Create site** keeps it private until you click **Publish site**, and drafts do not count against your site limit. See [Preview before you merge](saas-guide/user/start-from-code.md#preview-before-you-merge).
+- **Add several guides to one change.** Draft a second guide into the open change, so one pull request and one preview hold the set. You can also move a drafted guide to another change, remove one from a change, and plan another guide from the strip. See [Start from code](saas-guide/user/start-from-code.md#steps).
+- **Better comments to clean up.** **Suggest a fix** proposes replacements that come from your code instead of asking you for facts, **Apply N suggestions** applies them together, **Add cross-references** links related pages, and **Refresh checks** closes comments that no longer apply. Pages link to each other as they are drafted. See [Clean up the comments](saas-guide/user/start-from-code.md#clean-up-the-comments).
+- **The API reference is one OpenAPI file.** Start from code writes `api/openapi.yaml` from your routes, in parts for a large API, with no Markdown pages; the site draws the reference from it. Command-line tools are read as a tree of commands, and large APIs are read in groups of routes. See [The API reference](saas-guide/user/start-from-code.md#the-api-reference).
+- **A roomier Author mode editor.** More space for the text, a **Changed** view in the file list, **Upload an image** and **Move** under **Insert**, and the panel tabs beside the pull request bar. See [Author mode](saas-guide/user/author-mode.md#the-editor).
+
 ## November 22, 2026 {#2026-11-22}
 
 ### Publish
