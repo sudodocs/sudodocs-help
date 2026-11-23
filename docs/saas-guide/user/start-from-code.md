@@ -27,8 +27,10 @@ You pick one type for each run. Run it again for the next type, and each type ad
 | **User guide** | People who use the product | What it does and how to do tasks in it, written as tasks. |
 | **Admin guide** | People who administer it | Users, roles, permissions, settings and integrations inside the product. It does not cover installation or hosting. |
 | **CLI reference** | Command-line users | Every command, option and argument with examples. Offered only when your code has a command-line interface. |
-| **API reference** | Developers who call your API | An OpenAPI file and reference pages grouped by resource. Offered only when your code has HTTP routes. |
+| **API reference** | Developers who call your API | One **OpenAPI file** with every endpoint. It has no pages of its own: your site draws the API reference from the file. Offered only when your code has HTTP routes. |
 | **Deployment guide** (optional, under **More types**) | People who host the product themselves | Installing, configuring and running it. Meant for internal teams and self-hosted products. It is never offered first. |
+
+The API reference works differently from the others: there is nothing to plan, and it costs no planning credits. See [The API reference](#the-api-reference).
 
 A type that your code cannot support is greyed out with the reason, for example "No command-line interface was found in the code."
 
@@ -50,15 +52,45 @@ The documentation is written for your **readers**, not your engineers. Every rol
 3. Look at **What we found**: languages, screens, API routes, commands and modules.
 4. Choose a documentation type and click **Plan documentation**. The **Information Architect** proposes the pages, up to 40 in all, each with a purpose, an audience and the facts it will use. Anything it could not cover is listed under **Not covered**. Click **Add page** beside an item to add it to the plan, or **Suggest more pages** to ask for more.
 5. **Edit the plan.** Drag pages to reorder them, or use the keyboard. Click a page to edit its title, purpose and audience in the middle of the screen. Add or remove pages. Changes are saved as you go, and **Undo** works. For each page you can switch **Include a diagram** on and choose its type (see [Diagrams](#diagrams)).
-6. Choose the documentation repository, confirm the **Product name** (used for the site title, home page and Changelog), and click **Draft**. SudoDocs opens a change in Author mode on that repository.
+6. Choose the documentation repository, confirm the **Product name** (used for the site title, home page and Changelog), and click **Draft**. SudoDocs opens a change in Author mode on that repository. If you already have an open Start from code change in the same repository, **Add to** lets you draft into it instead, so all your guides travel in one pull request. A change can hold one run of each type.
 7. **Watch the drafting.** The editor opens with a strip that shows "Drafting 3 of 12 pages". Pages appear in the file list as each one is written, and the first page opens. You can start reading and editing while the rest is written. For each page, the **Technical Writer** drafts it, SudoDocs checks it, the **Editor** reviews it, and the Writer rewrites it once if something was wrong.
-8. **Review in Author mode.** Lines that the checks flagged, and the Editor's notes, are comments labelled **SudoDocs Editor (AI)** in the review panel. Edit pages like any others, [invite reviewers](reviews.md), including people outside SudoDocs, and use **Tools > Redraft from code** to have a page written again.
-9. Open **one pull request** from the editor and merge it on GitHub.
-10. Back on the run page, or from the strip in the editor, click **Create site**. SudoDocs builds the first version of the site from the documentation repository.
+8. **Preview the whole site.** In the strip, open the **Start from code** menu and click **Preview site**. SudoDocs builds a private copy of the site from your change, in the Manual skin, with a home page, navigation and a Changelog. Click **Open preview** to see it, and **Refresh preview** after more edits. Only members of your organization can open it; anyone else is asked to sign in. See [Preview before you merge](#preview-before-you-merge).
+9. **Review in Author mode.** Lines that the checks flagged, and the Editor's notes, are comments labelled **SudoDocs Editor (AI)** in the review panel. Edit pages like any others, [invite reviewers](reviews.md), including people outside SudoDocs, use **Tools > Redraft from code** to have a page written again, and use the comment tools described in [Clean up the comments](#clean-up-the-comments).
+10. Open **one pull request** from the editor and merge it on GitHub. The pull request text links to the preview.
+11. Back on the run page, or from the strip in the editor, click **Create site**. SudoDocs makes the site from the documentation repository. It stays private until you publish it (see below).
 
 The run page keeps a status for every page (**Waiting**, **Writing**, **Checking**, **Reviewing**, **Ready**, **Needs a look**, **Failed**), with **Open** to jump to the page in the editor and **Draft again** to retry one.
 
-To write another type, click **Plan another type**. SudoDocs reuses the same reading of your code, and the plan you saved is kept: planning again for the same type never loses your earlier drafts.
+To write another type, click **Plan another guide** in the strip, or **Plan another type** on the run page. SudoDocs reuses the same reading of your code, and the new run joins the same change. If you read the code with an older version of the reader, the run page says so and shows **Read code again**: use it, because the new reader finds more, such as every command of a large command-line tool and the routes of a large API.
+
+On the run page of a finished run you can also:
+
+- **Move to another change.** Moves the run's pages, with your edits, into another open change of the same repository, then discards the old change. It is offered when the run is alone in its change and the other change has no run of the same type.
+- **Remove from this change.** Takes a type out of the change: its folder, its navigation section and the home page links to it are removed, and links to its pages in other pages become plain words. The change, the other guides and the pull request stay. Use it to plan a type again.
+
+## Preview before you merge
+
+**Preview site** builds the whole documentation site from your change, so you can see the navigation, the home page and the pages as readers will, before anything is merged. It is a private **draft site**:
+
+- Only members of your organization can open it. Anyone else is asked to sign in, and people from other organizations are refused.
+- It has no public address and does not count against your plan's site limit. You can have up to three draft sites.
+- It uses the Manual skin. You choose the skin, home page and navigation after the merge, in the [Studio](../publish/studio.md).
+
+When the pull request is merged, click **Create site**. The draft site now follows the documentation repository's main branch and is marked **Draft**, still private. On its Publish page you can **Open Studio**, **Set access** and **Open preview**. When you are ready, click **Publish site**: it checks your plan's site limit, makes the site public and starts the first live build. If you discard the change instead, its draft site is deleted.
+
+The home page is a designed page made of blocks (a hero with search, cards for your guides and a call to action). It is saved in `sudodocs.json` in your documentation repository, so it travels with the pull request, and the [home page designer](../publish/studio.md) opens it. Each later guide adds its own cards.
+
+## Clean up the comments
+
+The review panel in Author mode has tools for the comments that Start from code and Self review leave:
+
+- **Suggest a fix.** The AI reads a comment, and on a page written by Start from code it searches your code for the answer itself. You are not asked for facts that only the code holds. It proposes a replacement for the commented text, or tells you that the code does not support the sentence and shows what it removed. It only proposes: nothing changes until you click **Apply suggestion**. Two credits are used for each proposal, and none when it finds nothing to propose.
+- **Apply N suggestions.** Applies every open suggestion at once, one commit for each file. Suggestions whose text has since changed are skipped.
+- **Add cross-references.** Finds places where a page mentions what another page covers and suggests a link for each, as a comment you can apply. It links only to pages that exist in the change.
+- **Refresh checks.** Runs the free checks again on every page as it is now and closes the comments that no longer apply.
+- **Review pages again.** Asks the Editor to read every page again. The credit cost is shown first, and its older notes are replaced.
+
+Pages written by Start from code also link to each other as they are drafted, and a link to a page that does not exist is removed.
 
 ## Redraft a page
 
@@ -100,6 +132,17 @@ Tips:
 - The diagram lands at the end of the page. Move it where you want it in the editor. Flowcharts and sequence diagrams open in the visual builder.
 - A diagram is added only when it draws correctly and passes the same checks. If one could not be made, a comment on the page says why.
 
+## The API reference
+
+Choose **API reference** and the plan card says what will be written: one OpenAPI file. There is no outline to edit. Click **Write the file**.
+
+- If your code repository already has an OpenAPI file, it is copied as it is.
+- Otherwise SudoDocs writes one from your routes, in parts of related routes (for a large API, many parts), then merges the parts and keeps only the paths and methods your code shows. The page states how many routes the file covers, and says so when a part could not be written.
+- The file is `api/openapi.yaml` in the change. Edit it in Author mode with the **Describe the API** form or in the source, and see the live API reference beside it. It does not appear in the page order, because the site's API reference tab draws it.
+- Keep it at `api/openapi.yaml`. **Create site** looks for it there when it adds the file to [API Specs](../admin/api-specs.md); if you move it, add it yourself from the site's API reference tab with **Add and publish**.
+
+Later improvements are ordinary changes to the file in Author mode, or fixes from API Specs.
+
 ## What it writes
 
 The pull request adds, in the documentation repository:
@@ -107,7 +150,7 @@ The pull request adds, in the documentation repository:
 - A folder for the type, with one Markdown page for each planned page. For example, `user-guide/` for the user guide.
 - `sudodocs.json`, with the site title and a navigation section for the type. Other settings you already have are kept.
 - On the first run: a home page that lists the sections (the list is updated by later runs), and a **Changelog** page.
-- For the API reference: the OpenAPI file. If your code repository already has one, it is copied as it is. Otherwise SudoDocs drafts one from your routes and keeps only the paths and methods that your code shows.
+- For the API reference: the OpenAPI file `api/openapi.yaml`, and no pages.
 
 The pull request says it is AI-generated and names the pages that still need a look.
 
@@ -133,6 +176,8 @@ Planning uses credits once for each type. Drafting uses credits for each page: o
 
 - A plan has up to 40 pages.
 - GraphQL and gRPC definitions are not read yet.
+- Command-line tools built with Click, Typer, argparse, Commander and Cobra are read as a tree of commands and subcommands. Tools built with other libraries are read as a flat list of command names.
+- A large API is read in groups of routes, so the plan covers every group, not only the first routes.
 - The code goes to the AI provider your organization uses (see [Connect an AI provider](../admin/llm-provider.md)). Nothing is stored beyond what your connected repositories already store.
 - Diagrams are added only to pages the plan marks for one, and only when they draw correctly.
 

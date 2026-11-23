@@ -16,7 +16,7 @@ Open **Author**. The start page lists:
 - **Open changes to continue**, and your earlier changes (a discarded change can be removed from your list).
 - **Where you can write**: your Publish sites and documentation repositories, one row for each repository. Choose **Start writing**.
 
-Starting from a code repository with no documentation? Click **Start from code** at the top of the page: see [Write docs from scratch with Start from code](start-from-code.md). The drafts open here as a normal change: a strip at the top shows the progress, pages appear in the file list as they are written, the checks' notes are comments labelled **SudoDocs Editor (AI)**, and **Tools > Redraft from code** rewrites a page and shows the result beside the page to apply or discard.
+Starting from a code repository with no documentation? Click **Start from code** at the top of the page: see [Write docs from scratch with Start from code](start-from-code.md). The drafts open here as a normal change: a strip at the top shows the progress, pages appear in the file list as they are written, the checks' notes are comments labelled **SudoDocs Editor (AI)**, and **Tools > Redraft from code** rewrites a page and shows the result beside the page to apply or discard. The strip's **Start from code** menu has **Preview site**, **Open plan** and **Plan another guide**. The review panel's tools, such as **Suggest a fix** and **Add cross-references**, are described in [Clean up the comments](start-from-code.md#clean-up-the-comments).
 
 A **change** is one work branch with any number of files. Most writing starts on a Publish site; you can also write in a documentation repository that has no site yet, or in a folder you saved as a source.
 
@@ -27,7 +27,10 @@ A **change** is one work branch with any number of files. Most writing starts on
 - **File list** with folders, lock icons, a dot on changed files and arrow-key navigation. Drag a file onto a folder to move it; links and navigation are updated.
 - **Tabs** for several files. Each keeps its unsaved text. **Save all** commits everything at once.
 - **Source** and **Visual** modes for Markdown and MDX (Source for reStructuredText and AsciiDoc), and a **live preview** in your site's own skin. The preview follows your unsaved text, including your navigation and variables.
-- **Full screen**, resizable panes, and a bottom panel for **Problems** and **Tools**.
+- **Full screen**, resizable panes, and a bottom panel for **Problems**, **Tools** and **Self review**. Its tabs sit in the bar at the bottom of the window, next to the pull request actions.
+- The left list has three views: **Files**, **Page order** and **Changed (n)**, which lists only the files you changed with **Diff**, **History** and **Revert** for each. Click "N files changed" in the bottom bar to open it.
+- **Insert** holds the extras: **Upload an image...** and **Move or rename page...** are in its Page group.
+- The review panel opens by itself the first time a change has open comments, if the window is wide enough. Your choice to open or close it is remembered.
 - **Command palette** (Cmd or Ctrl + Shift + P), **Go to file** (Cmd or Ctrl + P), **Search in files** (Cmd or Ctrl + Shift + F), and a **Keyboard shortcuts** list.
 
 ### Who else is here

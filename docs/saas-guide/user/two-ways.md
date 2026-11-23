@@ -16,7 +16,7 @@ SudoDocs works in two modes. Pick the one that matches where your documentation 
 
 ## Write docs from scratch
 
-[Start from code](start-from-code.md) turns a code repository into a first draft of **public** documentation, one type at a time: a user guide, an admin guide, a command-line reference and an API reference. The drafts open in [Author mode](author-mode.md), so you review, edit and invite reviewers in the same place you write everything else, and a person always merges the pull request.
+[Start from code](start-from-code.md) turns a code repository into a first draft of **public** documentation, one type at a time: a user guide, an admin guide, a command-line reference and an API reference (an OpenAPI file). The drafts open in [Author mode](author-mode.md), so you review, edit and invite reviewers in the same place you write everything else, and a person always merges the pull request.
 
 ## Maintain your docs
 
