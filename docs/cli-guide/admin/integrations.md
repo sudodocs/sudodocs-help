@@ -1,4 +1,8 @@
-# Connect Services
+---
+sidebar_label: "Connect Services"
+---
+
+# Connect Services in the CLI
 
 CLI equivalents of [Admin Tasks → Connect Services](../../saas-guide/admin/integrations.md). Admin-only, same as the Services tab.
 

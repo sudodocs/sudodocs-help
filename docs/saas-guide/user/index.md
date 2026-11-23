@@ -27,7 +27,7 @@ Every tool is an item in the **left menu** (see [Find your way around](find-your
 
 **Release Dashboard** in the left menu opens all your team's work, release by release - see [Dashboards](dashboards.md). **Triage** lists the items that need a decision. A release groups one version's feature drafts, release notes and Docflows; see [Manage Releases](releases.md), and [Review and Push Docflows](assign-pr.md) to review the Docflows on a release.
 
-### Your Work
+## Your Work
 
 When anything is assigned to you, **Home** sums it up in numbers - your open work, your blocked items, the Docflows to review, pull requests with changes requested, and what the Editor flagged. Click a number to open the Release Dashboard showing just that: your open work, your blocked items (highlighted on the board), your Docflows, or what needs attention. **Flagged** opens Docflows: suggestions assigned to you that SudoDocs' Editor couldn't sign off on. It only counts tools in your plan, and it's hidden when nothing is assigned to you.
 

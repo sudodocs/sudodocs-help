@@ -1,4 +1,8 @@
-# Manage Releases
+---
+sidebar_label: "Manage Releases"
+---
+
+# Manage Releases in the CLI
 
 CLI equivalent of [User Tasks → Manage Releases](../../saas-guide/user/releases.md). Available to any doc-team member (Writer or System Administrator), same as the Workspace. Requires `sudodocs-cli` 1.2.0 or later (`pip install --upgrade sudodocs-cli`).
 

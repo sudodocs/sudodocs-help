@@ -1,4 +1,8 @@
-# Organization
+---
+sidebar_label: "Organization"
+---
+
+# Organization settings in the CLI
 
 CLI equivalents of [Admin Tasks → Organization](../../saas-guide/admin/settings.md#api-keys) - specifically API Keys and background jobs. Billing and deleting the organization have no CLI equivalent by design - both stay browser-only, given the blast radius of scripting either one.
 

@@ -1,4 +1,8 @@
-# API Specs
+---
+sidebar_label: "API Specs"
+---
+
+# API Specs in the CLI
 
 CLI equivalents of [Admin Tasks → API Specs](../../saas-guide/admin/api-specs.md): your spec list, dependency locations, and the settings for every spec. All commands are admin-only, same as the API Specs tab.
 

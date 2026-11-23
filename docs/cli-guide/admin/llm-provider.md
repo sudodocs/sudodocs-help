@@ -1,4 +1,8 @@
-# Bring Your Own LLM Key (BYOK)
+---
+sidebar_label: "Bring Your Own LLM Key (BYOK)"
+---
+
+# Bring Your Own LLM Key (BYOK) in the CLI
 
 CLI equivalent of [Admin Tasks → Provider](../../saas-guide/admin/llm-provider.md). Admin-only, and Enterprise-only, same as the Provider tab.
 

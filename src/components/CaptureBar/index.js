@@ -30,7 +30,7 @@ export default function CaptureBar() {
   return (
     <div className={styles.bar}>
       <div className={styles.inner}>
-        <img src="/img/logo.png" alt="" className={styles.logo} />
+        <img src="/img/logo.webp" alt="" width="28" height="28" className={styles.logo} />
         <div className={styles.text}>
           <strong>SudoDocs Capture</strong>
           <span className={styles.tagline}>Turn what you do in any product into a shareable link - now on the Chrome Web Store.</span>

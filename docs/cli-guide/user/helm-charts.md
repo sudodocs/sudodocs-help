@@ -1,9 +1,10 @@
 ---
-title: Helm charts
+title: Helm charts in the CLI
+sidebar_label: Helm charts
 description: Register, check, describe and publish Helm charts from the terminal.
 ---
 
-# Helm charts
+# Helm charts in the CLI
 
 CLI equivalent of [Helm charts](../../saas-guide/publish/helm-charts.md). Registering and publishing charts needs the **System Administrator** role (`sudodocs admin charts`); running checks is open to Writers (`sudodocs chart-scan`).
 
