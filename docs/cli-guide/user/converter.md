@@ -1,4 +1,8 @@
-# Universal Converter
+---
+sidebar_label: "Universal Converter"
+---
+
+# Universal Converter in the CLI
 
 CLI equivalent of [User Tasks → Universal Doc Converter](../../saas-guide/user/converter.md#generate-ai-reference-docs-pro) - specifically the **API spec to docs** tool. Not admin-only - available to any doc-team member, matching the underlying dashboard page. The plain format-to-format converter (Markdown ↔ RST ↔ AsciiDoc ↔ HTML ↔ Word) has no CLI equivalent yet.
 

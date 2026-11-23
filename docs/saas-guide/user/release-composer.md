@@ -1,4 +1,8 @@
-# Changelog
+---
+sidebar_label: "Changelog"
+---
+
+# Changelog tool
 
 Every release has a **release notes queue**: the list of what goes into its notes. Items reach it from:
 
