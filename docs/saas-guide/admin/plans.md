@@ -43,10 +43,6 @@ Every plan, including Free, includes the core documentation tools: Author mode, 
 
 The public docs health check is free for everyone.
 
-### Startup offer
-
-SudoDocs can give eligible early-stage teams **Pro free for a number of months**. While it lasts, the header shows **PRO · STARTUP OFFER**, and **Admin > Organization** shows when it ends: there is nothing to cancel. Administrators see a reminder in the last 30 days (and a stronger one in the last 7), and get emails 30 and 7 days before the end. When it ends your organization moves to Basic unless you have chosen a plan; nothing is deleted, and protected sites stay protected. Choose a plan any time to keep Pro.
-
 ## What AI Actions Cost
 
 Each AI action uses credits. A failed action gives its credits back.
