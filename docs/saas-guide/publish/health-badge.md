@@ -1,11 +1,11 @@
 ---
-title: Docs health badge
-description: Show the SudoDocs docs health badge on your site when both health scores are 80 or more. It is checked live, so it always matches the latest check.
+title: SudoDocs score badge
+description: Show the SudoDocs score badge on your site when both health scores are 80 or more. It is checked live, so it always matches the latest check.
 ---
 
-# Docs health badge
+# SudoDocs score badge
 
-A site that scores **80 or more on both** [Site health](site-health.md) scores can show the SudoDocs docs health badge. The badge shows the two scores, **Human** and **AI**, and links to a page that says whose badge it is and when it was checked.
+A site that scores **80 or more on both** [Site health](site-health.md) scores can show the **SudoDocs score** badge. The badge shows the two scores, **Human** and **AI**, and links to a page that says whose badge it is and when it was checked.
 
 ## Earn it
 
@@ -40,20 +40,20 @@ Once verified, turn on **Show it only on my pages** to give any other site that 
 
 ## Sites published with SudoDocs
 
-A site published with SudoDocs shows its own badge in the footer by itself while it has earned it. Turn it off with **Show the docs health badge in the footer** in the site's **Readers** settings, or with `sudodocs publish set SITE --no-health-badge`. When the badge is earned or lost, the site is updated without a new build.
+A site published with SudoDocs shows its own badge in the footer by itself while it has earned it. Turn it off with **Show the SudoDocs score badge in the footer** in the site's **Readers** settings, or with `sudodocs publish set SITE --no-health-badge`. When the badge is earned or lost, the site is updated without a new build.
 
 ## Use it on any page
 
 HTML:
 
 ```html
-<a href="https://app.sudodocs.com/health/badge/docs.example.com"><img src="https://app.sudodocs.com/badge/docs.example.com.svg" alt="SudoDocs docs health" height="32"></a>
+<a href="https://app.sudodocs.com/health/badge/docs.example.com"><img src="https://app.sudodocs.com/badge/docs.example.com.svg" alt="SudoDocs score" height="32"></a>
 ```
 
 Markdown:
 
 ```markdown
-[![SudoDocs docs health](https://app.sudodocs.com/badge/docs.example.com.svg)](https://app.sudodocs.com/health/badge/docs.example.com)
+[![SudoDocs score](https://app.sudodocs.com/badge/docs.example.com.svg)](https://app.sudodocs.com/health/badge/docs.example.com)
 ```
 
 Replace `docs.example.com` with your own address. Add `?size=sm` for the compact badge and `?theme=dark` for dark pages (`?size=sm&theme=dark` for both).

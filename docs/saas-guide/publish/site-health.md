@@ -47,7 +47,7 @@ Each finding is marked with how it gets fixed: in a **pull request**, as a **sug
 
 ## Show your score
 
-When both scores are 80 or more, the report offers the [docs health badge](health-badge.md) for your own site.
+When both scores are 80 or more, the report offers the [SudoDocs score badge](health-badge.md) for your own site.
 
 ## Monitor your sites
 
