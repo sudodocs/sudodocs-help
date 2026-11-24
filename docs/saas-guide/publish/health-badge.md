@@ -27,6 +27,17 @@ The badge is not a fixed picture. It is drawn each time from the latest finished
 
 The badge sets no cookies and tracks nobody who sees it.
 
+## Prove you own your address
+
+Anyone can show a badge for any address, and it always names the address it belongs to. To show that **you** control an address, and to limit where the full badge is drawn, verify ownership. Open the **Ownership** card under **Show your score** (on the report or in **Site health**), choose **Verify ownership**, and add one of these to your site:
+
+- a meta tag `<meta name="sudodocs-health-verification" content="YOUR-CODE">` in the head of your home page, or
+- a text file at `/.well-known/sudodocs-health-verification.txt` that contains your code.
+
+Press **Verify**. A site you publish with SudoDocs is verified without either step. The badge page then shows **Owner verified**. Only one organization can own an address, and the proof is checked again after 180 days.
+
+Once verified, turn on **Show it only on my pages** to give any other site that shows your badge the grey **not verified** one. Add partner sites under **Also allowed on**. A badge requested without any referring page is always shown, because many browsers send none. This only changes where the badge is drawn: the page it links to always shows your real scores.
+
 ## Sites published with SudoDocs
 
 A site published with SudoDocs shows its own badge in the footer by itself while it has earned it. Turn it off with **Show the docs health badge in the footer** in the site's **Readers** settings, or with `sudodocs publish set SITE --no-health-badge`. When the badge is earned or lost, the site is updated without a new build.

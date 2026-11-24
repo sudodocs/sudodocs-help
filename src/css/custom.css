@@ -414,6 +414,16 @@ p, li, span {
   display: block;
 }
 
+/* the badge has a light and a dark picture: show the one for the current colour mode */
+.footer-health-badge .badge-dark,
+[data-theme='dark'] .footer-health-badge .badge-light {
+  display: none;
+}
+
+[data-theme='dark'] .footer-health-badge .badge-dark {
+  display: block;
+}
+
 .footer__copyright {
   display: flex;
   align-items: center;
