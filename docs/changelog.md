@@ -13,6 +13,7 @@ What's new in SudoDocs in **November 2026**, newest release first. SudoDocs upda
 
 - **Two scores.** Every health check now gives a **Human readers** score and an **AI agents** score, each with its own areas, explanations and advice, a step-by-step progress view, and a CSV download. New checks cover readability and how well an agent can retrieve a page. See [Site health](saas-guide/publish/site-health.md).
 - **Fix what it finds.** **Fix these now** reads the source of your site and prepares the fixes as one pull request: headings, code block languages, link text, titles, descriptions and alt text. AI fixes use credits and wait for your confirmation. See [Fix what Site health finds](saas-guide/publish/site-health-healing.md).
+- **A docs health badge.** When both scores are 80 or more you can show the badge on your site. It is checked live, so it turns grey when a later check falls below 80. Sites published with SudoDocs show it in the footer by themselves. See [Docs health badge](saas-guide/publish/health-badge.md).
 - **Healing on a schedule.** After each scheduled check SudoDocs adds the fixes to one open pull request, never merges, and keeps a history with the scores before and after. Your own sites are monitored by themselves, and a site hosted elsewhere can be linked to its docs repository.
 
 ## November 23, 2026 {#2026-11-23}

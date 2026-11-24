@@ -145,7 +145,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} SudoDocs.`,
+        copyright: `Copyright © ${new Date().getFullYear()} SudoDocs. <a class="footer-health-badge" href="https://app.sudodocs.com/health/badge/docs.sudodocs.com" target="_blank" rel="noopener" title="SudoDocs docs health"><img src="https://app.sudodocs.com/badge/docs.sudodocs.com.svg?size=sm" alt="SudoDocs docs health" height="24" /></a>`,
       },
       prism: {
         theme: prismThemes.github,

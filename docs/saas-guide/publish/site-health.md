@@ -45,6 +45,10 @@ A site that asks readers for a password or a sign-in cannot be read by a public 
 
 Each finding is marked with how it gets fixed: in a **pull request**, as a **suggestion** you apply yourself, by the **hosting** (for sites published with SudoDocs), or by a **person**. A line above the findings says how many SudoDocs can prepare fixes for. See [Fix what Site health finds](site-health-healing.md).
 
+## Show your score
+
+When both scores are 80 or more, the report offers the [docs health badge](health-badge.md) for your own site.
+
 ## Monitor your sites
 
 Pro and Enterprise organizations can check their sites on a schedule: **Site health** in the left menu.

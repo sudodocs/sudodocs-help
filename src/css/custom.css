@@ -410,6 +410,10 @@ p, li, span {
   margin-top: 1.5rem;
 }
 
+.footer-health-badge img {
+  display: block;
+}
+
 .footer__copyright {
   display: flex;
   align-items: center;
