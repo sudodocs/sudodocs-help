@@ -7,6 +7,14 @@ description: Product updates to SudoDocs in November 2026, newest release first.
 
 What's new in SudoDocs in **November 2026**, newest release first. SudoDocs updates for everyone at once, so there's nothing to install - except the CLI, which says how to upgrade. For earlier months, see [Past Changelogs](changelog-archive/index.md).
 
+## November DD, 2026 {#2026-11-DD}
+
+### Site health
+
+- **Two scores.** Every health check now gives a **Human readers** score and an **AI agents** score, each with its own areas, explanations and advice, a step-by-step progress view, and a CSV download. New checks cover readability and how well an agent can retrieve a page. See [Site health](saas-guide/publish/site-health.md).
+- **Fix what it finds.** **Fix these now** reads the source of your site and prepares the fixes as one pull request: headings, code block languages, link text, titles, descriptions and alt text. AI fixes use credits and wait for your confirmation. See [Fix what Site health finds](saas-guide/publish/site-health-healing.md).
+- **Healing on a schedule.** After each scheduled check SudoDocs adds the fixes to one open pull request, never merges, and keeps a history with the scores before and after. Your own sites are monitored by themselves, and a site hosted elsewhere can be linked to its docs repository.
+
 ## November 23, 2026 {#2026-11-23}
 
 ### Write docs from scratch
