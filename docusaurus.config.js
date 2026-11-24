@@ -145,7 +145,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} SudoDocs. <a class="footer-agent-score" href="https://buildwithfern.com/agent-score" target="_blank" rel="noopener noreferrer" title="100% Fern Agent Score"><img src="https://img.shields.io/badge/Fern_Agent_Score-100%25-0891b2?style=flat-square" alt="100% Fern Agent Score" height="20" /></a>`,
+        copyright: `Copyright © ${new Date().getFullYear()} SudoDocs.`,
       },
       prism: {
         theme: prismThemes.github,
