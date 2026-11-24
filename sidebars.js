@@ -31,6 +31,8 @@ const sidebars = {
         'saas-guide/publish/protected-docs',
         'saas-guide/publish/seo',
         'saas-guide/publish/site-health',
+        'saas-guide/publish/site-health-healing',
+        'saas-guide/publish/health-badge',
       ],
     },
     {

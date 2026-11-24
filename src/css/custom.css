@@ -410,6 +410,20 @@ p, li, span {
   margin-top: 1.5rem;
 }
 
+.footer-health-badge img {
+  display: block;
+}
+
+/* the badge has a light and a dark picture: show the one for the current colour mode */
+.footer-health-badge .badge-dark,
+[data-theme='dark'] .footer-health-badge .badge-light {
+  display: none;
+}
+
+[data-theme='dark'] .footer-health-badge .badge-dark {
+  display: block;
+}
+
 .footer__copyright {
   display: flex;
   align-items: center;
@@ -420,10 +434,6 @@ p, li, span {
   font-size: 0.8rem;
   font-weight: 500;
   margin: 0 !important;
-}
-
-.footer-agent-score img {
-  display: block;
 }
 
 /* ==============================

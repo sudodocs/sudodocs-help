@@ -32,6 +32,13 @@ What's new in SudoDocs in **November 2026**, newest release first. SudoDocs upda
 - **Helm charts.** Register a chart, check it, have AI write the missing value descriptions, and publish a Helm reference next to your API reference. See [Helm charts](saas-guide/publish/helm-charts.md).
 - **Validate before you publish.** Find broken links and API problems, and fix many of them with a pull request. See [Validate](saas-guide/publish/validate.md).
 
+### Site health
+
+- **Two scores.** Every health check now gives a **Human readers** score and an **AI agents** score, each with its own areas, explanations and advice, a step-by-step progress view, and a CSV download. New checks cover readability and how well an agent can retrieve a page. See [Site health](saas-guide/publish/site-health.md).
+- **Fix what it finds.** **Fix these now** reads the source of your site and prepares the fixes as one pull request: headings, code block languages, link text, titles, descriptions and alt text. AI fixes use credits and wait for your confirmation. See [Fix what Site health finds](saas-guide/publish/site-health-healing.md).
+- **A SudoDocs score badge.** When both scores are 80 or more you can show the badge on your site. It is checked live, so it turns grey when a later check falls below 80, and you can prove you own your address to limit where it is shown. Sites published with SudoDocs show it in the footer by themselves. See [SudoDocs score badge](saas-guide/publish/health-badge.md).
+- **Healing on a schedule.** After each scheduled check SudoDocs adds the fixes to one open pull request, never merges, and keeps a history with the scores before and after. Your own sites are monitored by themselves, and a site hosted elsewhere can be linked to its docs repository.
+
 ### Author mode
 
 - **Write and edit your docs in SudoDocs.** Author mode replaces Author a Feature: edit pages with a live preview in your site's skin, insert blocks, variables, snippets and embeds, move pages, see who else is editing, and review through a pull request. It also drafts changes from a Jira ticket or pull request. See [Author mode](saas-guide/user/author-mode.md).

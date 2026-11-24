@@ -147,7 +147,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} SudoDocs. <a class="footer-agent-score" href="https://buildwithfern.com/agent-score" target="_blank" rel="noopener noreferrer" title="100% Fern Agent Score"><img src="https://img.shields.io/badge/Fern_Agent_Score-100%25-0891b2?style=flat-square" alt="100% Fern Agent Score" width="148" height="20" /></a>`,
+        copyright: `Copyright © ${new Date().getFullYear()} SudoDocs. <a class="footer-health-badge" href="https://app.sudodocs.com/health/badge/docs.sudodocs.com" target="_blank" rel="noopener" title="SudoDocs score"><img class="badge-light" src="https://app.sudodocs.com/badge/docs.sudodocs.com.svg?size=sm" alt="SudoDocs score" width="259" height="24" /><img class="badge-dark" src="https://app.sudodocs.com/badge/docs.sudodocs.com.svg?size=sm&theme=dark" alt="" aria-hidden="true" width="259" height="24" /></a>`,
       },
       prism: {
         theme: prismThemes.github,

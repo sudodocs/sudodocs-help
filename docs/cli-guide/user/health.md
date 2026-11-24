@@ -21,3 +21,19 @@ sudodocs health remove 4                              # stop monitoring and dele
 ```
 
 Your plan decides how many sites you can monitor and how often. A site that is already monitored cannot be added twice.
+
+## Healing
+
+What SudoDocs does after a scheduled check of a published site: see [Fix what Site health finds](../../saas-guide/publish/site-health-healing.md).
+
+```bash
+sudodocs publish healing docs                    # the policy and the latest runs of the site
+sudodocs publish healing docs --no-auto          # stop preparing fixes after each check
+sudodocs publish healing docs --ai               # include AI fixes (1 credit each, 25 a month per site)
+sudodocs publish healing docs --kinds structure,links   # titles and headings, and links only (the third kind is content)
+sudodocs publish healing docs --max-files 10     # at most 10 files in one pull request
+sudodocs publish healing docs --no-watch         # do not monitor the site by itself
+```
+
+Without options the command shows the current policy, how many AI fixes are left this month, and the last runs with their pull requests.
+
