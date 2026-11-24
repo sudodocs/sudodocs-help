@@ -64,7 +64,6 @@ What's new in SudoDocs in **November 2026**, newest release first. SudoDocs upda
 
 - **Publishing policy.** Choose who may change site settings, which repositories Writers may edit, which embed hosts are allowed and which email domains can be invited to review. See [Publishing policy](saas-guide/admin/publish-admin.md).
 - **SAML, SCIM and protected docs for Enterprise.** Sign in with SAML, create and remove users automatically, and let your identity provider decide who reads private docs. See [SAML and SCIM](saas-guide/admin/sso-saml-scim.md).
-- **Startup offer.** Teams on the Startup offer see when it ends. See [Plans & Billing](saas-guide/admin/plans.md#startup-offer).
 
 ### CLI
 

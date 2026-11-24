@@ -102,7 +102,9 @@ const config = {
         title: 'SudoDocs',
         logo: {
           alt: 'SudoDocs Logo',
-          src: 'img/logo.png',
+          src: 'img/logo.webp',
+          width: 32,
+          height: 32,
         },
         items: [
           // Top-level tabs: each opens its own sidebar and stays highlighted
@@ -145,7 +147,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} SudoDocs. <a class="footer-health-badge" href="https://app.sudodocs.com/health/badge/docs.sudodocs.com" target="_blank" rel="noopener" title="SudoDocs docs health"><img class="badge-light" src="https://app.sudodocs.com/badge/docs.sudodocs.com.svg?size=sm" alt="SudoDocs docs health" height="24" /><img class="badge-dark" src="https://app.sudodocs.com/badge/docs.sudodocs.com.svg?size=sm&theme=dark" alt="" aria-hidden="true" height="24" /></a>`,
+        copyright: `Copyright © ${new Date().getFullYear()} SudoDocs. <a class="footer-health-badge" href="https://app.sudodocs.com/health/badge/docs.sudodocs.com" target="_blank" rel="noopener" title="SudoDocs docs health"><img class="badge-light" src="https://app.sudodocs.com/badge/docs.sudodocs.com.svg?size=sm" alt="SudoDocs docs health" width="233" height="24" /><img class="badge-dark" src="https://app.sudodocs.com/badge/docs.sudodocs.com.svg?size=sm&theme=dark" alt="" aria-hidden="true" width="233" height="24" /></a>`,
       },
       prism: {
         theme: prismThemes.github,
